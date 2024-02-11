@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.7.20)  11 FEB 2024 12:37
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.7.20)  11 FEB 2024 13:10
  restricted system commands enabled.
  file:line:error style messages enabled.
 **"/Users/alasaad/Documents/School/MA THESIS/Text Analytics of the Qur'an/main.tex"
@@ -1188,12 +1188,12 @@ Here is how much of LuaTeX's memory you used:
  100000,1977958 words of node,token memory allocated
  1055 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 17 glue, 4 kern, 1 glyph, 61 attribute, 103 glue_spec, 31 attribute_list, 2 write, 8 pdf_action nodes
-   avail lists: 2:1099,3:305,4:33,5:780,6:63,7:7041,8:123,9:454,10:24,11:412
+   avail lists: 2:1105,3:305,4:33,5:780,6:63,7:7041,8:123,9:455,10:24,11:412
  48945 multiletter control sequences out of 65536+600000
  200 fonts using 28654639 bytes
  120i,11n,119p,2347b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.otf></usr/local/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></usr/local/texlive/2023/texmf-dist/fonts/truetype/public/amiri/Amiri-Regular.ttf></usr/local/texlive/2023/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-italic.otf></usr/local/texlive/2023/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-regular.otf></usr/local/texlive/2023/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-bold.otf>
-Output written on main.pdf (19 pages, 5914401 bytes).
+Output written on main.pdf (19 pages, 5914527 bytes).
 
 PDF statistics: 401 PDF objects out of 1000 (max. 8388607)
  336 compressed objects within 4 object streams
