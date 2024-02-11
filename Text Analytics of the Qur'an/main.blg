@@ -1,0 +1,73 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: titlepage.aux
+A level-1 auxiliary file: chapters/abstract.aux
+A level-1 auxiliary file: chapters/ch1.aux
+A level-1 auxiliary file: chapters/ch2.aux
+A level-1 auxiliary file: chapters/ch3.aux
+A level-1 auxiliary file: chapters/ch4.aux
+A level-1 auxiliary file: chapters/ch5.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: reference.bib
+Warning--I'm ignoring Neuwirth_2007's extra "title" field
+--line 105 of file reference.bib
+Warning--entry type for "wikibirmingham" isn't style-file defined
+--line 115 of file reference.bib
+Warning--entry type for "mb2022" isn't style-file defined
+--line 123 of file reference.bib
+Warning--entry type for "bu2015" isn't style-file defined
+--line 131 of file reference.bib
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+Warning--No address in pewresearch
+You've used 14 entries,
+            6951 wiz_defined-function locations,
+            1371 strings with 13693 characters,
+and the built_in function-call counts, 24775 in all, are:
+= -- 3171
+> -- 172
+< -- 1120
++ -- 1061
+- -- 34
+* -- 1480
+:= -- 4424
+add.period$ -- 62
+call.type$ -- 14
+change.case$ -- 241
+chr.to.int$ -- 0
+cite$ -- 29
+duplicate$ -- 579
+empty$ -- 1044
+format.name$ -- 264
+if$ -- 4844
+int.to.chr$ -- 0
+int.to.str$ -- 42
+missing$ -- 0
+newline$ -- 351
+num.names$ -- 114
+pop$ -- 499
+preamble$ -- 1
+purify$ -- 58
+quote$ -- 0
+skip$ -- 1777
+stack$ -- 0
+substring$ -- 1140
+swap$ -- 323
+text.length$ -- 33
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 1400
+warning$ -- 1
+while$ -- 94
+width$ -- 0
+write$ -- 402
+(There were 5 warnings)
