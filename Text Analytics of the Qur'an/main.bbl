@@ -206,6 +206,31 @@ Neuwirth, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Noordin%
+\ \BBA {} Othman%
+}{%
+Noordin%
+\ \BBA {} Othman%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+noordin2006}
+\APACinsertmetastar {%
+noordin2006}%
+\begin{APACrefauthors}%
+Noordin, M.%
+\BCBT {}\ \BBA {} Othman, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {An Information Retrieval System for Quranic Texts: A Proposed System Design} {An information retrieval system for quranic texts: A proposed system design}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {2006 2nd International Conference on Information and Communication Technologies} {2006 2nd international conference on information and communication technologies}\ (\BVOL~1, \BPG~1704-1709).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Sadeghi%
 \ \BBA {} Bergmann%
 }{%
@@ -300,6 +325,54 @@ Sinai, N.%
 \APACrefbtitle {The Qur'an: A historical-critical introduction} {The qur'an: A historical-critical introduction}.
 \newblock
 \APACaddressPublisher{}{Edinburgh University Press Ltd}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Thabet%
+}{%
+Thabet%
+}{%
+{\protect \APACyear {2004}}%
+}]{%
+thabet2004}
+\APACinsertmetastar {%
+thabet2004}%
+\begin{APACrefauthors}%
+Thabet, N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2004}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Stemming the Qur'an} {Stemming the qur'an}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the Workshop on Computational Approaches to Arabic Script-Based Languages} {Proceedings of the workshop on computational approaches to arabic script-based languages}\ (\BPG~85-88).
+\newblock
+\APACaddressPublisher{USA}{Association for Computational Linguistics}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Thabet%
+}{%
+Thabet%
+}{%
+{\protect \APACyear {2005}}%
+}]{%
+thabet2005}
+\APACinsertmetastar {%
+thabet2005}%
+\begin{APACrefauthors}%
+Thabet, N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2005}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Understanding the thematic structure of the Qur'an: an exploratory multivariate approach} {Understanding the thematic structure of the qur'an: an exploratory multivariate approach}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the ACL Student Research Workshop} {Proceedings of the acl student research workshop}\ (\BPG~7-12).
+\newblock
+\APACaddressPublisher{USA}{Association for Computational Linguistics}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

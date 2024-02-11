@@ -1,6 +1,6 @@
-PWD /Users/alasaad/Documents/School/Text Analytics of the Qur'an
+PWD /Users/alasaad/Documents/School/MA THESIS/Text Analytics of the Qur'an
 INPUT /usr/local/texlive/2023/texmf-var/web2c/luahbtex/lualatex.fmt
-INPUT /Users/alasaad/Documents/School/Text Analytics of the Qur'an/main.tex
+INPUT /Users/alasaad/Documents/School/MA THESIS/Text Analytics of the Qur'an/main.tex
 OUTPUT main.log
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/lualatexquotejobname.lua
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/ltluatex.lua
