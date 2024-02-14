@@ -20,54 +20,54 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: reference.bib
 Warning--I'm ignoring Neuwirth_2007's extra "title" field
---line 141 of file reference.bib
+--line 205 of file reference.bib
 Warning--entry type for "wikibirmingham" isn't style-file defined
---line 151 of file reference.bib
+--line 215 of file reference.bib
 Warning--entry type for "mb2022" isn't style-file defined
---line 159 of file reference.bib
+--line 223 of file reference.bib
 Warning--entry type for "bu2015" isn't style-file defined
---line 167 of file reference.bib
+--line 231 of file reference.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No address in pewresearch
-You've used 17 entries,
+You've used 21 entries,
             6951 wiz_defined-function locations,
-            1391 strings with 14258 characters,
-and the built_in function-call counts, 30947 in all, are:
-= -- 4024
-> -- 225
-< -- 1359
-+ -- 1280
-- -- 40
-* -- 1814
-:= -- 5398
-add.period$ -- 80
-call.type$ -- 17
-change.case$ -- 295
+            1414 strings with 15336 characters,
+and the built_in function-call counts, 40180 in all, are:
+= -- 5249
+> -- 293
+< -- 1793
++ -- 1692
+- -- 49
+* -- 2394
+:= -- 7018
+add.period$ -- 101
+call.type$ -- 21
+change.case$ -- 386
 chr.to.int$ -- 0
-cite$ -- 35
-duplicate$ -- 717
-empty$ -- 1290
-format.name$ -- 316
-if$ -- 6125
+cite$ -- 43
+duplicate$ -- 929
+empty$ -- 1644
+format.name$ -- 408
+if$ -- 7935
 int.to.chr$ -- 0
-int.to.str$ -- 51
+int.to.str$ -- 67
 missing$ -- 0
-newline$ -- 424
-num.names$ -- 138
-pop$ -- 677
+newline$ -- 531
+num.names$ -- 174
+pop$ -- 918
 preamble$ -- 1
-purify$ -- 70
+purify$ -- 90
 quote$ -- 0
-skip$ -- 2235
+skip$ -- 2811
 stack$ -- 0
-substring$ -- 1421
-swap$ -- 422
-text.length$ -- 59
+substring$ -- 1888
+swap$ -- 552
+text.length$ -- 84
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 1832
+type$ -- 2344
 warning$ -- 1
-while$ -- 115
+while$ -- 151
 width$ -- 0
-write$ -- 485
+write$ -- 612
 (There were 5 warnings)

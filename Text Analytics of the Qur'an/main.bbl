@@ -180,6 +180,26 @@ mb2022}%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Nassourou%
+}{%
+Nassourou%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+nassourou2011}
+\APACinsertmetastar {%
+nassourou2011}%
+\begin{APACrefauthors}%
+Nassourou, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+\APACrefbtitle {Using Machine Learning Algorithms for Categorizing Quranic Chaptersby Major Phases of Prophet Mohammad's Messengership.} {Using machine learning algorithms for categorizing quranic chaptersby major phases of prophet mohammad's messengership.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Neuwirth%
 }{%
 Neuwirth%
@@ -255,6 +275,93 @@ Sadeghi, B.%
 \APACjournalVolNumPages{Arabica}{57}{4}{343 - 436}.
 \newblock
 \begin{APACrefDOI} \doi{\url{https://doi.org/10.1163/157005810X504518}} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sharaf%
+\ \BBA {} Atwell%
+}{%
+Sharaf%
+\ \BBA {} Atwell%
+}{%
+{\protect \APACyear {2009}}%
+}]{%
+sharaf2009}
+\APACinsertmetastar {%
+sharaf2009}%
+\begin{APACrefauthors}%
+Sharaf, A.%
+\BCBT {}\ \BBA {} Atwell, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Knowledge representation of the Quran through frame semantics: a corpus-based approach} {Knowledge representation of the quran through frame semantics: a corpus-based approach}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the Fifth Corpus Linguistics Conference.} {Proceedings of the fifth corpus linguistics conference.}
+\newblock
+\APACaddressPublisher{}{The Fifth Corpus Linguistics Conference}.
+\newblock
+\begin{APACrefURL} \url{https://api.semanticscholar.org/CorpusID:18278736} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sharaf%
+\ \BBA {} Atwell%
+}{%
+Sharaf%
+\ \BBA {} Atwell%
+}{%
+{\protect \APACyear {2012}}%
+{\protect \APACexlab {{\protect \BCnt {1}}}}}]{%
+sharaf2012}
+\APACinsertmetastar {%
+sharaf2012}%
+\begin{APACrefauthors}%
+Sharaf, A.%
+\BCBT {}\ \BBA {} Atwell, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012{\protect \BCnt {1}}}{{\APACmonth{05}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Q}ur{A}na: Corpus of the {Q}uran annotated with Pronominal Anaphora} {{Q}ur{A}na: Corpus of the {Q}uran annotated with pronominal anaphora}.{\BBCQ}
+\newblock
+\BIn{} N.~Calzolari\ \BOthers {.}\ (\BEDS), \APACrefbtitle {Proceedings of the Eighth International Conference on Language Resources and Evaluation ({LREC}'12)} {Proceedings of the eighth international conference on language resources and evaluation ({LREC}'12)}\ (\BPGS\ 130--137).
+\newblock
+\APACaddressPublisher{Istanbul, Turkey}{European Language Resources Association (ELRA)}.
+\newblock
+\begin{APACrefURL} \url{http://www.lrec-conf.org/proceedings/lrec2012/pdf/123_Paper.pdf} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sharaf%
+\ \BBA {} Atwell%
+}{%
+Sharaf%
+\ \BBA {} Atwell%
+}{%
+{\protect \APACyear {2012}}%
+{\protect \APACexlab {{\protect \BCnt {2}}}}}]{%
+sharaf2012b}
+\APACinsertmetastar {%
+sharaf2012b}%
+\begin{APACrefauthors}%
+Sharaf, A.%
+\BCBT {}\ \BBA {} Atwell, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012{\protect \BCnt {2}}}{{\APACmonth{05}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Q}ur{S}im: A corpus for evaluation of relatedness in short texts} {{Q}ur{S}im: A corpus for evaluation of relatedness in short texts}.{\BBCQ}
+\newblock
+\BIn{} N.~Calzolari\ \BOthers {.}\ (\BEDS), \APACrefbtitle {Proceedings of the Eighth International Conference on Language Resources and Evaluation ({LREC}'12)} {Proceedings of the eighth international conference on language resources and evaluation ({LREC}'12)}\ (\BPGS\ 2295--2302).
+\newblock
+\APACaddressPublisher{Istanbul, Turkey}{European Language Resources Association (ELRA)}.
+\newblock
+\begin{APACrefURL} \url{http://www.lrec-conf.org/proceedings/lrec2012/pdf/190_Paper.pdf} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
