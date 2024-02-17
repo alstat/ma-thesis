@@ -20,54 +20,54 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: reference.bib
 Warning--I'm ignoring Neuwirth_2007's extra "title" field
---line 205 of file reference.bib
-Warning--entry type for "wikibirmingham" isn't style-file defined
 --line 215 of file reference.bib
+Warning--entry type for "wikibirmingham" isn't style-file defined
+--line 225 of file reference.bib
 Warning--entry type for "mb2022" isn't style-file defined
---line 223 of file reference.bib
+--line 233 of file reference.bib
 Warning--entry type for "bu2015" isn't style-file defined
---line 231 of file reference.bib
+--line 241 of file reference.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No address in pewresearch
 You've used 21 entries,
             6951 wiz_defined-function locations,
-            1414 strings with 15336 characters,
-and the built_in function-call counts, 40180 in all, are:
-= -- 5249
-> -- 293
-< -- 1793
-+ -- 1692
+            1415 strings with 15349 characters,
+and the built_in function-call counts, 39727 in all, are:
+= -- 5156
+> -- 288
+< -- 1780
++ -- 1685
 - -- 49
-* -- 2394
-:= -- 7018
-add.period$ -- 101
+* -- 2386
+:= -- 6947
+add.period$ -- 99
 call.type$ -- 21
-change.case$ -- 386
+change.case$ -- 385
 chr.to.int$ -- 0
 cite$ -- 43
-duplicate$ -- 929
-empty$ -- 1644
-format.name$ -- 408
-if$ -- 7935
+duplicate$ -- 938
+empty$ -- 1645
+format.name$ -- 416
+if$ -- 7826
 int.to.chr$ -- 0
 int.to.str$ -- 67
 missing$ -- 0
-newline$ -- 531
+newline$ -- 534
 num.names$ -- 174
-pop$ -- 918
+pop$ -- 884
 preamble$ -- 1
 purify$ -- 90
 quote$ -- 0
-skip$ -- 2811
+skip$ -- 2777
 stack$ -- 0
-substring$ -- 1888
-swap$ -- 552
-text.length$ -- 84
+substring$ -- 1858
+swap$ -- 551
+text.length$ -- 73
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 2344
+type$ -- 2280
 warning$ -- 1
-while$ -- 151
+while$ -- 154
 width$ -- 0
-write$ -- 612
+write$ -- 618
 (There were 5 warnings)

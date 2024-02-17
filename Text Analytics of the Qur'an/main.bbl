@@ -226,31 +226,6 @@ Neuwirth, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Noordin%
-\ \BBA {} Othman%
-}{%
-Noordin%
-\ \BBA {} Othman%
-}{%
-{\protect \APACyear {2006}}%
-}]{%
-noordin2006}
-\APACinsertmetastar {%
-noordin2006}%
-\begin{APACrefauthors}%
-Noordin, M.%
-\BCBT {}\ \BBA {} Othman, R.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2006}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {An Information Retrieval System for Quranic Texts: A Proposed System Design} {An information retrieval system for quranic texts: A proposed system design}.{\BBCQ}
-\newblock
-\BIn{} \APACrefbtitle {2006 2nd International Conference on Information and Communication Technologies} {2006 2nd international conference on information and communication technologies}\ (\BVOL~1, \BPG~1704-1709).
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Sadeghi%
 \ \BBA {} Bergmann%
 }{%
@@ -275,6 +250,34 @@ Sadeghi, B.%
 \APACjournalVolNumPages{Arabica}{57}{4}{343 - 436}.
 \newblock
 \begin{APACrefDOI} \doi{\url{https://doi.org/10.1163/157005810X504518}} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Shahzadi%
+, ur Rahman%
+\BCBL {}\ \BBA {} Sawar%
+}{%
+Shahzadi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2012}}%
+}]{%
+shahzadi2012}
+\APACinsertmetastar {%
+shahzadi2012}%
+\begin{APACrefauthors}%
+Shahzadi, N.%
+, ur Rahman, A.%
+\BCBL {}\ \BBA {} Sawar, M\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Semantic Network based Classifier of Holy Quran} {Semantic network based classifier of holy quran}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{International Journal of Computer Applications}{39}{}{43-47}.
+\newblock
+\begin{APACrefURL} \url{https://api.semanticscholar.org/CorpusID:6539715} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
