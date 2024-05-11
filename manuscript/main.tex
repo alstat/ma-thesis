@@ -68,7 +68,7 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 \newenvironment{exmp}
   {\pushQED{\qed}\renewcommand{\qedsymbol}{$\multimapdot$}\exmpx}
   {\popQED\endexmpx}
-\newenvironment{warning}
+  \newenvironment{warning}
   {\par\begin{mdframed}[linewidth=2pt,linecolor=gray]%
     \begin{list}{}{\leftmargin=.5cm
                    \labelwidth=\leftmargin}\item[\Large\ding{43}]}
@@ -99,6 +99,8 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 \doublespacing
 \include{chapters/dedication.tex}
 % \include{chapters/acknowledgement.tex}
+\tableofcontents\newpage
+\listoffigures
 \include{chapters/abstract.tex}
 \include{chapters/ch1.tex}
 \include{chapters/ch2.tex}
