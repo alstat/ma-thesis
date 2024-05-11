@@ -15,20 +15,27 @@
 \contentsline {subsection}{\numberline {3.3.1}Box, Density, and Histogram Plots}{27}{subsection.3.3.1}%
 \contentsline {section}{\numberline {3.4}Topic Modeling}{28}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Latent Dirichlet Allocation}{29}{subsection.3.4.1}%
-\contentsline {section}{\numberline {3.5}Large Language Models}{29}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Retrieval-Augmented Generation}{29}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.4.2}Large Language Models}{29}{subsection.3.4.2}%
+\contentsline {subsubsection}{Bidirectional Encoder Representation from Transformer}{29}{subsubsection*.5}%
+\contentsline {subsubsection}{Generative Pre-Trained Transformer}{29}{subsubsection*.6}%
+\contentsline {section}{\numberline {3.5}Retrieval-Augmented Generation}{29}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Julia Code Setup}{29}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Desktop Application using SvelteKit and Rust}{29}{section.3.7}%
-\contentsline {chapter}{\numberline {4}Results and Discussions}{30}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Descriptive Statistics}{30}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Verses}{30}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}Morphological Analysis}{30}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Structural Analysis}{30}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Concentric Structure}{30}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Mathematical Structure}{30}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Topic Modeling}{30}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Latent Dirichlet Allocation}{30}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}OpenAI LLM}{30}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Information Retrieval using RAG}{30}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Conclusion and Recommendation}{31}{chapter.5}%
-\contentsline {section}{References}{32}{section*.5}%
+\contentsline {section}{\numberline {3.7}Python Code Setup}{30}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Desktop Application using SvelteKit and Rust}{30}{section.3.8}%
+\contentsline {chapter}{\numberline {4}Results and Discussions}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Descriptive Statistics}{31}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Verses}{31}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Morphological Analysis}{31}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Structural Analysis}{31}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Concentric Structure}{31}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Mathematical Structure}{31}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Discussions on Islamic Philosophy of Qur'\=an's Structural Analysis}{31}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Topic Modeling}{31}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Latent Dirichlet Allocation}{31}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Bidirectional Encoder Representation from Transformer}{31}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Generative Pre-Trained Transformer}{31}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Relating to other Islamic Texts and Analyses}{31}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Retrieval-Augmented Generation Approach}{31}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}Limitations of the Models}{31}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Conclusion and Recommendation}{34}{chapter.5}%
+\contentsline {section}{References}{35}{section*.7}%
