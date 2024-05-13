@@ -1,36 +1,24 @@
-\chapter{Results and Discussions}
-The chapter is organized as follows: Section \ref{sec:ch4_desc_stat} will discuss the result of the descriptive statistics; Section \ref{sec:ch4_morphological_analysis} will discuss the results on morphological analysis; Section \ref{sec:ch4_structural_analysis} will discuss the structural analysis including the Mathematical structures of the Qur'\=an. Section \ref{sec:ch4_topic_modeling_result} will discuss the results for thematic analysis using both statistical and Large Language models. Further, 
-Section \ref{sec:ir_result} will discuss the Information Retrieval result.
-\section{Descriptive Statistics}\label{sec:ch4_desc_stat}
-In this section, the count statistics for the verses and words of the Qur'an. Figure \ref{fig:ayah_word_count} shows the count of \arb[trans]{ayAt} \arb{ayAt} (verses) and word of the Qur'an.
-
-\begin{figure}[!b]
-    \centering
-    \includegraphics[width=\textwidth]{img/plot1.pdf}
-    \caption{Statistics of the words and \arb[trans]{ayAt} \arb{ayAt} (verses) of the Qur'\=an}
-    \label{fig:ch4_ayah_word_count}
-\end{figure}
-
-\begin{figure}[!b]
-    \centering
-    \includegraphics[width=\textwidth]{img/plot2.pdf}
-    \caption{Statistics of the words and \arb[trans]{ayAt} \arb{ayAt} (verses) of the Qur'\=an according to revelation order}
-    \label{fig:ch4_ayah_word_count_rev_order}
-\end{figure}
-
-\subsection{Verses}\label{sec:ch4_desc_stat_verse}
-\section{Morphological Analysis}\label{sec:ch4_morphological_analysis}
-\section{Structural Analysis}\label{sec:ch4_structural_analysis}
-\subsection{Concentric Structure}
-\subsection{Mathematical Structure}
-\subsection{Discussions on Islamic Philosophy of Qur'\=an's Structural Analysis}
-\section{Topic Modeling}\label{sec:ch4_topic_modeling_result}
-\subsection{Latent Dirichlet Allocation}
-\subsection{Bidirectional Encoder Representation from Transformer}
-\subsection{Generative Pre-Trained Transformer}
-\section{Relating to other Islamic Texts and Analyses}
-\subsection{Retrieval-Augmented Generation Approach}
-\section{Limitations of the Models}
-\label{sec:ch4_ir_result}
-
-
+\chapter{Methodology}
+This chapter is organized as follows: Section \ref{sec:topic_modeling_method} will discuss the concept of Topic Modeling, Section \ref{sec:llm_method} will discuss the concept of Large Language Models, and finally Section \ref{sec:code_setup} will discuss how to implement this in Julia programming language.
+\section{Topic Modeling}\label{sec:topic_modeling_method}
+As presented in Chapter \ref{ch:introduction}, the first objective is to extract the thematic themes of \textit{s\=urahs} \arb{sUr} with at least 1000 words. In Statistics and Machine Learning, this task is called Topic Modeling. There are several ways to do this, but the popular methodology is to use the Latent Dirichlet Allocation (LDA) discussed in the next section.
+\subsection{Latent Dirichlet Allocation}\label{sec:lda}
+Latent Dirichlet Allocation (LDA) is a Statistical methodology that is based on Bayesian inference \cite{bayes,laplace1986}. It is a generative probabilisitic model for collection of discrete data such as text corpora \cite{blei2003latent}. The main formula is defined below:
+\begin{defnx}[Latent Dirichlet Allocation]
+Let $\mathbf{W},\mathbf{Z},\boldsymbol{\theta},\boldsymbol{\varphi}$ be the random variables, and let $\alpha$ and $\beta$ be the hyper-parameters, then the probability of generating a document is
+\begin{equation}
+    \mathbb{P}(\mathbf{W},\mathbf{Z},\boldsymbol{\theta},\boldsymbol{\varphi})=\prod_{j=1}^m\mathbb{P}(\boldsymbol{\theta}_j;\alpha)\prod_{i=1}^{k}\mathbb{P}(\boldsymbol{\varphi};\beta)\prod_{t=1}^{n}\mathbb{P}(\mathbf{Z}_{j,t}|\boldsymbol{\theta}_j)\mathbb{P}(\mathbf{W}_{j,t}|\boldsymbol{\varphi}_{\mathbf{Z}_{j,t}})
+\end{equation}
+\end{defnx}
+\subsection{Large Language Models}\label{sec:llm_method}
+Generative Artificial Intelligence or GenAI for short has been making waves on its effectiveness to generate texts, images, audio, video, etc. It has elevated humanity to a new level of capability. However, behind this amazing capabilities is that GenAI is by design a mathematical formula that are called \textit{model}. There are several types of \textit{models}, and one of those is the Large Language Model (LLM). The following section will discuss what LLM is and its mathematical formulation.
+\subsubsection{Bidirectional Encoder Representation from Transformer}
+\subsubsection{Generative Pre-Trained Transformer}
+\section{Retrieval-Augmented Generation}
+The problem with LLM is that it was only trained on huge but limited data, and is therefore not able to infer what should be the context when asked.
+\section{Julia Code Setup}\label{sec:code_setup}
+This section will discuss the coding setup. As mentioned in Chapter \ref{ch:introduction}, the main programming language to use is Julia. As such, it is necessary to present where the codes will be stored so that readers are able to reproduce it. All of the codes will be saved in Github repository accessible through the following link:
+\begin{center}
+    \url{https://github.com/alstat/ma-thesis/tree/main/codes}
+\end{center}
+\section{Python Code Setup}\label{sec:py_code_setup}

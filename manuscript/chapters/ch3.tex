@@ -1,9 +1,9 @@
-\chapter{Methodology}
-This chapter will discuss the methodologies that will be used to address the objectives of the paper. In particular, the chapter is organized as follows: Section \ref{sec:descriptive_stat_method} will discuss the Descriptive Statistics, Section \ref{sec:probability_method} will discuss Probability distributions, Section \ref{sec:stat_graphs_method} will discuss the concept of Histogram, Section \ref{sec:topic_modeling_method} will discuss the concept of Topic Modeling, Section \ref{sec:llm_method} will discuss the concept of Large Language Models, and finally Section \ref{sec:code_setup} will discuss how to implement this in Julia programming language.
+\chapter{Background on Probability and Statistics}
+This chapter will discuss some statistical concepts that will be used to understand and build up the ideas behind the methodology of this paper, which is presented in the next chapter. With that said, the discussions are organized as follows: Section \ref{sec:descriptive_stat_method} will present the concept of Descriptive Statistics; Section \ref{sec:probability_method} will discuss the Probability Theory; and, Section \ref{sec:stat_graphs_method} will discuss the Statistical graphs or plots.
 
-Further, the topics discussed here may be self-explanatory for Statisticians, ML researchers or those with Mathematical background. However, for the benefit of readers coming from humanities background, the paper will present the methodology as follows: mathematical formulas are formalized through Definition, Proposition, and Corollary for the sake of brevity, but immediate to these will be an explanation or examples hoping to be simple enough for non-Statistician readers. As a guide, Statisticians or ML researchers can simply read the Definition, Proposition, and Corollary. Whereas for humanities readers, don't stress too much in the said sections, instead use the example or discussions immediate to the said sections to aid with the understanding.
+Further, the topics discussed here may be self-explanatory for Statisticians, ML researchers or those with Mathematical background. However, for the benefit of readers coming from humanities background, the paper will present the methodology as follows: mathematical formulas are formalized for purpose of brevity through Definition, Proposition, and Corollary, but immediate to these are explanations or examples aimed to be simple enough for non-statistician readers. As a guide, statisticians or ML researchers can simply read the Definition, Proposition, and/or Corollary. Whereas for humanities readers, the reading shouldn't not stress too much on the said mathematical formalities, and instead proceed to the discussions or examples immediate to it to aid with the understanding.
 \section{Descriptive Statistics}\label{sec:descriptive_stat_method}
-Among the basic statistical methodologies for summarizing information or data is what is known as Descriptive Statistics. From its name, these statistics are meant to convey simple description of the data. For example, \textit{mean}, and \textit{variance} are common statistics used for describing data. The formulas for these statistics are given in the following definitions:
+Among the basic statistical methodologies for summarizing information or data is what is known as Descriptive Statistics. From the name itself, these statistics are meant to convey simple descriptions of the data. For example, \textit{mean} and \textit{variance} are common statistics used for describing the data. The formulas for these statistics are given in the following definitions:
 \begin{defnx}[Mean]\label{defn:mean}
 Let $x_i, i\in\{1,\cdots,n\}$ where $n\in\mathbb{N}$, then the \textit{mean} of $x_i$s is defined as follows:
 \begin{equation}
@@ -16,16 +16,25 @@ Let $x_i, i\in\{1,\cdots,n\}$ where $n\in\mathbb{N}$, then the \textit{mean} of 
         \mathbb{V}\text{ar}(x) = \frac{1}{n-1}\sum_{i=1}^n (x_i-\bar{x})^2, \qquad\text{where}\;x_i \in\mathbb{R}.
     \end{equation}    
 \end{defnx}
-The mean is simply the average of the data points, while the variance is a single number that measures or summarizes the distances of the data points from the mean. The variance therefore gives us an idea of how spread or varied is the data points.
+\begin{defnx}[Standard Deviation]
+Let $\sigma^2$ be the variance, then the standard deviation, denoted by $\sigma$, is defined as $\sigma:=\sqrt{\sigma^2}$, that is, square root of the variance.    
+\end{defnx}
+The mean is simply the average of the data points, while the variance is a single number that measures or summarizes the distances of the data points from the mean. The variance therefore measures how spread or varied the data points are. In practice, however, standard deviation is more popular for measure of variability since it doesn't get big easily due to the square root operator. Standard deviation is also the preferred metric for this paper.
 \section{Probability Theory}\label{sec:probability_method}
-Another statistical tool to understanding patterns in the data is through the use of Probability distribution. Probability distribution is a model (\textit{see} discussion in Chapter \ref{ch:introduction} for understanding the model). Therefore, Probability distribution is a mathematical formula design to characterize or describe the patterns of a data point--- mathematically represented as a variable (think of this like a placeholder of the data point of the said data). Modeling one variable makes it a univariate model or specifically a univariate probability distribution. Further, modeling more than one variable makes it a multivariate model or a multivariate probability distribution. Formally, the following are necessary definitions to build up on the concept of probability.
+Statistics is built around the concept of Probability Theory. Hence, it is important to understand how this mathematical theory behind the statistical concepts work. Probability theory is a discipline in itself. It is a branch of mathematics that aims at studying realizations or observations from random phenomena. It does this by using algorithms and models (\textit{see} discussion in Chapter \ref{ch:introduction} for understanding the model). These probability models are mathematical formula design to characterize or describe the patterns of data points. The simplest form of these models is the univariate probability density functions. However, before discussing these models, the idea behind it should be build up from ground up so that humanities readers can appreciate it. To do this, the discussion will proceed with the concept of probability.
+\begin{defnx}[Probability]\label{defn:probability}
+A probability is a mathematical concept that measures the likelihood or chance of some event to happen.
+\end{defnx}
+Indeed, this idea of probability is well known or is easily understood by many. So that, the probability that someone will die is 1, meaning 100\%, since that's how natures and biology work. Further, the probability of selecting one \arb[trans]{'ayAt} \arb{'ayAt} from \arb[trans]{sUraT 'l-fAti.hati} \arb{sUraT 'l-fAti.hati} through a random draw is one out of seven, assuming each \arb[trans]{'ayAt} \arb{'ayAt} has equal chances of being drawn.
+
+Now, to gradually formalize the concept into mathematics, the succeeding definitions will be discussed to build up the definition of a probability distribution.
 \begin{defnx}[Sample Space]
 Let $\omega_1,\cdots,\omega_n, \forall n\in\mathbb{N}$ be the list of all possible outcomes of a random event or a phenomena, then the sample space, denoted by $\Omega$, is defined as the collection of all these possible outcomes including the empty set denoted by $\emptyset$.\qed
 \end{defnx}
 \begin{exmpx}\label{ex:sample_space}
 Consider the random phenomenon or event where someone randomly picks a verse from the Qur'\=an, what is the probability that it will be a Meccan \arb{makkiyyaT} or a Medinan \arb{madaniyyaT} verse?
 
-The possible output for such random event is either Meccan or Medinan. Suppose, we let Meccan be denoted by $\omega_1$ and Medinan be $\omega_2$, then the sample space, which is the collection of all possible output is denoted as follows:
+The possible output for such random event is either Meccan or Medinan. Suppose, we let Meccan to be denoted by $\omega_1$ and Medinan to be denoted $\omega_2$, then the sample space, which is the collection of all possible output is denoted as follows:
 \begin{equation}\label{ex_eq:sample_space}
     \Omega:=\{\text{\arb{makkiyyaT}},\text{\arb{madaniyyaT}}\}=\{\text{Meccan}, \text{Medinan},\}=\{\omega_1,\omega_2,\}
 \end{equation}
@@ -36,8 +45,33 @@ It should be understood that $\emptyset$ is also included in $\Omega$, but is no
 Let $\Omega=\{\omega_1,\cdots,\omega_n\}, \forall n\in\mathbb{N}$, be the sample space, then an event, denoted here as $\mathscr{A}$, is defined as the subset of the sample space, i.e., $\mathscr{A}\subseteq{\Omega}$.\qed
 \end{defnx}
 \begin{exmpx}
-From Ex. \ref{ex:sample_space}, the event of getting a random verse can be as follows: suppose the first two draws were Meccan and Meccan verses, then mathematically this event can be written as $\mathscr{A}=\{\text{Meccan}\}$. Therefore, $\mathscr{A}$ is a subset of all possible outcomes which is the sample space given in Eq. \ref{ex_eq:sample_space}, and thus $\mathscr{A}\subseteq{\Omega}$. \qed
+From Ex. \ref{ex:sample_space}, consider drawing two samples from the Qur'an, what is the sample space and give an example of a possible event?\\
+\textit{Solution:} The sample space is given below:
+\begin{align}
+    \Omega=&\{(\text{\arb{makkiyyaT}},\text{\arb{makkiyyaT}}),(\text{\arb{makkiyyaT}},\text{\arb{madaniyyaT}}), (\text{\arb{madaniyyaT}}, \text{\arb{makkiyyaT}}), (\text{\arb{madaniyyaT}}, \text{\arb{madaniyyaT}})\}\nonumber\\
+    =&\{(\text{Meccan},\text{Meccan}),(\text{Meccan},\text{Medinan}), \\
+    &\;\;(\text{Medinan},\text{Meccan}), (\text{Medinan},\text{Medinan})\}\\
+    =&\{(\omega_1,\omega_1),(\omega_1,\omega_2),(\omega_2,\omega_1),(\omega_2,\omega_2)\}
+\end{align}
+So that, if $\mathscr{A}$ is the event of drawing two \arb[trans]{'ayAt} \arb{'ayAt} from the Qur'\=an, then a possible event is given by 
+\begin{equation}
+    \mathscr{A}:=\{\text{\arb{madaniyyaT}}, \text{\arb{makkiyyaT}}\}=\{\text{Medinan}, \text{Meccan}\}=\{\omega_2,\omega_1\}
+\end{equation}
+Therefore, $\mathscr{A}\subseteq\Omega$, read as $\mathscr{A}$ is a subset of $\Omega$.\qed
 \end{exmpx}
+Now, going back to the discussion on the concept of probability above and reflect on the example given, that the probability that someone will die is 1; and that the probability of selecting one \arb[trans]{'ayAt} \arb{'ayAt} from \arb[trans]{sUraT 'l-fAti.hati} \arb{sUraT 'l-fAti.hati} through a random draw is one out of seven. It therefore begs the following questions: how does one solve this? Like how does it translate into a formal mathematical computation?
+
+Indeed, to appreciate the motivation of the succeeding definitions, it is important to devise a logical approach to computing probability mathematically, and this should explain why the following definitions are defined the way they are.
+
+Probability as already defined in Defn. \ref{defn:probability} is a measure. Indeed, this is analogues to measuring an object's size using a tape measure. So, when someone attempts to measure an object's size, there are conditions for the object to be measurable. That is, it is necessary to defined the space where the measurement will be performed. This space is of course the object's body area. For any object's surface area, the area or the space or the field should have the following properties:
+\begin{itemize}
+    \item The object's area can be broken down into smallest pieces, and that the collection of all possible collections of these pieces include:
+    \begin{enumerate}
+        \item The 0 size piece, that is, the object's measurement should start at 0;
+        \item The remainings of the pieces given the pieces already measured;
+        \item The union of the pieces.
+    \end{enumerate}
+\end{itemize}
 \begin{defnx}[$\sigma$-algebra]\label{defn:sigma_algebra}
 Let $\Omega:=\{\omega_1,\cdots,\omega_n\}, \forall n\in\mathbb{N}$, then the collections of all disjoint partitions, which are the events, are defined as the $\sigma$-algebra or $\sigma$-field, denoted here as $\mathfrak{F}$, and should satisfy the following conditions:
 \begin{enumerate}
@@ -139,33 +173,3 @@ While most statistical plots are easy to understand like bar graphs and scatter 
 \end{figure}
 
 As shown in Figure \ref{fig:ayah_word_count_with_desc}, both the Box and Density plots are tied to each other. This is indeed the case because both are describing the same information but presented in different style of visualization. In fact, Histogram is also used to describe the same information as the Box and Density, and the three are therefore related. So much so, that the three can be put into one graph. As to how to interpret these, readers are referred to for further details \textcolor{red}{[to add reference]}.
-\section{Topic Modeling}\label{sec:topic_modeling_method}
-As presented in Chapter \ref{ch:introduction}, the first objective is to extract the thematic themes of \textit{s\=urahs} \arb{sUr} with at least 1000 words. In Statistics and Machine Learning, this task is called Topic Modeling. There are several ways to do this, but the popular methodology is to use the Latent Dirichlet Allocation (LDA) discussed in the next section.
-\subsection{Latent Dirichlet Allocation}\label{sec:lda}
-Latent Dirichlet Allocation (LDA) is a Statistical methodology that is based on Bayesian inference \cite{bayes,laplace1986}. It is a generative probabilisitic model for collection of discrete data such as text corpora \cite{blei2003latent}. The main formula is defined below:
-\begin{defnx}[Latent Dirichlet Allocation]
-Let $\mathbf{W},\mathbf{Z},\boldsymbol{\theta},\boldsymbol{\varphi}$ be the random variables, and let $\alpha$ and $\beta$ be the hyper-parameters, then the probability of generating a document is
-\begin{equation}
-    \mathbb{P}(\mathbf{W},\mathbf{Z},\boldsymbol{\theta},\boldsymbol{\varphi})=\prod_{j=1}^m\mathbb{P}(\boldsymbol{\theta}_j;\alpha)\prod_{i=1}^{k}\mathbb{P}(\boldsymbol{\varphi};\beta)\prod_{t=1}^{n}\mathbb{P}(\mathbf{Z}_{j,t}|\boldsymbol{\theta}_j)\mathbb{P}(\mathbf{W}_{j,t}|\boldsymbol{\varphi}_{\mathbf{Z}_{j,t}})
-\end{equation}
-\end{defnx}
-\subsection{Large Language Models}\label{sec:llm_method}
-Generative Artificial Intelligence or GenAI for short has been making waves on its effectiveness to generate texts, images, audio, video, etc. It has elevated humanity to a new level of capability. However, behind this amazing capabilities is that GenAI is by design a mathematical formula that are called \textit{model}. There are several types of \textit{models}, and one of those is the Large Language Model (LLM). The following section will discuss what LLM is and its mathematical formulation.
-\subsubsection{Bidirectional Encoder Representation from Transformer}
-\subsubsection{Generative Pre-Trained Transformer}
-\section{Retrieval-Augmented Generation}
-The problem with LLM is that it was only trained on huge but limited data, and is therefore not able to infer what should be the context when asked.
-\section{Julia Code Setup}\label{sec:code_setup}
-This section will discuss the coding setup. As mentioned in Chapter \ref{ch:introduction}, the main programming language to use is Julia. As such, it is necessary to present where the codes will be stored so that readers are able to reproduce it. All of the codes will be saved in Github repository accessible through the following link:
-\begin{center}
-    \url{https://github.com/alstat/ma-thesis/tree/main/codes}
-\end{center}
-\section{Python Code Setup}\label{sec:py_code_setup}
-\section{Desktop Application using SvelteKit and Rust}
-As mentioned in Chapter \ref{ch:introduction}, this paper aims to package all of the result into something that is accessible to the masses. Hence, a desktop application is will be part of the output of this paper as well. To do this, the technology stack for the development are discussed in this section. 
-
-Any application, may it be desktop, web, or mobile application, it will always be composed of two main parts: the \textit{frontend} and \textit{backend}. Each of these parts has their own corresponding technology stacks. For a desktop application, there are several choices, but the one used here is a web technology baked into a desktop application. This is possible with the use of a Tauri Rust library. Indeed, Rust is the core programming language used for wrapping all together into an executable application, but the frontend technology will be SvelteKit using Typescript programming language. As for the backend, as hinted above already, the main programming language is Rust.
-
-\begin{center}
-    \url{https://github.com/alstat/ma-thesis/tree/main/app}
-\end{center}

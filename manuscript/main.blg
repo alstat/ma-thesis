@@ -2,13 +2,13 @@ This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: titlepage.aux
-A level-1 auxiliary file: chapters/dedication.aux
 A level-1 auxiliary file: chapters/abstract.aux
 A level-1 auxiliary file: chapters/ch1.aux
 A level-1 auxiliary file: chapters/ch2.aux
 A level-1 auxiliary file: chapters/ch3.aux
 A level-1 auxiliary file: chapters/ch4.aux
 A level-1 auxiliary file: chapters/ch5.aux
+A level-1 auxiliary file: chapters/ch6.aux
 The style file: apacite.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
@@ -32,7 +32,7 @@ apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No address in pewresearch
 You've used 25 entries,
             6951 wiz_defined-function locations,
-            1450 strings with 16147 characters,
+            1450 strings with 16140 characters,
 and the built_in function-call counts, 46861 in all, are:
 = -- 6068
 > -- 342
