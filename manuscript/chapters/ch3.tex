@@ -63,15 +63,13 @@ Now, going back to the discussion on the concept of probability above and reflec
 
 Indeed, to appreciate the motivation of the succeeding definitions, it is important to devise a logical approach to computing probability mathematically, and this should explain why the following definitions are defined the way they are.
 
-Probability as already defined in Defn. \ref{defn:probability} is a measure. Indeed, this is analogues to measuring an object's size using a tape measure. So, when someone attempts to measure an object's size, there are conditions for the object to be measurable. That is, it is necessary to defined the space where the measurement will be performed. This space is of course the object's body area. For any object's surface area, the area or the space or the field should have the following properties:
-\begin{itemize}
-    \item The object's area can be broken down into smallest pieces, and that the collection of all possible collections of these pieces include:
-    \begin{enumerate}
-        \item The 0 size piece, that is, the object's measurement should start at 0;
-        \item The remainings of the pieces given the pieces already measured;
-        \item The union of the pieces.
-    \end{enumerate}
-\end{itemize}
+Probability as already defined in Defn. \ref{defn:probability} is a measure, which will be formalized in Defn. \ref{defn:probability_measure}. Indeed, this is analogues to measuring an object's size using a tape measure. So, when someone attempts to measure an object's size, there are conditions for the space of the object to be measurable. The first expectation is that, the space or area can be measured in several ways. Either measuring it as a whole, or measuring it piece by piece from its partitions. Now, measuring it as a whole using tape measure should be straightforward. However, measuring it by pieces can have several cases, and all of these should end up to the same measuring. These cases accounts for the fact that when dealing with pieces of the surface one can start with different sizes of the pieces to be measured. So that, all the collections of all these possible configurations of pieces are mathematically called $\sigma$-algebra, and this collection should include the following:
+\begin{enumerate}
+    \item The 0 size piece, that is, the object's measurement should start at 0;
+    \item The remainings of the pieces given the pieces already measured;
+    \item The union of all the pieces.
+\end{enumerate}
+The above explanation for the $\sigma$-algebra is condensed in to the following mathematical definition:
 \begin{defnx}[$\sigma$-algebra]\label{defn:sigma_algebra}
 Let $\Omega:=\{\omega_1,\cdots,\omega_n\}, \forall n\in\mathbb{N}$, then the collections of all disjoint partitions, which are the events, are defined as the $\sigma$-algebra or $\sigma$-field, denoted here as $\mathfrak{F}$, and should satisfy the following conditions:
 \begin{enumerate}
@@ -81,7 +79,13 @@ Let $\Omega:=\{\omega_1,\cdots,\omega_n\}, \forall n\in\mathbb{N}$, then the col
 \end{enumerate}\qed
 \end{defnx}
 \begin{exmpx}
-Given the sample space $\Omega:=\{\text{Meccan},\text{Medinan}\}$, the $\sigma$-algebra is $\mathfrak{F}=\{\{\text{Meccan}\},\{\text{Medinan}\},\Omega,\emptyset\}$.\qed
+Given the sample space $\Omega:=\{\text{Meccan},\text{Medinan}\}$, the $\sigma$-algebra is
+\begin{align}
+    \mathfrak{F}=&\{\text{Meccan},\text{Medinan},(\text{Meccan},\text{Medinan}),\nonumber\\
+    &\;\;(\text{Meccan},\text{Meccan}), (\text{Medinan},\text{Meccan}),\nonumber\\
+    &\;\;(\text{Medinan},\text{Medinan}),\emptyset\}
+\end{align}
+\qed
 \end{exmpx}
 \begin{defnx}[Probability Measure]\label{defn:probability_measure}
 Let $\Omega$ be the \textit{sample space}, $\mathfrak{F}$ be the $\sigma$-algebra, $\mathbb{P}$ be the probability measure, then the probability of a set $\mathscr{A}, \mathscr{A}\in\mathfrak{F}$, on the probability space $(\Omega,\mathfrak{F},\mathbb{P})$, denoted by $\mathbb{P}(\mathscr{A})$, satisfies the following properties:
@@ -93,14 +97,14 @@ Let $\Omega$ be the \textit{sample space}, $\mathfrak{F}$ be the $\sigma$-algebr
 \qed
 \end{defnx}
 
-Basically, the idea of Defn. \ref{defn:probability_measure} is to define the concept of "measure" in general sense, although above is a special measure called probability measure. One can think of this probability measure like a tape measure in simple sense. This tape measure has some properties that should be expected for a measurement tool. The first property or condition is that the probability measure has to be positive. Indeed, if we use any tape measure for measuring length, never will someone get a negative measure like -2cm length. It always has to be positive. Further, the second condition to expect is that for this type of tape measure called probability measure, the total measure of all objects available in the given space should be equal to 1. That is, the total is normalized to 1. Think of this like 100\% coverage if we measure all of the objects. Lastly, for any object, this tape measure should be able to measure the object through partitions, such that the measure of the union of these partitions is equal to the sum of the measure of each partition. All of these conditions are logical criteria for a general idea of "measure," although the normalization part above is unique for probability measure. Note that, the concept of proability measure here is should not be confined to measuring length as in the analogy, it should generalize to measuring volume and complex objects in general.
+Basically, the idea of Defn. \ref{defn:probability_measure} is to define the concept of "measure" in general sense, although above is a special measure called probability measure. As before, one can think of this probability measure like a tape measure in simple sense. This tape measure has some properties that should be expected for a measurement tool. The first property or condition is that the probability measure has to be positive. Indeed, if we use any tape measure for measuring length, never will someone get a negative measure like -2cm length. It always has to be positive. Further, the second condition to expect is that for this type of tape measure called probability measure, the total measure of all objects available in the given space should be equal to 1. That is, the total is normalized to 1. Think of this like 100\% coverage if we measure all of the objects. Lastly, for any object, this tape measure should be able to measure the object through partitions, such that the measure of the union of these partitions is equal to the sum of the measure of each partition. All of these conditions are logical criteria for a general idea of "measure," although the normalization part above is unique for probability measure. Note that, the concept of proability measure here should not be confined to measuring length as in the analogy, it should generalize to measuring volume and complex objects in general.
 \begin{defnx}[Random Variable]
 Let $\Omega$ be the sample space, and $\mathbb{R}$ be the set of all real numbers, then a random variable $X$ is a function defined as $X:\Omega\rightarrow\mathbb{R}$.\qed
 \end{defnx}
 \begin{exmpx}\label{ex:ayah_prob}
 Consider the example of drawing a random verse or \arb[trans]{'ayAt} \arb{'ayAt} again, what is the probability that it will be an \arb[trans]{'ayAt} \arb{'ayAt} from \textit{s\=urah l-baqara}'s \arb[trans]{'ayAt} \arb{A"'yaTu sUraT 'l-baqaraT} or the Chapter of Cow?
 
-The answer to this is 4.59\% probability, this is because there are 286 \arb[trans]{'ayAt} \arb{'ayAt} and there are 6236 verses in the Qur'\=an, so that the probability is $\frac{286}{6236}=0.04586$.
+The answer to this is 4.59\% probability, this is because there are 286 \arb[trans]{'ayAt} \arb{'ayAt} and there are 6236 verses in the Qur'\=an, so that the probability is $\frac{286}{6236}=0.04586$. The assumption here is that all of the \arb[trans]{'ayAt} \arb{'ayAt} in the Qur'\=an have equal chances of being picked up or drawn.
 \qed
 \end{exmpx}
 \begin{exmpx}\label{ex:binom_manual}
@@ -118,15 +122,19 @@ Now, the sample space consists of all possible sequences of 20 \arb{na`am} and \
         &\qquad\qquad\vdots\\
         &(\text{\arb{lA}},\text{\arb{lA}},\text{\arb{lA}},\cdots,\text{\arb{lA}})\}.
 \end{align}
-In total, there are $20^2=400$ possible samples in the sample space $\Omega$. Further, from Ex. \ref{ex:ayah_prob}, the probability of getting a \textit{s\=urah l-baqara}'s \arb[trans]{'ayAt} \arb{A"'yaTu sUraT 'l-baqaraT} is 0.0459 or 4.59\%. Therefore, if we assign \arb{lA}  and \arb{na`am} as either 0 or 1, respectively, then mathematically $\mathbb{P}(X=1)=0.0459$. In addition, the probability of getting an \arb[trans]{'ayAt} \arb{'ayAt} from other \textit{s\=urah} \arb{sUraT} would be $\mathbb{P}(X=0)=1-\mathbb{P}(X=1)=1-0.0459=0.9541$. 
+In total, there are $20^2=400$ possible samples in the sample space $\Omega$. Further, from Ex. \ref{ex:ayah_prob}, the probability of getting a \textit{s\=urah l-baqara}'s \arb[trans]{'ayAt} \arb{A"'yaTu sUraT 'l-baqaraT} is 0.0459 or 4.59\%. Therefore, if $X$ is the random variable of an event of drawing an \arb[trans]{'ayAt} from the Qur'\=an, if we assign \arb{lA}  and \arb{na`am} as either 0 or 1, respectively, then this would imply that mathematically $\mathbb{P}(X=1)=0.0459$. In addition, the probability of getting an \arb[trans]{'ayAt} \arb{'ayAt} from other \textit{s\=urah} \arb{sUraT} would be
 
-Further, let $Z$ be the random variable for the event of getting $n$ \arb{na`am} from 20 trials, then the problem is equivalent to finding the number of ways to choose 5 positions out of 20 in the collection or set. This can be solved using \textit{combination} formula as shown below:
+\begin{equation}    
+\mathbb{P}(X=0)=1-\mathbb{P}(X=1)=1-0.0459=0.9541.
+\end{equation}
+
+Further, let $Z$ be the random variable for the event of getting $n$ \arb{na`am} from 20 trials, then the problem is now equivalent to finding the number of ways to choose $n$ possible positions out of 20 in the collection or set. This can be solved using the \textit{combination} formula as shown below:
 \begin{align}
     n \choose x &= \frac{n!}{r!(n-r)!}\Rightarrow{20 \choose 5} = \frac{20!}{5!(20-5)!}=15,504. 
 \end{align}
-That is, there are 15,504 possible cases with 5 positions for \arb{na`am} in a 20 trial. Moreover, in each of these samples 5 has a probability of $\mathbb{P}(X=1)=0.0459$, while the remaining 15 has a probability of $\mathbb{P}(X=0)=0.9541$. So that,
+That is, there are 15,504 possible cases of 5 positions' configuration for \arb{na`am} in a 20 trial. Moreover, in each of these samples 5 has a probability of $\mathbb{P}(X=1)=0.0459$, while the remaining 15 has a probability of $\mathbb{P}(X=0)=0.9541$. So that,
 \begin{align}
-    \mathbb{P}(Z=5)&=184,756\times\mathbb{P}(X=1)^{5}\times\mathbb{P}(X=1)^{20-5}\nonumber\\
+    \mathbb{P}(Z=5)&=184,756\times\mathbb{P}(X=1)^{5}\times\mathbb{P}(X=0)^{20-5}\nonumber\\
     &=15,504\times0.0459^{5}\times0.9541^{20-5}\nonumber\\
     &=0.0016.
 \end{align}
