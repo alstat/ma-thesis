@@ -34,6 +34,7 @@ elseif active_theme == :dust
 else
     error("No active_theme=" * string(active_theme))
 end;
+colors = [parse(Color, i) for i in current_theme[:swatch]]
 
 crps, tnzl = load(QuranData());
 crpstbl = table(crps)
@@ -364,4 +365,41 @@ axislegend(ax_bar, elements, labels, title, orientation=:vertical, halign=:left)
 
 save("plots/plot2.pdf", f)
 
+# plot 3
+# for boxplot
+word_len = combine(
+    groupby(crpstbl.data, [:chapter, :verse]),
+    :word => x -> length(unique(x))
+);
+word_len
+ayah_len = combine(
+    groupby(word_len, :chapter),
+    :word_function => x -> Ref(vcat(x))
+);
+ayah_len
+xs = Int64[]; j = 1
+for i in ayah_len[!,:chapter]
+    xs = vcat(xs, repeat([i], inner=length(ayah_len[j,:word_function_function])))
+    j += 1
+end
+ys = vcat(ayah_len[!,:word_function_function]...);
+ayah_len[!,"location"] = place_rev;
+ayah_len_loc = combine(groupby(ayah_len, :location),
+    :word_function_function => x -> Ref(vcat(x...))
+)
+category_labels = vcat(
+    repeat([ayah_len_loc[1,:location]], inner=length(ayah_len_loc[1,2])),
+    repeat([ayah_len_loc[2,:location]], inner=length(ayah_len_loc[2,2]))
+);
+f = Figure(resolution=(500, 500));
+rainclouds!(Axis(
+    f[1, 1], xlabel="Word Count per Ayah",
+    yticks=(1:0.5:2.5, ["Meccan", "", "Medinan", ""])
+    ), category_labels, data_array;
+    orientation=:horizontal,
+    plot_boxplots = true, cloud_width=0.5, clouds=hist, hist_bins=50,
+    color = colors[[1,3]][indexin(category_labels, unique(category_labels))],
+    whiskercolor=colors[4], mediancolor=colors[4])
+    
 f
+save("plots/plot3.pdf", f)

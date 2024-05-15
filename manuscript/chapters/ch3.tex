@@ -36,7 +36,7 @@ Consider the random phenomenon or event where someone randomly picks a verse fro
 
 The possible output for such random event is either Meccan or Medinan. Suppose, we let Meccan to be denoted by $\omega_1$ and Medinan to be denoted $\omega_2$, then the sample space, which is the collection of all possible output is denoted as follows:
 \begin{equation}\label{ex_eq:sample_space}
-    \Omega:=\{\text{\arb{makkiyyaT}},\text{\arb{madaniyyaT}}\}=\{\text{Meccan}, \text{Medinan},\}=\{\omega_1,\omega_2,\}
+    \Omega:=\{\text{\arb{makkiyyaT}},\text{\arb{madaniyyaT}}\}=\{\text{Meccan}, \text{Medinan}\}=\{\omega_1,\omega_2\}
 \end{equation}
 It should be understood that $\emptyset$ is also included in $\Omega$, but is not written for brevity.
 \qed
@@ -141,7 +141,21 @@ That is, there are 15,504 possible cases of 5 positions' configuration for \arb{
 Hence, there is a 0.16\% probability of getting 5 \textit{s\=urah l-baqara}'s \arb[trans]{'ayAt} \arb{A"'yaTu sUraT 'l-baqaraT} when randomly drawing 20 \arb{'ayAt} from the Qur'\=an.
 \qed
 \end{exmpx}
-Note that Ex. \ref{ex:binom_manual} can be solved using a known formula in probability called \textit{Binomial} mass function. The general concept of probability distribution is defined in the following definitions.
+Note that Ex. \ref{ex:binom_manual} can be solved using a known formula in probability called \textit{Binomial} mass function, which is a model that can be used to describe the event of getting 5 \textit{s\=urah l-baqara}'s \arb[trans]{'ayAt} \arb{A"'yaTu sUraT 'l-baqaraT} on a 20 random samples of Qur'\=an's \arb{'ayAt}. The {Binomial} mass function is specifically a probability mass/density function model. The following example will discuss this concept followed by a proper definition of it.
+\begin{exmpx}
+Conside again the task of drawing an \arb[trans]{'ayAt} \arb{'ayAt} from the Qur'\=an, suppose the \arb[trans]{'ayAt} \arb{'ayAt} are separated into \arb{makkiyyaT} Meccan and \arb{madaniyyaT} Medinan, what is the probability of getting 10 \arb[trans]{kalimAt} \arb{kalimAt} in a sampled \arb[trans]{'ayAt} \arb{'ayAt} from \arb{makkiyyaT} Meccan \textit{surah}s \arb{sUr}?\\
+\textit{Solution:} To answer this, Figure \ref{fig:meccan_medinan_word_count_per_ayah} shows the \textit{histograms} with the \textit{box plots} and \textit{rainclouds} plots. The figure shows us how the \arb[trans]{kalimAt} \arb{kalimAt} in a sampled \arb[trans]{'ayAt} \arb{'ayAt} are distributed. To interpret this, the Medinan \arb{madaniyyaT} histogram shows that most of the \arb[trans]{'ayAt} \arb{'ayAt} have about 10 to 20 \arb[trans]{kalimAt} \arb{kalimAt} or words in total. This conclusion is based on the where the box of the box plot is located, which also correspond to the area where the bars of the histogram are high, and where most of the points or 'droplets' from rainclouds are congested. With that said, \textit{historgram}, \textit{box plot}, and \textit{rainclouds} are related and are telling the same story from different perspective. It should be noted that, the rainclouds plot is not common. 
+
+Now, comparing the numbers from Medinan \arb{madaniyyaT} to the Meccan's \textit{surah}s \arb{'l-suwaru 'l-makkiyyaTu}, the \arb[trans]{'ayAt} \arb{'ayAt} has about 5 to 15 \arb[trans]{kalimAt} \arb{kalimAt}.
+
+The question has not been answered yet though, the above discussions only explains how to interpret the graphs in Figure \ref{fig:meccan_medinan_word_count_per_ayah}. So to answer the question, one simply needs to total the number of \arb[trans]{'ayAt} \arb{'ayAt} with at most 10 \arb[trans]{kalimAt} \arb{kalimAt} or words and divide this with the total number of \arb[trans]{'ayAt} \arb{'ayAt} in \arb{'l-suwaru 'l-makkiyyaTu}.
+\qed
+\end{exmpx}
+\begin{figure}[!t]
+    \includegraphics[width=\textwidth]{img/plot3.pdf}
+    \caption{Probability density function plot of word count per \arb[trans]{'ayAt} \arb{'ayAt} by revelation location, in relation to its box plot and rainclouds.}
+    \label{fig:meccan_medinan_word_count_per_ayah}
+\end{figure}
 \begin{defnx}[Normal Density Function]
 Let $Y$ be a random variable and let $\mu\in\mathbb{R}$ and $\sigma\in\mathbb{R}$ be the mean and variance parameters, if $y$ is the random value, then the \textit{Gaussian} or \textit{Normal} density function is given below:
 \begin{equation}

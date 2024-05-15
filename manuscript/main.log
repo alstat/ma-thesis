@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2024.3.13)  14 MAY 2024 11:53
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2024.3.13)  15 MAY 2024 17:51
  restricted system commands enabled.
  file:line:error style messages enabled.
 **"/Users/al-ahmadgaidasaad/Documents/School/Islamic Studies/ma-thesis/manuscript/main.tex"
@@ -1148,13 +1148,13 @@ Chapter 1.
 
 
 ]
-<img/plot1.pdf, id=265, 602.25pt x 526.96875pt>
+<img/plot1.pdf, id=268, 602.25pt x 526.96875pt>
 File: img/plot1.pdf Graphic file (type pdf)
 <use img/plot1.pdf>
 Package luatex.def Info: img/plot1.pdf  used on input line 11.
 (luatex.def)             Requested size: 434.90039pt x 380.55096pt.
  [7<./img/plot1.pdf>] [8]
-<img/birmingham.jpg, id=314, 6259.385pt x 4954.51pt>
+<img/birmingham.jpg, id=317, 6259.385pt x 4954.51pt>
 File: img/birmingham.jpg Graphic file (type jpg)
 <use img/birmingham.jpg>
 Package luatex.def Info: img/birmingham.jpg  used on input line 24.
@@ -1195,22 +1195,29 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                 on input line 134.
 
 [27]
+warning  (file img/plot3.pdf) (pdf inclusion): PDF inclusion: found PDF version '1.7', but at most version '1.5' allowed
+<img/plot3.pdf, id=598, 376.40625pt x 376.40625pt>
+File: img/plot3.pdf Graphic file (type pdf)
+<use img/plot3.pdf>
+Package luatex.def Info: img/plot3.pdf  used on input line 155.
+(luatex.def)             Requested size: 434.90039pt x 434.93147pt.
+[28] [29<./img/plot3.pdf>]
 warning  (file img/plot1-desc.pdf) (pdf inclusion): PDF inclusion: found PDF version '1.7', but at most version '1.5' allowed
-<img/plot1-desc.pdf, id=600, 602.25pt x 526.96875pt>
+<img/plot1-desc.pdf, id=662, 602.25pt x 526.96875pt>
 File: img/plot1-desc.pdf Graphic file (type pdf)
 <use img/plot1-desc.pdf>
-Package luatex.def Info: img/plot1-desc.pdf  used on input line 178.
+Package luatex.def Info: img/plot1-desc.pdf  used on input line 192.
 (luatex.def)             Requested size: 434.90039pt x 380.55096pt.
-[28]) [29<./img/plot1-desc.pdf>]
+) [30] [31<./img/plot1-desc.pdf>]
 \openout2 = chapters/ch4.aux
  (./chapters/ch4.tex
 Chapter 4.
-[30
+[32
 
 
 
 
-]) [31]
+]) [33]
 \openout2 = chapters/ch5.aux
  (./chapters/ch5.tex
 Chapter 5.
@@ -1220,21 +1227,21 @@ Package luatex.def Info: img/plot1.pdf  used on input line 24.
 (luatex.def)             Requested size: 434.90039pt x 380.55096pt.
 
 warning  (file img/plot2.pdf) (pdf inclusion): PDF inclusion: found PDF version '1.7', but at most version '1.5' allowed
-<img/plot2.pdf, id=709, 602.25pt x 526.96875pt>
+<img/plot2.pdf, id=765, 602.25pt x 526.96875pt>
 File: img/plot2.pdf Graphic file (type pdf)
 <use img/plot2.pdf>
 Package luatex.def Info: img/plot2.pdf  used on input line 31.
 (luatex.def)             Requested size: 434.90039pt x 380.55096pt.
-[32
+[34
 
 
 
 
-] [33] [34<./img/plot2.pdf>]) [35]
+] [35] [36<./img/plot2.pdf>]) [37]
 \openout2 = chapters/ch6.aux
  (./chapters/ch6.tex
 Chapter 6.
-) [36
+) [38
 
 
 
@@ -1259,7 +1266,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--108
 []$\TU/lmtt/m/n/12 https://www[].birmingham[].ac[].uk/news[]-archive/2015/birmingham[]-quran[]
  []
 
-[37
+[39
 
 
 ]
@@ -1267,25 +1274,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 271--283
 \TU/lmtt/m/n/12 -embassy[]-in[]-riyadh[]-hosts[]-first[]-asian[]-quran[]-memorization[]-contest/$[]
  []
 
-[38]) [39] (./main.aux (./titlepage.aux) (./chapters/abstract.aux) (./chapters/ch1.aux) (./chapters/ch2.aux) (./chapters/ch3.aux) (./chapters/ch4.aux) (./chapters/ch5.aux) (./chapters/ch6.aux))
+[40]) [41] (./main.aux (./titlepage.aux) (./chapters/abstract.aux) (./chapters/ch1.aux) (./chapters/ch2.aux) (./chapters/ch3.aux) (./chapters/ch4.aux) (./chapters/ch5.aux) (./chapters/ch6.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 0954FFB89AA212FC01662AFE9197EDF3;6710.
 )
 
 Here is how much of LuaTeX's memory you used:
- 31038 strings out of 478285
+ 31055 strings out of 478285
  100000,1977958 words of node,token memory allocated
- 1270 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 16 glue, 4 kern, 1 glyph, 118 attribute, 104 glue_spec, 60 attribute_list, 2 write, 14 pdf_action nodes
-   avail lists: 2:1063,3:302,4:33,5:789,6:63,7:7229,8:123,9:486,10:24,11:400
- 49280 multiletter control sequences out of 65536+600000
+ 1282 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 16 glue, 4 kern, 1 glyph, 120 attribute, 104 glue_spec, 61 attribute_list, 2 write, 15 pdf_action nodes
+   avail lists: 2:1063,3:302,4:33,5:789,6:62,7:7229,8:123,9:397,10:24,11:400
+ 49287 multiletter control sequences out of 65536+600000
  287 fonts using 36730311 bytes
  120i,16n,119p,2355b,519s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.otf>{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></usr/local/texlive/2023/texmf-dist/fonts/truetype/public/amiri/Amiri-Regular.ttf></usr/local/texlive/2023/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-italic.otf></usr/local/texlive/2023/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-regular.otf></usr/local/texlive/2023/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-bold.otf></usr/local/texlive/2023/texmf-dist/fonts/type1/public/newpx/NewPXBMI.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/newpx/NewPXBMI_gnu.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmb10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/newtx/stxscr.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb>
-Output written on main.pdf (39 pages, 6210095 bytes).
+Output written on main.pdf (41 pages, 6406001 bytes).
 
-PDF statistics: 874 PDF objects out of 1000 (max. 8388607)
- 765 compressed objects within 8 object streams
- 178 named destinations out of 1000 (max. 131072)
+PDF statistics: 932 PDF objects out of 1000 (max. 8388607)
+ 806 compressed objects within 9 object streams
+ 182 named destinations out of 1000 (max. 131072)
  320 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -776,6 +776,9 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmb10.tfm
 OUTPUT chapters/ch3.aux
 INPUT ./chapters/ch3.tex
 INPUT ./chapters/ch3.tex
+INPUT ./img/plot3.pdf
+INPUT ./img/plot3.pdf
+INPUT ./img/plot3.pdf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/newpx/zplbmi.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/newpx/zplbmi.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/newpx/NewPXBMI_gnu.tfm
