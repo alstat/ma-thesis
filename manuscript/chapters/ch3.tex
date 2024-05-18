@@ -141,21 +141,106 @@ That is, there are 15,504 possible cases of 5 positions' configuration for \arb{
 Hence, there is a 0.16\% probability of getting 5 \textit{s\=urah l-baqara}'s \arb[trans]{'ayAt} \arb{A"'yaTu sUraT 'l-baqaraT} when randomly drawing 20 \arb{'ayAt} from the Qur'\=an.
 \qed
 \end{exmpx}
-Note that Ex. \ref{ex:binom_manual} can be solved using a known formula in probability called \textit{Binomial} mass function, which is a model that can be used to describe the event of getting 5 \textit{s\=urah l-baqara}'s \arb[trans]{'ayAt} \arb{A"'yaTu sUraT 'l-baqaraT} on a 20 random samples of Qur'\=an's \arb{'ayAt}. The {Binomial} mass function is specifically a probability mass/density function model. The following example will discuss this concept followed by a proper definition of it.
-\begin{exmpx}
-Conside again the task of drawing an \arb[trans]{'ayAt} \arb{'ayAt} from the Qur'\=an, suppose the \arb[trans]{'ayAt} \arb{'ayAt} are separated into \arb{makkiyyaT} Meccan and \arb{madaniyyaT} Medinan, what is the probability of getting 10 \arb[trans]{kalimAt} \arb{kalimAt} in a sampled \arb[trans]{'ayAt} \arb{'ayAt} from \arb{makkiyyaT} Meccan \textit{surah}s \arb{sUr}?\\
-\textit{Solution:} To answer this, Figure \ref{fig:meccan_medinan_word_count_per_ayah} shows the \textit{histograms} with the \textit{box plots} and \textit{rainclouds} plots. The figure shows us how the \arb[trans]{kalimAt} \arb{kalimAt} in a sampled \arb[trans]{'ayAt} \arb{'ayAt} are distributed. To interpret this, the Medinan \arb{madaniyyaT} histogram shows that most of the \arb[trans]{'ayAt} \arb{'ayAt} have about 10 to 20 \arb[trans]{kalimAt} \arb{kalimAt} or words in total. This conclusion is based on the where the box of the box plot is located, which also correspond to the area where the bars of the histogram are high, and where most of the points or 'droplets' from rainclouds are congested. With that said, \textit{historgram}, \textit{box plot}, and \textit{rainclouds} are related and are telling the same story from different perspective. It should be noted that, the rainclouds plot is not common. 
+Note that Ex. \ref{ex:binom_manual} can be solved using a known formula in probability called \textit{Binomial} mass function, which is a model that can be used to describe the event of getting 5 \textit{s\=urah l-baqara}'s \arb[trans]{'ayAt} \arb{A"'yaTu sUraT 'l-baqaraT} on a 20 random samples of Qur'\=an's \arb{'ayAt}. The {Binomial} mass function is specifically a probability mass/density function model. The following section will discuss the Statistical Graphs, which will cover the concept of frequency distribution, the one modeled or characterized by the probability mass/density function.
+\section{Statistical Graphs}\label{sec:stat_graphs_method}
+Graphs or plots are data visualization tools that are useful for exploratory data analysis apart from the Descriptive Statistics discussed above. It supplements the Descriptive Statistics findings through shapes visualized in the graphs. Among the popular statistical graphs is the bar graph. An example of this is given in Figure \ref{fig:ayah_word_count}. Other graphs used are the box plots and the density plots which is also in Figure \ref{fig:ayah_word_count}
+\subsection{Box, Density, and Histogram Plots}
+While most statistical plots are easy to understand like bar graphs and scatter plots, others like Box, Density, and Histogram plots may not be easy to comprehend for someone with no Statistical background. This section will discuss how it is interpreted. Let's use Figure \ref{fig:ayah_word_count}, Figure \ref{fig:ayah_word_count_with_desc} for easy reference in this section.
+\begin{figure}[!b]
+    \centering
+    \includegraphics[width=\textwidth]{img/plot1.pdf}
+    \caption{Statistics of the words and \arb[trans]{ayAt} \arb{ayAt} (verses) of the Qur'\=an}
+    \label{fig:ayah_word_count_with_desc}
+\end{figure}
 
-Now, comparing the numbers from Medinan \arb{madaniyyaT} to the Meccan's \textit{surah}s \arb{'l-suwaru 'l-makkiyyaTu}, the \arb[trans]{'ayAt} \arb{'ayAt} has about 5 to 15 \arb[trans]{kalimAt} \arb{kalimAt}.
+As shown in Figure \ref{fig:ayah_word_count_with_desc}, both the Box and Density plots are tied to each other. This is indeed the case because both are describing the same information but presented in different style of visualization. In fact, Histogram is also used to describe the same information as the Box and Density, and the three are therefore related. So much so, that the three can be put into one graph. As to how to interpret these, readers are referred to for further details \textcolor{red}{[to add reference]}.
+\begin{exmpx}[Frequency Distribution]\label{ex:frequency_distribution}
+Consider again the task of drawing an \arb[trans]{'ayAt} \arb{'ayAt} from the Qur'\=an, suppose the \arb[trans]{'ayAt} \arb{'ayAt} are separated into \arb{makkiyyaT} Meccan and \arb{madaniyyaT} Medinan, what is the probability of getting at most 10 \arb[trans]{kalimAt} \arb{kalimAt} or words in a sampled \arb[trans]{'ayAt} \arb{'ayAt} from \arb{makkiyyaT} Meccan \textit{surah}s \arb{sUr}?\\
+\textit{Solution:} To answer this, Figure \ref{fig:meccan_medinan_word_count_per_ayah} shows the \textit{histograms} with the \textit{box plots} and the \textit{rainclouds} plots. The figure shows the frequency of the \arb[trans]{kalimAt} \arb{kalimAt} or words in a sampled \arb[trans]{'ayAt} \arb{'ayAt}. This frequency describes the distribution of the \arb[trans]{kalimAt} \arb{kalimAt}. To interpret this, the Medinan \arb{madaniyyaT} histogram shows that most of the \arb[trans]{'ayAt} \arb{'ayAt} have about 10 to 20 \arb[trans]{kalimAt} \arb{kalimAt} or words in total. This conclusion is based on the where the box of the box plot is located, which also corresponds to the area where the bars of the histogram are high, and also where most of the points or 'droplets' from the rainclouds plot are congested. With that said, \textit{historgram}, \textit{box plot}, and \textit{rainclouds} are related and are telling the same story from different perspectives. It should be noted that, the rainclouds plot is not a common visualization tool. 
 
-The question has not been answered yet though, the above discussions only explains how to interpret the graphs in Figure \ref{fig:meccan_medinan_word_count_per_ayah}. So to answer the question, one simply needs to total the number of \arb[trans]{'ayAt} \arb{'ayAt} with at most 10 \arb[trans]{kalimAt} \arb{kalimAt} or words and divide this with the total number of \arb[trans]{'ayAt} \arb{'ayAt} in \arb{'l-suwaru 'l-makkiyyaTu}.
-\qed
-\end{exmpx}
+Now, comparing the numbers from Medinan \arb{madaniyyaT} to the \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu}, there are about 5 to 15 \arb[trans]{kalimAt} \arb{kalimAt} to expect per \arb[trans]{'ayAt} \arb{'ayAt} based on Figure \ref{fig:meccan_medinan_word_count_per_ayah}. 
+
 \begin{figure}[!t]
     \includegraphics[width=\textwidth]{img/plot3.pdf}
     \caption{Probability density function plot of word count per \arb[trans]{'ayAt} \arb{'ayAt} by revelation location, in relation to its box plot and rainclouds.}
     \label{fig:meccan_medinan_word_count_per_ayah}
 \end{figure}
+
+The question has not been answered yet though, the above discussions only explains how to interpret the graphs in Figure \ref{fig:meccan_medinan_word_count_per_ayah}. So to answer the question, one simply needs to total the number of \arb[trans]{'AyAt} \arb{'AyAt} with at most 10 \arb[trans]{kalimAt} \arb{kalimAt} or words and divide this with the total number of \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu}. The answer is as follows, and this is part of the result of this paper: there are 4613 \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu}, and out of these is 2602 \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu} with at most 10 words. Therefore, the probability is $\frac{2602}{4613}=0.612$ or 61.2\% probability. Formally, if $X$ is the random variable of the event of observing at most 10 \arb[trans]{kalimAt} \arb{kalimAt} in a \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu}, then 
+\begin{align}
+    \mathbb{P}(X\leq 10)=&\sum_{x=0}^{10}\mathbb{P}(X=x)\label{ex_eq:prob_lesseq_10}\\
+    =&\mathbb{P}(X=0)+\mathbb{P}(X=1)+\mathbb{P}(X=2)+\cdots+\mathbb{P}(X=10)\label{ex_eq:freq_dist_prob1..10}\\
+    =&0+\frac{24}{4613}+\frac{172}{4613}+\cdots+\frac{222}{4613}\label{ex_eq:freq_dist_probval1..10}\\
+    =&\frac{2602}{4613}=0.612\label{ex_eq:prob_0612}
+\end{align}
+
+From Eq. \ref{ex_eq:freq_dist_prob1..10}, $\mathbb{P}(X=0)$ is the probability of observing zero \arb[trans]{kalimaT} \arb{kalimaT} in a \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu}, and $\mathbb{P}(X=1)$ is the probability of observing one \arb[trans]{kalimaT} \arb{kalimaT} in a \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu}, and so on. The numbers in Eq. \ref{ex_eq:freq_dist_probval1..10} are the number of \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu} having zero, one, two, to ten \arb[trans]{kalimAt} \arb{kalimAt}.
+\qed
+\end{exmpx}
+\section{Population and Sample}
+Statistics is a branch of science that is concerned with understanding how the data behave based on a sample---a small set of the said data. It uses statistical methodologies to understand these behavior such as probability mass/density function, and use the findings from these tools on the sampled data as a conclusion for the population---the overall data.
+
+Figure \ref{fig:pop_sample} illustrates the relation of population and sample data. A good example of this is the political surveys on the pulse of the nation on the candidates prior to election. Private entities like PulseAsia\footnote{\url{https://pulseasia.ph/}} and Social Weather Station\footnote{\url{https://www.sws.org.ph/swsmain/home/}} (SWS) do their survey by  sampling from the total population of the Philippines, hence the name survey.
+
+The statistics computed from the surveys like the percentage of votes for particular political candidate are referred as estimates, this is because the computation was done in a sample of the population and not on the population itself. It is therefore important that for these estimates to be accurate representation of the nation's opinion, it has to be representative of the population. That is, the sample shouldn't be bias and leaning to the opinions of the few only and not of the whole nation.
+
+The importance of the sample data as illustrated below follows from the fact that it saves time and cost since interviewing 2500 compared to 100,000 is better compromise for the estimated vote percentages. Further, since these samples requires to well represent the population, the computations of the statistics are estimated using statistical models, like probability mass/density functions, and other models like linear and nonlinears discussed in Section \ref{sec:stat_modeling}. The next example will illustrate the idea population and sample, and how probabilistic modeling can help in understanding insights and answering more questions.
+\begin{figure}[t]
+    \includegraphics[width=\textwidth]{img/pop_sample.pdf}
+    \caption{Population and sample illustration}
+    \label{fig:pop_sample}
+\end{figure}
+\begin{exmpx}\label{ex:population_sample_distribution_meccan_words}
+Consider the task of sampling 100 \arb[trans]{'AyAt} \arb{'AyAt} from the population of \arb[trans]{'AyAt 'l-makkiyyaT}, describe the statistics of the population and the sample.\\
+\textit{Solution:} In Statistics, there are several ways to sample from data, the simplest approach is through the use of \textit{uniform distribution}, that is, the sampling assumes that all data from the population are distributed equally, in the sense that all data points have equal chance of being selected. The other approach is through a \textit{weighted distribution}, where a probability is assigned to each of the data points in the population, so that, the selection will be biased to those with high probability. Figure \ref{fig:meccan_words_sampling} shows the graphs or plots of the population distribution of \arb[trans]{kalimAtu 'l-makkiyyaT} \arb{kalimAtu 'l-makkiyyaT}, which is presented as the top plot, this distribution of \arb{kalimAtu 'l-makkiyyaT} is the same one shown in the bottom plot of Figure \ref{fig:meccan_medinan_word_count_per_ayah}. 
+
+To draw 100 samples from the said population, a simple random sampling without replacement (SRSWOR) is used for selecting or drawing samples. SRSWOR works by randomly selecting sample from the population and then setting it aside as the first sample. The resulting 100 samples are plotted in the bottom plot of Figure \ref{fig:meccan_words_sampling}.
+
+As discussed above, the sample needs to be representative of the population. Figure \ref{fig:meccan_words_sampling} shows that the sampling distribution has more or less the same shape as the population. So that, the statistics are shown in Table \ref{tbl:meccan_words_pop_sample_stats}. From the said table, it can be seen that in terms of centrality, the both data are almost the same, for example the mean is 12.42 for the population and 10.64 for the sample. The reason why the mean in the population is much higher is due to the outlier in the population, which is seen in the extent of the tail of the Kernel Density Estimate in Figure \ref{fig:meccan_words_sampling}. In fact, this is seen in the Median in Table \ref{tbl:meccan_words_pop_sample_stats}, where  the estimate are almost the same. This is because the median is not affected by the outlier. However, the variance did suffer from the outlier in the population, with 50\% reduction in the sample variance, 54.15 to 48.96. The sample will less likely get the outlier as the sample since the outlier is only one observation from the 4163 total Meccan surahs.
+
+The estimates got from the sample ideally are taken from a probabilistic model fitted into the sample data. This computation will be discussed in the next example.
+
+\begin{table}
+    \caption{Descriptive statistics of the population and sample data of \arb[trans]{kalimAtu 'l-makkiyyaT} \arb{kalimAtu 'l-makkiyyaT}}
+    \label{tbl:meccan_words_pop_sample_stats}
+    \begin{tabularx}{\textwidth}[!h]{XXXXl}
+        \toprule
+        Data&Mean&Median&Variance&Std. Deviation\\
+        \midrule
+        Population&10.28&8&54.15&7.36\\
+        Sample&10.64&9&48.96&7.00\\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+\begin{figure}[t]
+    \includegraphics[width=\textwidth]{img/plot5.pdf}
+    \caption{Population and sample distribution of Meccan }
+    \label{fig:meccan_words_sampling}
+\end{figure}
+\qed
+\end{exmpx}
+\begin{exmpx}
+Consider again Ex. \ref{ex:population_sample_distribution_meccan_words}, suppose the sample data is the only data available, how will you compute the probability of getting exactly 35 \arb[trans]{kalimAtu 'l-sUratu 'l-makkiyyaTu} \arb{kalimAtu 'l-sUratu 'l-makkiyyaTu}?\\
+\textit{Solution:} To answer this question, one might approach this using the frequency distribution as in Ex. \ref{ex:frequency_distribution}. However, the use of frequency distribution from the said example is applicable since that deals with the population data, which is already the true probability, and there is no need to do some estimation. It is like try to get the average height of male Filipinos in the Philippines by doing census across the population, for such case, why would you do an estimate if you have all the census data of all heights of the Filipino, wouldn't it be easier to just do the average computation directly? This is the analogy for the frequency distribution used in Ex. \ref{ex:frequency_distribution}, that is, no need to do some estimation. However, for this problem, the assumption is that only the sample is available, that is, not all of the population is available. With that said, the best solution is to do some estimation. Now, doing an estimation is possible using the samples only, that is, using the idea of frequency distribution but this time applying it on the sample. This is becaus the sample was done using a random sampling, which more or less representative of the population. However, using this approach may possess a problem, let's see what that problem will likely be by forcing the approach in Ex. \ref{ex:frequency_distribution}, following the computation as in Eq. (\ref{ex_eq:prob_lesseq_10}) to Eq. (\ref{ex_eq:prob_0612}). 
+
+Let $X$ again be the random variable of an event of observing 35 \arb[trans]{kalimAt} \arb{kalimAt}, this time from the sample, then
+\begin{equation}\label{eq:probx_eq_35}
+    \mathbb{P}(X=35)=\begin{cases}
+        \displaystyle\frac{0}{250}=0,&\text{if sample data}\\
+        \displaystyle\frac{5}{4613}=0.0011,&\text{if population data}
+    \end{cases}
+\end{equation}
+From the Eq. \ref{eq:probx_eq_35}, it shows that if we use the sample data for estimating the probability of observing 35 \arb{kalimAt}, then the answer above is 0, meaning by estimate there is a 0 chance of observing a 35 \arb{kalimAt} from a \arb[trans]{'AyAtu 'l-makkiyyaTu} \arb{'l-sUrAtu 'l-makkiyyaTu}. This conclusion is indeed misleading, since according to the population data, there are \arb[trans]{'AyAtu 'l-makkiyyaTu} \arb{'AyAtu 'l-makkiyyaTu} that has 35 \arb[trans]{kalimAt} \arb{kalimAt}. 
+
+So, how to properly estimate this then? This is where the concept of probabilistic modeling comes in. For this problem, the data is count, and that the event of observing 10 \arb[trans]{kalimAtu 'l-sUratu 'l-makkiyyaTu} \arb{kalimAtu 'l-sUratu 'l-makkiyyaTu} in an \arb{'AyaT} is known to be best modeled by a Poisson distribution defined in Defn. \ref{defn:poisson_mass_function}. Ex. will discuss how to solve this.   44 
+\end{exmpx}
+\section{Probability Distributions}
+\begin{defnx}[Poisson Mass Function]\label{defn:poisson_mass_function}
+Let $X$ be a random variable and let $\lambda>0$ be a parameter, then if $x$ is the random value, then the \textit{Poisson} mass function is given by:
+\begin{equation}
+    \mathbb{P}(X=x)=\frac{\lambda^x\exp(-\lambda)}{x!}
+\end{equation}
+\end{defnx}
 \begin{defnx}[Normal Density Function]
 Let $Y$ be a random variable and let $\mu\in\mathbb{R}$ and $\sigma\in\mathbb{R}$ be the mean and variance parameters, if $y$ is the random value, then the \textit{Gaussian} or \textit{Normal} density function is given below:
 \begin{equation}
@@ -183,15 +268,8 @@ Let $\mathbf{X}$ be a vector random variable with a random value $\mathbf{x}:=[x
     \end{cases}
 \end{align}
 \end{defnx}
-\section{Statistical Graphs}\label{sec:stat_graphs_method}
-Graphs or plots are data visualization tools that are useful for exploratory data analysis apart from the Descriptive Statistics discussed above. It supplements the Descriptive Statistics findings through shapes visualized in the graphs. Among the popular statistical graphs is the bar graph. An example of this is given in Figure \ref{fig:ayah_word_count}. Other graphs used are the box plots and the density plots which is also in Figure \ref{fig:ayah_word_count}
-\subsection{Box, Density, and Histogram Plots}
-While most statistical plots are easy to understand like bar graphs and scatter plots, others like Box, Density, and Histogram plots may not be easy to comprehend for someone with no Statistical background. This section will discuss how it is interpreted. Let's use Figure \ref{fig:ayah_word_count}, Figure \ref{fig:ayah_word_count_with_desc} for easy reference in this section.
-\begin{figure}[!b]
-    \centering
-    \includegraphics[width=\textwidth]{img/plot1-desc.pdf}
-    \caption{Statistics of the words and \arb[trans]{ayAt} \arb{ayAt} (verses) of the Qur'\=an}
-    \label{fig:ayah_word_count_with_desc}
-\end{figure}
 
-As shown in Figure \ref{fig:ayah_word_count_with_desc}, both the Box and Density plots are tied to each other. This is indeed the case because both are describing the same information but presented in different style of visualization. In fact, Histogram is also used to describe the same information as the Box and Density, and the three are therefore related. So much so, that the three can be put into one graph. As to how to interpret these, readers are referred to for further details \textcolor{red}{[to add reference]}.
+\section{Hypothesis Testing}
+\section{Statistical Modeling}\label{sec:stat_modeling}
+\subsection{Frequentist}
+\subsection{Bayesian}

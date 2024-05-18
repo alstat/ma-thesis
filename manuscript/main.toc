@@ -10,31 +10,40 @@
 \contentsline {chapter}{\numberline {3}Background on Probability and Statistics}{20}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Descriptive Statistics}{20}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Probability Theory}{21}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Statistical Graphs}{30}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Box, Density, and Histogram Plots}{30}{subsection.3.3.1}%
-\contentsline {chapter}{\numberline {4}Methodology}{32}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Topic Modeling}{32}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Latent Dirichlet Allocation}{32}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Large Language Models}{32}{subsection.4.1.2}%
-\contentsline {subsubsection}{Bidirectional Encoder Representation from Transformer}{33}{subsubsection*.4}%
-\contentsline {subsubsection}{Generative Pre-Trained Transformer}{33}{subsubsection*.5}%
-\contentsline {section}{\numberline {4.2}Retrieval-Augmented Generation}{33}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Julia Code Setup}{33}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Python Code Setup}{33}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Results and Discussions}{34}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Descriptive Statistics}{34}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Verses}{36}{subsection.5.1.1}%
-\contentsline {section}{\numberline {5.2}Morphological Analysis}{36}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Structural Analysis}{36}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Concentric Structure}{36}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Mathematical Structure}{36}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Discussions on Islamic Philosophy of Qur'\=an's Structural Analysis}{36}{subsection.5.3.3}%
-\contentsline {section}{\numberline {5.4}Topic Modeling}{37}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Latent Dirichlet Allocation}{37}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Bidirectional Encoder Representation from Transformer}{37}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}Generative Pre-Trained Transformer}{37}{subsection.5.4.3}%
-\contentsline {section}{\numberline {5.5}Relating to other Islamic Texts and Analyses}{37}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Retrieval-Augmented Generation Approach}{37}{subsection.5.5.1}%
-\contentsline {section}{\numberline {5.6}Limitations of the Models}{37}{section.5.6}%
-\contentsline {chapter}{\numberline {6}Conclusion and Recommendation}{38}{chapter.6}%
-\contentsline {section}{References}{39}{section*.6}%
+\contentsline {section}{\numberline {3.3}Statistical Graphs}{27}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Box, Density, and Histogram Plots}{28}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}Population and Sample}{31}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Probability Distributions}{35}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Hypothesis Testing}{37}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Statistical Modeling}{37}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Frequentist}{37}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Bayesian}{37}{subsection.3.7.2}%
+\contentsline {chapter}{\numberline {4}Background on Natural Language Processing}{38}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Complex Models with Machine Learning}{38}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Word Embeddings}{38}{section.4.2}%
+\contentsline {section}{\numberline {4.3}NLP using Julia}{38}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Methodology}{39}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Topic Modeling}{39}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Latent Dirichlet Allocation}{39}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Large Language Models}{39}{subsection.5.1.2}%
+\contentsline {subsubsection}{Bidirectional Encoder Representation from Transformer}{40}{subsubsection*.4}%
+\contentsline {subsubsection}{Generative Pre-Trained Transformer}{40}{subsubsection*.5}%
+\contentsline {section}{\numberline {5.2}Retrieval-Augmented Generation}{40}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Julia Code Setup}{40}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Python Code Setup}{40}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Results and Discussions}{41}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Descriptive Statistics}{41}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Verses}{43}{subsection.6.1.1}%
+\contentsline {section}{\numberline {6.2}Morphological Analysis}{43}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Structural Analysis}{43}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Concentric Structure}{43}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Mathematical Structure}{43}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Discussions on Islamic Philosophy of Qur'\=an's Structural Analysis}{43}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Topic Modeling}{44}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Latent Dirichlet Allocation}{44}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Bidirectional Encoder Representation from Transformer}{44}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Generative Pre-Trained Transformer}{44}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Relating to other Islamic Texts and Analyses}{44}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Retrieval-Augmented Generation Approach}{44}{subsection.6.5.1}%
+\contentsline {section}{\numberline {6.6}Limitations of the Models}{44}{section.6.6}%
+\contentsline {section}{References}{45}{section.6.6}%

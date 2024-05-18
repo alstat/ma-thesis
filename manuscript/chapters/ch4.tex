@@ -1,24 +1,4 @@
-\chapter{Methodology}
-This chapter is organized as follows: Section \ref{sec:topic_modeling_method} will discuss the concept of Topic Modeling, Section \ref{sec:llm_method} will discuss the concept of Large Language Models, and finally Section \ref{sec:code_setup} will discuss how to implement this in Julia programming language.
-\section{Topic Modeling}\label{sec:topic_modeling_method}
-As presented in Chapter \ref{ch:introduction}, the first objective is to extract the thematic themes of \textit{s\=urahs} \arb{sUr} with at least 1000 words. In Statistics and Machine Learning, this task is called Topic Modeling. There are several ways to do this, but the popular methodology is to use the Latent Dirichlet Allocation (LDA) discussed in the next section.
-\subsection{Latent Dirichlet Allocation}\label{sec:lda}
-Latent Dirichlet Allocation (LDA) is a Statistical methodology that is based on Bayesian inference \cite{bayes,laplace1986}. It is a generative probabilisitic model for collection of discrete data such as text corpora \cite{blei2003latent}. The main formula is defined below:
-\begin{defnx}[Latent Dirichlet Allocation]
-Let $\mathbf{W},\mathbf{Z},\boldsymbol{\theta},\boldsymbol{\varphi}$ be the random variables, and let $\alpha$ and $\beta$ be the hyper-parameters, then the probability of generating a document is
-\begin{equation}
-    \mathbb{P}(\mathbf{W},\mathbf{Z},\boldsymbol{\theta},\boldsymbol{\varphi})=\prod_{j=1}^m\mathbb{P}(\boldsymbol{\theta}_j;\alpha)\prod_{i=1}^{k}\mathbb{P}(\boldsymbol{\varphi};\beta)\prod_{t=1}^{n}\mathbb{P}(\mathbf{Z}_{j,t}|\boldsymbol{\theta}_j)\mathbb{P}(\mathbf{W}_{j,t}|\boldsymbol{\varphi}_{\mathbf{Z}_{j,t}})
-\end{equation}
-\end{defnx}
-\subsection{Large Language Models}\label{sec:llm_method}
-Generative Artificial Intelligence or GenAI for short has been making waves on its effectiveness to generate texts, images, audio, video, etc. It has elevated humanity to a new level of capability. However, behind this amazing capabilities is that GenAI is by design a mathematical formula that are called \textit{model}. There are several types of \textit{models}, and one of those is the Large Language Model (LLM). The following section will discuss what LLM is and its mathematical formulation.
-\subsubsection{Bidirectional Encoder Representation from Transformer}
-\subsubsection{Generative Pre-Trained Transformer}
-\section{Retrieval-Augmented Generation}
-The problem with LLM is that it was only trained on huge but limited data, and is therefore not able to infer what should be the context when asked.
-\section{Julia Code Setup}\label{sec:code_setup}
-This section will discuss the coding setup. As mentioned in Chapter \ref{ch:introduction}, the main programming language to use is Julia. As such, it is necessary to present where the codes will be stored so that readers are able to reproduce it. All of the codes will be saved in Github repository accessible through the following link:
-\begin{center}
-    \url{https://github.com/alstat/ma-thesis/tree/main/codes}
-\end{center}
-\section{Python Code Setup}\label{sec:py_code_setup}
+\chapter{Background on Natural Language Processing}
+\section{Complex Models with Machine Learning}
+\section{Word Embeddings}
+\section{NLP using Julia}

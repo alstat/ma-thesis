@@ -44,7 +44,6 @@ http_response = HTTP.get(qrn_order_url)
 quran_order = DataFrame(CSV.File(http_response.body, header=true, delim="\t"))
 quran_order |> show
 
-# for barplot
 ayah_freq = combine(
     groupby(crpstbl.data, :chapter),
     :verse => x -> length(unique(x))
@@ -203,7 +202,7 @@ word_means = combine(
 mean(word_means[!,:ys_function])
 median(word_means[!,:ys_function])
 std(word_means[!,:ys_function])
-
+f
 save("plots/plot1.pdf", f)
 
 # plot 2
@@ -391,6 +390,9 @@ category_labels = vcat(
     repeat([ayah_len_loc[1,:location]], inner=length(ayah_len_loc[1,2])),
     repeat([ayah_len_loc[2,:location]], inner=length(ayah_len_loc[2,2]))
 );
+data_array = vcat(
+    ayah_len_loc[1,2],ayah_len_loc[2,2]
+);
 f = Figure(resolution=(500, 500));
 rainclouds!(Axis(
     f[1, 1], xlabel="Word Count per Ayah",
@@ -403,3 +405,5 @@ rainclouds!(Axis(
     
 f
 save("plots/plot3.pdf", f)
+
+# 
