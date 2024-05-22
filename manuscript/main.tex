@@ -7,10 +7,16 @@
 \usepackage[framemethod=TikZ]{mdframed}
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{arabluatex}
+\usepackage{tikz}
+\usetikzlibrary{shapes,backgrounds,automata,chains,arrows,positioning,calc,patterns}
+\usetikzlibrary{decorations.markings,arrows}
+\usepackage{pgfplots}
 \usepackage{pifont}
 \usepackage{newpxmath} % math font is Palatino compatible
 % \usepackage[nomath]{fontspec}
 % \usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{pdflscape}
 \usepackage{setspace}
 \usepackage[explicit,compact]{titlesec}
 \usepackage[hidelinks]{hyperref}
@@ -54,6 +60,28 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 \begin{mdframed}[]\relax%
 \label{#2}}{\end{mdframed}}
 
+\newcommand{\CI}{\mathrel{\perp\mspace{-10mu}\perp}}
+\newcommand{\nCI}{\centernot{\CI}}
+\newcommand{\ein}{E_{\mathrm{in}}}
+\newcommand{\eout}{E_{\mathrm{out}}}
+\newcommand{\Var}{\mathbb{V}\text{ar}}
+\newcommand{\ev}{\mathbb{E}}
+\newcommand{\var}{\mathbb{V}\text{ar}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\af}{\varrho}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\D}{\operatorname{d}}
+\newcommand{\dkl}{\mathbb{D}_{\mathrm{KL}}}
+\newcommand{\f}{\mathbb{F}}
+\newcommand{\set}{\overset{\text{set}}{=}}
+\newcommand{\tr}{\mathrm{tr}}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\newcommand{\g}{\mathbb{G}}
+\newcommand{\idxa}{\textrm{\ding{70}}}
+\newcommand{\idxb}{\textrm{\ding{72}}}
+\newcommand{\idxc}{\textrm{\ding{86}}}
+\newcommand{\post}{\textrm{\ding{71}}}
+\newcommand{\F}{\mathtt{f}}
 \newtheorem*{remark}{Remark}
 \newtheorem{thm}{Theorem}[section]
 \newtheorem{prop}{Proposition}[section]
@@ -77,7 +105,7 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 % for full expanding width table
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 
-\def\title{\Large\bf Text Analytics of the Qur'\=an using Statistical and\\Large Language Models}
+\def\title{\Large\bf Text Analytics of the Qur'\=an using \\Bayesian Statistics and Large Language Models}
 \def\author{Al-Ahmadgaid Bahauddin Asaad}
 \def\program{\bf Master of Arts in Islamic Studies}
 \def\ddate{May 2025}
@@ -97,7 +125,7 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 \begin{document}
 \include{titlepage.tex}
 \doublespacing
-% \include{chapters/dedication.tex}
+\include{chapters/dedication.tex}
 % \include{chapters/acknowledgement.tex}
 \tableofcontents\newpage
 \listoffigures
@@ -108,6 +136,8 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 \include{chapters/ch4.tex}
 \include{chapters/ch5.tex}
 \include{chapters/ch6.tex}
+\include{chapters/ch7.tex}
+\include{chapters/ch8.tex}
 \bibliographystyle{apacite}
 \bibliography{reference}
 \end{document}

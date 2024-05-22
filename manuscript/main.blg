@@ -2,6 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: titlepage.aux
+A level-1 auxiliary file: chapters/dedication.aux
 A level-1 auxiliary file: chapters/abstract.aux
 A level-1 auxiliary file: chapters/ch1.aux
 A level-1 auxiliary file: chapters/ch2.aux
@@ -9,6 +10,8 @@ A level-1 auxiliary file: chapters/ch3.aux
 A level-1 auxiliary file: chapters/ch4.aux
 A level-1 auxiliary file: chapters/ch5.aux
 A level-1 auxiliary file: chapters/ch6.aux
+A level-1 auxiliary file: chapters/ch7.aux
+A level-1 auxiliary file: chapters/ch8.aux
 The style file: apacite.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
@@ -21,54 +24,59 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: reference.bib
 Warning--I'm ignoring Neuwirth_2007's extra "title" field
---line 252 of file reference.bib
+--line 273 of file reference.bib
 Warning--entry type for "wikibirmingham" isn't style-file defined
---line 262 of file reference.bib
+--line 283 of file reference.bib
 Warning--entry type for "mb2022" isn't style-file defined
---line 270 of file reference.bib
+--line 291 of file reference.bib
 Warning--entry type for "bu2015" isn't style-file defined
---line 278 of file reference.bib
+--line 299 of file reference.bib
+Warning--I didn't find a database entry for "Haykin1998"
+Warning--I didn't find a database entry for "mccullochpitts"
+Warning--I didn't find a database entry for "nndeepl"
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No address in pewresearch
-You've used 25 entries,
+Warning--`others' not consistent with 6th ed. of the APA Manual
+Warning--No journal in radford2018improving
+You've used 28 entries,
             6951 wiz_defined-function locations,
-            1450 strings with 16140 characters,
-and the built_in function-call counts, 46861 in all, are:
-= -- 6068
-> -- 342
-< -- 2079
-+ -- 1990
-- -- 57
-* -- 2817
-:= -- 8131
-add.period$ -- 117
-call.type$ -- 25
-change.case$ -- 456
+            1471 strings with 16856 characters,
+and the built_in function-call counts, 53191 in all, are:
+= -- 6802
+> -- 419
+< -- 2378
++ -- 2314
+- -- 65
+* -- 3228
+:= -- 9234
+add.period$ -- 127
+call.type$ -- 28
+change.case$ -- 507
 chr.to.int$ -- 0
-cite$ -- 51
-duplicate$ -- 1134
-empty$ -- 1958
-format.name$ -- 490
-if$ -- 9250
+cite$ -- 58
+duplicate$ -- 1355
+empty$ -- 2206
+format.name$ -- 639
+if$ -- 10428
 int.to.chr$ -- 0
-int.to.str$ -- 79
+int.to.str$ -- 88
 missing$ -- 0
-newline$ -- 636
-num.names$ -- 206
-pop$ -- 1014
+newline$ -- 720
+num.names$ -- 230
+pop$ -- 1104
 preamble$ -- 1
-purify$ -- 108
+purify$ -- 120
 quote$ -- 0
-skip$ -- 3298
+skip$ -- 3710
 stack$ -- 0
-substring$ -- 2207
-swap$ -- 673
-text.length$ -- 89
+substring$ -- 2553
+swap$ -- 787
+text.length$ -- 96
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 2664
-warning$ -- 1
-while$ -- 184
+type$ -- 2904
+warning$ -- 3
+while$ -- 233
 width$ -- 0
-write$ -- 735
-(There were 5 warnings)
+write$ -- 853
+(There were 10 warnings)

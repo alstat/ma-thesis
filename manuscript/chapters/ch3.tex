@@ -1,4 +1,4 @@
-\chapter{Background on Probability and Statistics}
+\chapter{Background on Probability and Statistics}\label{ch:statistics}
 This chapter will discuss some statistical concepts that will be used to understand and build up the ideas behind the methodology of this paper, which is presented in the next chapter. With that said, the discussions are organized as follows: Section \ref{sec:descriptive_stat_method} will present the concept of Descriptive Statistics; Section \ref{sec:probability_method} will discuss the Probability Theory; and, Section \ref{sec:stat_graphs_method} will discuss the Statistical graphs or plots.
 
 Further, the topics discussed here may be self-explanatory for Statisticians, ML researchers or those with Mathematical background. However, for the benefit of readers coming from humanities background, the paper will present the methodology as follows: mathematical formulas are formalized for purpose of brevity through Definition, Proposition, and Corollary, but immediate to these are explanations or examples aimed to be simple enough for non-statistician readers. As a guide, statisticians or ML researchers can simply read the Definition, Proposition, and/or Corollary. Whereas for humanities readers, the reading shouldn't not stress too much on the said mathematical formalities, and instead proceed to the discussions or examples immediate to it to aid with the understanding.
@@ -88,11 +88,11 @@ Given the sample space $\Omega:=\{\text{Meccan},\text{Medinan}\}$, the $\sigma$-
 \qed
 \end{exmpx}
 \begin{defnx}[Probability Measure]\label{defn:probability_measure}
-Let $\Omega$ be the \textit{sample space}, $\mathfrak{F}$ be the $\sigma$-algebra, $\mathbb{P}$ be the probability measure, then the probability of a set $\mathscr{A}, \mathscr{A}\in\mathfrak{F}$, on the probability space $(\Omega,\mathfrak{F},\mathbb{P})$, denoted by $\mathbb{P}(\mathscr{A})$, satisfies the following properties:
+Let $\Omega$ be the \textit{sample space}, $\mathfrak{F}$ be the $\sigma$-algebra, $ p$ be the probability measure, then the probability of a set $\mathscr{A}, \mathscr{A}\in\mathfrak{F}$, on the probability space $(\Omega,\mathfrak{F}, p)$, denoted by $ p(\mathscr{A})$, satisfies the following properties:
 \begin{enumerate}
-    \item Non-negativity: For any set $\mathscr{A}, \mathbb{P}(\mathscr{A})\geq 0$
-    \item Normalization: $\mathbb{P}(\Omega)=1$
-    \item Countable additivity: For any sequence of disjoint sets $\mathscr{A}_1,\mathscr{A}_2,\cdots$ in $\mathfrak{F}$, such that the union $\bigcup_{\forall i \in\mathbb{N}}\mathscr{A}_i$ is also in $\mathfrak{F}$, we have: $\mathbb{P}\left(\displaystyle\bigcup_{\forall i\in\mathbb{N}}\mathscr{A}_i\right)=\displaystyle\sum_{\forall \in\mathbb{N}}\mathbb{P}(\mathscr{A}_i)$
+    \item Non-negativity: For any set $\mathscr{A},  p(\mathscr{A})\geq 0$
+    \item Normalization: $ p(\Omega)=1$
+    \item Countable additivity: For any sequence of disjoint sets $\mathscr{A}_1,\mathscr{A}_2,\cdots$ in $\mathfrak{F}$, such that the union $\bigcup_{\forall i \in\mathbb{N}}\mathscr{A}_i$ is also in $\mathfrak{F}$, we have: $ p\left(\displaystyle\bigcup_{\forall i\in\mathbb{N}}\mathscr{A}_i\right)=\displaystyle\sum_{\forall \in\mathbb{N}} p(\mathscr{A}_i)$
 \end{enumerate}
 \qed
 \end{defnx}
@@ -122,19 +122,19 @@ Now, the sample space consists of all possible sequences of 20 \arb{na`am} and \
         &\qquad\qquad\vdots\\
         &(\text{\arb{lA}},\text{\arb{lA}},\text{\arb{lA}},\cdots,\text{\arb{lA}})\}.
 \end{align}
-In total, there are $20^2=400$ possible samples in the sample space $\Omega$. Further, from Ex. \ref{ex:ayah_prob}, the probability of getting a \textit{s\=urah l-baqara}'s \arb[trans]{'ayAt} \arb{A"'yaTu sUraT 'l-baqaraT} is 0.0459 or 4.59\%. Therefore, if $X$ is the random variable of an event of drawing an \arb[trans]{'ayAt} from the Qur'\=an, if we assign \arb{lA}  and \arb{na`am} as either 0 or 1, respectively, then this would imply that mathematically $\mathbb{P}(X=1)=0.0459$. In addition, the probability of getting an \arb[trans]{'ayAt} \arb{'ayAt} from other \textit{s\=urah} \arb{sUraT} would be
+In total, there are $20^2=400$ possible samples in the sample space $\Omega$. Further, from Ex. \ref{ex:ayah_prob}, the probability of getting a \textit{s\=urah l-baqara}'s \arb[trans]{'ayAt} \arb{A"'yaTu sUraT 'l-baqaraT} is 0.0459 or 4.59\%. Therefore, if $X$ is the random variable of an event of drawing an \arb[trans]{'ayAt} from the Qur'\=an, if we assign \arb{lA}  and \arb{na`am} as either 0 or 1, respectively, then this would imply that mathematically $ p(X=1)=0.0459$. In addition, the probability of getting an \arb[trans]{'ayAt} \arb{'ayAt} from other \textit{s\=urah} \arb{sUraT} would be
 
 \begin{equation}    
-\mathbb{P}(X=0)=1-\mathbb{P}(X=1)=1-0.0459=0.9541.
+ p(X=0)=1- p(X=1)=1-0.0459=0.9541.
 \end{equation}
 
 Further, let $Z$ be the random variable for the event of getting $n$ \arb{na`am} from 20 trials, then the problem is now equivalent to finding the number of ways to choose $n$ possible positions out of 20 in the collection or set. This can be solved using the \textit{combination} formula as shown below:
 \begin{align}
     n \choose x &= \frac{n!}{r!(n-r)!}\Rightarrow{20 \choose 5} = \frac{20!}{5!(20-5)!}=15,504. 
 \end{align}
-That is, there are 15,504 possible cases of 5 positions' configuration for \arb{na`am} in a 20 trial. Moreover, in each of these samples 5 has a probability of $\mathbb{P}(X=1)=0.0459$, while the remaining 15 has a probability of $\mathbb{P}(X=0)=0.9541$. So that,
+That is, there are 15,504 possible cases of 5 positions' configuration for \arb{na`am} in a 20 trial. Moreover, in each of these samples 5 has a probability of $ p(X=1)=0.0459$, while the remaining 15 has a probability of $ p(X=0)=0.9541$. So that,
 \begin{align}
-    \mathbb{P}(Z=5)&=184,756\times\mathbb{P}(X=1)^{5}\times\mathbb{P}(X=0)^{20-5}\nonumber\\
+     p(Z=5)&=184,756\times p(X=1)^{5}\times p(X=0)^{20-5}\nonumber\\
     &=15,504\times0.0459^{5}\times0.9541^{20-5}\nonumber\\
     &=0.0016.
 \end{align}
@@ -168,13 +168,13 @@ Now, comparing the numbers from Medinan \arb{madaniyyaT} to the \arb[trans]{'AyA
 
 The question has not been answered yet though, the above discussions only explains how to interpret the graphs in Figure \ref{fig:meccan_medinan_word_count_per_ayah}. So to answer the question, one simply needs to total the number of \arb[trans]{'AyAt} \arb{'AyAt} with at most 10 \arb[trans]{kalimAt} \arb{kalimAt} or words and divide this with the total number of \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu}. The answer is as follows, and this is part of the result of this paper: there are 4613 \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu}, and out of these is 2602 \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu} with at most 10 words. Therefore, the probability is $\frac{2602}{4613}=0.612$ or 61.2\% probability. Formally, if $X$ is the random variable of the event of observing at most 10 \arb[trans]{kalimAt} \arb{kalimAt} in a \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu}, then 
 \begin{align}
-    \mathbb{P}(X\leq 10)=&\sum_{x=0}^{10}\mathbb{P}(X=x)\label{ex_eq:prob_lesseq_10}\\
-    =&\mathbb{P}(X=0)+\mathbb{P}(X=1)+\mathbb{P}(X=2)+\cdots+\mathbb{P}(X=10)\label{ex_eq:freq_dist_prob1..10}\\
+     p(X\leq 10)=&\sum_{x=0}^{10} p(X=x)\label{ex_eq:prob_lesseq_10}\\
+    =& p(X=0)+ p(X=1)+ p(X=2)+\cdots+ p(X=10)\label{ex_eq:freq_dist_prob1..10}\\
     =&0+\frac{24}{4613}+\frac{172}{4613}+\cdots+\frac{222}{4613}\label{ex_eq:freq_dist_probval1..10}\\
     =&\frac{2602}{4613}=0.612\label{ex_eq:prob_0612}
 \end{align}
 
-From Eq. \ref{ex_eq:freq_dist_prob1..10}, $\mathbb{P}(X=0)$ is the probability of observing zero \arb[trans]{kalimaT} \arb{kalimaT} in a \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu}, and $\mathbb{P}(X=1)$ is the probability of observing one \arb[trans]{kalimaT} \arb{kalimaT} in a \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu}, and so on. The numbers in Eq. \ref{ex_eq:freq_dist_probval1..10} are the number of \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu} having zero, one, two, to ten \arb[trans]{kalimAt} \arb{kalimAt}.
+From Eq. \ref{ex_eq:freq_dist_prob1..10}, $ p(X=0)$ is the probability of observing zero \arb[trans]{kalimaT} \arb{kalimaT} in a \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu}, and $ p(X=1)$ is the probability of observing one \arb[trans]{kalimaT} \arb{kalimaT} in a \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu}, and so on. The numbers in Eq. \ref{ex_eq:freq_dist_probval1..10} are the number of \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu} having zero, one, two, to ten \arb[trans]{kalimAt} \arb{kalimAt}.
 \qed
 \end{exmpx}
 \section{Population and Sample}
@@ -191,7 +191,7 @@ The importance of the sample data as illustrated below follows from the fact tha
     \label{fig:pop_sample}
 \end{figure}
 \begin{exmpx}\label{ex:population_sample_distribution_meccan_words}
-Consider the task of sampling 100 \arb[trans]{'AyAt} \arb{'AyAt} from the population of \arb[trans]{'AyAt 'l-makkiyyaT}, describe the statistics of the population and the sample.\\
+Consider the task of sampling 250 \arb[trans]{'AyAt} \arb{'AyAt} from the population of \arb[trans]{'AyAt 'l-makkiyyaT}, describe the statistics of the population and the sample.\\
 \textit{Solution:} In Statistics, there are several ways to sample from data, the simplest approach is through the use of \textit{uniform distribution}, that is, the sampling assumes that all data from the population are distributed equally, in the sense that all data points have equal chance of being selected. The other approach is through a \textit{weighted distribution}, where a probability is assigned to each of the data points in the population, so that, the selection will be biased to those with high probability. Figure \ref{fig:meccan_words_sampling} shows the graphs or plots of the population distribution of \arb[trans]{kalimAtu 'l-makkiyyaT} \arb{kalimAtu 'l-makkiyyaT}, which is presented as the top plot, this distribution of \arb{kalimAtu 'l-makkiyyaT} is the same one shown in the bottom plot of Figure \ref{fig:meccan_medinan_word_count_per_ayah}. 
 
 To draw 100 samples from the said population, a simple random sampling without replacement (SRSWOR) is used for selecting or drawing samples. SRSWOR works by randomly selecting sample from the population and then setting it aside as the first sample. The resulting 100 samples are plotted in the bottom plot of Figure \ref{fig:meccan_words_sampling}.
@@ -225,32 +225,35 @@ Consider again Ex. \ref{ex:population_sample_distribution_meccan_words}, suppose
 
 Let $X$ again be the random variable of an event of observing 35 \arb[trans]{kalimAt} \arb{kalimAt}, this time from the sample, then
 \begin{equation}\label{eq:probx_eq_35}
-    \mathbb{P}(X=35)=\begin{cases}
+     p(X=35)=\begin{cases}
         \displaystyle\frac{0}{250}=0,&\text{if sample data}\\
         \displaystyle\frac{5}{4613}=0.0011,&\text{if population data}
     \end{cases}
 \end{equation}
 From the Eq. \ref{eq:probx_eq_35}, it shows that if we use the sample data for estimating the probability of observing 35 \arb{kalimAt}, then the answer above is 0, meaning by estimate there is a 0 chance of observing a 35 \arb{kalimAt} from a \arb[trans]{'AyAtu 'l-makkiyyaTu} \arb{'l-sUrAtu 'l-makkiyyaTu}. This conclusion is indeed misleading, since according to the population data, there are \arb[trans]{'AyAtu 'l-makkiyyaTu} \arb{'AyAtu 'l-makkiyyaTu} that has 35 \arb[trans]{kalimAt} \arb{kalimAt}. 
 
-So, how to properly estimate this then? This is where the concept of probabilistic modeling comes in. For this problem, the data is count, and that the event of observing 10 \arb[trans]{kalimAtu 'l-sUratu 'l-makkiyyaTu} \arb{kalimAtu 'l-sUratu 'l-makkiyyaTu} in an \arb{'AyaT} is known to be best modeled by a Poisson distribution defined in Defn. \ref{defn:poisson_mass_function}. Ex. will discuss how to solve this.   44 
+So, how to properly estimate this then? This is where the concept of probabilistic modeling comes in. For this problem, the data is count, and that the event of observing 10 \arb[trans]{kalimAtu 'l-sUratu 'l-makkiyyaTu} \arb{kalimAtu 'l-sUratu 'l-makkiyyaTu} in an \arb{'ayaT} is known to be best modeled by a Poisson distribution defined in Defn. \ref{defn:poisson_mass_function}. Ex. \ref{ex:poisson_distribution_sample} will discuss how to solve this. 
 \end{exmpx}
 \section{Probability Distributions}
 \begin{defnx}[Poisson Mass Function]\label{defn:poisson_mass_function}
 Let $X$ be a random variable and let $\lambda>0$ be a parameter, then if $x$ is the random value, then the \textit{Poisson} mass function is given by:
 \begin{equation}
-    \mathbb{P}(X=x)=\frac{\lambda^x\exp(-\lambda)}{x!}
+     p(X=x)=\frac{\lambda^x\exp(-\lambda)}{x!}
 \end{equation}
 \end{defnx}
+\begin{exmpx}\label{ex:poisson_distribution_sample}
+Consider again Ex. \ref{ex:population_sample_distribution_meccan_words}, the problem can be solved using the Poisson distribution.
+\end{exmpx}
 \begin{defnx}[Normal Density Function]
 Let $Y$ be a random variable and let $\mu\in\mathbb{R}$ and $\sigma\in\mathbb{R}$ be the mean and variance parameters, if $y$ is the random value, then the \textit{Gaussian} or \textit{Normal} density function is given below:
 \begin{equation}
-    \mathbb{P}(Y=y):=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left\{-\frac{(y-\mu)^2}{\sigma^2}\right\},\quad\text{where}\;-\infty<y<\infty
+     p(Y=y):=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left\{-\frac{(y-\mu)^2}{\sigma^2}\right\},\quad\text{where}\;-\infty<y<\infty
 \end{equation}
 \end{defnx}
 \begin{defnx}[Dirichlet Density Function]
 Let $\mathbf{Y}$ be a vector random variable with a random value $\mathbf{y}:=[y_1,\cdots,y_k]^{\text{T}}$ and let $\boldsymbol{\alpha}:=[\alpha_1,\cdots,\alpha_k]^{\text{T}}$ be the parameters, then the \textit{Dirichlet} density function is defined as
 \begin{equation}
-    \mathbb{P}(\mathbf{X}=\mathbf{x};\boldsymbol{\alpha}):=\frac{1}{B(\boldsymbol{\alpha})}\prod_{i=1}^kx_i^{\alpha_i-1},
+     p(\mathbf{X}=\mathbf{x};\boldsymbol{\alpha}):=\frac{1}{B(\boldsymbol{\alpha})}\prod_{i=1}^kx_i^{\alpha_i-1},
 \end{equation}
 where,
 \begin{equation}
@@ -259,17 +262,32 @@ where,
 \qed
 \end{defnx}
 \begin{defnx}[Multinomial Mass Function]
-Let $\mathbf{X}$ be a vector random variable with a random value $\mathbf{x}:=[x_1,\cdots,x_k]^{\text{T}}$ such that $x_i\geq 0,\forall i \in[1,k]$, let $\boldsymbol{p}:=[p_1,\cdots,p_k]^{\text{T}}$ and $n$ be the parameters, the probability mass function of a Multinomial distribution is 
+Let $\mathbf{X}$ be a vector random variable with a random value $\mathbf{x}:=[x_1,\cdots,x_k]^{\text{T}}$ such that $x_i\geq 0,\forall i \in[1,k]$, let $\boldsymbol{q}:=[q_1,\cdots,q_k]^{\text{T}}$ and $n$ be the parameters, the probability mass function of a Multinomial distribution is 
 \begin{align}
-    f(x_1,\cdots,x_k;n,p_1,\cdots,p_k):=&\mathbb{P}(X_1=x_1\;\text{and}\;\cdots\;\text{and}\;X_k=x_k)\nonumber\\
+    f(x_1,\cdots,x_k;n,q_1,\cdots,q_k):=& q(X_1=x_1\;\text{and}\;\cdots\;\text{and}\;X_k=x_k)\nonumber\\
     =&\begin{cases}
-        \displaystyle\frac{n!}{x_1!\cdots x_k!}p_1^{x_1}\times\cdots\times p_k^{x_k},&\text{when}\;\sum_{i=1}^kx_i=n\\
+        \displaystyle\frac{n!}{x_1!\cdots x_k!}q_1^{x_1}\times\cdots\times q_k^{x_k},&\text{when}\;\sum_{i=1}^kx_i=n\\
         0&\text{otherwise},
     \end{cases}
 \end{align}
 \end{defnx}
 
-\section{Hypothesis Testing}
 \section{Statistical Modeling}\label{sec:stat_modeling}
-\subsection{Frequentist}
-\subsection{Bayesian}
+Probability distributions are fundamental models that can be used to describe some characteristics of the data. However, combinations of variables, and accounting dynamics of the observations can lead into other types of models as well. In general, a statistical model can be written using the following formula:
+\begin{equation}
+    y=f(x|\mathbf{\Theta})+\varepsilon,
+\end{equation}
+where $y\sim p(\cdot)$ and $\varepsilon\sim p(\cdot)$.
+\subsection{Frequentist Estimation}
+There are two main ways to estimating the parameters $\boldsymbol{\Theta}$, and that is either through Frequentist or Bayesian approach.
+\subsubsection{Maximum Likelihood Estimation}
+\subsubsection{Numerical Approximation}
+\subsection{Bayesian Estimation}
+\subsubsection{Markov Chain Monte Carlo}
+\subsubsection{Variational Bayes}
+\subsubsection{Inverse Laplace Method}
+\section{Types of Models}
+\subsection{Parametric}
+\subsection{Nonparametric}
+\subsection{Supervised}
+\subsection{Unsupervised}\label{sec:unsupervised_models}

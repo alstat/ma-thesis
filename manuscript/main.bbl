@@ -159,6 +159,34 @@ Cooperman, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Devlin%
+, Chang%
+, Lee%
+\BCBL {}\ \BBA {} Toutanova%
+}{%
+Devlin%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+devlin2018bert}
+\APACinsertmetastar {%
+devlin2018bert}%
+\begin{APACrefauthors}%
+Devlin, J.%
+, Chang, M\BHBI W.%
+, Lee, K.%
+\BCBL {}\ \BBA {} Toutanova, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Bert: Pre-training of deep bidirectional transformers for language understanding} {Bert: Pre-training of deep bidirectional transformers for language understanding}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1810.04805}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Dukes%
 \ \BBA {} Habash%
 }{%
@@ -325,6 +353,34 @@ Neuwirth, A.%
 \begin{APACrefURL} [{2023-07-09}]\url{https://doi.org/10.1515/9783110920383} \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{doi:10.1515/9783110920383} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Radford%
+, Narasimhan%
+, Salimans%
+, Sutskever%
+\BCBL {}\ \protect \BOthers {.}}{%
+Radford%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+radford2018improving}
+\APACinsertmetastar {%
+radford2018improving}%
+\begin{APACrefauthors}%
+Radford, A.%
+, Narasimhan, K.%
+, Salimans, T.%
+, Sutskever, I.%
+\BCBL {}\ \BOthersPeriod {.}\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Improving language understanding by generative pre-training} {Improving language understanding by generative pre-training}.{\BBCQ}
+\newblock
+
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -585,6 +641,34 @@ Thabet, N.%
 \BIn{} \APACrefbtitle {Proceedings of the ACL Student Research Workshop} {Proceedings of the acl student research workshop}\ (\BPG~7-12).
 \newblock
 \APACaddressPublisher{USA}{Association for Computational Linguistics}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Vaswani%
+\ \protect \BOthers {.}}{%
+Vaswani%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+vaswani2017attention}
+\APACinsertmetastar {%
+vaswani2017attention}%
+\begin{APACrefauthors}%
+Vaswani, A.%
+, Shazeer, N.%
+, Parmar, N.%
+, Uszkoreit, J.%
+, Jones, L.%
+, Gomez, A\BPBI N.%
+\BDBL {}Polosukhin, I.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Attention is all you need} {Attention is all you need}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Advances in neural information processing systems}{30}{}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

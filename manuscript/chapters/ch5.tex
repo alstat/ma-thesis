@@ -1,24 +1,33 @@
-\chapter{Methodology}
-This chapter is organized as follows: Section \ref{sec:topic_modeling_method} will discuss the concept of Topic Modeling, Section \ref{sec:llm_method} will discuss the concept of Large Language Models, and finally Section \ref{sec:code_setup} will discuss how to implement this in Julia programming language.
-\section{Topic Modeling}\label{sec:topic_modeling_method}
-As presented in Chapter \ref{ch:introduction}, the first objective is to extract the thematic themes of \textit{s\=urahs} \arb{sUr} with at least 1000 words. In Statistics and Machine Learning, this task is called Topic Modeling. There are several ways to do this, but the popular methodology is to use the Latent Dirichlet Allocation (LDA) discussed in the next section.
-\subsection{Latent Dirichlet Allocation}\label{sec:lda}
-Latent Dirichlet Allocation (LDA) is a Statistical methodology that is based on Bayesian inference \cite{bayes,laplace1986}. It is a generative probabilisitic model for collection of discrete data such as text corpora \cite{blei2003latent}. The main formula is defined below:
-\begin{defnx}[Latent Dirichlet Allocation]
-Let $\mathbf{W},\mathbf{Z},\boldsymbol{\theta},\boldsymbol{\varphi}$ be the random variables, and let $\alpha$ and $\beta$ be the hyper-parameters, then the probability of generating a document is
+
+\chapter{Background on Natural Language Processing}
+This chapter will discuss the concept and examples of Natural Language Processing in the context of analyzing the Qur'\=an.
+\section{Text Analytics}
+Technically, any information can be regarded as data, whether it be image, audio, video, and even texts; and in fact many more. All of these raw data, however, needs to be translated into numbers, and therefore true for texts as well. There are several ways to translate texts into numbers, the easiest way maybe is to map the letters into numbers. Like for example, $a$ will be 1, $b$ will be 2, and so on. This simple assignment, while easy to do, disregards a lot of information or representation of the texts. Therefore, when it comes to mapping raw data not in numeric form, the assignment has to be logical. One needs to make sure that the transformation from its raw form needs to account the characteristics of the texts. For example, any language has words that have synonyms and antonyms. So, mapping these to numbers should account these relations as well. For example, since synonyms depict the related words to a given words, their numeric form should therefore be close to each other. So that, if ``beautiful'' corresponds to 132, then ``attractive'' should have a numeric mapping that is close to 132 since the word ``beautiful'' and ``attractive'' are considered synonymous or related. On the other hand, ``ugly'', which is an antonym of the ``beautiful'', the corresponding numeric form should be far from 132 to capture the opposite of the two in number. The next section will discuss formal mathematical definition for this concept of representing the texts.
+\section{Tokenization}\label{sec:text_tokenization}
+\section{Embeddings}
+Embeddings is the technical word for translating the words into numbers, it is the process of `embedding' the words in a Euclidean vector space, a low-dimensional dense space. Let's understand this piece by piece. A logical approach to translating a word into numbers would be to do a one-hot encoding, which is a process of representing a word in a sparse vector with only one non-zero entry. Let's say the language contains only three words, `hi', `hello', and `yes'. Then, the one-hot encoding for this would be:
+\begin{align}
+    \text{hi}&=[1,0,0]\\
+    \text{hello}&=[0,1,0]\\
+    \text{yes}&=[0,0,1]
+\end{align}
+Notice, that each of the words has unique identity in their vector encoding. However, this example only shows 3 words, what if the language contains one million words, then each words will have 999,999 zeros in their vector encoding and only one non-zero entry. If a vector contains many zeros than non-zeros, then it is refered to as sparse. For this case, it is very sparse indeed. Further, applying such methodology is not flexible, since it is tied to fix number of words, which is a problem even for Arabic due to its complex morphology. Further, sparse vectors are not good for natural language processing (NLP), especially for doing all of the linear algebra computations. It is more preferrable to have a dense vector that also captures the semantics of the words.
+
+Ideally, this very high dimensional vectors should be condensed into very low dimension to avoid the curse of dimensionality, a case where the vectors which supposed to be close to each other, but becomes more unique due to very high dimension. Apart from this, the embedding in the vector space should also capture the semantic proximity, that is, words that are similar semantically should be closed to each other in the embedding space. There are two approaches: \textit{Term Frequency - Inverse Document Frequency}, and \textit{Word Embeddings}.
+\subsection{Term Frequency - Inverse Document Frequency}
+The TF-IDF or Term Frequency - Inverse Document Frequency is a NLP method for embedding words. It is composed of two statistics, the TF and the IDF. The following is the formal definitions of both statistics.
+\begin{defnx}[Term Frequency]
+Let $d$ be the document, and let $i$ be a term or word in the document, then the \textit{term frequency} of the $i$th term in the document $d$ is denoted by $\operatorname{tf}(i,d)$ with the following formula: $\operatorname{tf}(i,d)=\displaystyle\frac{|i|}{\sum_{\forall i'\in d}|i'|}$, where $i'$ is any other term other than $i$.
+\end{defnx}
+\begin{defnx}[Inverse Document Frequency]
+Let $N$ be the total number of documents $D$ in the corpus, and let $i$ be the term in $d$ such that $d\in D$, then the \textit{inverse document frequency} is defined by
 \begin{equation}
-    \mathbb{P}(\mathbf{W},\mathbf{Z},\boldsymbol{\theta},\boldsymbol{\varphi})=\prod_{j=1}^m\mathbb{P}(\boldsymbol{\theta}_j;\alpha)\prod_{i=1}^{k}\mathbb{P}(\boldsymbol{\varphi};\beta)\prod_{t=1}^{n}\mathbb{P}(\mathbf{Z}_{j,t}|\boldsymbol{\theta}_j)\mathbb{P}(\mathbf{W}_{j,t}|\boldsymbol{\varphi}_{\mathbf{Z}_{j,t}})
+    \operatorname{idf}(i,d)=\log\frac{N}{|\{d:d\in D\;\text{and}\;i\in d\}|}
 \end{equation}
 \end{defnx}
-\subsection{Large Language Models}\label{sec:llm_method}
-Generative Artificial Intelligence or GenAI for short has been making waves on its effectiveness to generate texts, images, audio, video, etc. It has elevated humanity to a new level of capability. However, behind this amazing capabilities is that GenAI is by design a mathematical formula that are called \textit{model}. There are several types of \textit{models}, and one of those is the Large Language Model (LLM). The following section will discuss what LLM is and its mathematical formulation.
-\subsubsection{Bidirectional Encoder Representation from Transformer}
-\subsubsection{Generative Pre-Trained Transformer}
-\section{Retrieval-Augmented Generation}
-The problem with LLM is that it was only trained on huge but limited data, and is therefore not able to infer what should be the context when asked.
-\section{Julia Code Setup}\label{sec:code_setup}
-This section will discuss the coding setup. As mentioned in Chapter \ref{ch:introduction}, the main programming language to use is Julia. As such, it is necessary to present where the codes will be stored so that readers are able to reproduce it. All of the codes will be saved in Github repository accessible through the following link:
-\begin{center}
-    \url{https://github.com/alstat/ma-thesis/tree/main/codes}
-\end{center}
-\section{Python Code Setup}\label{sec:py_code_setup}
+\subsection{Word Embeddings}
+TF-IDF has several limitations, like the initial discussions above, each word will have its own dimension. Therefore, the resulting embedding will be very high in dimension. Further, while TF-IDF can create pairs of words in its bag-of-words to add a little context to the given word, it still cannot capture the full context of the sentence. Lastly, TF-IDF cannot handle out-of-vocabulary words without re-running all the computations to account the new word.
+
+Having said all the limitaitons of the TF-IDF, \textit{word embeddings}, which is understood as based on Neural Network became popular since it addresses all of TF-IDF limitations. First, these word embeddings are dense and lower in dimension compared to the TF-IDF embeddings. Second, these embeddings capture the semantic relationship and similarities between words. Advanced models like Bidirectional Encoder Representation from Transformer (BERT) and Generative Pre-Trained Transformers (GPT) can generate contextualized embeddings, meaning the same word can have different representations depending on its context within a sentence. Both BERT and GPT are discussed in the next chapter. Third, these embeddings have the flexibility to handle out-of-vocabulary words. Lastly, these embeddings pre-trained on large corpora can be fine-tuned for specific tasks.
+
+In summary, while TF-IDF is a straightforward and interpretable method for measuring term importance, it falls short in capturing the semantic richness and contextual nuances of language. Neural network-based word embeddings address these limitations by providing dense, semantically rich, and context-aware representations of words, making them more powerful and versatile for a wide range of natural language processing tasks.
