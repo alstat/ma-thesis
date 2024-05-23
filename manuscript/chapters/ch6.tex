@@ -1,10 +1,10 @@
 
 \chapter{Methodology}
 This chapter is organized as follows: Section \ref{sec:topic_modeling_method} will discuss the concept of Topic Modeling, Section \ref{sec:llm_method} will discuss the concept of Large Language Models, and finally Section \ref{sec:code_setup} will discuss how to implement this in Julia programming language.
-\section{Structural Analysis}
+\section{Morphological Analysis}
 \subsection{Bayesian Statistical Models}
 
-\section{Rhythmic Analysis and Modeling}
+\section{Rhythmic Analysis}
 Analyzing the rhyme starts with collection of the ending syllable of the last word of each \arb[trans]{'ayaT} \arb{'ayaT} in the \arb[trans]{sUraT} \arb{sUraT}. This can be done per \arb[trans]{sUraT} \arb{sUraT} or across the Qur'\=an. For this study, both are done to see if there are interesting patterns. 
 
 The analysis is done by visualizing the signature of the rhythms, and also modeling the transition probabilities between the ending syllables. That is, answering the question like what is the probability of getting a ending rhyme of \arb[trans]{iyn} \arb{iyn} given the previous verse ends with \arb[trans]{uwn} \arb{uwn}.
@@ -12,10 +12,10 @@ The analysis is done by visualizing the signature of the rhythms, and also model
 Therefore, each \arb[trans]{sUraT} \arb{sUraT} will have its own probabilistic graphical model, which can be analyzed by clustering similar rhymings of \arb[trans]{sUraT} \arb{sUraT}.
 
 The signature can be plotted using line chart, and the verses can be divided into juz. So that, there will be 30 rows for 30 juz.
-\subsection{Bayesian Network Model}
-\section{Verse Division Analysis and Modeling}
+\subsection{Bayesian Network Models}
+\section{Verse Division Analysis}
 In theory, verse division depends on the rhyme and the length of the verse. For this to be modeled, a discrete-time markov chain can be used with transition probability modeled by a Geometric distribution. The idea is that an \arb[trans]{'ayaT} \arb{'ayaT} will end if enough number of words have been recited and that the rhyme is achieved. The question is how many number of words to be recited for it to be enough to transition to the next verse. The states here can be defined as the ending rhyming syllable used in the previous section. 
-\subsection{Bayesian Discrete-Time Markov Model}
+\subsection{Bayesian Discrete-Time Markov Models}
 \section{Thematic Analysis}
 This section 
 \subsection{Topic Modeling}\label{sec:topic_modeling_method}
@@ -30,7 +30,7 @@ Let $\mathbf{W},\mathbf{Z},\boldsymbol{\theta},\boldsymbol{\varphi}$ be the rand
 \end{defnx}
 \subsection{Large Language Models}\label{sec:llm_method}
 Generative Artificial Intelligence or GenAI for short has been making waves on its effectiveness to generate texts, images, audio, video, etc. It has elevated humanity to a new level of capability. However, behind this amazing capabilities is that GenAI is by design a mathematical formula that are called \textit{model}. There are several types of \textit{models}, and one of those is the Large Language Model (LLM). The following section will discuss what LLM is and its mathematical formulation.
-\subsection{Bidirectional Encoder Representation from Transformers}
+\subsection{Bidirectional Encoder Representation from Transformers}\label{sec:bert}
 BERT or Bidirectional Encoder Representation from Transformers model is a large language model proposed by \citeA{devlin2018bert}. From the name itself, it is based on the Transformer model architecture (\textit{see} discussion in Section \ref{sec:transformers}) in that it only uses the Encoder layer, and stack it together. BERT was pre-trained on large corpus of text using two unsupervised (\textit{see} Section \ref{sec:unsupervised_models}) tasks, and these are:
 \begin{enumerate}
     \item \textit{Masked Language Modeling (MLM)} - tokens (\textit{see} Section \ref{sec:text_tokenization}) are randomly masked in the input and trains the model to predict these masked tokens based on the surrounding context.
@@ -54,17 +54,69 @@ GPT or Generative Pre-Trained Transformer is another large language model propos
 GPT models like those powering ChatGPT were pre-trained on large corpora by going through the sequence of the texts in \textit{unidirection}, which is contrary to the \textit{bidirectional} approach of BERT model. As such, the GPT models excel in generating text and performing tasks that require producing coherent sequences of words, in applications like text completion and creative writing. Whereas BERT is technically effective for tasks requiring deep contextual understanding such as text classification and named-entity recognition.
 
 For this paper, the 
-\section{Concentrism Formulation}
+\section{Concentrism Statistical Formulation}
+One of the specific items for the second objective of this paper is on the theory of concentrism, and how can this be formulated statistically, and what are the insights that can be extracted. The idea of the theory of concentrism is that a given texts with define partition follows a ring or concentric structure, which is a literary form where the text is organized in such a way that it mirrors itself around a central point. This means that the beginning and ending sections correspond to each other, moving inward until the center of the text, which often contains the main message or theme. This particular pattern was observed by linguistic experts that it got documented in a book by \citeA{farrin2014structure}. This theory can be defined mathematically as follows:
+
+\begin{defnx}[Concentric]\label{defn:concentric}
+    Let $\mathscr{D}$ be a collection of texts, then $\mathscr{D}$ is said to have a \textit{concentric} or \textit{ring} structure if and only if $\exists\;\mathscr{A}_i\subseteq\mathscr{D},\mathscr{C}\subseteq\mathscr{D},$ and $\mathscr{A}_i^{*}\subseteq\mathscr{D},i\in\mathbb{N}_1$; and that these sets are arranged as follows in $\mathscr{D}$:  $\mathscr{A}_1,\cdots,\mathscr{A}_n,\mathscr{C},\mathscr{A}_1^{*},\cdots,\mathscr{A}_n^{*}$, such that $\mathscr{A}_i^{*}$ \underline{mirrors} $\mathscr{A}_i$ in semantic, and that $\mathscr{C}$ is the center texts of the document $\mathscr{D}$ that is \underline{not related} to both $\mathscr{A}_i$ and $\mathscr{A}_i^{*}$.
+\end{defnx}
+
+The underlined words above will be used in the next section, because mathematically it begs further definition on what we mean by "mirrors" and "not related" mathematically. This will be defined in the next section. Now, another pattern that was observed by \citeA{farrin2014structure} as chiasmus, which is basically \textit{ring} structure but the second half of the ring after the center is the "complement" or "reversal" of the first half of the document before the center. The following is its mathematical definition.
+
+\begin{defnx}[Chiasmus]\label{defn:chiasmus}
+    Let $\mathscr{D}$ be a collection of texts, then $\mathscr{D}$ is said to have a \textit{concentric} or \textit{ring} structure if and only if $\exists\;\mathscr{A}_i\subseteq\mathscr{D},\mathscr{C}\subseteq\mathscr{D},$ and $\mathscr{A}_i^{*}\subseteq\mathscr{D},i\in\mathbb{N}_1$; and that these sets are arranged as follows in $\mathscr{D}$:  $\mathscr{A}_1,\cdots,\mathscr{A}_n,\mathscr{C},\mathscr{A}_1^{c},\cdots,\mathscr{A}_n^{c}$, such that $\mathscr{A}_i^{c}$ is the \underline{complement} or \underline{reversal} of $\mathscr{A}_i$ in semantic, and that $\mathscr{C}$ is the center texts of the document $\mathscr{D}$ that is \underline{not related} to both $\mathscr{A}_i$ and $\mathscr{A}_i^{c}$.
+\end{defnx}
+There are other structures that can be observed in the Qur'\=an, like \textit{parallelism} where themes are repeated in other \arb[trans]{sUraT} \arb{sUraT}; and \textit{segment structure}, where a particular segment starts and ends with similar phrases or themes, creating a bracket around the content; but, these other structures are not studied in this paper. Apart from this, there is also the "mathematical patterns" of the Qur'\=an which has been extensively studied by \citeA{rashad1981}, but this is also not studied in this paper.
 \subsection{Cosine Similarity}
-\subsection{Kullback-Leibler Divergence}
+In Defn. \ref{defn:concentric} and \ref{defn:chiasmus}, there are key words that are still vagued in terms of its mathematical meaning, and these were "mirrors," "not related," and "complemented" or "reversal." Well, semantically these words refer to measurement, particularly, a distance measurement. So that, "mirrors" would mean related meaning the distance in terms of measurement should be relatively close as opposed to "not related" or "complemented" or "reversal". So, how to measure this then?
+
+The answer to the above question is by measuring the distance of their word embeddings. These embeddings as discussed in Section \ref{sec:bert} will be extracted from BERT models. Using these embeddings a similarity or distance measurement can be used, and the common formula for this is the \textit{cosine similarity} defined below.
+
+\begin{defnx}[Cosine Similarity]
+    Let x
+\end{defnx}
+\subsection{Bayesian Optimization}
+
 \section{Integrating Other Islamic Literatures}
+The third objective of this paper asks on how to unify all of these results from Statistics, Machine Learning, AI, and the work of Islamic scholars on Qur'\=anic studies help in understanding the Qur'\=an. Discussions on this will be provided in the next chapter, but in terms of the methodology on how to combine all of this into something that is accessible to Muslims and those interested in learning the Qur'\=an, this paper will provide the architecture on how to package all of these.
+
+The idea of combining the results in this paper with the work of Islamic scholars requires some form of relation, that is, relating particular results to what was studied by the scholars before in order to provide more context. For such tasks, of relating particular result to a large corpus of documents written in Qur'\=anic studies will seem to be a great endeavor. Manually reading through those corpus and combining to the results of this paper, plus trying to summarize all of this combinations can be a daunting task. Fortunately, at the age of Generative AI, such task can be automated. To do this, there are three main components, and these are: 
+\begin{enumerate}
+    \item Digitized Pre-Modern Islamic Documents - this include like the \textit{ahadith} or the traditions or \arb[trans]{sunnaT} \arb{sunnaT} of the Prophet, and writings of the early Islamic scholars.
+    \item Information Retrieval Algorithm - an algorithm that will help extract the necessary pre-modern Islamic document related to the results.
+    \item Text Summarizer - a generative AI model that can create coherent summary on the combinations of the results of this paper plus the context from the pre-modern Islamic document
+\end{enumerate}
+\subsection{Open Islamic Text Initiative}
+The OpenITI or Open Islamic Text Initiative project by Aga Khan University, Institute for the Study of Muslim Civilisations in London, Roshan Institute for Persian Studies at the University of Maryland, College Park, and Universität Hamburg is a huge step to computational analysis of the Islamicate texts, which include the pre-modern Islamic texts. What the team of this project did is that they converted all of the said documents into a text file, so that, it can be used for any digital humanities study of these texts.
+
+According to their About page in their website\footnote{\url{https://openiti.org/}}, since its founding in 2016, OpenITI's work has focused on the tasks necessary to build digital capacity in Islamicate studies, including improving Arabic-script optical character recognition (OCR) and handwritten text recognition (HTR), developing robust Arabic-script standards for OCR and HTR output and text encoding, and creating platforms for the collaborative creation of Islamicate text corpora and digital editions.
+
+More specifically, OpenITI compiled all of these digitized texts in their sub-project called KITAB or Knowledge, Information Technology, and the Arabic Book. For this paper, the digitized Sahih al-Bukhari from  OpenITI's KITAB will be used as the Islamic context for demonstrating how to combine the results from this study. Fortunately, a Julia library called Kitab.jl\footnote{\url{https://github.com/alstat/Kitab.jl}} developed by \citeA{al_ahmadgaid_b_asaad_kitab} was made to interface with KITAB books for easy access, and will be used for this project.
 \subsection{Retrieval-Augmented Generation}
-The problem with LLM is that it was only trained on huge but limited data, and is therefore not able to infer what should be the context when asked.
+The popularity of Generative AI like ChatGPT has made the said tool the go-to assistant when it comes to anything writing. It is especially good at synthesizing different texts and summarizing it beautifully. However, like any \textit{mathematical models}, it only has knowledge about the data it was trained on. In fact, those that it even learned has the chance of getting it wrong. This is just the nature of models in general, they are not perfect but good enough to be an effective assistant. Therefore, when it comes to new informations, or data, these AI models can still generate answers that seem believable when in fact it is not, and this is what is called as \textit{AI hallucination}. So the question now is, how can we at least mitigate this limitation and still be able to take advantage its creative writing skills? Well, the simplest way is to provide it more context. Like instead of just asking a question to it, provide it with a document as an attached context for it to read, so that, it can provide its answer not only based on the knowledge it learned during the training, but also the documents provided to it in the query. This will make the AI generate a better and more relevant answer.
+
+Now, the next question is, if there are several documents, how can someone automate the process where the user will only query, and then the AI will be given the necessary document it needs for the context, plus those documents that are related to the query can also be presented as part of the outputs? Well, this is the concept of Retrieval-Augmented Generation or RAG. This method proposed by \citeA{NEURIPS2020_6b493230} is gaining popularity especially in companies trying to integrate AI into their workflow.
+\begin{center}
+    \textcolor{red}{add figure here in the context of the methodology proposed}
+\end{center}
 \section{Programming Languages Setup}\label{sec:code_setup}
-This section will discuss the coding setup. As mentioned in Chapter \ref{ch:introduction}, the main programming language to use is Julia. As such, it is necessary to present where the codes will be stored so that readers are able to reproduce it. All of the codes will be saved in Github repository accessible through the following link:
+This section will discuss the programming languages used in this paper. As mentioned in Chapter \ref{ch:introduction}, there are three main programming languages that will be used, all of which are known in the area of data analysis, and these are Julia, Python, and R. The rule of thumb here is to use Julia as much as possible. With that said, Python is the popular framework for deep learning modeling, and therefore will be used in this paper for such tasks if in case the deep learning model is not available in Julia. Finally, R is known for almost all statistical models, especially those that are very niche, and this is because R was created as a statistical software not as a general purpose programming language like Julia and Python. To download these software, refer to Table \ref{tbl:download_page} for the links to the download page. Further, there are several tutorials on these programming languages in Youtube\footnote{\url{https://www.youtube.com/}} for those interested to learn these. Finally, all of the codes for this paper are stored in a Github repository below:
+
 \begin{center}
     \url{https://github.com/alstat/ma-thesis/tree/main/codes}
 \end{center}
-\subsection{Julia}
-\subsection{Python}
-\subsection{R}
+
+Further, in terms of the libraries used, QuranTree.jl\footnote{\url{https://github.com/alstat/QuranTree.jl}} by \citeA{asaad2021qurantree} will be used as the main library for interfacing with the digitized Qur'\=an text; Yunir.jl\footnote{\url{https://github.com/alstat/Yunir.jl}} by \citeA{al_ahmadgaid_b_asaad_yunir} will be used for text analytics; Kitab.jl\footnote{\url{https://github.com/alstat/Kitab.jl}} by \citeA{al_ahmadgaid_b_asaad_kitab} will be used for interfacing with other Islamicate texts from OpenITI\footnote{\url{https://openiti.org/}}.
+\begin{table}[!t]
+    \caption{Download page for programming languages used}
+    \begin{tabularx}{\textwidth}[h]{XXl}
+        \toprule
+        Software&Version&Download Page\\
+        \midrule
+        Julia&1.10.3&\url{https://julialang.org/downloads/}\\
+        Python&3.12.2&\url{https://www.python.org/downloads/}\\
+        R&3.4.4&\url{https://cran.r-project.org/bin/windows/base/}\\
+        \bottomrule
+    \end{tabularx}
+    \label{tbl:download_page}
+\end{table}

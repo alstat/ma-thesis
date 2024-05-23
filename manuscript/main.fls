@@ -603,6 +603,8 @@ INPUT ./chapters/ch1.aux
 INPUT ./chapters/ch1.aux
 INPUT ./chapters/ch2.aux
 INPUT ./chapters/ch2.aux
+INPUT ./chapters/ch3-0.aux
+INPUT ./chapters/ch3-0.aux
 INPUT ./chapters/ch3.aux
 INPUT ./chapters/ch3.aux
 INPUT ./chapters/ch4.aux
@@ -919,6 +921,9 @@ INPUT ./chapters/ch2.tex
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmb10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmb10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmb10.tfm
+OUTPUT chapters/ch3-0.aux
+INPUT ./chapters/ch3-0.tex
+INPUT ./chapters/ch3-0.tex
 OUTPUT chapters/ch3.aux
 INPUT ./chapters/ch3.tex
 INPUT ./chapters/ch3.tex
@@ -1301,6 +1306,8 @@ INPUT ./chapters/ch1.aux
 INPUT ./chapters/ch1.aux
 INPUT ./chapters/ch2.aux
 INPUT ./chapters/ch2.aux
+INPUT ./chapters/ch3-0.aux
+INPUT ./chapters/ch3-0.aux
 INPUT ./chapters/ch3.aux
 INPUT ./chapters/ch3.aux
 INPUT ./chapters/ch4.aux

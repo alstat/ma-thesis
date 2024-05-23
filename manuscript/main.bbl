@@ -27,6 +27,58 @@ Asaad, A\BHBI A\BPBI B.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Asaad%
+}{%
+Asaad%
+}{%
+{\protect \APACyear {2022}}%
+{\protect \APACexlab {{\protect \BCnt {1}}}}}]{%
+al_ahmadgaid_b_asaad_kitab}
+\APACinsertmetastar {%
+al_ahmadgaid_b_asaad_kitab}%
+\begin{APACrefauthors}%
+Asaad, A\BHBI A\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022{\protect \BCnt {1}}}{{\APACmonth{06}}}{}.
+\newblock
+\APACrefbtitle {{Kitab.jl: A Julia interface to the Open Islamic Texts Initiative (OpenITI) data}.} {{Kitab.jl: A Julia interface to the Open Islamic Texts Initiative (OpenITI) data}.}
+\newblock
+\APACaddressPublisher{}{Zenodo}.
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.5281/zenodo.6665710} \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.5281/zenodo.6665710} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Asaad%
+}{%
+Asaad%
+}{%
+{\protect \APACyear {2022}}%
+{\protect \APACexlab {{\protect \BCnt {2}}}}}]{%
+al_ahmadgaid_b_asaad_yunir}
+\APACinsertmetastar {%
+al_ahmadgaid_b_asaad_yunir}%
+\begin{APACrefauthors}%
+Asaad, A\BHBI A\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022{\protect \BCnt {2}}}{{\APACmonth{06}}}{}.
+\newblock
+\APACrefbtitle {{Yunir.jl: A lightweight Arabic NLP toolkit for Julia}.} {{Yunir.jl: A lightweight Arabic NLP toolkit for Julia}.}
+\newblock
+\APACaddressPublisher{}{Zenodo}.
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.5281/zenodo.6629868} \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.5281/zenodo.6629868} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Bayes%
 }{%
 Bayes%
@@ -216,6 +268,30 @@ Dukes, K.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Farrin%
+}{%
+Farrin%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+farrin2014structure}
+\APACinsertmetastar {%
+farrin2014structure}%
+\begin{APACrefauthors}%
+Farrin, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2014}.
+\newblock
+\APACrefbtitle {Structure and Qur'anic Interpretation: A Study of Symmetry and Coherence in Islam's Holy Text} {Structure and qur'anic interpretation: A study of symmetry and coherence in islam's holy text}.
+\newblock
+\APACaddressPublisher{}{White Cloud Press}.
+\newblock
+\begin{APACrefURL} \url{https://books.google.com.ph/books?id=io03ngEACAAJ} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Karatay%
 }{%
 Karatay%
@@ -283,6 +359,38 @@ Laplace, P\BPBI S.%
 \begin{APACrefURL} \url{http://dx.doi.org/10.1214/ss/1177013621} \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1214/ss/1177013621} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lewis%
+\ \protect \BOthers {.}}{%
+Lewis%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+NEURIPS2020_6b493230}
+\APACinsertmetastar {%
+NEURIPS2020_6b493230}%
+\begin{APACrefauthors}%
+Lewis, P.%
+, Perez, E.%
+, Piktus, A.%
+, Petroni, F.%
+, Karpukhin, V.%
+, Goyal, N.%
+\BDBL {}Kiela, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks} {Retrieval-augmented generation for knowledge-intensive nlp tasks}.{\BBCQ}
+\newblock
+\BIn{} H.~Larochelle, M.~Ranzato, R.~Hadsell, M.~Balcan\BCBL {}\ \BBA {} H.~Lin\ (\BEDS), \APACrefbtitle {Advances in Neural Information Processing Systems} {Advances in neural information processing systems}\ (\BVOL~33, \BPGS\ 9459--9474).
+\newblock
+\APACaddressPublisher{}{Curran Associates, Inc.}
+\newblock
+\begin{APACrefURL} \url{https://proceedings.neurips.cc/paper_files/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
