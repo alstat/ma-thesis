@@ -84,11 +84,14 @@ From Defn. \ref{defn:concentric} and \ref{defn:chiasmus}, it both states that, a
 \begin{defnx}[Gaussian Process]\label{def:gp}
     Let $Y_1,Y_2,\cdots,Y_T$ be sequence of random variables such that $Y_t\in\mathbf{Y}$, then the sequence is a \textit{Gaussian process} (GP) if and only if $\mathbf{Y}\overset{\mathrm{iid}}{\sim}\mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma})$.
 \end{defnx}
-\begin{defnx}[Global Cost Function]\label{def:gcf}
-    Let $s_i\in\mathscr{D}$ be an \arb[trans]{'ayaT} \arb{'ayaT} in document $\mathscr{D}$, which can be a \arb[trans]{sUraT} \arb{sUraT}, group of \arb[trans]{suwar} \arb{suwar}, or group of \arb[trans]{'Ayat} \arb{'Ayat} within a \arb[trans]{sUraT} \arb{sUraT}. Further, suppose $\mathscr{A}_i,\mathscr{C},\mathscr{A}_i^{*}$ are the subsets of $\mathscr{D}$, such that $\mathscr{A}:=\{s_1,\cdots,s_n\}, \mathscr{C}:=\{s_{n+1},\cdots,s_{n+c}\}$, and $\mathscr{A}_i^{*}:=\{s_{n+c+1},\cdots,s_{n+c+m}\}$, then the parameters to be optimized is $\boldsymbol{\theta}:=[n,c,m]^{\text{T}}$, and since $n,c,m\in\mathbb{N}_{\geq 2}$, then the parameter space is $\mathscr{P}:=\mathbb{N}_{\geq 2}\times\mathbb{N}_{\geq 2}\times\mathbb{N}_{\geq 2}$, so that $\boldsymbol{\theta}\in\mathscr{P}$. Therefore, if $\gamma$ is the \textit{global cost function}, then $\gamma:\mathscr{P}\rightarrow\mathbb{R}$.
+\begin{defnx}[Global Cost Function]\label{def:global_cost_func}
+    Let $\mathbf{s}_i\in\mathscr{D}$ be a word embedding of an \arb[trans]{'ayaT} \arb{'ayaT} in document $\mathscr{D}$, which can be a \arb[trans]{sUraT} \arb{sUraT}, group of \arb[trans]{suwar} \arb{suwar}, or group of \arb[trans]{'Ayat} \arb{'Ayat} within a \arb[trans]{sUraT} \arb{sUraT}. Further, suppose $\mathscr{A}_i,\mathscr{C},\mathscr{A}_i^{*}$ are the subsets of $\mathscr{D}$, such that $\mathscr{A}_i:=\{\mathbf{s}_1,\cdots,\mathbf{s}_n\}, \mathscr{C}:=\{\mathbf{s}_{n+1},\cdots,\mathbf{s}_{n+c}\}$, and $\mathscr{A}_i^{*}:=\{\mathbf{s}_{n+c+1},\cdots,\mathbf{s}_{n+c+m}\}$, then the parameters to be optimized is $\boldsymbol{\theta}:=[n,c,m]^{\text{T}}$, and since $n,c,m\in\mathbb{N}_{\geq 2}$, then the parameter space is $\mathscr{P}:=\mathbb{N}_{\geq 2}\times\mathbb{N}_{\geq 2}\times\mathbb{N}_{\geq 2}$, so that $\boldsymbol{\theta}\in\mathscr{P}$. Therefore, if $\gamma$ is the \textit{global cost function}, then $\gamma:\mathscr{P}\rightarrow\mathbb{R}$.
 \end{defnx}
-\begin{defnx}[Cosine Similarity Global Cost Function]
-    in such a way the . suppose   domain of the  activation functions, $\mathscr{L}$ be the domain of the number of hidden neurons, $\mathscr{B}$ be the domain of the proportions of the train data, and $\mathscr{A}$ be the domain of training optimizers, then $\mathscr{P}:=\mathscr{G}\times\mathscr{L}\times\mathscr{B}\times\mathscr{A}$ is the domain of the hyper-parameters such that for any \textit{global cost function} $\gamma$, and $\forall\mathbf{v}\in\mathscr{P}$, we have $\gamma:\mathscr{P}\rightarrow\mathbb{R}$.
+\begin{defnx}["Related" Cost Function]
+    From Defn. \ref{def:global_cost_func}, let $\mathbf{a}_k\in\mathscr{A}_i$ and $\mathbf{a}_k^{*}\in\mathscr{A}_i^{*}$, then the \textit{related} cost function is defined as:
+    \begin{equation}
+        \cos(\theta_{\mathbf{a}_k,\mathbf{a}})
+    \end{equation}
 \end{defnx}
 \begin{remark}
     The \textit{global cost function} for this paper is computed from the error of the PoisNN model after training using a given the input hyper-parameters $\mathscr{P}$.
