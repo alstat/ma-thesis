@@ -64,19 +64,94 @@ One of the specific items for the second objective of this paper is on the theor
 The underlined words above will be used in the next section, because mathematically it begs further definition on what we mean by "mirrors" and "not related" mathematically. This will be defined in the next section. Now, another pattern that was observed by \citeA{farrin2014structure} as chiasmus, which is basically \textit{ring} structure but the second half of the ring after the center is the "complement" or "reversal" of the first half of the document before the center. The following is its mathematical definition.
 
 \begin{defnx}[Chiasmus]\label{defn:chiasmus}
-    Let $\mathscr{D}$ be a collection of texts, then $\mathscr{D}$ is said to have a \textit{concentric} or \textit{ring} structure if and only if $\exists\;\mathscr{A}_i\subseteq\mathscr{D},\mathscr{C}\subseteq\mathscr{D},$ and $\mathscr{A}_i^{*}\subseteq\mathscr{D},i\in\mathbb{N}_1$; and that these sets are arranged as follows in $\mathscr{D}$:  $\mathscr{A}_1,\cdots,\mathscr{A}_n,\mathscr{C},\mathscr{A}_1^{c},\cdots,\mathscr{A}_n^{c}$, such that $\mathscr{A}_i^{c}$ is the \underline{complement} or \underline{reversal} of $\mathscr{A}_i$ in semantic, and that $\mathscr{C}$ is the center texts of the document $\mathscr{D}$ that is \underline{not related} to both $\mathscr{A}_i$ and $\mathscr{A}_i^{c}$.
+    Let $\mathscr{D}$ be a collection of texts, then $\mathscr{D}$ is said to have a \textit{concentric} or \textit{ring} structure if and only if $\exists\;\mathscr{A}_i\subseteq\mathscr{D},\mathscr{C}\subseteq\mathscr{D},$ and $\mathscr{A}_i^{*}\subseteq\mathscr{D},i\in\mathbb{N}_{geq 1}$; and that these sets are arranged as follows in $\mathscr{D}$:  $\mathscr{A}_1,\cdots,\mathscr{A}_n,\mathscr{C},\mathscr{A}_1^{c},\cdots,\mathscr{A}_n^{c}$, such that $\mathscr{A}_i^{c}$ is the \underline{complement} or \underline{reversal} of $\mathscr{A}_i$ in semantic, and that $\mathscr{C}$ is the center texts of the document $\mathscr{D}$ that is \underline{not related} to both $\mathscr{A}_i$ and $\mathscr{A}_i^{c}$.
 \end{defnx}
 There are other structures that can be observed in the Qur'\=an, like \textit{parallelism} where themes are repeated in other \arb[trans]{sUraT} \arb{sUraT}; and \textit{segment structure}, where a particular segment starts and ends with similar phrases or themes, creating a bracket around the content; but, these other structures are not studied in this paper. Apart from this, there is also the "mathematical patterns" of the Qur'\=an which has been extensively studied by \citeA{rashad1981}, but this is also not studied in this paper.
 \subsection{Cosine Similarity}
-In Defn. \ref{defn:concentric} and \ref{defn:chiasmus}, there are key words that are still vagued in terms of its mathematical meaning, and these were "mirrors," "not related," and "complemented" or "reversal." Well, semantically these words refer to measurement, particularly, a distance measurement. So that, "mirrors" would mean related meaning the distance in terms of measurement should be relatively close as opposed to "not related" or "complemented" or "reversal". So, how to measure this then?
+From Defn. \ref{defn:concentric} and \ref{defn:chiasmus}, there are key words that are still vagued in terms of its mathematical meaning, and these were "mirrors," "not related," and "complemented" or "reversal." Well, semantically these words refer to measurement, particularly, a distance measurement. So that, "mirrors" would mean related meaning the distance in terms of measurement should be relatively close as opposed to "not related" or "complemented" or "reversal". So, how to measure this then?
 
 The answer to the above question is by measuring the distance of their word embeddings. These embeddings as discussed in Section \ref{sec:bert} will be extracted from BERT models. Using these embeddings a similarity or distance measurement can be used, and the common formula for this is the \textit{cosine similarity} defined below.
 
 \begin{defnx}[Cosine Similarity]
-    Let x
+    Let $\mathbf{u}:=[u_1,\cdots,u_n]^{\text{T}}$ and $\mathbf{v}:=[v_1,\cdots,v_n]^{\text{T}},\linebreak n\in\mathbb{N}_{\geq 1}$ be word embedding vectors such that $\theta_{\mathbf{u},\mathbf{v}}$ is the angle between $\mathbf{u}$ and $\mathbf{v}$, then the cosine similarity of the given angle $\theta$ is
+    \begin{equation}
+        \cos(\theta_{\mathbf{u},\mathbf{v}}):=\frac{\mathbf{u}\cdot\mathbf{v}}{||\mathbf{u}||\,||\mathbf{v}||}.
+    \end{equation}
 \end{defnx}
+Therefore, for this study, if $\theta_1$ is the angle between "related" \arb[trans]{'Ayat} \arb{'Ayat} embeddings, and $\theta_2$ is the angle between "not related" \arb[trans]{'Ayat} \arb{'Ayat} embeddings, then it should be expected that $\cos(\theta_1)\leq\cos(\theta_2)$. Further, if $\theta_3$ is the angle of "complemented" or "reversal" \arb[trans]{'Ayat} \arb{'Ayat} embeddings, then maybe $\cos(\theta_1)\leq\cos(\theta_3)$ since it is not clear yet how disparate is the "related" distance to "complement" or "reversal" distance, and this is especially true for the relation of $\theta_2$ to $\theta_3$ as it cannot be determined up front, and may only be observed from the data, which will be discussed in the next chapter.
 \subsection{Bayesian Optimization}
-
+From Defn. \ref{defn:concentric} and \ref{defn:chiasmus}, it both states that, a document $\mathscr{D}$ may only be considered \textit{concentric} or \textit{chiasmus} if and only if "there exist", denoted by the symbol $\exists$. Indeed, subset of texts $\mathscr{A}_i$s, $\mathscr{C}$, and $\mathscr{A}_i^{*}$ or $\mathscr{A}_i^{\text{c}}$ are all determined manually by the investigator. In this study, we propose to automate the determination of these subsets of texts of document $\mathscr{D}$, and this is through the use of an optimization algorithm called Bayesian Optimization. To do this, a \textit{global objective function} must be defined, for this study, the cosine similarity discussed in the previous section will be used as the said cost function that will either be maximized or minimized. The core model for this optimization is the Gaussian Process defined below.
+\begin{defnx}[Gaussian Process]\label{def:gp}
+    Let $Y_1,Y_2,\cdots,Y_T$ be sequence of random variables such that $Y_t\in\mathbf{Y}$, then the sequence is a \textit{Gaussian process} (GP) if and only if $\mathbf{Y}\overset{\mathrm{iid}}{\sim}\mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma})$.
+\end{defnx}
+\begin{defnx}[Global Cost Function]\label{def:gcf}
+    Let $s_i\in\mathscr{D}$ be an \arb[trans]{'ayaT} \arb{'ayaT} in document $\mathscr{D}$, which can be a \arb[trans]{sUraT} \arb{sUraT}, group of \arb[trans]{suwar} \arb{suwar}, or group of \arb[trans]{'Ayat} \arb{'Ayat} within a \arb[trans]{sUraT} \arb{sUraT}. Further, suppose $\mathscr{A}_i,\mathscr{C},\mathscr{A}_i^{*}$ are the subsets of $\mathscr{D}$, such that $\mathscr{A}:=\{s_1,\cdots,s_n\}, \mathscr{C}:=\{s_{n+1},\cdots,s_{n+c}\}$, and $\mathscr{A}_i^{*}:=\{s_{n+c+1},\cdots,s_{n+c+m}\}$, then the parameters to be optimized is $\boldsymbol{\theta}:=[n,c,m]^{\text{T}}$, and since $n,c,m\in\mathbb{N}_{\geq 2}$, then the parameter space is $\mathscr{P}:=\mathbb{N}_{\geq 2}\times\mathbb{N}_{\geq 2}\times\mathbb{N}_{\geq 2}$, so that $\boldsymbol{\theta}\in\mathscr{P}$. Therefore, if $\gamma$ is the \textit{global cost function}, then $\gamma:\mathscr{P}\rightarrow\mathbb{R}$.
+\end{defnx}
+\begin{defnx}[Cosine Similarity Global Cost Function]
+    in such a way the . suppose   domain of the  activation functions, $\mathscr{L}$ be the domain of the number of hidden neurons, $\mathscr{B}$ be the domain of the proportions of the train data, and $\mathscr{A}$ be the domain of training optimizers, then $\mathscr{P}:=\mathscr{G}\times\mathscr{L}\times\mathscr{B}\times\mathscr{A}$ is the domain of the hyper-parameters such that for any \textit{global cost function} $\gamma$, and $\forall\mathbf{v}\in\mathscr{P}$, we have $\gamma:\mathscr{P}\rightarrow\mathbb{R}$.
+\end{defnx}
+\begin{remark}
+    The \textit{global cost function} for this paper is computed from the error of the PoisNN model after training using a given the input hyper-parameters $\mathscr{P}$.
+\end{remark}
+\begin{remark}
+    For the case of the model proposed in this paper, the following are the domains: $\mathscr{G}:=\{\tanh,\mathrm{sigmoid}\},\mathscr{L}:=\{l_i: l_i\in [4, 16]\}$, $\mathscr{B}:=\{60, 70, 80\}$, $\mathscr{A}:=$\,\{RMSProp \cite{hinton2012}, Nadam \cite{Dozat2016IncorporatingNM}, Ftrl \cite{ftrl}, Adagrad \cite{JMLR:adagrad}\}.
+\end{remark}
+\begin{prop}\label{prop:hypedist}
+    Let $\mathscr{P}$ be the domain of the hyper-parameters and suppose $\gamma(\mathbf{v})\overset{\mathrm{iid}}{\sim}\mathcal{N}(m(\mathbf{v}),k(\mathbf{v},\mathbf{v})), \forall \mathbf{v}\in\mathscr{P}$, then for any $\boldsymbol{\delta}:=[\gamma(\mathbf{v}_1),\cdots,\gamma(\mathbf{v}_n)]^{\top}$, $\boldsymbol{\delta}\overset{\mathrm{iid}}{\sim}\mathcal{N}_n(\mathbf{m},\mathbf{K})$, where $\mathbf{m}:=[m(\mathbf{v}_1),\cdots,m(\mathbf{v}_n)]^{\top}$ and
+    \begin{equation}
+        \mathbf{K}:=\left[\begin{matrix}
+        k(\mathbf{v}_1,\mathbf{v}_1)&\cdots&k(\mathbf{v}_1,\mathbf{v}_n)\\
+        \vdots&\ddots&\vdots\\
+        k(\mathbf{v}_n,\mathbf{v}_1)&\cdots&k(\mathbf{v}_n,\mathbf{v}_n)\\
+        \end{matrix}\right]
+    \end{equation}
+\end{prop}
+\begin{proof}
+    The proof follows from the proof of Theorem 1.2.9 of \citeA{muirhead2005}.
+\end{proof}
+\begin{remark}
+    From Proposition \ref{prop:hypedist} and Definition \ref{def:gp}, $\boldsymbol{\delta}$ is a GP.
+\end{remark}
+\begin{prop}\label{prop:jointpdf}
+    From Proposition \ref{prop:hypedist}, suppose $\boldsymbol{\delta}_{*}:=[\gamma(\mathbf{v}_{n+1}),\cdots,\gamma(\mathbf{v}_{n+p})]^{\top}$, such that $\boldsymbol{\delta}_{*}\overset{\mathrm{iid}}{\sim}\mathcal{N}_p(\mathbf{m}_*,\mathbf{K}_*)$ then 
+    \begin{equation}
+        \left[
+        \begin{matrix}
+            \boldsymbol{\delta}\\
+            \boldsymbol{\delta}_{*}\\
+        \end{matrix}
+        \right]\overset{\mathrm{iid}}{\sim}
+        \mathcal{N}_{n+p}\left(\left[
+        \begin{matrix}
+            \mathbf{m}\\
+            \mathbf{m}_{*}\\
+        \end{matrix}
+        \right],\left[
+        \begin{matrix}
+            \mathbf{K}&\mathbf{K}_{*}\\
+            \mathbf{K}_{*}^{\top}&\mathbf{K}_{**}\\
+        \end{matrix}
+        \right]\right)
+    \end{equation}
+\end{prop}
+\begin{proof}
+    Let $\mathbf{u}:=[\boldsymbol{\delta},\boldsymbol{\delta}_{*}]^{\top}$, then $\mathbf{u}=[\gamma(\mathbf{v}_1),\cdots,\gamma(\mathbf{v}_{n+p})]^{\top}$. Further, since $\mathbf{\gamma}(\mathbf{v}_i)\overset{\mathrm{iid}}{\sim}\mathcal{N}(m(\mathbf{v}_i),k(\mathbf{v}_i,\mathbf{v}_i)),\forall i\in\mathbb{N}_{\leq n+p}$, then the joint distribution of the $\gamma(\mathbf{v}_i)$s, i.e. $\mathrm{Pr}(\mathbf{u})$, follows from the proof of Theorem 1.2.9 of \citeA{muirhead2005}.
+\end{proof}
+\begin{cor}\label{cor:condpdf}
+From Proposition \ref{prop:jointpdf}, let $\mathbf{m}$ and $\mathbf{m}_{*}$ be zero vectors, then the following conditional distribution is true:
+    \begin{equation}\label{eq:gp_updater}    \boldsymbol{\delta}_*\mid\boldsymbol{\delta}\overset{\mathrm{iid}}{\sim}\mathcal{N}_{p}(\mathbf{K}_{*}^{\top}\mathbf{K}^{-1}\boldsymbol{\delta},\mathbf{K}_{**}-\mathbf{K}_{*}^{\top}\mathbf{K}^{-1}\mathbf{K}_{*}).
+\end{equation}
+\end{cor}
+\begin{proof}
+    The proof follows by reversing the condition from $\mathbf{X}_1\mid\mathbf{X}_2$ to $\mathbf{X}_2\mid\mathbf{X}_1$ of the proof of Theorem 1.2.11 of \cite{muirhead2005}.
+\end{proof}
+\begin{defnx}[Lower Confidence Bound]\label{def:lcb}
+    Let $m(\mathbf{v})$ be the mean of the GP, then the Lower Confidence Bound (LCB) notated as $\xi$ is given by
+    \begin{equation}
+        \xi(\mathbf{v}\mid\zeta):=m(\mathbf{v})-\zeta k(\mathbf{v},\mathbf{v}),
+    \end{equation}
+    where $\zeta$ is the balancing factor.
+\end{defnx}
 \section{Integrating Other Islamic Literatures}
 The third objective of this paper asks on how to unify all of these results from Statistics, Machine Learning, AI, and the work of Islamic scholars on Qur'\=anic studies help in understanding the Qur'\=an. Discussions on this will be provided in the next chapter, but in terms of the methodology on how to combine all of this into something that is accessible to Muslims and those interested in learning the Qur'\=an, this paper will provide the architecture on how to package all of these.
 

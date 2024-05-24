@@ -239,6 +239,28 @@ Devlin, J.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Dozat%
+}{%
+Dozat%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+Dozat2016IncorporatingNM}
+\APACinsertmetastar {%
+Dozat2016IncorporatingNM}%
+\begin{APACrefauthors}%
+Dozat, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Incorporating Nesterov Momentum into Adam} {Incorporating nesterov momentum into adam}.{\BBCQ}.
+\newblock
+\begin{APACrefURL} \url{https://openreview.net/pdf/OM0jvwB8jIp57ZJjtNEZ.pdf} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Dukes%
 \ \BBA {} Habash%
 }{%
@@ -289,6 +311,32 @@ Farrin, R.%
 \APACaddressPublisher{}{White Cloud Press}.
 \newblock
 \begin{APACrefURL} \url{https://books.google.com.ph/books?id=io03ngEACAAJ} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hinton%
+, Srivasta%
+\BCBL {}\ \BBA {} Swersky%
+}{%
+Hinton%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2012}}%
+}]{%
+hinton2012}
+\APACinsertmetastar {%
+hinton2012}%
+\begin{APACrefauthors}%
+Hinton, G.%
+, Srivasta, N.%
+\BCBL {}\ \BBA {} Swersky, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+\APACrefbtitle {{RMSprop}.} {{RMSprop}.}
+\newblock
+\begin{APACrefURL} \url{http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -415,6 +463,28 @@ mb2022}%
 \APACaddressPublisher{}{Manila Bulletin}.
 \newblock
 \APACrefnote{Available at: \url{https://mb.com.ph/2022/04/30/ph-embassy-in-riyadh-hosts-first-asian-quran-memorization-contest/} (Accessed: {July 8th, 2023})}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Muirhead%
+}{%
+Muirhead%
+}{%
+{\protect \APACyear {2005}}%
+}]{%
+muirhead2005}
+\APACinsertmetastar {%
+muirhead2005}%
+\begin{APACrefauthors}%
+Muirhead, R\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2005}.
+\newblock
+\APACrefbtitle {Aspects of Multivariate Statistical Theory} {Aspects of multivariate statistical theory}.
+\newblock
+\APACaddressPublisher{Hoboken, New Jersey}{John Wiley \& Sons, Inc.}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

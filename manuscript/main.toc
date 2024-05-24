@@ -62,25 +62,25 @@
 \contentsline {subsection}{\numberline {7.4.5}Generative Pre-Trained Transformer}{68}{subsection.7.4.5}%
 \contentsline {section}{\numberline {7.5}Concentrism Statistical Formulation}{69}{section.7.5}%
 \contentsline {subsection}{\numberline {7.5.1}Cosine Similarity}{70}{subsection.7.5.1}%
-\contentsline {subsection}{\numberline {7.5.2}Bayesian Optimization}{70}{subsection.7.5.2}%
-\contentsline {section}{\numberline {7.6}Integrating Other Islamic Literatures}{70}{section.7.6}%
-\contentsline {subsection}{\numberline {7.6.1}Open Islamic Text Initiative}{71}{subsection.7.6.1}%
-\contentsline {subsection}{\numberline {7.6.2}Retrieval-Augmented Generation}{72}{subsection.7.6.2}%
-\contentsline {section}{\numberline {7.7}Programming Languages Setup}{73}{section.7.7}%
-\contentsline {chapter}{\numberline {8}Results and Discussions}{75}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Descriptive Statistics}{75}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Verses}{77}{subsection.8.1.1}%
-\contentsline {section}{\numberline {8.2}Morphological Analysis}{77}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Structural Analysis}{77}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Concentric Structure}{77}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Mathematical Structure}{77}{subsection.8.3.2}%
-\contentsline {subsection}{\numberline {8.3.3}Discussions on Islamic Philosophy of Qur'\=an's Structural Analysis}{77}{subsection.8.3.3}%
-\contentsline {section}{\numberline {8.4}Topic Modeling}{78}{section.8.4}%
-\contentsline {subsection}{\numberline {8.4.1}Latent Dirichlet Allocation}{78}{subsection.8.4.1}%
-\contentsline {subsection}{\numberline {8.4.2}Bidirectional Encoder Representation from Transformer}{78}{subsection.8.4.2}%
-\contentsline {subsection}{\numberline {8.4.3}Generative Pre-Trained Transformer}{78}{subsection.8.4.3}%
-\contentsline {section}{\numberline {8.5}Relating to other Islamic Texts and Analyses}{78}{section.8.5}%
-\contentsline {subsection}{\numberline {8.5.1}Retrieval-Augmented Generation Approach}{78}{subsection.8.5.1}%
-\contentsline {section}{\numberline {8.6}Limitations of the Models}{78}{section.8.6}%
-\contentsline {chapter}{\numberline {9}Conclusion and Recommendation}{79}{chapter.9}%
-\contentsline {section}{References}{80}{section*.32}%
+\contentsline {subsection}{\numberline {7.5.2}Bayesian Optimization}{71}{subsection.7.5.2}%
+\contentsline {section}{\numberline {7.6}Integrating Other Islamic Literatures}{73}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Open Islamic Text Initiative}{74}{subsection.7.6.1}%
+\contentsline {subsection}{\numberline {7.6.2}Retrieval-Augmented Generation}{74}{subsection.7.6.2}%
+\contentsline {section}{\numberline {7.7}Programming Languages Setup}{75}{section.7.7}%
+\contentsline {chapter}{\numberline {8}Results and Discussions}{77}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Descriptive Statistics}{77}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Verses}{79}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}Morphological Analysis}{79}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Structural Analysis}{79}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Concentric Structure}{79}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Mathematical Structure}{79}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Discussions on Islamic Philosophy of Qur'\=an's Structural Analysis}{79}{subsection.8.3.3}%
+\contentsline {section}{\numberline {8.4}Topic Modeling}{80}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Latent Dirichlet Allocation}{80}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Bidirectional Encoder Representation from Transformer}{80}{subsection.8.4.2}%
+\contentsline {subsection}{\numberline {8.4.3}Generative Pre-Trained Transformer}{80}{subsection.8.4.3}%
+\contentsline {section}{\numberline {8.5}Relating to other Islamic Texts and Analyses}{80}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Retrieval-Augmented Generation Approach}{80}{subsection.8.5.1}%
+\contentsline {section}{\numberline {8.6}Limitations of the Models}{80}{section.8.6}%
+\contentsline {chapter}{\numberline {9}Conclusion and Recommendation}{81}{chapter.9}%
+\contentsline {section}{References}{82}{section*.32}%
