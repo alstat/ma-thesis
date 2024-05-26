@@ -4,34 +4,34 @@ This chapter will discuss some statistical concepts that will be used to underst
 Further, the topics discussed here may be self-explanatory for Statisticians, ML researchers or those with Mathematical background. However, for the benefit of readers coming from humanities background, the paper will present the methodology as follows: mathematical formulas are formalized for purpose of brevity through Definition, Proposition, and Corollary, but immediate to these are explanations or examples aimed to be simple enough for non-statistician readers. As a guide, statisticians or ML researchers can simply read the Definition, Proposition, and/or Corollary. Whereas for humanities readers, the reading shouldn't not stress too much on the said mathematical formalities, and instead proceed to the discussions or examples immediate to it to aid with the understanding.
 \section{Descriptive Statistics}\label{sec:descriptive_stat_method}
 Among the basic statistical methodologies for summarizing information or data is what is known as Descriptive Statistics. From the name itself, these statistics are meant to convey simple descriptions of the data. For example, \textit{mean} and \textit{variance} are common statistics used for describing the data. The formulas for these statistics are given in the following definitions:
-\begin{defnx}[Mean]\label{defn:mean}
+\begin{defn}[Mean]\label{defn:mean}
 Let $x_i, i\in\{1,\cdots,n\}$ where $n\in\mathbb{N}$, then the \textit{mean} of $x_i$s is defined as follows:
 \begin{equation}
     \bar{x} = \sum_{i=1}^n x_i, \qquad\text{where}\;x_i \in\mathbb{R}.
 \end{equation}
-\end{defnx}
-\begin{defnx}[Variance]
+\end{defn}
+\begin{defn}[Variance]
     Let $x_i, i\in\{1,\cdots,n\}$ where $n\in\mathbb{N}$ and let $\bar{x}$ be the mean defined in Defn. \ref{defn:mean} then the \textit{variance} of $x_i$s is defined as follows:
     \begin{equation}
         \mathbb{V}\text{ar}(x) = \frac{1}{n-1}\sum_{i=1}^n (x_i-\bar{x})^2, \qquad\text{where}\;x_i \in\mathbb{R}.
     \end{equation}    
-\end{defnx}
-\begin{defnx}[Standard Deviation]
+\end{defn}
+\begin{defn}[Standard Deviation]
 Let $\sigma^2$ be the variance, then the standard deviation, denoted by $\sigma$, is defined as $\sigma:=\sqrt{\sigma^2}$, that is, square root of the variance.    
-\end{defnx}
+\end{defn}
 The mean is simply the average of the data points, while the variance is a single number that measures or summarizes the distances of the data points from the mean. The variance therefore measures how spread or varied the data points are. In practice, however, standard deviation is more popular for measure of variability since it doesn't get big easily due to the square root operator. Standard deviation is also the preferred metric for this paper.
 \section{Probability Theory}\label{sec:probability_method}
 Statistics is built around the concept of Probability Theory. Hence, it is important to understand how this mathematical theory behind the statistical concepts work. Probability theory is a discipline in itself. It is a branch of mathematics that aims at studying realizations or observations from random phenomena. It does this by using algorithms and models (\textit{see} discussion in Chapter \ref{ch:introduction} for understanding the model). These probability models are mathematical formula design to characterize or describe the patterns of data points. The simplest form of these models is the univariate probability density functions. However, before discussing these models, the idea behind it should be build up from ground up so that humanities readers can appreciate it. To do this, the discussion will proceed with the concept of probability.
-\begin{defnx}[Probability]\label{defn:probability}
+\begin{defn}[Probability]\label{defn:probability}
 A probability is a mathematical concept that measures the likelihood or chance of some event to happen.
-\end{defnx}
+\end{defn}
 Indeed, this idea of probability is well known or is easily understood by many. So that, the probability that someone will die is 1, meaning 100\%, since that's how natures and biology work. Further, the probability of selecting one \arb[trans]{'ayAt} \arb{'ayAt} from \arb[trans]{sUraT 'l-fAti.hati} \arb{sUraT 'l-fAti.hati} through a random draw is one out of seven, assuming each \arb[trans]{'ayAt} \arb{'ayAt} has equal chances of being drawn.
 
 Now, to gradually formalize the concept into mathematics, the succeeding definitions will be discussed to build up the definition of a probability distribution.
-\begin{defnx}[Sample Space]
+\begin{defn}[Sample Space]
 Let $\omega_1,\cdots,\omega_n, \forall n\in\mathbb{N}$ be the list of all possible outcomes of a random event or a phenomena, then the sample space, denoted by $\Omega$, is defined as the collection of all these possible outcomes including the empty set denoted by $\emptyset$.\qed
-\end{defnx}
-\begin{exmpx}\label{ex:sample_space}
+\end{defn}
+\begin{exmp}\label{ex:sample_space}
 Consider the random phenomenon or event where someone randomly picks a verse from the Qur'\=an, what is the probability that it will be a Meccan \arb{makkiyyaT} or a Medinan \arb{madaniyyaT} verse?
 
 The possible output for such random event is either Meccan or Medinan. Suppose, we let Meccan to be denoted by $\omega_1$ and Medinan to be denoted $\omega_2$, then the sample space, which is the collection of all possible output is denoted as follows:
@@ -40,11 +40,11 @@ The possible output for such random event is either Meccan or Medinan. Suppose, 
 \end{equation}
 It should be understood that $\emptyset$ is also included in $\Omega$, but is not written for brevity.
 \qed
-\end{exmpx}
-\begin{defnx}[Event]
+\end{exmp}
+\begin{defn}[Event]
 Let $\Omega=\{\omega_1,\cdots,\omega_n\}, \forall n\in\mathbb{N}$, be the sample space, then an event, denoted here as $\mathscr{A}$, is defined as the subset of the sample space, i.e., $\mathscr{A}\subseteq{\Omega}$.\qed
-\end{defnx}
-\begin{exmpx}
+\end{defn}
+\begin{exmp}
 From Ex. \ref{ex:sample_space}, consider drawing two samples from the Qur'an, what is the sample space and give an example of a possible event?\\
 \textit{Solution:} The sample space is given below:
 \begin{align}
@@ -58,7 +58,7 @@ So that, if $\mathscr{A}$ is the event of drawing two \arb[trans]{'ayAt} \arb{'a
     \mathscr{A}:=\{\text{\arb{madaniyyaT}}, \text{\arb{makkiyyaT}}\}=\{\text{Medinan}, \text{Meccan}\}=\{\omega_2,\omega_1\}
 \end{equation}
 Therefore, $\mathscr{A}\subseteq\Omega$, read as $\mathscr{A}$ is a subset of $\Omega$.\qed
-\end{exmpx}
+\end{exmp}
 Now, going back to the discussion on the concept of probability above and reflect on the example given, that the probability that someone will die is 1; and that the probability of selecting one \arb[trans]{'ayAt} \arb{'ayAt} from \arb[trans]{sUraT 'l-fAti.hati} \arb{sUraT 'l-fAti.hati} through a random draw is one out of seven. It therefore begs the following questions: how does one solve this? Like how does it translate into a formal mathematical computation?
 
 Indeed, to appreciate the motivation of the succeeding definitions, it is important to devise a logical approach to computing probability mathematically, and this should explain why the following definitions are defined the way they are.
@@ -70,15 +70,15 @@ Probability as already defined in Defn. \ref{defn:probability} is a measure, whi
     \item The union of all the pieces.
 \end{enumerate}
 The above explanation for the $\sigma$-algebra is condensed in to the following mathematical definition:
-\begin{defnx}[$\sigma$-algebra]\label{defn:sigma_algebra}
+\begin{defn}[$\sigma$-algebra]\label{defn:sigma_algebra}
 Let $\Omega:=\{\omega_1,\cdots,\omega_n\}, \forall n\in\mathbb{N}$, then the collections of all disjoint partitions, which are the events, are defined as the $\sigma$-algebra or $\sigma$-field, denoted here as $\mathfrak{F}$, and should satisfy the following conditions:
 \begin{enumerate}
     \item The empty set $\emptyset\in\mathfrak{F}$
     \item If $\mathscr{A}\in\mathfrak{F}$, then the complement $\Omega\backslash\mathscr{A}$ is also an element of $\mathfrak{F}$
     \item If $\mathscr{A}_1,\mathscr{A}_2,\cdots$ is a countable sequence of sets in \mathscr{A}, then the $\bigcup_{i=1}^{\infty}\mathscr{A}_i$ is also an element of $\mathfrak{F}$
 \end{enumerate}\qed
-\end{defnx}
-\begin{exmpx}
+\end{defn}
+\begin{exmp}
 Given the sample space $\Omega:=\{\text{Meccan},\text{Medinan}\}$, the $\sigma$-algebra is
 \begin{align}
     \mathfrak{F}=&\{\text{Meccan},\text{Medinan},(\text{Meccan},\text{Medinan}),\nonumber\\
@@ -86,8 +86,8 @@ Given the sample space $\Omega:=\{\text{Meccan},\text{Medinan}\}$, the $\sigma$-
     &\;\;(\text{Medinan},\text{Medinan}),\emptyset\}
 \end{align}
 \qed
-\end{exmpx}
-\begin{defnx}[Probability Measure]\label{defn:probability_measure}
+\end{exmp}
+\begin{defn}[Probability Measure]\label{defn:probability_measure}
 Let $\Omega$ be the \textit{sample space}, $\mathfrak{F}$ be the $\sigma$-algebra, $ p$ be the probability measure, then the probability of a set $\mathscr{A}, \mathscr{A}\in\mathfrak{F}$, on the probability space $(\Omega,\mathfrak{F}, p)$, denoted by $ p(\mathscr{A})$, satisfies the following properties:
 \begin{enumerate}
     \item Non-negativity: For any set $\mathscr{A},  p(\mathscr{A})\geq 0$
@@ -95,19 +95,19 @@ Let $\Omega$ be the \textit{sample space}, $\mathfrak{F}$ be the $\sigma$-algebr
     \item Countable additivity: For any sequence of disjoint sets $\mathscr{A}_1,\mathscr{A}_2,\cdots$ in $\mathfrak{F}$, such that the union $\bigcup_{\forall i \in\mathbb{N}}\mathscr{A}_i$ is also in $\mathfrak{F}$, we have: $ p\left(\displaystyle\bigcup_{\forall i\in\mathbb{N}}\mathscr{A}_i\right)=\displaystyle\sum_{\forall \in\mathbb{N}} p(\mathscr{A}_i)$
 \end{enumerate}
 \qed
-\end{defnx}
+\end{defn}
 
 Basically, the idea of Defn. \ref{defn:probability_measure} is to define the concept of "measure" in general sense, although above is a special measure called probability measure. As before, one can think of this probability measure like a tape measure in simple sense. This tape measure has some properties that should be expected for a measurement tool. The first property or condition is that the probability measure has to be positive. Indeed, if we use any tape measure for measuring length, never will someone get a negative measure like -2cm length. It always has to be positive. Further, the second condition to expect is that for this type of tape measure called probability measure, the total measure of all objects available in the given space should be equal to 1. That is, the total is normalized to 1. Think of this like 100\% coverage if we measure all of the objects. Lastly, for any object, this tape measure should be able to measure the object through partitions, such that the measure of the union of these partitions is equal to the sum of the measure of each partition. All of these conditions are logical criteria for a general idea of "measure," although the normalization part above is unique for probability measure. Note that, the concept of proability measure here should not be confined to measuring length as in the analogy, it should generalize to measuring volume and complex objects in general.
-\begin{defnx}[Random Variable]
+\begin{defn}[Random Variable]
 Let $\Omega$ be the sample space, and $\mathbb{R}$ be the set of all real numbers, then a random variable $X$ is a function defined as $X:\Omega\rightarrow\mathbb{R}$.\qed
-\end{defnx}
-\begin{exmpx}\label{ex:ayah_prob}
+\end{defn}
+\begin{exmp}\label{ex:ayah_prob}
 Consider the example of drawing a random verse or \arb[trans]{'ayAt} \arb{'ayAt} again, what is the probability that it will be an \arb[trans]{'ayAt} \arb{'ayAt} from \textit{s\=urah l-baqara}'s \arb[trans]{'ayAt} \arb{A"'yaTu sUraT 'l-baqaraT} or the Chapter of Cow?
 
 The answer to this is 4.59\% probability, this is because there are 286 \arb[trans]{'ayAt} \arb{'ayAt} and there are 6236 verses in the Qur'\=an, so that the probability is $\frac{286}{6236}=0.04586$. The assumption here is that all of the \arb[trans]{'ayAt} \arb{'ayAt} in the Qur'\=an have equal chances of being picked up or drawn.
 \qed
-\end{exmpx}
-\begin{exmpx}\label{ex:binom_manual}
+\end{exmp}
+\begin{exmp}\label{ex:binom_manual}
 To apply the concept so far, consider again Ex. \ref{ex:ayah_prob}, what is the probability of getting 5 \textit{s\=urah l-baqara}'s \arb[trans]{'ayAt} \arb{A"'yaTu sUraT 'l-baqaraT} if we randomly pick 20 \arb[trans]{'ayAt} \arb{'ayAt} in total from the Qur'\=an?\\
 \textit{Solution.} The following are given:
 \begin{itemize}
@@ -140,7 +140,7 @@ That is, there are 15,504 possible cases of 5 positions' configuration for \arb{
 \end{align}
 Hence, there is a 0.16\% probability of getting 5 \textit{s\=urah l-baqara}'s \arb[trans]{'ayAt} \arb{A"'yaTu sUraT 'l-baqaraT} when randomly drawing 20 \arb{'ayAt} from the Qur'\=an.
 \qed
-\end{exmpx}
+\end{exmp}
 Note that Ex. \ref{ex:binom_manual} can be solved using a known formula in probability called \textit{Binomial} mass function, which is a model that can be used to describe the event of getting 5 \textit{s\=urah l-baqara}'s \arb[trans]{'ayAt} \arb{A"'yaTu sUraT 'l-baqaraT} on a 20 random samples of Qur'\=an's \arb{'ayAt}. The {Binomial} mass function is specifically a probability mass/density function model. The following section will discuss the Statistical Graphs, which will cover the concept of frequency distribution, the one modeled or characterized by the probability mass/density function.
 \section{Statistical Graphs}\label{sec:stat_graphs_method}
 Graphs or plots are data visualization tools that are useful for exploratory data analysis apart from the Descriptive Statistics discussed above. It supplements the Descriptive Statistics findings through shapes visualized in the graphs. Among the popular statistical graphs is the bar graph. An example of this is given in Figure \ref{fig:ayah_word_count}. Other graphs used are the box plots and the density plots which is also in Figure \ref{fig:ayah_word_count}
@@ -154,7 +154,7 @@ While most statistical plots are easy to understand like bar graphs and scatter 
 \end{figure}
 
 As shown in Figure \ref{fig:ayah_word_count_with_desc}, both the Box and Density plots are tied to each other. This is indeed the case because both are describing the same information but presented in different style of visualization. In fact, Histogram is also used to describe the same information as the Box and Density, and the three are therefore related. So much so, that the three can be put into one graph. As to how to interpret these, readers are referred to for further details \textcolor{red}{[to add reference]}.
-\begin{exmpx}[Frequency Distribution]\label{ex:frequency_distribution}
+\begin{exmp}[Frequency Distribution]\label{ex:frequency_distribution}
 Consider again the task of drawing an \arb[trans]{'ayAt} \arb{'ayAt} from the Qur'\=an, suppose the \arb[trans]{'ayAt} \arb{'ayAt} are separated into \arb{makkiyyaT} Meccan and \arb{madaniyyaT} Medinan, what is the probability of getting at most 10 \arb[trans]{kalimAt} \arb{kalimAt} or words in a sampled \arb[trans]{'ayAt} \arb{'ayAt} from \arb{makkiyyaT} Meccan \textit{surah}s \arb{sUr}?\\
 \textit{Solution:} To answer this, Figure \ref{fig:meccan_medinan_word_count_per_ayah} shows the \textit{histograms} with the \textit{box plots} and the \textit{rainclouds} plots. The figure shows the frequency of the \arb[trans]{kalimAt} \arb{kalimAt} or words in a sampled \arb[trans]{'ayAt} \arb{'ayAt}. This frequency describes the distribution of the \arb[trans]{kalimAt} \arb{kalimAt}. To interpret this, the Medinan \arb{madaniyyaT} histogram shows that most of the \arb[trans]{'ayAt} \arb{'ayAt} have about 10 to 20 \arb[trans]{kalimAt} \arb{kalimAt} or words in total. This conclusion is based on the where the box of the box plot is located, which also corresponds to the area where the bars of the histogram are high, and also where most of the points or 'droplets' from the rainclouds plot are congested. With that said, \textit{historgram}, \textit{box plot}, and \textit{rainclouds} are related and are telling the same story from different perspectives. It should be noted that, the rainclouds plot is not a common visualization tool. 
 
@@ -176,7 +176,7 @@ The question has not been answered yet though, the above discussions only explai
 
 From Eq. \ref{ex_eq:freq_dist_prob1..10}, $ p(X=0)$ is the probability of observing zero \arb[trans]{kalimaT} \arb{kalimaT} in a \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu}, and $ p(X=1)$ is the probability of observing one \arb[trans]{kalimaT} \arb{kalimaT} in a \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu}, and so on. The numbers in Eq. \ref{ex_eq:freq_dist_probval1..10} are the number of \arb[trans]{'AyAt 'l-makkiyyaTu} \arb{'AyAt 'l-makkiyyaTu} having zero, one, two, to ten \arb[trans]{kalimAt} \arb{kalimAt}.
 \qed
-\end{exmpx}
+\end{exmp}
 \section{Population and Sample}
 Statistics is a branch of science that is concerned with understanding how the data behave based on a sample---a small set of the said data. It uses statistical methodologies to understand these behavior such as probability mass/density function, and use the findings from these tools on the sampled data as a conclusion for the population---the overall data.
 
@@ -190,7 +190,7 @@ The importance of the sample data as illustrated below follows from the fact tha
     \caption{Population and sample illustration}
     \label{fig:pop_sample}
 \end{figure}
-\begin{exmpx}\label{ex:population_sample_distribution_meccan_words}
+\begin{exmp}\label{ex:population_sample_distribution_meccan_words}
 Consider the task of sampling 250 \arb[trans]{'AyAt} \arb{'AyAt} from the population of \arb[trans]{'AyAt 'l-makkiyyaT}, describe the statistics of the population and the sample.\\
 \textit{Solution:} In Statistics, there are several ways to sample from data, the simplest approach is through the use of \textit{uniform distribution}, that is, the sampling assumes that all data from the population are distributed equally, in the sense that all data points have equal chance of being selected. The other approach is through a \textit{weighted distribution}, where a probability is assigned to each of the data points in the population, so that, the selection will be biased to those with high probability. Figure \ref{fig:meccan_words_sampling} shows the graphs or plots of the population distribution of \arb[trans]{kalimAtu 'l-makkiyyaT} \arb{kalimAtu 'l-makkiyyaT}, which is presented as the top plot, this distribution of \arb{kalimAtu 'l-makkiyyaT} is the same one shown in the bottom plot of Figure \ref{fig:meccan_medinan_word_count_per_ayah}. 
 
@@ -218,8 +218,8 @@ The estimates got from the sample ideally are taken from a probabilistic model f
     \label{fig:meccan_words_sampling}
 \end{figure}
 \qed
-\end{exmpx}
-\begin{exmpx}
+\end{exmp}
+\begin{exmp}
 Consider again Ex. \ref{ex:population_sample_distribution_meccan_words}, suppose the sample data is the only data available, how will you compute the probability of getting exactly 35 \arb[trans]{kalimAtu 'l-sUratu 'l-makkiyyaTu} \arb{kalimAtu 'l-sUratu 'l-makkiyyaTu}?\\
 \textit{Solution:} To answer this question, one might approach this using the frequency distribution as in Ex. \ref{ex:frequency_distribution}. However, the use of frequency distribution from the said example is applicable since that deals with the population data, which is already the true probability, and there is no need to do some estimation. It is like try to get the average height of male Filipinos in the Philippines by doing census across the population, for such case, why would you do an estimate if you have all the census data of all heights of the Filipino, wouldn't it be easier to just do the average computation directly? This is the analogy for the frequency distribution used in Ex. \ref{ex:frequency_distribution}, that is, no need to do some estimation. However, for this problem, the assumption is that only the sample is available, that is, not all of the population is available. With that said, the best solution is to do some estimation. Now, doing an estimation is possible using the samples only, that is, using the idea of frequency distribution but this time applying it on the sample. This is becaus the sample was done using a random sampling, which more or less representative of the population. However, using this approach may possess a problem, let's see what that problem will likely be by forcing the approach in Ex. \ref{ex:frequency_distribution}, following the computation as in Eq. (\ref{ex_eq:prob_lesseq_10}) to Eq. (\ref{ex_eq:prob_0612}). 
 
@@ -233,24 +233,24 @@ Let $X$ again be the random variable of an event of observing 35 \arb[trans]{kal
 From the Eq. \ref{eq:probx_eq_35}, it shows that if we use the sample data for estimating the probability of observing 35 \arb{kalimAt}, then the answer above is 0, meaning by estimate there is a 0 chance of observing a 35 \arb{kalimAt} from a \arb[trans]{'AyAtu 'l-makkiyyaTu} \arb{'l-sUrAtu 'l-makkiyyaTu}. This conclusion is indeed misleading, since according to the population data, there are \arb[trans]{'AyAtu 'l-makkiyyaTu} \arb{'AyAtu 'l-makkiyyaTu} that has 35 \arb[trans]{kalimAt} \arb{kalimAt}. 
 
 So, how to properly estimate this then? This is where the concept of probabilistic modeling comes in. For this problem, the data is count, and that the event of observing 10 \arb[trans]{kalimAtu 'l-sUratu 'l-makkiyyaTu} \arb{kalimAtu 'l-sUratu 'l-makkiyyaTu} in an \arb{'ayaT} is known to be best modeled by a Poisson distribution defined in Defn. \ref{defn:poisson_mass_function}. Ex. \ref{ex:poisson_distribution_sample} will discuss how to solve this. 
-\end{exmpx}
+\end{exmp}
 \section{Probability Distributions}
-\begin{defnx}[Poisson Mass Function]\label{defn:poisson_mass_function}
+\begin{defn}[Poisson Mass Function]\label{defn:poisson_mass_function}
 Let $X$ be a random variable and let $\lambda>0$ be a parameter, then if $x$ is the random value, then the \textit{Poisson} mass function is given by:
 \begin{equation}
      p(X=x)=\frac{\lambda^x\exp(-\lambda)}{x!}
 \end{equation}
-\end{defnx}
-\begin{exmpx}\label{ex:poisson_distribution_sample}
+\end{defn}
+\begin{exmp}\label{ex:poisson_distribution_sample}
 Consider again Ex. \ref{ex:population_sample_distribution_meccan_words}, the problem can be solved using the Poisson distribution.
-\end{exmpx}
-\begin{defnx}[Normal Density Function]
+\end{exmp}
+\begin{defn}[Normal Density Function]
 Let $Y$ be a random variable and let $\mu\in\mathbb{R}$ and $\sigma\in\mathbb{R}$ be the mean and variance parameters, if $y$ is the random value, then the \textit{Gaussian} or \textit{Normal} density function is given below:
 \begin{equation}
      p(Y=y):=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left\{-\frac{(y-\mu)^2}{\sigma^2}\right\},\quad\text{where}\;-\infty<y<\infty
 \end{equation}
-\end{defnx}
-\begin{defnx}[Dirichlet Density Function]
+\end{defn}
+\begin{defn}[Dirichlet Density Function]
 Let $\mathbf{Y}$ be a vector random variable with a random value $\mathbf{y}:=[y_1,\cdots,y_k]^{\text{T}}$ and let $\boldsymbol{\alpha}:=[\alpha_1,\cdots,\alpha_k]^{\text{T}}$ be the parameters, then the \textit{Dirichlet} density function is defined as
 \begin{equation}
      p(\mathbf{X}=\mathbf{x};\boldsymbol{\alpha}):=\frac{1}{B(\boldsymbol{\alpha})}\prod_{i=1}^kx_i^{\alpha_i-1},
@@ -260,8 +260,8 @@ where,
     B(\boldsymbol{\alpha}):=\frac{\displaystyle\prod_{i=1}^k\Gamma(\alpha_i)}{\Gamma\left(\sum_{i=1}^k\alpha_i\right)}
 \end{equation}
 \qed
-\end{defnx}
-\begin{defnx}[Multinomial Mass Function]
+\end{defn}
+\begin{defn}[Multinomial Mass Function]
 Let $\mathbf{X}$ be a vector random variable with a random value $\mathbf{x}:=[x_1,\cdots,x_k]^{\text{T}}$ such that $x_i\geq 0,\forall i \in[1,k]$, let $\boldsymbol{q}:=[q_1,\cdots,q_k]^{\text{T}}$ and $n$ be the parameters, the probability mass function of a Multinomial distribution is 
 \begin{align}
     f(x_1,\cdots,x_k;n,q_1,\cdots,q_k):=& q(X_1=x_1\;\text{and}\;\cdots\;\text{and}\;X_k=x_k)\nonumber\\
@@ -270,7 +270,7 @@ Let $\mathbf{X}$ be a vector random variable with a random value $\mathbf{x}:=[x
         0&\text{otherwise},
     \end{cases}
 \end{align}
-\end{defnx}
+\end{defn}
 
 \section{Statistical Modeling}\label{sec:stat_modeling}
 Probability distributions are fundamental models that can be used to describe some characteristics of the data. However, combinations of variables, and accounting dynamics of the observations can lead into other types of models as well. In general, a statistical model can be written using the following formula:
