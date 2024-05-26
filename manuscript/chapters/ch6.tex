@@ -5,21 +5,56 @@ This chapter is organized as follows: Section \ref{sec:topic_modeling_method} wi
 \subsection{Bayesian Statistical Models}
 
 \section{Rhythmic Analysis}
-Analyzing the rhyme starts with collection of the ending syllable of the last word of each \arb[trans]{'ayaT} \arb{'ayaT} in the \arb[trans]{sUraT} \arb{sUraT}. This can be done per \arb[trans]{sUraT} \arb{sUraT} or across the Qur'\=an. For this study, both are done to see if there are interesting patterns. 
+As discussed in Chapter \ref{ch:introduction}, one of the Qur'\=an's characteristics is the rhythmic feature of the \arb[trans]{'ayaT} \arb{'ayaT} in the \arb[trans]{sUraT}. This can be easily confirmed by simply learning the phonetical alphabets of Arabic, and reciting through the \arb[trans]{'ayaT} \arb{'ayaT} of the Qur'\=an. However, none has ever studied this rhythmic feature objectively from a statistical perspective. In this section, the methodology on how to analyze this is discussed. To start with, consider the following example:
+\begin{exmpx}
+    Table \ref{tbl:surah_alfatihah} shows the verses of the first chapter of the Qur'\=an, \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT}. In this table the last two syllables are highlighted in red. In Arabic, when the sentence ends or there is a pause, the last vowel of the syllable is silent, that is, not pronounced. So that, for the first \arb[trans]{'ayaT} \arb{'ayaT}, the last two syllables is read as \arb[trans]{hImi} \arb{hImi}, but because this is the end of the said \arb[trans]{'ayaT} \arb{'ayaT}, then it is read as \arb[trans]{hIm} \arb{hIm}. This is the same case with the remaining six \arb[trans]{'ayaT} \arb{'ayaT}. Therefore, following the said rule, the \arb[trans]{'ayaT} \arb{'ayaT} of \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT} are: \arb[trans]{hIm} \arb{hIm}, \arb[trans]{mIn} \arb{mIn}, \arb[trans]{hIm} \arb{hIm}, \arb[trans]{dIn} \arb{dIn}, \arb[trans]{`in} \arb{`in}, \arb[trans]{qIm} \arb{qIm}, and \arb[trans]{lIn} \arb{lIn}. As observed, all of the ending syllables has a vowel of \textit{i}, and this consistency is what produces the rhyme. In this paper, the rhymes across all \arb[trans]{'Ayat} of the Qur'\=an are studied.\\
+    \begin{table}
+        \caption{The verses or \arb[trans]{'Ayat} \arb{'Ayat} of \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT}}
+        \begin{tabularx}{\textwidth}{XX}
+            \toprule
+            \textbf{Transliteration}&\textbf{Verses} or \arb[trans]{'Ayat} \arb{'Ayat}\\
+            \midrule
+            \arb[trans]{bismi 'l-lahi 'l-ra.hmAni 'l-ra\arbcolor[red]{hIm}i ((1))}&
+            \arb[fullvoc]{bismi 'l-lahi 'l-ra.hmAni 'l-ra\arbcolor[red]{hImi} ((1))}
+            \\[0.4cm]
+            \arb[trans]{'l.hamdu lillahi rabbi 'l`Ala\arbcolor[red]{mIn}a ((2))}&
+            \arb[fullvoc]{'l-.hamdu lillahi rabbi 'l-`Ala\arbcolor[red]{mIna} ((2))}\\[0.4cm]
+            
+            \arb[trans]{'l-ra.hmAni 'l-ra\arbcolor[red]{hIm}i ((3))}&
+            \arb[fullvoc]{'l-ra.hmAni 'l-ra\arbcolor[red]{hImi} ((3))}\\[0.4cm]
+            
+            \arb[trans]{mAliki yawmi 'l-\arbcolor[red]{dIn}i ((4))}&
+            \arb[fullvoc]{mAliki yawmi 'l-\arbcolor[red]{dIni} ((4))}\\[0.4cm]
+            
+            \arb[trans]{'iyyAka na`budu wa-'iyyaka nasta\arbcolor[red]{`In}u ((5))}&
+            \arb[fullvoc]{'iyyAka na`budu wa-'iyyaka nasta\arbcolor[red]{`Inu} ((5))}\\[0.4cm]
+            
+            \arb[trans]{'ihdinA 'l-.sirA.ta 'l-musta\arbcolor[red]{qIm}a ((6))}&
+            \arb[fullvoc]{'ihdinA 'l-.sirA.ta 'l-musta\arbcolor[red]{qIma} ((6))}\\[0.4cm]
 
-The analysis is done by visualizing the signature of the rhythms, and also modeling the transition probabilities between the ending syllables. That is, answering the question like what is the probability of getting a ending rhyme of \arb[trans]{iyn} \arb{iyn} given the previous verse ends with \arb[trans]{uwn} \arb{uwn}.
+            \arb[trans]{.sirA.ta 'lla_dIna 'an`amta `alayhim .gayri 'l-ma.g.dUbi `alayhim wa-lA 'l-.dAl\arbcolor[red]{lIn}a ((7))}&
+            \arb[fullvoc]{.sirA.ta 'lla_dIna 'an`amta `alayhim .gayri 'l-ma.g.dUbi `alayhim wa-lA 'l-.dA\arbcolor[red]{llIna} ((7))}\\[0.4cm]
+            \bottomrule
+        \end{tabularx}
+        \label{tbl:surah_alfatihah}
+    \end{table}
+\end{exmpx}
 
-Therefore, each \arb[trans]{sUraT} \arb{sUraT} will have its own probabilistic graphical model, which can be analyzed by clustering similar rhymings of \arb[trans]{sUraT} \arb{sUraT}.
+The first method for studying the rhyme is to simply visualize this through a line chart, with the x-axis being the \arb[trans]{'ayaT} \arb{'ayaT} number and the y-axis being the last syllables. The idea then is to understand the pattern of how the vowels switch. Figure \ref{fig:fatihah_baqarah_rhythmic_method} shows the rhythmic pattern of the last pronounced syllable of both \arb[trans]{sUraTu 'l-fati.haT} \arb{sUraTu 'l-fati.haT} and \arb[trans]{sUraTu 'l-baqaraT} \arb{sUraTu 'l-baqaraT}.
 
-The signature can be plotted using line chart, and the verses can be divided into juz. So that, there will be 30 rows for 30 juz.
+\begin{figure}[!t]
+    \includegraphics[width=\textwidth]{img/plot_rhythmic1.pdf}
+    \caption{Rhythmic pattern of the last pronounced syllables of the \arb[trans]{sUraTu 'l-fati.haT} \arb{sUraTu 'l-fati.haT} and \arb[trans]{sUraTu 'l-baqaraT} \arb{sUraTu 'l-baqaraT}}
+    \label{fig:fatihah_baqarah_rhythmic_method}
+\end{figure}
+
+With the data given in Figure \ref{fig:fatihah_baqarah_rhythmic_method}, we want to study if there are some interesting patterns on the switch of the rhythm, like in terms of topic, does the switch to particular rhythmic syllables imply a change in topic being discussed in the \arb[trans]{sUraT} \arb{sUraT}? Further, we also would want to model the dynamic of the changes using a statistical model. The first one is a non-dynamic model and is called Bayesian Networks model, and then the other one accounts the changes over the \arb[trans]{'ayaT} \arb{'ayaT} numbers, and this model is called the Bayesian Discrete-Time Markov Models, both discussed in the succeeding sections.
 \subsection{Bayesian Network Models}
-\section{Verse Division Analysis}
-In theory, verse division depends on the rhyme and the length of the verse. For this to be modeled, a discrete-time markov chain can be used with transition probability modeled by a Geometric distribution. The idea is that an \arb[trans]{'ayaT} \arb{'ayaT} will end if enough number of words have been recited and that the rhyme is achieved. The question is how many number of words to be recited for it to be enough to transition to the next verse. The states here can be defined as the ending rhyming syllable used in the previous section. 
+
 \subsection{Bayesian Discrete-Time Markov Models}
+For this to be modeled, a discrete-time markov chain can be used with transition probability modeled by a Geometric distribution. The idea is that an \arb[trans]{'ayaT} \arb{'ayaT} will end if enough number of words have been recited and that the rhyme is achieved. The question is how many number of words to be recited for it to be enough to transition to the next verse. The states here can be defined as the ending rhyming syllable used in the previous section. 
 \section{Thematic Analysis}
-This section 
-\subsection{Topic Modeling}\label{sec:topic_modeling_method}
-As presented in Chapter \ref{ch:introduction}, the first objective is to extract the thematic themes of \textit{s\=urahs} \arb{sUr} with at least 1000 words. In Statistics and Machine Learning, this task is called Topic Modeling. There are several ways to do this, but the popular methodology is to use the Latent Dirichlet Allocation (LDA) discussed in the next section.
+This section will discuss the methodology on how to extract the themes or topics of an input text like a \arb[trans]{sUraT} \arb{sUraT}. There are two approaches for this, using the classic statistical methodology and using the recent large language models. The popular statistical method for this is using a Bayesian model called Latent Dirichlet Allocation or LDA. On the other hand, there are two for large language model, and that is using a Bidirectional Encoder Representation from Transformers (BERT) and Generative Pre-Trained Transformer (GPT). The three approaches will be tested for generating these topics.
 \subsection{Latent Dirichlet Allocation}\label{sec:lda}
 Latent Dirichlet Allocation (LDA) is a Statistical methodology that is based on Bayesian inference \cite{bayes,laplace1986}. It is a generative probabilisitic model for collection of discrete data such as text corpora \cite{blei2003latent}. The main formula is defined below:
 \begin{defnx}[Latent Dirichlet Allocation]
@@ -75,32 +110,54 @@ The answer to the above question is by measuring the distance of their word embe
 \begin{defnx}[Cosine Similarity]
     Let $\mathbf{u}:=[u_1,\cdots,u_n]^{\text{T}}$ and $\mathbf{v}:=[v_1,\cdots,v_n]^{\text{T}},\linebreak n\in\mathbb{N}_{\geq 1}$ be word embedding vectors such that $\theta_{\mathbf{u},\mathbf{v}}$ is the angle between $\mathbf{u}$ and $\mathbf{v}$, then the cosine similarity of the given angle $\theta$ is
     \begin{equation}
-        \cos(\theta_{\mathbf{u},\mathbf{v}}):=\frac{\mathbf{u}\cdot\mathbf{v}}{||\mathbf{u}||\,||\mathbf{v}||}.
+        \cos(\theta_{\mathbf{u};\mathbf{v}}):=\frac{\mathbf{u}\cdot\mathbf{v}}{||\mathbf{u}||\,||\mathbf{v}||}.
     \end{equation}
 \end{defnx}
 Therefore, for this study, if $\theta_1$ is the angle between "related" \arb[trans]{'Ayat} \arb{'Ayat} embeddings, and $\theta_2$ is the angle between "not related" \arb[trans]{'Ayat} \arb{'Ayat} embeddings, then it should be expected that $\cos(\theta_1)\leq\cos(\theta_2)$. Further, if $\theta_3$ is the angle of "complemented" or "reversal" \arb[trans]{'Ayat} \arb{'Ayat} embeddings, then maybe $\cos(\theta_1)\leq\cos(\theta_3)$ since it is not clear yet how disparate is the "related" distance to "complement" or "reversal" distance, and this is especially true for the relation of $\theta_2$ to $\theta_3$ as it cannot be determined up front, and may only be observed from the data, which will be discussed in the next chapter.
 \subsection{Bayesian Optimization}
-From Defn. \ref{defn:concentric} and \ref{defn:chiasmus}, it both states that, a document $\mathscr{D}$ may only be considered \textit{concentric} or \textit{chiasmus} if and only if "there exist", denoted by the symbol $\exists$. Indeed, subset of texts $\mathscr{A}_i$s, $\mathscr{C}$, and $\mathscr{A}_i^{*}$ or $\mathscr{A}_i^{\text{c}}$ are all determined manually by the investigator. In this study, we propose to automate the determination of these subsets of texts of document $\mathscr{D}$, and this is through the use of an optimization algorithm called Bayesian Optimization. To do this, a \textit{global objective function} must be defined, for this study, the cosine similarity discussed in the previous section will be used as the said cost function that will either be maximized or minimized. The core model for this optimization is the Gaussian Process defined below.
-\begin{defnx}[Gaussian Process]\label{def:gp}
+From Defn. \ref{defn:concentric} and \ref{defn:chiasmus}, it both states that, a document $\mathscr{D}$ may only be considered \textit{concentric} or \textit{chiasmus} if and only if "there exist", denoted by the symbol $\exists$. Indeed, subset of texts $\mathscr{A}_i$s, $\mathscr{C}$, and $\mathscr{A}_i^{*}$ or $\mathscr{A}_i^{\text{c}}$ are all determined manually by the investigator. In this study, we propose to automate the determination of these subsets of texts of document $\mathscr{D}$, and this is through the use of an optimization algorithm called Bayesian Optimization. The idea behind Bayesian optimization is that it approximates the objective function with a \textit{surrogate} function, and using this surrogate to find the global maximum or minimum of the objective function. Furthermore, it does this by fitting the surrogate function to the objective function in as few input points or iteration as possible. As such, an \textit{acquisition} function is needed for choosing smartly the next input points to be used for fitting the surrogate. Using these components, a Bayes' Theorem is used in fitting the surrogate.
+
+To do this, a \textit{global objective function} must be defined, for this study, the cosine similarity discussed in the previous section will be used as the said cost function that will either be maximized or minimized. The core model for this optimization is the Gaussian Process defined below.
+\subsubsection{Surrogate Function}
+The surrogate function aims to approximate the objective function. In Bayesian, optimization, the surrogate function is defined by the Gaussian process (GP).
+\begin{defnx}[Gaussian Process]\label{defn:gp}
     Let $Y_1,Y_2,\cdots,Y_T$ be sequence of random variables such that $Y_t\in\mathbf{Y}$, then the sequence is a \textit{Gaussian process} (GP) if and only if $\mathbf{Y}\overset{\mathrm{iid}}{\sim}\mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma})$.
 \end{defnx}
-\begin{defnx}[Global Cost Function]\label{def:global_cost_func}
-    Let $\mathbf{s}_i\in\mathscr{D}$ be a word embedding of an \arb[trans]{'ayaT} \arb{'ayaT} in document $\mathscr{D}$, which can be a \arb[trans]{sUraT} \arb{sUraT}, group of \arb[trans]{suwar} \arb{suwar}, or group of \arb[trans]{'Ayat} \arb{'Ayat} within a \arb[trans]{sUraT} \arb{sUraT}. Further, suppose $\mathscr{A}_i,\mathscr{C},\mathscr{A}_i^{*}$ are the subsets of $\mathscr{D}$, such that $\mathscr{A}_i:=\{\mathbf{s}_1,\cdots,\mathbf{s}_n\}, \mathscr{C}:=\{\mathbf{s}_{n+1},\cdots,\mathbf{s}_{n+c}\}$, and $\mathscr{A}_i^{*}:=\{\mathbf{s}_{n+c+1},\cdots,\mathbf{s}_{n+c+m}\}$, then the parameters to be optimized is $\boldsymbol{\theta}:=[n,c,m]^{\text{T}}$, and since $n,c,m\in\mathbb{N}_{\geq 2}$, then the parameter space is $\mathscr{P}:=\mathbb{N}_{\geq 2}\times\mathbb{N}_{\geq 2}\times\mathbb{N}_{\geq 2}$, so that $\boldsymbol{\theta}\in\mathscr{P}$. Therefore, if $\gamma$ is the \textit{global cost function}, then $\gamma:\mathscr{P}\rightarrow\mathbb{R}$.
+\begin{defnx}[Parameter Space]\label{defn:parameter_space}
+    Let $\mathbf{s}_i\in\mathscr{D}$ be a word embedding of an \arb[trans]{'ayaT} \arb{'ayaT} in document $\mathscr{D}$, which can be a \arb[trans]{sUraT} \arb{sUraT}, group of \arb[trans]{suwar} \arb{suwar}, or group of \arb[trans]{'Ayat} \arb{'Ayat} within a \arb[trans]{sUraT} \arb{sUraT}. Further, suppose $\mathscr{A}_i,\mathscr{C},\mathscr{A}_i^{*}\subseteq\mathscr{D}$ such that $\mathscr{A}_i:=\{\mathbf{s}_{i,1},\cdots,\mathbf{s}_{i,n}\},\linebreak\mathscr{C}:=\{\mathbf{s}_{n+1},\cdots,\mathbf{s}_{n+c}\}$, and $\mathscr{A}_i^{*}:=\{\mathbf{s}_{i,(n+c+1)},\cdots,\mathbf{s}_{i,(n+c+n)}\}$, then the \textit{parameters} to be optimized are assigned to $\mathbf{v}:=[n,c]^{\text{T}}$, and since $n,c,m\in\mathbb{N}_{\geq 2}$, then the \textit{parameter space} is $\mathscr{P}:=\mathbb{N}_{\geq 2}\times\mathbb{N}_{\geq 2}\times\mathbb{N}_{\geq 2}=(\mathbb{N}_{\geq 2})^3$, so that $\mathbf{v}\in\mathscr{P}$. 
 \end{defnx}
-\begin{defnx}["Related" Cost Function]
-    From Defn. \ref{def:global_cost_func}, let $\mathbf{a}_k\in\mathscr{A}_i$ and $\mathbf{a}_k^{*}\in\mathscr{A}_i^{*}$, then the \textit{related} cost function is defined as:
+\begin{defnx}[Semi-Circle Cost Function]\label{defn:semi_circle_cost}
+    From Defn. \ref{defn:parameter_space}, let $r_1$ to denote that $\mathscr{A}_i$ is "related" to $\mathscr{A}_i^{*}$, and $r_2$ to denote that $\mathscr{A}_i$ is "reversal" of $\mathscr{A}_i^{*}$, such that $\eta:=\{r_1,r_2\}$, then  the \textit{semi-circle} cost function between $\mathscr{A}_i$ and $\mathscr{A}_i^{*}$ is defined as:
     \begin{equation}
-        \cos(\theta_{\mathbf{a}_k,\mathbf{a}})
+        \operatorname{\gamma}_{a}(\mathbf{v};\mathscr{A}_i,\mathscr{A}_i^{*},\eta):=\begin{cases}
+            \frac{1}{n}\sum_{k=1}^{n}\cos\left(\theta_{\mathbf{s}_{i,k};\mathbf{s}_{i,n+l}}\right),&\text{if}\;\eta=r_1\\
+            1-\frac{1}{n}\sum_{k=1}^{n}\cos\left(\theta_{\mathbf{s}_{i,k};\mathbf{s}_{i,n+l}}\right),&\text{if}\;\eta=r_2\\
+        \end{cases}
     \end{equation}
 \end{defnx}
-\begin{remark}
-    The \textit{global cost function} for this paper is computed from the error of the PoisNN model after training using a given the input hyper-parameters $\mathscr{P}$.
-\end{remark}
-\begin{remark}
-    For the case of the model proposed in this paper, the following are the domains: $\mathscr{G}:=\{\tanh,\mathrm{sigmoid}\},\mathscr{L}:=\{l_i: l_i\in [4, 16]\}$, $\mathscr{B}:=\{60, 70, 80\}$, $\mathscr{A}:=$\,\{RMSProp \cite{hinton2012}, Nadam \cite{Dozat2016IncorporatingNM}, Ftrl \cite{ftrl}, Adagrad \cite{JMLR:adagrad}\}.
-\end{remark}
+\begin{defnx}[Center Cost Function]\label{defn:center_cost}
+    From Defn. \ref{defn:parameter_space}, the \textit{center} cost function is defined as:
+    \begin{equation}
+        \operatorname{\gamma}_{b}(\mathbf{v};\mathscr{A}_i,\mathscr{C},\mathscr{A}_i^{*}):=2-\frac{1}{nc}\sum_{k=1}^{n}\sum_{l=1}^{c}\cos\left(\theta_{\mathbf{s}_{i,k};\mathbf{s}_{n+l}}\right)-\frac{1}{nc}\sum_{k=1}^{n}\sum_{l=1}^{c}\cos\left(\theta_{\mathbf{s}_{n+l};\mathbf{s}_{i,n+c+k}^{*}}\right).
+    \end{equation}
+\end{defnx}
+\begin{defnx}[Global Cost Function]\label{defn:global_cost}
+    From Defn. \ref{defn:parameter_space}-\ref{defn:center_cost}, the \textit{global} cost function is defined as:
+    \begin{equation}
+        \operatorname{\gamma}_{g}(\mathbf{v};\mathscr{A}_i,\mathscr{C},\mathscr{A}_i^{*},\eta):=\operatorname{\gamma}_{a}(\mathbf{v};\mathscr{A}_i,\mathscr{A}_i^{*},\eta)+\operatorname{\gamma}_{b}(\mathbf{v};\mathscr{A}_i,\mathscr{C},\mathscr{A}_i^{*})
+    \end{equation}
+\end{defnx}
+\begin{defnx}[Optimal Parameters] From Defn. \ref{defn:global_cost}, the optimal parameters would be:
+\begin{equation}
+    \hat{\mathbf{v}}:=\underset{n,c}{\arg\min}\operatorname{\gamma}_{g}(\mathbf{v};\mathscr{A}_i,\mathscr{C},\mathscr{A}_i^{*},\eta),
+\end{equation}    
+\end{defnx}
 \begin{prop}\label{prop:hypedist}
-    Let $\mathscr{P}$ be the domain of the hyper-parameters and suppose $\gamma(\mathbf{v})\overset{\mathrm{iid}}{\sim}\mathcal{N}(m(\mathbf{v}),k(\mathbf{v},\mathbf{v})), \forall \mathbf{v}\in\mathscr{P}$, then for any $\boldsymbol{\delta}:=[\gamma(\mathbf{v}_1),\cdots,\gamma(\mathbf{v}_n)]^{\top}$, $\boldsymbol{\delta}\overset{\mathrm{iid}}{\sim}\mathcal{N}_n(\mathbf{m},\mathbf{K})$, where $\mathbf{m}:=[m(\mathbf{v}_1),\cdots,m(\mathbf{v}_n)]^{\top}$ and
+    Let $\mathscr{P}$ be the parameter space and suppose $\gamma(\mathbf{v})\overset{\mathrm{iid}}{\sim}\mathcal{N}(m(\mathbf{v}),k(\mathbf{v},\mathbf{v})), \linebreak\forall \mathbf{v}\in\mathscr{P}$, then for any $\boldsymbol{\delta}:=[\gamma(\mathbf{v}_1),\cdots,\gamma(\mathbf{v}_n)]^{\top}$, $\boldsymbol{\delta}\overset{\mathrm{iid}}{\sim}\mathcal{N}_n(\mathbf{m},\mathbf{K})$, where 
+    \begin{equation}
+        \mathbf{m}:=[m(\mathbf{v}_1),\cdots,m(\mathbf{v}_n)]^{\top}
+    \end{equation}
+    and
     \begin{equation}
         \mathbf{K}:=\left[\begin{matrix}
         k(\mathbf{v}_1,\mathbf{v}_1)&\cdots&k(\mathbf{v}_1,\mathbf{v}_n)\\
@@ -113,7 +170,7 @@ From Defn. \ref{defn:concentric} and \ref{defn:chiasmus}, it both states that, a
     The proof follows from the proof of Theorem 1.2.9 of \citeA{muirhead2005}.
 \end{proof}
 \begin{remark}
-    From Proposition \ref{prop:hypedist} and Definition \ref{def:gp}, $\boldsymbol{\delta}$ is a GP.
+    From Proposition \ref{prop:hypedist} and Definition \ref{defn:gp}, $\boldsymbol{\delta}$ is a GP.
 \end{remark}
 \begin{prop}\label{prop:jointpdf}
     From Proposition \ref{prop:hypedist}, suppose $\boldsymbol{\delta}_{*}:=[\gamma(\mathbf{v}_{n+1}),\cdots,\gamma(\mathbf{v}_{n+p})]^{\top}$, such that $\boldsymbol{\delta}_{*}\overset{\mathrm{iid}}{\sim}\mathcal{N}_p(\mathbf{m}_*,\mathbf{K}_*)$ then 
@@ -148,13 +205,17 @@ From Proposition \ref{prop:jointpdf}, let $\mathbf{m}$ and $\mathbf{m}_{*}$ be z
 \begin{proof}
     The proof follows by reversing the condition from $\mathbf{X}_1\mid\mathbf{X}_2$ to $\mathbf{X}_2\mid\mathbf{X}_1$ of the proof of Theorem 1.2.11 of \cite{muirhead2005}.
 \end{proof}
-\begin{defnx}[Lower Confidence Bound]\label{def:lcb}
+\begin{defnx}[Lower Confidence Bound]\label{defn:lcb}
     Let $m(\mathbf{v})$ be the mean of the GP, then the Lower Confidence Bound (LCB) notated as $\xi$ is given by
     \begin{equation}
         \xi(\mathbf{v}\mid\zeta):=m(\mathbf{v})-\zeta k(\mathbf{v},\mathbf{v}),
     \end{equation}
     where $\zeta$ is the balancing factor.
 \end{defnx}
+The \textit{global cost} computed from the global cost function in Defn. \ref{defn:global_cost} is approximated by the Gaussian process (the surrogate function) defined in Defn. \ref{defn:gp} through Proposition \ref{prop:hypedist}. So that, for any new observed global cost computed from the new parameter input $\mathbf{v}$, chosen by the acquisition function defined in Defn. \ref{defn:lcb}, the joint distribution with the previous global cost is given in Proposition \ref{prop:jointpdf}. Therefore, computing for the conditional distribution of the new global costs conditioned on previous global cost is given in Corollary \ref{cor:condpdf}. The process of acquiring new parameter candidate and computing the global cost is done iteratively. The algorithm converges until there is no significant changes on the new parameter candidate relative to the preceding parameter candidate, or alternatively, until a specified maximum iteration.
+\begin{center}
+    \textcolor{red}{add theoretical Bayes theorem computations here}
+\end{center}
 \section{Integrating Other Islamic Literatures}
 The third objective of this paper asks on how to unify all of these results from Statistics, Machine Learning, AI, and the work of Islamic scholars on Qur'\=anic studies help in understanding the Qur'\=an. Discussions on this will be provided in the next chapter, but in terms of the methodology on how to combine all of this into something that is accessible to Muslims and those interested in learning the Qur'\=an, this paper will provide the architecture on how to package all of these.
 

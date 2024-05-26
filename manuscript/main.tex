@@ -22,7 +22,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{apacite} % load this after hyperref
 \setmainfont{TeX Gyre Pagella} 
-
+\newfontfamily\arabicfont{Amiri}[Script=Arabic,RawFeature={+ss05}]
 % remove this if you want to print it as paperback
 \setlength\oddsidemargin{\dimexpr(\paperwidth-\textwidth)/2 - 1in\relax}
 \setlength\evensidemargin{\oddsidemargin}
@@ -86,7 +86,7 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 \newtheorem{thm}{Theorem}[section]
 \newtheorem{prop}{Proposition}[section]
 \newtheorem{lem}{Lemma}[section]
-\newtheorem{cor}{Corollary}[thm]
+\newtheorem{cor}{Corollary}[section]
 \theoremstyle{definition}
 \newtheorem{exmpx}{Example}[section]
 \newtheorem{defnx}{Definition}[section]

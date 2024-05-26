@@ -591,6 +591,10 @@ INPUT /Users/al-ahmadgaidasaad/Library/texlive/2023/texmf-var/luatex-cache/gener
 INPUT /Users/al-ahmadgaidasaad/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/texgyrepagella-bolditalic.luc
 INPUT /Users/al-ahmadgaidasaad/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/texgyrepagella-bold.luc
 INPUT /Users/al-ahmadgaidasaad/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/texgyrepagella-italic.luc
+INPUT /Users/al-ahmadgaidasaad/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/amiri-regular.luc
+INPUT /Users/al-ahmadgaidasaad/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/amiri-bolditalic.luc
+INPUT /Users/al-ahmadgaidasaad/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/amiri-bold.luc
+INPUT /Users/al-ahmadgaidasaad/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/amiri-italic.luc
 INPUT ./main.aux
 INPUT ./main.aux
 INPUT ./titlepage.aux
@@ -635,10 +639,6 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.st
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT /Users/al-ahmadgaidasaad/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/amiri-regular.luc
-INPUT /Users/al-ahmadgaidasaad/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/amiri-bolditalic.luc
-INPUT /Users/al-ahmadgaidasaad/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/amiri-bold.luc
-INPUT /Users/al-ahmadgaidasaad/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/amiri-italic.luc
 INPUT ./main.out
 INPUT ./main.out
 INPUT ./main.out
@@ -1280,6 +1280,9 @@ INPUT ./chapters/ch5.tex
 OUTPUT chapters/ch6.aux
 INPUT ./chapters/ch6.tex
 INPUT ./chapters/ch6.tex
+INPUT ./img/plot_rhythmic1.pdf
+INPUT ./img/plot_rhythmic1.pdf
+INPUT ./img/plot_rhythmic1.pdf
 INPUT /Users/al-ahmadgaidasaad/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/lmmono12-regular.luc
 OUTPUT chapters/ch7.aux
 INPUT ./chapters/ch7.tex
