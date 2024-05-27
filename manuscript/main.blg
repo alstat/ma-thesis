@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2024)
+This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: titlepage.aux
@@ -24,17 +24,17 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: reference.bib
 Warning--entry type for "al_ahmadgaid_b_asaad_yunir" isn't style-file defined
---line 171 of file reference.bib
+--line 86 of file reference.bib
 Warning--entry type for "al_ahmadgaid_b_asaad_kitab" isn't style-file defined
---line 243 of file reference.bib
+--line 122 of file reference.bib
 Warning--I'm ignoring Neuwirth_2007's extra "title" field
---line 811 of file reference.bib
+--line 406 of file reference.bib
 Warning--entry type for "wikibirmingham" isn't style-file defined
---line 831 of file reference.bib
+--line 416 of file reference.bib
 Warning--entry type for "mb2022" isn't style-file defined
---line 847 of file reference.bib
+--line 424 of file reference.bib
 Warning--entry type for "bu2015" isn't style-file defined
---line 863 of file reference.bib
+--line 432 of file reference.bib
 Warning--I didn't find a database entry for "bishop"
 Warning--I didn't find a database entry for "Rabiner89atutorial"
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
