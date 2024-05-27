@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2023)
+This is BibTeX, Version 0.99d (TeX Live 2024)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: titlepage.aux
@@ -24,62 +24,62 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: reference.bib
 Warning--entry type for "al_ahmadgaid_b_asaad_yunir" isn't style-file defined
---line 70 of file reference.bib
+--line 171 of file reference.bib
 Warning--entry type for "al_ahmadgaid_b_asaad_kitab" isn't style-file defined
---line 106 of file reference.bib
+--line 243 of file reference.bib
 Warning--I'm ignoring Neuwirth_2007's extra "title" field
---line 390 of file reference.bib
+--line 811 of file reference.bib
 Warning--entry type for "wikibirmingham" isn't style-file defined
---line 400 of file reference.bib
+--line 831 of file reference.bib
 Warning--entry type for "mb2022" isn't style-file defined
---line 408 of file reference.bib
+--line 847 of file reference.bib
 Warning--entry type for "bu2015" isn't style-file defined
---line 416 of file reference.bib
+--line 863 of file reference.bib
 Warning--I didn't find a database entry for "bishop"
 Warning--I didn't find a database entry for "Rabiner89atutorial"
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No address in pewresearch
 Warning--`others' not consistent with 6th ed. of the APA Manual
 Warning--No journal in radford2018improving
-You've used 36 entries,
+You've used 38 entries,
             6951 wiz_defined-function locations,
-            1524 strings with 18585 characters,
-and the built_in function-call counts, 69033 in all, are:
-= -- 8863
-> -- 531
-< -- 3081
-+ -- 3026
-- -- 82
-* -- 4185
-:= -- 11938
-add.period$ -- 162
-call.type$ -- 36
-change.case$ -- 668
+            1536 strings with 18872 characters,
+and the built_in function-call counts, 72103 in all, are:
+= -- 9249
+> -- 555
+< -- 3202
++ -- 3137
+- -- 88
+* -- 4357
+:= -- 12454
+add.period$ -- 171
+call.type$ -- 38
+change.case$ -- 702
 chr.to.int$ -- 0
-cite$ -- 74
-duplicate$ -- 1793
-empty$ -- 2859
-format.name$ -- 820
-if$ -- 13546
+cite$ -- 78
+duplicate$ -- 1880
+empty$ -- 3011
+format.name$ -- 858
+if$ -- 14178
 int.to.chr$ -- 0
-int.to.str$ -- 116
+int.to.str$ -- 122
 missing$ -- 0
-newline$ -- 923
-num.names$ -- 296
-pop$ -- 1422
+newline$ -- 972
+num.names$ -- 312
+pop$ -- 1553
 preamble$ -- 1
-purify$ -- 160
+purify$ -- 168
 quote$ -- 0
-skip$ -- 4797
+skip$ -- 4958
 stack$ -- 0
-substring$ -- 3355
-swap$ -- 1019
-text.length$ -- 130
+substring$ -- 3479
+swap$ -- 1066
+text.length$ -- 135
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 3752
+type$ -- 3912
 warning$ -- 3
-while$ -- 310
+while$ -- 322
 width$ -- 0
-write$ -- 1084
+write$ -- 1141
 (There were 11 warnings)

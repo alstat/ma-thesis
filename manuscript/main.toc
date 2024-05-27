@@ -2,8 +2,8 @@
 \contentsline {chapter}{\numberline {1}Introduction}{9}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Background}{9}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Rationale of the Study}{10}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Objectives}{13}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Significance of the Study}{14}{section.1.4}%
+\contentsline {section}{\numberline {1.3}Objectives}{14}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Significance of the Study}{15}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Scope of the Study}{15}{section.1.5}%
 \contentsline {section}{\numberline {1.6}Thesis Organization}{15}{section.1.6}%
 \contentsline {chapter}{\numberline {2}Literature Review}{16}{chapter.2}%
