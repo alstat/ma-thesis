@@ -292,6 +292,28 @@ Farrin, R.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Haykin%
+}{%
+Haykin%
+}{%
+{\protect \APACyear {1998}}%
+}]{%
+Haykin1998}
+\APACinsertmetastar {%
+Haykin1998}%
+\begin{APACrefauthors}%
+Haykin, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1998}.
+\newblock
+\APACrefbtitle {Neural Networks: A Comprehensive Foundation} {Neural networks: A comprehensive foundation}\ (\PrintOrdinal{2nd}\ \BEd).
+\newblock
+\APACaddressPublisher{Upper Saddle River, NJ, USA}{Prentice Hall PTR}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Karatay%
 }{%
 Karatay%
@@ -418,6 +440,33 @@ mb2022}%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+McCulloch%
+\ \BBA {} Pitts%
+}{%
+McCulloch%
+\ \BBA {} Pitts%
+}{%
+{\protect \APACyear {1943}}%
+}]{%
+mccullochpitts}
+\APACinsertmetastar {%
+mccullochpitts}%
+\begin{APACrefauthors}%
+McCulloch, W\BPBI S.%
+\BCBT {}\ \BBA {} Pitts, W.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1943}{{\APACmonth{12}}}{21}.
+\newblock
+{\BBOQ}\APACrefatitle {{A logical calculus of the ideas immanent in nervous activity}} {{A logical calculus of the ideas immanent in nervous activity}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Bulletin of Mathematical Biology}{5}{4}{115--133}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/bf02478259} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Muirhead%
 }{%
 Muirhead%
@@ -483,6 +532,30 @@ Neuwirth, A.%
 \begin{APACrefURL} [{2023-07-09}]\url{https://doi.org/10.1515/9783110920383} \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{doi:10.1515/9783110920383} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Nielsen%
+}{%
+Nielsen%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+nndeepl}
+\APACinsertmetastar {%
+nndeepl}%
+\begin{APACrefauthors}%
+Nielsen, M\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2015}.
+\newblock
+\APACrefbtitle {Neural Network and Deep Learning} {Neural network and deep learning}.
+\newblock
+\APACaddressPublisher{}{Determination Press}.
+\newblock
+\begin{APACrefURL} \url{http://neuralnetworksanddeeplearning.com/} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
