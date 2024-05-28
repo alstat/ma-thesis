@@ -681,33 +681,84 @@ And just to emphasize $\af'\!\left(z_{kj}^{(L-1)}\right)$ is indexed at $j$ but 
 Transformer models is a model based on the work of \cite{vaswani2017attention}. These models are a type of neural network architecture designed to handle sequential data, primarily used in natural language processing (NLP) tasks. Unlike traditional recurrent neural networks (RNNs) and long short-term memory networks (LSTMs), transformers do not rely on sequential data processing. Instead, they utilize an attention mechanism that allows them to process entire sequences simultaneously, significantly improving efficiency and effectiveness.
 
 \subsection{Attention Mechanism}
-The core innovation of transformers is the self-attention mechanism, which computes attention scores to weigh the importance of different words in a sentence relative to each other. Given an input sequence $X:=[x_1,x_2,\cdots,x_n]^{\text{T}}$, the self-attention mechanism produces an output sequence $Z:=[z_1,z_2,\cdots,z_n]^{\text{T}}$ where each $z_i$ is a weighted sum of the input sequence elements. The weights are determined by the attention scores.
+The core innovation of transformers is the self-attention mechanism, which computes attention scores to weigh the importance of different words in a sentence relative to each other. 
 
-The self-attention mechanism can be mathematically described using three matrices: Query ($Q$), Key ($K$), and Value ($V$), which are learned during training. For an input sequence $X$, these matrices are computed as follows:
-\begin{equation}
-    Q:=XW^{Q},\quad K:=XW^{K}, \quad V=XW^{V},
-\end{equation}
-where $W^{Q},W^{K},$ and $W^{V}$ are weight matrices.
+\begin{defn}[Vector Self-Attention]\label{defn:vec-self-attention}
+    Let $\mathbf{X}:=[\mathbf{x}_1,\cdots,\mathbf{x}_N]^{\text{T}}$ be the data matrix, such that $\mathbf{x}_i\in\mathbb{R}^{D}$ is a word embedding, then the \textit{self-attention} is given by
+    \begin{equation}\label{eq:self-attention}
+        \mathbf{y}_n := \sum_{n=1}^{N}a_{nm}\mathbf{x}_n,
+    \end{equation}
+    where $0\leq a_{nm}\leq 1$ is a attention coefficient, and that $\sum_{\forall l}a_{nm}=1$.
+\end{defn}
 
-The attention scores are computed using the dot-product of the query and key matrices, scaled by the square root of the dimension of the key vectors (denoted as $d_k$) followed by a softmax operation to obtain the attention weights:
-\begin{equation}
-    \operatorname{Attention}(Q,K,V):=\operatorname{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-\end{equation}
-\subsection{Multi-Head Attention}
-To enhance the model's ability to focus on different parts of the input sequence, transformers employ multi-head attention. This involves splitting the query, key, and value matrices into multiple heads, applying the attention mechanism to each head independently, and then concatenating the results:
-\begin{equation}
-    \operatorname{MultiHead}(Q,K,V):=\operatorname{Concat}(\text{head}_1,\text{head}_2,\cdots,\text{head}_h)W^{O},
-\end{equation}
-where each $\text{head}_i:=\operatorname{Attention}(Q_i,K_i,V_i),$ and $W^{O}$ is an output weight matrix.
-\subsection{Positional Encoding}
-Since transformers do not process input sequences in order, they require a way to incorporate the position of each word. This is achieved through positional encoding, which adds positional information to the input embeddings. Positional encodings are vectors added to the input embeddings and can be computed using sine and cosine functions of different frequencies:
+The attention weights are based on the idea of \textit{query}, \textit{key}, and \textit{value}, where given the an input vector $\mathbf{x}_n$, its similarity to other words $\mathbf{x}_n,n\neq m$. Here $\mathbf{x}_n$ is the query and $\mathbf{x}_m$ is the key. The similarity can be computed using \textit{cosine similarity} (\textit{see} discussions on this in Section \ref{sec:cosine_similarity} and Defn. \ref{defn:cosine_similarity})
+\begin{defn}[Attention Coefficient]
+    Let $\mathbf{X}:=[\mathbf{x}_1,\cdots,\mathbf{x}_N]^{\text{T}}$ be the data matrix, then the \textit{attention coefficient} is
+    \begin{equation}
+        a_{nm}:=\frac{\exp(\mathbf{x}_n^{\text{T}}\mathbf{x}_l)}{\displaystyle\sum_{m'=1}^{M}\exp(\mathbf{x}_n^{\text{T}}\mathbf{x}_{m'})},
+    \end{equation}
+    the softmax formula helps $a_{kl}$ satisfy its contraints.
+\end{defn}
+\begin{defn}[Identity Self-Attention]
+    Let $\mathbf{y_1},\cdots,\mathbf{y}_N$ be the \textit{vector self-attention}, then $\mathbf{Y}=[\mathbf{y}_1,\cdots,\mathbf{y}_N]^{\text{T}}$ is the \textit{identity self-attention} with the following formula:
+    \begin{equation}\label{eq:identity-self-attention}
+        \mathbf{Y}:=\operatorname{Softmax}(\mathbf{X}\mathbf{X}^{\text{T}})\mathbf{X}
+    \end{equation}
+\end{defn}
+\begin{remark}
+    It is called \text{identity self-attention} since there is no learnable parameter that controls the data matrix input.
+\end{remark}
+\begin{defn}[Encoded Data Matrix]\label{defn:encoded-data-matrix}
+    Let $\mathbf{V}\in\mathbb{R}^{D\times D}$, then the \textit{encoded data matrix} is given by $\mathbf{Z}:=\mathbf{X}\mathbf{V}$
+\end{defn}
+So that from Defn. \ref{defn:encoded-data-matrix}, Eq. \ref{eq:identity-self-attention} becomes:
 \begin{align}
-    \operatorname{PE}_{pos,2i}:=&\sin\left(\frac{pos}{10000^{2i/d}}\right)\\
-    \operatorname{PE}_{pos,2i+1}:=&\cos\left(\frac{pos}{10000^{2i/d}}\right),
+    \mathbf{Y}=&\operatorname{Softmax}(\mathbf{X}\mathbf{V}\mathbf{V}^{\text{T}}\mathbf{X}^{\text{T}})\mathbf{X}\mathbf{V}\\
+    =&\operatorname{Softmax}(\mathbf{Z}\mathbf{Z}^{\text{T}})\mathbf{Z}
 \end{align}
-where $pos$ is the position and $i$ is the dimension.
+Further, it would be better to add learnable weights for the \textit{query}, \textit{key}, and \textit{value} as well. This is formulated in the next definition.
+\begin{defn}[Self-Attention]\label{defn:self-attention}
+    Let $\mathbf{W}_{(q)},\mathbf{W}_{(k)}$, and $\mathbf{W}_{(v)}$ be the weights matrix for \textit{query}, \textit{key}, and \textit{value}, respectively, such that $\mathbf{W_{(i)}}\in\mathbb{R}^{D\times D_i},i\in\{q,k,v\}$, then the \textit{self-attention} is 
+    \begin{align}
+        \mathbf{Y}=&\operatorname{Softmax}(\mathbf{Z}\mathbf{W}_{(q)}\mathbf{W}_{(k)}^{\mathbf{T}}\mathbf{Z}^{\mathbf{T}})\mathbf{Z}\mathbf{W}_{(v)}\\
+        &\operatorname{Softmax}(\mathbf{Q}\mathbf{K}^{\text{T}})\mathbf{V},
+    \end{align}
+    where $\mathbf{Q}:=\mathbf{Z}\mathbf{W}_{(q)},\mathbf{K}:=\mathbf{Z}\mathbf{W}_{(k)},\mathbf{V}:=\mathbf{Z}\mathbf{W}_{(v)}$. The above equation will only work if $\mathbf{W}_{(q)}$ and $\mathbf{W}_{(k)}$ have the same dimention.
+\end{defn}
+
+Further, becaus the Softmax can suffer from having exponentially small gradients for inputs of high magnitude, the same case for tanh or logistic-sigmoid activation functions, scaling can be used to address this issue.
+
+\begin{defn}[Scaled Self-Attention]
+    From Defn. \ref{defn:self-attention}, the \textit{scaled self-attention} is
+    \begin{equation}
+        \mathbf{Y}=\operatorname{Attention}(\mathbf{Q},\mathbf{K},\mathbf{V}):=\operatorname{Softmax}\left[\frac{\mathbf{Q}\mathbf{K}^{\text{T}}}{\sqrt{D}}\right]\mathbf{V},
+    \end{equation}
+    where $D$ can be $D_q$ or $D_k$ since $D_q=D_k$.
+\end{defn}
+
+\subsection{Multi-Head Attention}
+To enhance the model's ability to focus on different parts of the input sequence, transformers employ multi-head attention. This involves splitting the query, key, and value matrices into multiple heads, applying the attention mechanism to each head independently, and then concatenating the results.
+\begin{defn}[Multi-Head Attention]
+    Let $\mathbf{Y}_1,\cdots,\mathbf{Y}_H$ be the scaled self-attention such that $\mathbf{Y}_h=\operatorname{Attention}(\mathbf{Q}_h,\mathbf{K}_h,\mathbf{V}_h)$, where $\mathbf{Q}_h=\mathbf{X}\mathbf{W}_h^{(q)},\mathbf{K}_h=\mathbf{X}\mathbf{W}_h^{(k)}$, and $\mathbf{V}_h=\mathbf{X}\mathbf{V}_h^{(k)}$, then the \textit{multi-head attention} is
+    \begin{equation}
+        \operatorname{MultiHead}(\mathbf{Q},\mathbf{K},\mathbf{V}):=\operatorname{Concat}(\mathbf{Y}_1,\cdots,\mathbf{Y}_H)\mathbf{W}^{(o)},
+    \end{equation}
+    where $\operatorname{Concat}$ simply combines the outputs $\mathbf{Y}_h$ into a matrix, so that, $\mathbf{W}^{(o)}\in\mathbb{R}^{H\times D_o}$.
+\end{defn}
+\subsection{Positional Encoding}
+Since transformers do not process input sequences in order, it require a way to incorporate the position of each word. This is achieved through positional encoding, which adds positional information to the input embeddings. Positional encodings are vectors added to the input embeddings and can be computed using sine and cosine functions of different frequencies.
+\begin{defn}[Positional Encoding]
+    Let $\mathbf{r}_n$ be the vector of positional encoding with components defined as:
+    \begin{equation}
+        r_{ni}:=\begin{cases}
+            \sin\left(\displaystyle\frac{n}{L^{i/D}}\right)&\text{if}\;i\;\text{is even,}\\
+            \cos\left(\displaystyle\frac{n}{L^{(i-1)/D}}\right)&\text{if}\;i\;\text{is odd},
+        \end{cases}
+    \end{equation}
+    where $n$ is the position, $i$ is the dimension, and $L$ is the maximum of the spectrum. For the paper of \shortciteA{vaswani2017attention} uses $L=10000$.
+\end{defn}
 \subsection{Transformer Architecture}
-The transformer architecture consists of an encoder and a decoder, each comprising several layers of multi-head attention and feed-forward neural networks. The encoder processes the input sequence and generates context-aware representations, while the decoder uses these representations along with previously generated outputs to produce the final sequence.\\
+The transformer architecture consists of an \textit{encoder} and a \textit{decoder}, each comprising several layers of multi-head attention and feed-forward neural networks. The encoder processes the input sequence and generates context-aware representations, while the decoder uses these representations along with previously generated outputs to produce the final sequence.\\
 \textbf{Encoder Layer}:
 \begin{equation}
     \operatorname{EncoderLayer}(X)=\operatorname{LayerNorm}(X+\operatorname{MultiHead}(Q,K,V))+\operatorname{FFN}(X)\nonumber
