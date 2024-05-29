@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.4.11)  29 MAY 2024 10:48
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.4.11)  29 MAY 2024 23:29
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1713,7 +1713,7 @@ File: img/plot1.pdf Graphic file (type pdf)
 <use img/plot1.pdf>
 Package luatex.def Info: img/plot1.pdf  used on input line 11.
 (luatex.def)             Requested size: 434.90039pt x 380.55096pt.
-[10<./img/plot1.pdf>] [11] [12] [13] [14] [15]) [16] [17]
+[10<./img/plot1.pdf>] [11] [12] [13] [14] [15] [16]) [17]
 \openout2 = chapters/ch2.aux
  (./chapters/ch2.tex
 Chapter 2.
@@ -1741,7 +1741,7 @@ agella(0)/m/n/12 to Prophet
 
 
 ] [22]
-<img/birmingham.jpg, id=783, 6259.385pt x 4954.51pt>
+<img/birmingham.jpg, id=804, 6259.385pt x 4954.51pt>
 File: img/birmingham.jpg Graphic file (type jpg)
 <use img/birmingham.jpg>
 Package luatex.def Info: img/birmingham.jpg  used on input line 11.
@@ -1779,7 +1779,7 @@ Package luatex.def Info: img/plot1.pdf  used on input line 151.
  [34]
 warning  (file img/plot3.pdf) (pdf inclusion): PDF inclusion: found PDF version 
 '1.7', but at most version '1.5' allowed
-<img/plot3.pdf, id=940, 376.40625pt x 376.40625pt>
+<img/plot3.pdf, id=961, 376.40625pt x 376.40625pt>
 File: img/plot3.pdf Graphic file (type pdf)
 <use img/plot3.pdf>
 Package luatex.def Info: img/plot3.pdf  used on input line 164.
@@ -1787,7 +1787,7 @@ Package luatex.def Info: img/plot3.pdf  used on input line 164.
 [35] [36<./img/plot3.pdf>] [37]
 warning  (file img/pop_sample.pdf) (pdf inclusion): PDF inclusion: found PDF ver
 sion '1.7', but at most version '1.5' allowed
-<img/pop_sample.pdf, id=1008, 376.40625pt x 376.40625pt>
+<img/pop_sample.pdf, id=1029, 376.40625pt x 376.40625pt>
 File: img/pop_sample.pdf Graphic file (type pdf)
 <use img/pop_sample.pdf>
 Package luatex.def Info: img/pop_sample.pdf  used on input line 189.
@@ -1795,7 +1795,7 @@ Package luatex.def Info: img/pop_sample.pdf  used on input line 189.
 [38] [39<./img/pop_sample.pdf>]
 warning  (file img/plot5.pdf) (pdf inclusion): PDF inclusion: found PDF version 
 '1.7', but at most version '1.5' allowed
-<img/plot5.pdf, id=1041, 376.40625pt x 376.40625pt>
+<img/plot5.pdf, id=1062, 376.40625pt x 376.40625pt>
 File: img/plot5.pdf Graphic file (type pdf)
 <use img/plot5.pdf>
 Package luatex.def Info: img/plot5.pdf  used on input line 216.
@@ -1945,7 +1945,7 @@ Overfull \hbox (1.54767pt too wide) in paragraph at lines 562--563
 \openout2 = chapters/ch4.aux
  (./chapters/ch4.tex
 Chapter 5.
-<img/Neuron.pdf, id=1242, 887.56593pt x 477.06671pt>
+<img/Neuron.pdf, id=1263, 887.56593pt x 477.06671pt>
 File: img/Neuron.pdf Graphic file (type pdf)
 <use img/Neuron.pdf>
 Package luatex.def Info: img/Neuron.pdf  used on input line 7.
@@ -1995,7 +1995,7 @@ put line 3.
 ]
 warning  (file img/plot_rhythmic1.pdf) (pdf inclusion): PDF inclusion: found PDF
  version '1.7', but at most version '1.5' allowed
-<img/plot_rhythmic1.pdf, id=1464, 602.25pt x 602.25pt>
+<img/plot_rhythmic1.pdf, id=1485, 602.25pt x 602.25pt>
 File: img/plot_rhythmic1.pdf Graphic file (type pdf)
 <use img/plot_rhythmic1.pdf>
 Package luatex.def Info: img/plot_rhythmic1.pdf  used on input line 45.
@@ -2037,7 +2037,7 @@ Package luatex.def Info: img/plot1.pdf  used on input line 24.
 
 warning  (file img/plot2.pdf) (pdf inclusion): PDF inclusion: found PDF version 
 '1.7', but at most version '1.5' allowed
-<img/plot2.pdf, id=1771, 602.25pt x 526.96875pt>
+<img/plot2.pdf, id=1792, 602.25pt x 526.96875pt>
 File: img/plot2.pdf Graphic file (type pdf)
 <use img/plot2.pdf>
 Package luatex.def Info: img/plot2.pdf  used on input line 31.
@@ -2062,19 +2062,19 @@ Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 1.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--160
+Underfull \hbox (badness 10000) in paragraph at lines 279--294
 []\TU/TeXGyrePagella(0)/m/n/12 Birm-ing-ham Uni-ver-sity.  (2015).  \TU/TeXGyre
 Pagella(0)/m/it/12 Birm-ing-ham qur’an manuscript dated
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 148--160
+Underfull \hbox (badness 1571) in paragraph at lines 279--294
 \TU/TeXGyrePagella(0)/m/it/12 among the old-est in the world.  \TU/TeXGyrePagel
 la(0)/m/n/12 Birm-ing-ham Uni-ver-sity.  (Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--160
+Underfull \hbox (badness 10000) in paragraph at lines 279--294
 []$\TU/lmtt/m/n/12 https://www[].birmingham[].ac[].uk/news[]-archive/2015/birmin
 gham[]-quran[]
  []
@@ -2082,14 +2082,14 @@ gham[]-quran[]
 [105
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 429--441
+] [106]
+Underfull \hbox (badness 10000) in paragraph at lines 626--642
 \TU/lmtt/m/n/12 -embassy[]-in[]-riyadh[]-hosts[]-first[]-asian[]-quran[]-memoriz
 ation[]-contest/$[]
  []
 
-[106] [107] [108]) [109] (./main.aux (./titlepage.aux) (./chapters/abstract.aux
-) (./chapters/ch1.aux) (./chapters/ch2.aux) (./chapters/ch3-0.aux)
+[107] [108]) [109] (./main.aux (./titlepage.aux) (./chapters/abstract.aux)
+(./chapters/ch1.aux) (./chapters/ch2.aux) (./chapters/ch3-0.aux)
 (./chapters/ch3.aux) (./chapters/ch4.aux) (./chapters/ch5.aux)
 (./chapters/ch6.aux) (./chapters/ch7.aux) (./chapters/ch8.aux))
  ***********
@@ -2105,14 +2105,14 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 47781 strings out of 476435
+ 47804 strings out of 476435
  125126,1977958 words of node,token memory allocated
- 2801 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 21 dir, 38 glue, 4 kern, 2 sub_mlist, 1 glyph, 532 
-attribute, 104 glue_spec, 267 attribute_list, 2 write, 18 pdf_action nodes
-   avail lists: 1:2,2:4164,3:1746,4:27,5:747,6:69,7:6631,8:123,9:1169,10:20,11:4
+ 2813 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 21 dir, 38 glue, 4 kern, 2 sub_mlist, 1 glyph, 534 
+attribute, 104 glue_spec, 268 attribute_list, 2 write, 19 pdf_action nodes
+   avail lists: 1:2,2:4164,3:1746,4:27,5:747,6:68,7:6631,8:123,9:1169,10:20,11:4
 62
- 67420 multiletter control sequences out of 65536+600000
+ 67438 multiletter control sequences out of 65536+600000
  551 fonts using 55579071 bytes
  122i,16n,128p,3004b,1384s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -2142,10 +2142,10 @@ e/2024/texmf-dist/fonts/type1/public/newpx/pxsys.pfb><c:/texlive/2024/texmf-dist
 lic/newtx/txexas.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/newtx/txexs.
 pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb><c:/texlive
 /2024/texmf-dist/fonts/type1/public/newtx/txsym.pfb>
-Output written on main.pdf (109 pages, 6868702 bytes).
+Output written on main.pdf (109 pages, 6871976 bytes).
 
-PDF statistics: 1984 PDF objects out of 2073 (max. 8388607)
- 1767 compressed objects within 18 object streams
- 520 named destinations out of 1000 (max. 131072)
+PDF statistics: 2006 PDF objects out of 2073 (max. 8388607)
+ 1789 compressed objects within 18 object streams
+ 525 named destinations out of 1000 (max. 131072)
  709 words of extra memory for PDF output out of 10000 (max. 100000000)
 
