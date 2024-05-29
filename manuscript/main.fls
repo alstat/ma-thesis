@@ -916,9 +916,9 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/newtx/ntxexa.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/newtx/txexas.tfm
 INPUT /Users/al-ahmadgaidasaad/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc
 INPUT /Users/al-ahmadgaidasaad/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc
-INPUT ./img/plot2.pdf
-INPUT ./img/plot2.pdf
-INPUT ./img/plot2.pdf
+INPUT ./img/plot1.pdf
+INPUT ./img/plot1.pdf
+INPUT ./img/plot1.pdf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmb10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmb10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmb10.tfm
@@ -1033,7 +1033,6 @@ INPUT ./img/birmingham.jpg
 OUTPUT chapters/ch3.aux
 INPUT ./chapters/ch3.tex
 INPUT ./chapters/ch3.tex
-INPUT ./img/plot1.pdf
 INPUT ./img/plot1.pdf
 INPUT ./img/plot1.pdf
 INPUT ./img/plot3.pdf
@@ -1525,6 +1524,7 @@ INPUT ./chapters/ch7.tex
 INPUT ./chapters/ch7.tex
 INPUT ./img/plot1.pdf
 INPUT ./img/plot1.pdf
+INPUT ./img/plot2.pdf
 INPUT ./img/plot2.pdf
 INPUT ./img/plot2.pdf
 OUTPUT chapters/ch8.aux
