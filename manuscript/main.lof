@@ -1,31 +1,32 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Statistics of the words and \arb [trans]{'AyAt} \arb {'AyAt} (verses) of the Qur'\=an\relax }}{10}{figure.caption.4}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Statistics of the words and \arb [trans]{'AyAt} \arb {'AyAt} (verses) of the Qur'\=an}}{10}{figure.caption.4}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces 20th Century Qur'\=an (left) in its fully featured orthographies vs Birmingham Qur'\=an dated between 568 and 645 CE (right) in its basic consonantal skeleton. Image from \citeA {wikibirmingham}.\relax }}{23}{figure.caption.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Statistics of the words and \arb [trans]{ayAt} \arb {ayAt} (verses) of the Qur'\=an\relax }}{35}{figure.caption.6}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Probability density function plot of word count per \arb [trans]{'ayAt} \arb {'ayAt} by revelation location, in relation to its box plot and rainclouds.\relax }}{36}{figure.caption.7}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Population and sample illustration\relax }}{39}{figure.caption.8}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Population and sample distribution of Meccan \relax }}{41}{figure.caption.10}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 20th Century Qur'\=an (left) in its fully featured orthographies vs Birmingham Qur'\=an dated between 568 and 645 CE (right) in its basic consonantal skeleton. Image from \citeA {wikibirmingham}.}}{25}{figure.caption.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Structure of a Typical Biological Neuron}}{57}{figure.caption.11}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Schematic Representation of the Perceptron Neuron}}{58}{figure.caption.12}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Feedforward Neural Network}}{59}{figure.caption.13}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Multilayer Feedforward Neural Network}}{60}{figure.caption.14}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Neural Net with Standard Neuron Notation}}{63}{figure.caption.15}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Neuron's Schematic Diagram for Linear Regression}}{64}{figure.caption.16}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Neuron's Schematic Diagram for Logistic Regression}}{66}{figure.caption.17}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Neural Network for $d^{(1)}\geq 2$ Output Nodes}}{67}{figure.caption.18}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Statistics of the words and \arb [trans]{ayAt} \arb {ayAt} (verses) of the Qur'\=an}}{37}{figure.caption.6}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Probability density function plot of word count per \arb [trans]{'ayAt} \arb {'ayAt} by revelation location, in relation to its box plot and rainclouds.}}{38}{figure.caption.7}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Population and sample illustration}}{41}{figure.caption.8}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Population and sample distribution of Meccan }}{43}{figure.caption.10}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Structure of a Typical Biological Neuron}}{59}{figure.caption.11}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Schematic Representation of the Perceptron Neuron}}{60}{figure.caption.12}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Feedforward Neural Network}}{61}{figure.caption.13}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Multilayer Feedforward Neural Network}}{62}{figure.caption.14}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Neural Net with Standard Neuron Notation}}{65}{figure.caption.15}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Neuron's Schematic Diagram for Linear Regression}}{66}{figure.caption.16}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Neuron's Schematic Diagram for Logistic Regression}}{68}{figure.caption.17}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Neural Network for $d^{(1)}\geq 2$ Output Nodes}}{69}{figure.caption.18}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Rhythmic pattern of the last pronounced syllables of the \arb [trans]{sUraTu 'l-fati.haT} \arb {sUraTu 'l-fati.haT} and \arb [trans]{sUraTu 'l-baqaraT} \arb {sUraTu 'l-baqaraT}\relax }}{82}{figure.caption.20}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Bayesian Network Representation}}{83}{figure.caption.21}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Tail-to-Tail Node Directed Graph}}{84}{figure.caption.22}%
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Head-to-Tail Node Directed Graph}}{85}{figure.caption.23}%
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Head-to-Head Node Directed Graph}}{86}{figure.caption.24}%
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Markov Chain Graphs}}{88}{figure.caption.25}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Rhythmic pattern of the last pronounced syllables of the \arb [trans]{sUraTu 'l-fati.haT} \arb {sUraTu 'l-fati.haT} and \arb [trans]{sUraTu 'l-baqaraT} \arb {sUraTu 'l-baqaraT}}}{84}{figure.caption.20}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Bayesian Network Representation}}{85}{figure.caption.21}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Tail-to-Tail Node Directed Graph}}{86}{figure.caption.22}%
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Head-to-Tail Node Directed Graph}}{87}{figure.caption.23}%
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Head-to-Head Node Directed Graph}}{88}{figure.caption.24}%
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Markov Chain Graphs}}{90}{figure.caption.25}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Statistics of the words and \arb [trans]{ayAt} \arb {ayAt} (verses) of the Qur'\=an\relax }}{101}{figure.caption.29}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Statistics of the words and \arb [trans]{ayAt} \arb {ayAt} (verses) of the Qur'\=an according to revelation order\relax }}{102}{figure.caption.30}%
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Statistics of the words and \arb [trans]{ayAt} \arb {ayAt} (verses) of the Qur'\=an}}{103}{figure.caption.29}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Statistics of the words and \arb [trans]{ayAt} \arb {ayAt} (verses) of the Qur'\=an according to revelation order}}{104}{figure.caption.30}%
 \addvspace {10\p@ }

@@ -33,7 +33,7 @@ Let $N$ be the total number of documents $D$ in the corpus, and let $i$ be the t
     \operatorname{idf}(i,d)=\log\frac{N}{|\{d:d\in D\;\text{and}\;i\in d\}|}
 \end{equation}
 \end{defnx}
-\subsection{Word Embeddings}
+\subsection{Word Embeddings}\label{sec:word-embeddings}
 TF-IDF has several limitations, like the initial discussions above, each word will have its own dimension. Therefore, the resulting embedding will be very high in dimension. Further, while TF-IDF can create pairs of words in its bag-of-words to add a little context to the given word, it still cannot capture the full context of the sentence. Lastly, TF-IDF cannot handle out-of-vocabulary words without re-running all the computations to account the new word.
 
 Having said all the limitaitons of the TF-IDF, \textit{word embeddings}, which is understood as based on Neural Network became popular since it addresses all of TF-IDF limitations. First, these word embeddings are dense and lower in dimension compared to the TF-IDF embeddings. Second, these embeddings capture the semantic relationship and similarities between words. Advanced models like Bidirectional Encoder Representation from Transformer (BERT) and Generative Pre-Trained Transformers (GPT) can generate contextualized embeddings, meaning the same word can have different representations depending on its context within a sentence. Both BERT and GPT are discussed in the next chapter. Third, these embeddings have the flexibility to handle out-of-vocabulary words. Lastly, these embeddings pre-trained on large corpora can be fine-tuned for specific tasks.
