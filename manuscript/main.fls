@@ -618,6 +618,8 @@ INPUT ./chapters/abstract.aux
 INPUT ./chapters/abstract.aux
 INPUT ./chapters/ch1.aux
 INPUT ./chapters/ch1.aux
+INPUT ./chapters/ch2-0.aux
+INPUT ./chapters/ch2-0.aux
 INPUT ./chapters/ch2.aux
 INPUT ./chapters/ch2.aux
 INPUT ./chapters/ch3-0.aux
@@ -1021,6 +1023,12 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/newpx/zplbexa.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntxbexa.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/newtx/ntxbexa.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/newtx/txbexas.tfm
+OUTPUT chapters/ch2-0.aux
+INPUT ./chapters/ch2-0.tex
+INPUT ./chapters/ch2-0.tex
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmb10.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmb10.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmb10.tfm
 OUTPUT chapters/ch2.aux
 INPUT ./chapters/ch2.tex
 INPUT ./chapters/ch2.tex
@@ -1044,9 +1052,6 @@ INPUT ./img/pop_sample.pdf
 INPUT ./img/plot5.pdf
 INPUT ./img/plot5.pdf
 INPUT ./img/plot5.pdf
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmb10.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmb10.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmb10.tfm
 OUTPUT chapters/ch4.aux
 INPUT ./chapters/ch4.tex
 INPUT ./chapters/ch4.tex
@@ -1540,6 +1545,8 @@ INPUT ./chapters/abstract.aux
 INPUT ./chapters/abstract.aux
 INPUT ./chapters/ch1.aux
 INPUT ./chapters/ch1.aux
+INPUT ./chapters/ch2-0.aux
+INPUT ./chapters/ch2-0.aux
 INPUT ./chapters/ch2.aux
 INPUT ./chapters/ch2.aux
 INPUT ./chapters/ch3-0.aux

@@ -1,9 +1,10 @@
-This is BibTeX, Version 0.99d (TeX Live 2024)
+This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: titlepage.aux
 A level-1 auxiliary file: chapters/abstract.aux
 A level-1 auxiliary file: chapters/ch1.aux
+A level-1 auxiliary file: chapters/ch2-0.aux
 A level-1 auxiliary file: chapters/ch2.aux
 A level-1 auxiliary file: chapters/ch3-0.aux
 A level-1 auxiliary file: chapters/ch3.aux
@@ -24,62 +25,62 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: reference.bib
 Warning--entry type for "al_ahmadgaid_b_asaad_yunir" isn't style-file defined
---line 597 of file reference.bib
+--line 317 of file reference.bib
 Warning--entry type for "al_ahmadgaid_b_asaad_kitab" isn't style-file defined
---line 669 of file reference.bib
+--line 353 of file reference.bib
 Warning--I'm ignoring Neuwirth_2007's extra "title" field
---line 1237 of file reference.bib
+--line 637 of file reference.bib
 Warning--entry type for "wikibirmingham" isn't style-file defined
---line 1257 of file reference.bib
+--line 647 of file reference.bib
 Warning--entry type for "mb2022" isn't style-file defined
---line 1273 of file reference.bib
+--line 655 of file reference.bib
 Warning--entry type for "bu2015" isn't style-file defined
---line 1289 of file reference.bib
+--line 663 of file reference.bib
 Warning--I didn't find a database entry for "bishop"
 Warning--I didn't find a database entry for "Rabiner89atutorial"
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No address in pewresearch
 Warning--`others' not consistent with 6th ed. of the APA Manual
 Warning--No journal in radford2018improving
-You've used 55 entries,
+You've used 57 entries,
             6951 wiz_defined-function locations,
-            1662 strings with 23514 characters,
-and the built_in function-call counts, 109405 in all, are:
-= -- 13860
-> -- 902
-< -- 5029
-+ -- 5057
-- -- 122
-* -- 6807
-:= -- 19169
-add.period$ -- 246
-call.type$ -- 55
-change.case$ -- 997
+            1674 strings with 23904 characters,
+and the built_in function-call counts, 113724 in all, are:
+= -- 14415
+> -- 940
+< -- 5243
++ -- 5265
+- -- 126
+* -- 7077
+:= -- 19920
+add.period$ -- 256
+call.type$ -- 57
+change.case$ -- 1032
 chr.to.int$ -- 0
-cite$ -- 112
-duplicate$ -- 2942
-empty$ -- 4397
-format.name$ -- 1436
-if$ -- 21206
+cite$ -- 116
+duplicate$ -- 3054
+empty$ -- 4556
+format.name$ -- 1500
+if$ -- 22039
 int.to.chr$ -- 0
-int.to.str$ -- 173
+int.to.str$ -- 179
 missing$ -- 0
-newline$ -- 1446
-num.names$ -- 448
-pop$ -- 2209
+newline$ -- 1498
+num.names$ -- 464
+pop$ -- 2300
 preamble$ -- 1
-purify$ -- 238
+purify$ -- 246
 quote$ -- 0
-skip$ -- 7249
+skip$ -- 7529
 stack$ -- 0
-substring$ -- 5616
-swap$ -- 1682
-text.length$ -- 197
+substring$ -- 5839
+swap$ -- 1744
+text.length$ -- 201
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 5528
+type$ -- 5752
 warning$ -- 3
-while$ -- 523
+while$ -- 547
 width$ -- 0
-write$ -- 1754
+write$ -- 1824
 (There were 11 warnings)
