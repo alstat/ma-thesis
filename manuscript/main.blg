@@ -25,62 +25,62 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: reference.bib
 Warning--entry type for "al_ahmadgaid_b_asaad_yunir" isn't style-file defined
---line 317 of file reference.bib
+--line 351 of file reference.bib
 Warning--entry type for "al_ahmadgaid_b_asaad_kitab" isn't style-file defined
---line 353 of file reference.bib
+--line 387 of file reference.bib
 Warning--I'm ignoring Neuwirth_2007's extra "title" field
---line 637 of file reference.bib
+--line 671 of file reference.bib
 Warning--entry type for "wikibirmingham" isn't style-file defined
---line 647 of file reference.bib
+--line 681 of file reference.bib
 Warning--entry type for "mb2022" isn't style-file defined
---line 655 of file reference.bib
+--line 689 of file reference.bib
 Warning--entry type for "bu2015" isn't style-file defined
---line 663 of file reference.bib
+--line 697 of file reference.bib
 Warning--I didn't find a database entry for "bishop"
 Warning--I didn't find a database entry for "Rabiner89atutorial"
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No address in pewresearch
 Warning--`others' not consistent with 6th ed. of the APA Manual
 Warning--No journal in radford2018improving
-You've used 57 entries,
+You've used 59 entries,
             6951 wiz_defined-function locations,
-            1674 strings with 23904 characters,
-and the built_in function-call counts, 113724 in all, are:
-= -- 14415
-> -- 940
-< -- 5243
-+ -- 5265
-- -- 126
-* -- 7077
-:= -- 19920
-add.period$ -- 256
-call.type$ -- 57
-change.case$ -- 1032
+            1685 strings with 24256 characters,
+and the built_in function-call counts, 117685 in all, are:
+= -- 14935
+> -- 967
+< -- 5438
++ -- 5444
+- -- 130
+* -- 7319
+:= -- 20632
+add.period$ -- 266
+call.type$ -- 59
+change.case$ -- 1067
 chr.to.int$ -- 0
-cite$ -- 116
-duplicate$ -- 3054
-empty$ -- 4556
-format.name$ -- 1500
-if$ -- 22039
+cite$ -- 120
+duplicate$ -- 3139
+empty$ -- 4704
+format.name$ -- 1538
+if$ -- 22813
 int.to.chr$ -- 0
-int.to.str$ -- 179
+int.to.str$ -- 185
 missing$ -- 0
-newline$ -- 1498
-num.names$ -- 464
-pop$ -- 2300
+newline$ -- 1545
+num.names$ -- 480
+pop$ -- 2383
 preamble$ -- 1
-purify$ -- 246
+purify$ -- 254
 quote$ -- 0
-skip$ -- 7529
+skip$ -- 7804
 stack$ -- 0
-substring$ -- 5839
-swap$ -- 1744
-text.length$ -- 201
+substring$ -- 6034
+swap$ -- 1800
+text.length$ -- 209
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 5752
+type$ -- 5976
 warning$ -- 3
-while$ -- 547
+while$ -- 560
 width$ -- 0
-write$ -- 1824
+write$ -- 1879
 (There were 11 warnings)

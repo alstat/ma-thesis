@@ -624,6 +624,31 @@ Dukes, K.%
 
 \bibitem [\protect \citeauthoryear {%
 Dukes%
+\ \BBA {} Buckwalter%
+}{%
+Dukes%
+\ \BBA {} Buckwalter%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+dukes2010dependency}
+\APACinsertmetastar {%
+dukes2010dependency}%
+\begin{APACrefauthors}%
+Dukes, K.%
+\BCBT {}\ \BBA {} Buckwalter, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A dependency treebank of the Quran using traditional Arabic grammar} {A dependency treebank of the quran using traditional arabic grammar}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {2010 the 7th International Conference on Informatics and Systems (INFOS)} {2010 the 7th international conference on informatics and systems (infos)}\ (\BPGS\ 1--7).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Dukes%
 \ \BBA {} Habash%
 }{%
 Dukes%
@@ -1106,6 +1131,28 @@ Radford, A.%
 {\BBOQ}\APACrefatitle {Improving language understanding by generative pre-training} {Improving language understanding by generative pre-training}.{\BBCQ}
 \newblock
 
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sabtan%
+}{%
+Sabtan%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+sabtan2017morphological}
+\APACinsertmetastar {%
+sabtan2017morphological}%
+\begin{APACrefauthors}%
+Sabtan, Y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Morphological Analysis of the Glorious Qur'an: A Comparative Survey of Three Corpora} {Morphological analysis of the glorious qur'an: A comparative survey of three corpora}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Arab World English Journal (AWEJ)}{8}{4}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
