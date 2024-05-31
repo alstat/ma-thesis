@@ -21,11 +21,15 @@ Abdelazim, H.%
 \newblock
 \APACrefYearMonthDay{2023}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Semantic Embeddings for Arabic Retrieval Augmented Generation (ARAG)} {Semantic embeddings for arabic retrieval augmented generation (arag)}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Semantic Embeddings for Arabic Retrieval Augmented
+  Generation (ARAG)} {Semantic embeddings for arabic retrieval augmented
+  generation (arag)}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{International Journal of Advanced Computer Science and Applications}{14}{11}{}.
+\APACjournalVolNumPages{International Journal of Advanced Computer Science and
+  Applications}{14}{11}{}.
 \newblock
-\begin{APACrefURL} \url{http://dx.doi.org/10.14569/IJACSA.2023.01411135} \end{APACrefURL}
+\begin{APACrefURL} \url{http://dx.doi.org/10.14569/IJACSA.2023.01411135}
+  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.14569/IJACSA.2023.01411135} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -51,9 +55,12 @@ Abro, B.%
 \newblock
 \APACrefYearMonthDay{2012}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Qur'an recognition for the purpose of memorisation using Speech Recognition technique} {Qur'an recognition for the purpose of memorisation using speech recognition technique}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Qur'an recognition for the purpose of memorisation using
+  Speech Recognition technique} {Qur'an recognition for the purpose of
+  memorisation using speech recognition technique}.{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {2012 15th International Multitopic Conference (INMIC)} {2012 15th international multitopic conference (inmic)}\ (\BPG~30-34).
+\BIn{} \APACrefbtitle {2012 15th International Multitopic Conference (INMIC)}
+  {2012 15th international multitopic conference (inmic)}\ (\BPG~30-34).
 \newblock
 \begin{APACrefDOI} \doi{10.1109/INMIC.2012.6511440} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -78,9 +85,12 @@ Afzal, H.%
 \newblock
 \APACrefYearMonthDay{2019}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Semantically enhanced concept search of the Holy Quran: Qur’anic English WordNet} {Semantically enhanced concept search of the holy quran: Qur’anic english wordnet}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Semantically enhanced concept search of the Holy Quran:
+  Qur’anic English WordNet} {Semantically enhanced concept search of the holy
+  quran: Qur’anic english wordnet}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Arabian Journal for Science and Engineering}{44}{}{3953--3966}.
+\APACjournalVolNumPages{Arabian Journal for Science and
+  Engineering}{44}{}{3953--3966}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -103,9 +113,11 @@ Ahmed, A\BPBI H.%
 \newblock
 \APACrefYearMonthDay{2017}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Verification system for Quran recitation recordings} {Verification system for quran recitation recordings}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Verification system for Quran recitation recordings}
+  {Verification system for quran recitation recordings}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{International Journal of Computer Applications}{163}{4}{6--11}.
+\APACjournalVolNumPages{International Journal of Computer
+  Applications}{163}{4}{6--11}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -129,9 +141,12 @@ Ahsiah, I.%
 \newblock
 \APACrefYearMonthDay{2013}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Tajweed checking system to support recitation} {Tajweed checking system to support recitation}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Tajweed checking system to support recitation} {Tajweed
+  checking system to support recitation}.{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {2013 International Conference on Advanced Computer Science and Information Systems (ICACSIS)} {2013 international conference on advanced computer science and information systems (icacsis)}\ (\BPG~189-193).
+\BIn{} \APACrefbtitle {2013 International Conference on Advanced Computer
+  Science and Information Systems (ICACSIS)} {2013 international conference on
+  advanced computer science and information systems (icacsis)}\ (\BPG~189-193).
 \newblock
 \begin{APACrefDOI} \doi{10.1109/ICACSIS.2013.6761574} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -156,9 +171,12 @@ Alargrami, A\BPBI M.%
 \newblock
 \APACrefYearMonthDay{2020}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Imam: Word Embedding Model for Islamic Arabic NLP} {Imam: Word embedding model for islamic arabic nlp}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Imam: Word Embedding Model for Islamic Arabic NLP}
+  {Imam: Word embedding model for islamic arabic nlp}.{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {2020 2nd Novel Intelligent and Leading Emerging Sciences Conference (NILES)} {2020 2nd novel intelligent and leading emerging sciences conference (niles)}\ (\BPG~520-524).
+\BIn{} \APACrefbtitle {2020 2nd Novel Intelligent and Leading Emerging Sciences
+  Conference (NILES)} {2020 2nd novel intelligent and leading emerging sciences
+  conference (niles)}\ (\BPG~520-524).
 \newblock
 \begin{APACrefDOI} \doi{10.1109/NILES50944.2020.9257931} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -180,9 +198,12 @@ Alhawarat, M.%
 \newblock
 \APACrefYearMonthDay{2015}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Extracting topics from the holy Quran using generative models} {Extracting topics from the holy quran using generative models}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Extracting topics from the holy Quran using generative
+  models} {Extracting topics from the holy quran using generative
+  models}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{International Journal of Advanced Computer Science and Applications}{6}{12}{288--294}.
+\APACjournalVolNumPages{International Journal of Advanced Computer Science and
+  Applications}{6}{12}{288--294}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -210,7 +231,9 @@ Al-Kabi, M\BPBI N.%
 \newblock
 \APACrefYearMonthDay{2005}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Statistical classifier of the holy Quran verses (Fatiha and Yaseen chapters)} {Statistical classifier of the holy quran verses (fatiha and yaseen chapters)}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Statistical classifier of the holy Quran verses (Fatiha
+  and Yaseen chapters)} {Statistical classifier of the holy quran verses
+  (fatiha and yaseen chapters)}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Applied Sciences}{5}{3}{580--583}.
 \PrintBackRefs{\CurrentBib}
@@ -235,9 +258,11 @@ Alqahtani, M.%
 \newblock
 \APACrefYearMonthDay{2017}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Evaluation criteria for computational Quran search} {Evaluation criteria for computational quran search}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Evaluation criteria for computational Quran search}
+  {Evaluation criteria for computational quran search}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{International Journal on Islamic Applications in Computer Science And Technology}{5}{1}{12--22}.
+\APACjournalVolNumPages{International Journal on Islamic Applications in
+  Computer Science And Technology}{5}{1}{12--22}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -261,15 +286,20 @@ Alshammeri, M.%
 \newblock
 \APACrefYearMonthDay{2021}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Detecting Semantic-based Similarity Between Verses of The Quran with Doc2vec} {Detecting semantic-based similarity between verses of the quran with doc2vec}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Detecting Semantic-based Similarity Between Verses of
+  The Quran with Doc2vec} {Detecting semantic-based similarity between verses
+  of the quran with doc2vec}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Procedia Computer Science}{189}{}{351-358}.
 \newblock
-\begin{APACrefURL} \url{https://www.sciencedirect.com/science/article/pii/S1877050921012291} \end{APACrefURL}
+\begin{APACrefURL}
+  \url{https://www.sciencedirect.com/science/article/pii/S1877050921012291}
+  \end{APACrefURL}
 \newblock
 \APACrefnote{AI in Computational Linguistics}
 \newblock
-\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.procs.2021.05.104} \end{APACrefDOI}
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.procs.2021.05.104}
+  \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -289,13 +319,19 @@ Asaad, A\BHBI A\BPBI B.%
 \newblock
 \APACrefYearMonthDay{2021}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Q}uran{T}ree.jl: A {J}ulia Package for {Q}uranic {A}rabic Corpus} {{Q}uran{T}ree.jl: A {J}ulia package for {Q}uranic {A}rabic corpus}.{\BBCQ}
+{\BBOQ}\APACrefatitle {{Q}uran{T}ree.jl: A {J}ulia Package for {Q}uranic
+  {A}rabic Corpus} {{Q}uran{T}ree.jl: A {J}ulia package for {Q}uranic {A}rabic
+  corpus}.{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {Proceedings of the Sixth Arabic Natural Language Processing Workshop} {Proceedings of the sixth arabic natural language processing workshop}\ (\BPGS\ 208--212).
+\BIn{} \APACrefbtitle {Proceedings of the Sixth Arabic Natural Language
+  Processing Workshop} {Proceedings of the sixth arabic natural language
+  processing workshop}\ (\BPGS\ 208--212).
 \newblock
-\APACaddressPublisher{Kyiv, Ukraine (Virtual)}{Association for Computational Linguistics}.
+\APACaddressPublisher{Kyiv, Ukraine (Virtual)}{Association for Computational
+  Linguistics}.
 \newblock
-\begin{APACrefURL} \url{https://aclanthology.org/2021.wanlp-1.22} \end{APACrefURL}
+\begin{APACrefURL} \url{https://aclanthology.org/2021.wanlp-1.22}
+  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -315,11 +351,14 @@ Asaad, A\BHBI A\BPBI B.%
 \newblock
 \APACrefYearMonthDay{2022{\protect \BCnt {1}}}{{\APACmonth{06}}}{}.
 \newblock
-\APACrefbtitle {{Kitab.jl: A Julia interface to the Open Islamic Texts Initiative (OpenITI) data}.} {{Kitab.jl: A Julia interface to the Open Islamic Texts Initiative (OpenITI) data}.}
+\APACrefbtitle {{Kitab.jl: A Julia interface to the Open Islamic Texts
+  Initiative (OpenITI) data}.} {{Kitab.jl: A Julia interface to the Open
+  Islamic Texts Initiative (OpenITI) data}.}
 \newblock
 \APACaddressPublisher{}{Zenodo}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.5281/zenodo.6665710} \end{APACrefURL}
+\begin{APACrefURL} \url{https://doi.org/10.5281/zenodo.6665710}
+  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.5281/zenodo.6665710} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -341,11 +380,13 @@ Asaad, A\BHBI A\BPBI B.%
 \newblock
 \APACrefYearMonthDay{2022{\protect \BCnt {2}}}{{\APACmonth{06}}}{}.
 \newblock
-\APACrefbtitle {{Yunir.jl: A lightweight Arabic NLP toolkit for Julia}.} {{Yunir.jl: A lightweight Arabic NLP toolkit for Julia}.}
+\APACrefbtitle {{Yunir.jl: A lightweight Arabic NLP toolkit for Julia}.}
+  {{Yunir.jl: A lightweight Arabic NLP toolkit for Julia}.}
 \newblock
 \APACaddressPublisher{}{Zenodo}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.5281/zenodo.6629868} \end{APACrefURL}
+\begin{APACrefURL} \url{https://doi.org/10.5281/zenodo.6629868}
+  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.5281/zenodo.6629868} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -373,7 +414,9 @@ Bashir, M\BPBI H.%
 \newblock
 \APACrefYearMonthDay{2023}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Arabic natural language processing for Qur’anic research: a systematic review} {Arabic natural language processing for qur’anic research: a systematic review}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Arabic natural language processing for Qur’anic
+  research: a systematic review} {Arabic natural language processing for
+  qur’anic research: a systematic review}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Artificial Intelligence Review}{56}{7}{6801--6854}.
 \PrintBackRefs{\CurrentBib}
@@ -395,7 +438,9 @@ Bayes, T.%
 \newblock
 \APACrefYearMonthDay{1763}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {An Essay Towards Solving a Problem in the Doctrine of Chances} {An essay towards solving a problem in the doctrine of chances}.{\BBCQ}
+{\BBOQ}\APACrefatitle {An Essay Towards Solving a Problem in the Doctrine of
+  Chances} {An essay towards solving a problem in the doctrine of
+  chances}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Philosophical Transactions}{53}{}{370-418}.
 \newblock
@@ -425,11 +470,13 @@ Bezanson, J.%
 \newblock
 \APACrefYearMonthDay{2017}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Julia: A fresh approach to numerical computing} {Julia: A fresh approach to numerical computing}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Julia: A fresh approach to numerical computing} {Julia:
+  A fresh approach to numerical computing}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{SIAM {R}eview}{59}{1}{65--98}.
 \newblock
-\begin{APACrefURL} \url{https://epubs.siam.org/doi/10.1137/141000671} \end{APACrefURL}
+\begin{APACrefURL} \url{https://epubs.siam.org/doi/10.1137/141000671}
+  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1137/141000671} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -451,11 +498,14 @@ bu2015}%
 \newblock
 \APACrefYearMonthDay{2015}{}{}.
 \newblock
-\APACrefbtitle {Birmingham Qur'an manuscript dated among the oldest in the world.} {Birmingham qur'an manuscript dated among the oldest in the world.}
+\APACrefbtitle {Birmingham Qur'an manuscript dated among the oldest in the
+  world.} {Birmingham qur'an manuscript dated among the oldest in the world.}
 \newblock
 \APACaddressPublisher{}{Birmingham University}.
 \newblock
-\APACrefnote{Available at: \url{https://www.birmingham.ac.uk/news-archive/2015/birmingham-quran-manuscript-dated-among-the-oldest-in-the-world} (Accessed: {July 8th, 2023})}
+\APACrefnote{Available at:
+  \url{https://www.birmingham.ac.uk/news-archive/2015/birmingham-quran-manuscript-dated-among-the-oldest-in-the-world}
+  (Accessed: {July 8th, 2023})}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -479,9 +529,11 @@ Blei, D\BPBI M.%
 \newblock
 \APACrefYearMonthDay{2003}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Latent dirichlet allocation} {Latent dirichlet allocation}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Latent dirichlet allocation} {Latent dirichlet
+  allocation}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Journal of machine Learning research}{3}{Jan}{993--1022}.
+\APACjournalVolNumPages{Journal of machine Learning
+  research}{3}{Jan}{993--1022}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -505,7 +557,8 @@ Cooperman, A.%
 \newblock
 \APACrefYearMonthDay{2011}{}{}.
 \newblock
-\APACrefbtitle {the future of the global muslim population} {the future of the global muslim population}\ \APACbVolEdTR{}{\BTR{}}.
+\APACrefbtitle {the future of the global muslim population} {the future of the
+  global muslim population}\ \APACbVolEdTR{}{\BTR{}}.
 \newblock
 \APACaddressInstitution{}{Pew Research Center}.
 \PrintBackRefs{\CurrentBib}
@@ -533,7 +586,9 @@ Darwish, K.%
 \newblock
 \APACrefYearMonthDay{2021}{mar}{}.
 \newblock
-{\BBOQ}\APACrefatitle {A panoramic survey of natural language processing in the Arab world} {A panoramic survey of natural language processing in the arab world}.{\BBCQ}
+{\BBOQ}\APACrefatitle {A panoramic survey of natural language processing in the
+  Arab world} {A panoramic survey of natural language processing in the arab
+  world}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Commun. ACM}{64}{4}{72–81}.
 \newblock
@@ -565,9 +620,35 @@ Devlin, J.%
 \newblock
 \APACrefYearMonthDay{2018}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Bert: Pre-training of deep bidirectional transformers for language understanding} {Bert: Pre-training of deep bidirectional transformers for language understanding}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Bert: Pre-training of deep bidirectional transformers
+  for language understanding} {Bert: Pre-training of deep bidirectional
+  transformers for language understanding}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{arXiv preprint arXiv:1810.04805}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Dukes%
+}{%
+Dukes%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+dukes2015statistical}
+\APACinsertmetastar {%
+dukes2015statistical}%
+\begin{APACrefauthors}%
+Dukes, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Statistical parsing by machine learning from a classical
+  Arabic treebank} {Statistical parsing by machine learning from a classical
+  arabic treebank}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1510.07193}{}{}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -591,7 +672,9 @@ Dukes, K.%
 \newblock
 \APACrefYearMonthDay{2013}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Supervised collaboration for syntactic annotation of Quranic Arabic} {Supervised collaboration for syntactic annotation of quranic arabic}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Supervised collaboration for syntactic annotation of
+  Quranic Arabic} {Supervised collaboration for syntactic annotation of quranic
+  arabic}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Language resources and evaluation}{47}{}{33--62}.
 \PrintBackRefs{\CurrentBib}
@@ -617,9 +700,12 @@ Dukes, K.%
 \newblock
 \APACrefYearMonthDay{2010}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Online visualization of traditional Quranic grammar using dependency graphs} {Online visualization of traditional quranic grammar using dependency graphs}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Online visualization of traditional Quranic grammar
+  using dependency graphs} {Online visualization of traditional quranic grammar
+  using dependency graphs}.{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {The Foundations of Arabic Linguistics Conference.} {The foundations of arabic linguistics conference.}
+\BIn{} \APACrefbtitle {The Foundations of Arabic Linguistics Conference.} {The
+  foundations of arabic linguistics conference.}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -642,9 +728,13 @@ Dukes, K.%
 \newblock
 \APACrefYearMonthDay{2010}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {A dependency treebank of the Quran using traditional Arabic grammar} {A dependency treebank of the quran using traditional arabic grammar}.{\BBCQ}
+{\BBOQ}\APACrefatitle {A dependency treebank of the Quran using traditional
+  Arabic grammar} {A dependency treebank of the quran using traditional arabic
+  grammar}.{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {2010 the 7th International Conference on Informatics and Systems (INFOS)} {2010 the 7th international conference on informatics and systems (infos)}\ (\BPGS\ 1--7).
+\BIn{} \APACrefbtitle {2010 the 7th International Conference on Informatics and
+  Systems (INFOS)} {2010 the 7th international conference on informatics and
+  systems (infos)}\ (\BPGS\ 1--7).
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -667,13 +757,55 @@ Dukes, K.%
 \newblock
 \APACrefYearMonthDay{2010}{{\APACmonth{05}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Morphological Annotation of {Q}uranic {A}rabic} {Morphological annotation of {Q}uranic {A}rabic}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Morphological Annotation of {Q}uranic {A}rabic}
+  {Morphological annotation of {Q}uranic {A}rabic}.{\BBCQ}
 \newblock
-\BIn{} N.~Calzolari\ \BOthers {.}\ (\BEDS), \APACrefbtitle {Proceedings of the Seventh International Conference on Language Resources and Evaluation ({LREC}'10).} {Proceedings of the seventh international conference on language resources and evaluation ({LREC}'10).}
+\BIn{} N.~Calzolari\ \BOthers {.}\ (\BEDS), \APACrefbtitle {Proceedings of the
+  Seventh International Conference on Language Resources and Evaluation
+  ({LREC}'10).} {Proceedings of the seventh international conference on
+  language resources and evaluation ({LREC}'10).}
 \newblock
-\APACaddressPublisher{Valletta, Malta}{European Language Resources Association (ELRA)}.
+\APACaddressPublisher{Valletta, Malta}{European Language Resources Association
+  (ELRA)}.
 \newblock
-\begin{APACrefURL} \url{http://www.lrec-conf.org/proceedings/lrec2010/pdf/276_Paper.pdf} \end{APACrefURL}
+\begin{APACrefURL}
+  \url{http://www.lrec-conf.org/proceedings/lrec2010/pdf/276_Paper.pdf}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Dukes%
+\ \BBA {} Habash%
+}{%
+Dukes%
+\ \BBA {} Habash%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+dukes-habash-2011-one}
+\APACinsertmetastar {%
+dukes-habash-2011-one}%
+\begin{APACrefauthors}%
+Dukes, K.%
+\BCBT {}\ \BBA {} Habash, N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{{\APACmonth{10}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {One-Step Statistical Parsing of Hybrid
+  Dependency-Constituency Syntactic Representations} {One-step statistical
+  parsing of hybrid dependency-constituency syntactic representations}.{\BBCQ}
+\newblock
+\BIn{} H.~Bunt, J.~Nivre\BCBL {}\ \BBA {} {\"O}.~{\c{C}}etinoglu\ (\BEDS),
+  \APACrefbtitle {Proceedings of the 12th International Conference on Parsing
+  Technologies} {Proceedings of the 12th international conference on parsing
+  technologies}\ (\BPGS\ 92--103).
+\newblock
+\APACaddressPublisher{Dublin, Ireland}{Association for Computational
+  Linguistics}.
+\newblock
+\begin{APACrefURL} \url{https://aclanthology.org/W11-2912} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -697,13 +829,19 @@ ELAffendi, M\BPBI A.%
 \newblock
 \APACrefYearMonthDay{2021}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {A simple Galois Power-of-Two real time embedding scheme for performing Arabic morphology deep learning tasks} {A simple galois power-of-two real time embedding scheme for performing arabic morphology deep learning tasks}.{\BBCQ}
+{\BBOQ}\APACrefatitle {A simple Galois Power-of-Two real time embedding scheme
+  for performing Arabic morphology deep learning tasks} {A simple galois
+  power-of-two real time embedding scheme for performing arabic morphology deep
+  learning tasks}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Egyptian Informatics Journal}{22}{1}{35-43}.
 \newblock
-\begin{APACrefURL} \url{https://www.sciencedirect.com/science/article/pii/S1110866520301146} \end{APACrefURL}
+\begin{APACrefURL}
+  \url{https://www.sciencedirect.com/science/article/pii/S1110866520301146}
+  \end{APACrefURL}
 \newblock
-\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.eij.2020.03.002} \end{APACrefDOI}
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.eij.2020.03.002}
+  \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -723,11 +861,14 @@ Farrin, R.%
 \newblock
 \APACrefYear{2014}.
 \newblock
-\APACrefbtitle {Structure and Qur'anic Interpretation: A Study of Symmetry and Coherence in Islam's Holy Text} {Structure and qur'anic interpretation: A study of symmetry and coherence in islam's holy text}.
+\APACrefbtitle {Structure and Qur'anic Interpretation: A Study of Symmetry and
+  Coherence in Islam's Holy Text} {Structure and qur'anic interpretation: A
+  study of symmetry and coherence in islam's holy text}.
 \newblock
 \APACaddressPublisher{}{White Cloud Press}.
 \newblock
-\begin{APACrefURL} \url{https://books.google.com.ph/books?id=io03ngEACAAJ} \end{APACrefURL}
+\begin{APACrefURL} \url{https://books.google.com.ph/books?id=io03ngEACAAJ}
+  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -747,7 +888,8 @@ Haykin, S.%
 \newblock
 \APACrefYear{1998}.
 \newblock
-\APACrefbtitle {Neural Networks: A Comprehensive Foundation} {Neural networks: A comprehensive foundation}\ (\PrintOrdinal{2nd}\ \BEd).
+\APACrefbtitle {Neural Networks: A Comprehensive Foundation} {Neural networks:
+  A comprehensive foundation}\ (\PrintOrdinal{2nd}\ \BEd).
 \newblock
 \APACaddressPublisher{Upper Saddle River, NJ, USA}{Prentice Hall PTR}.
 \PrintBackRefs{\CurrentBib}
@@ -769,7 +911,10 @@ Karatay, F\BPBI E.%
 \newblock
 \APACrefYear{1962}.
 \newblock
-\APACrefbtitle {Topkapı Sarayı Müzesi Kütüphanesi Arapça Yazmalar Katalogu. Kur'an, Kur'an ilimleri, Tefsirler No. 1 - 2171} {Topkapı sarayı müzesi kütüphanesi arapça yazmalar katalogu. kur'an, kur'an ilimleri, tefsirler no. 1 - 2171}.
+\APACrefbtitle {Topkapı Sarayı Müzesi Kütüphanesi Arapça Yazmalar
+  Katalogu. Kur'an, Kur'an ilimleri, Tefsirler No. 1 - 2171} {Topkapı sarayı
+  müzesi kütüphanesi arapça yazmalar katalogu. kur'an, kur'an ilimleri,
+  tefsirler no. 1 - 2171}.
 \newblock
 \APACaddressPublisher{}{Küçükaydın Matbaası, İstanbul}.
 \PrintBackRefs{\CurrentBib}
@@ -791,7 +936,8 @@ Khalifa, R.%
 \newblock
 \APACrefYear{1981}.
 \newblock
-\APACrefbtitle {The computer speaks: God's message to the world} {The computer speaks: God's message to the world}.
+\APACrefbtitle {The computer speaks: God's message to the world} {The computer
+  speaks: God's message to the world}.
 \newblock
 \APACaddressPublisher{}{Renaissance Production}.
 \PrintBackRefs{\CurrentBib}
@@ -813,11 +959,13 @@ Laplace, P\BPBI S.%
 \newblock
 \APACrefYearMonthDay{1986}{08}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Memoir on the Probability of the Causes of Events} {Memoir on the probability of the causes of events}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Memoir on the Probability of the Causes of Events}
+  {Memoir on the probability of the causes of events}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Statist. Sci.}{1}{3}{364--378}.
 \newblock
-\begin{APACrefURL} \url{http://dx.doi.org/10.1214/ss/1177013621} \end{APACrefURL}
+\begin{APACrefURL} \url{http://dx.doi.org/10.1214/ss/1177013621}
+  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1214/ss/1177013621} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -845,13 +993,20 @@ Lewis, P.%
 \newblock
 \APACrefYearMonthDay{2020}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks} {Retrieval-augmented generation for knowledge-intensive nlp tasks}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Retrieval-Augmented Generation for Knowledge-Intensive
+  NLP Tasks} {Retrieval-augmented generation for knowledge-intensive nlp
+  tasks}.{\BBCQ}
 \newblock
-\BIn{} H.~Larochelle, M.~Ranzato, R.~Hadsell, M.~Balcan\BCBL {}\ \BBA {} H.~Lin\ (\BEDS), \APACrefbtitle {Advances in Neural Information Processing Systems} {Advances in neural information processing systems}\ (\BVOL~33, \BPGS\ 9459--9474).
+\BIn{} H.~Larochelle, M.~Ranzato, R.~Hadsell, M.~Balcan\BCBL {}\ \BBA {}
+  H.~Lin\ (\BEDS), \APACrefbtitle {Advances in Neural Information Processing
+  Systems} {Advances in neural information processing systems}\ (\BVOL~33,
+  \BPGS\ 9459--9474).
 \newblock
 \APACaddressPublisher{}{Curran Associates, Inc.}
 \newblock
-\begin{APACrefURL} \url{https://proceedings.neurips.cc/paper_files/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf} \end{APACrefURL}
+\begin{APACrefURL}
+  \url{https://proceedings.neurips.cc/paper_files/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf}
+  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -876,7 +1031,10 @@ Mahboub, A.%
 \newblock
 \APACrefYearMonthDay{2024}{}{}.
 \newblock
-\APACrefbtitle {Evaluation of Semantic Search and its Role in Retrieved-Augmented-Generation (RAG) for Arabic Language.} {Evaluation of semantic search and its role in retrieved-augmented-generation (rag) for arabic language.}
+\APACrefbtitle {Evaluation of Semantic Search and its Role in
+  Retrieved-Augmented-Generation (RAG) for Arabic Language.} {Evaluation of
+  semantic search and its role in retrieved-augmented-generation (rag) for
+  arabic language.}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -899,13 +1057,18 @@ Malhas, R.%
 \newblock
 \APACrefYearMonthDay{2022}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Arabic machine reading comprehension on the Holy Qur’an using CL-AraBERT} {Arabic machine reading comprehension on the holy qur’an using cl-arabert}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Arabic machine reading comprehension on the Holy
+  Qur’an using CL-AraBERT} {Arabic machine reading comprehension on the holy
+  qur’an using cl-arabert}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Information Processing and Management}{59}{6}{103068}.
 \newblock
-\begin{APACrefURL} \url{https://www.sciencedirect.com/science/article/pii/S0306457322001704} \end{APACrefURL}
+\begin{APACrefURL}
+  \url{https://www.sciencedirect.com/science/article/pii/S0306457322001704}
+  \end{APACrefURL}
 \newblock
-\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.ipm.2022.103068} \end{APACrefDOI}
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.ipm.2022.103068}
+  \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -925,11 +1088,15 @@ mb2022}%
 \newblock
 \APACrefYearMonthDay{2022}{}{}.
 \newblock
-\APACrefbtitle {{PH} Embassy in Riyadh hosts First Asian Qur’an Memorization Contest.} {{PH} embassy in riyadh hosts first asian qur’an memorization contest.}
+\APACrefbtitle {{PH} Embassy in Riyadh hosts First Asian Qur’an Memorization
+  Contest.} {{PH} embassy in riyadh hosts first asian qur’an memorization
+  contest.}
 \newblock
 \APACaddressPublisher{}{Manila Bulletin}.
 \newblock
-\APACrefnote{Available at: \url{https://mb.com.ph/2022/04/30/ph-embassy-in-riyadh-hosts-first-asian-quran-memorization-contest/} (Accessed: {July 8th, 2023})}
+\APACrefnote{Available at:
+  \url{https://mb.com.ph/2022/04/30/ph-embassy-in-riyadh-hosts-first-asian-quran-memorization-contest/}
+  (Accessed: {July 8th, 2023})}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -953,13 +1120,19 @@ Mannaa, Z\BPBI M.%
 \newblock
 \APACrefYearMonthDay{2022}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Computer-assisted i`raab of Arabic sentences for teaching grammar to students} {Computer-assisted i`raab of arabic sentences for teaching grammar to students}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Computer-assisted i`raab of Arabic sentences for
+  teaching grammar to students} {Computer-assisted i`raab of arabic sentences
+  for teaching grammar to students}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Journal of King Saud University - Computer and Information Sciences}{34}{10, Part B}{8909-8926}.
+\APACjournalVolNumPages{Journal of King Saud University - Computer and
+  Information Sciences}{34}{10, Part B}{8909-8926}.
 \newblock
-\begin{APACrefURL} \url{https://www.sciencedirect.com/science/article/pii/S1319157822002944} \end{APACrefURL}
+\begin{APACrefURL}
+  \url{https://www.sciencedirect.com/science/article/pii/S1319157822002944}
+  \end{APACrefURL}
 \newblock
-\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.jksuci.2022.08.020} \end{APACrefDOI}
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.jksuci.2022.08.020}
+  \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -982,7 +1155,9 @@ McCulloch, W\BPBI S.%
 \newblock
 \APACrefYearMonthDay{1943}{{\APACmonth{12}}}{21}.
 \newblock
-{\BBOQ}\APACrefatitle {{A logical calculus of the ideas immanent in nervous activity}} {{A logical calculus of the ideas immanent in nervous activity}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {{A logical calculus of the ideas immanent in nervous
+  activity}} {{A logical calculus of the ideas immanent in nervous
+  activity}}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Bulletin of Mathematical Biology}{5}{4}{115--133}.
 \newblock
@@ -1006,7 +1181,8 @@ Muirhead, R\BPBI J.%
 \newblock
 \APACrefYear{2005}.
 \newblock
-\APACrefbtitle {Aspects of Multivariate Statistical Theory} {Aspects of multivariate statistical theory}.
+\APACrefbtitle {Aspects of Multivariate Statistical Theory} {Aspects of
+  multivariate statistical theory}.
 \newblock
 \APACaddressPublisher{Hoboken, New Jersey}{John Wiley \& Sons, Inc.}
 \PrintBackRefs{\CurrentBib}
@@ -1028,7 +1204,10 @@ Nassourou, M.%
 \newblock
 \APACrefYearMonthDay{2011}{}{}.
 \newblock
-\APACrefbtitle {Using Machine Learning Algorithms for Categorizing Quranic Chaptersby Major Phases of Prophet Mohammad's Messengership.} {Using machine learning algorithms for categorizing quranic chaptersby major phases of prophet mohammad's messengership.}
+\APACrefbtitle {Using Machine Learning Algorithms for Categorizing Quranic
+  Chaptersby Major Phases of Prophet Mohammad's Messengership.} {Using machine
+  learning algorithms for categorizing quranic chaptersby major phases of
+  prophet mohammad's messengership.}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1048,11 +1227,13 @@ Neuwirth, A.%
 \newblock
 \APACrefYear{2007}.
 \newblock
-\APACrefbtitle {Studien zur Komposition der mekkanischen Suren} {Studien zur komposition der mekkanischen suren}.
+\APACrefbtitle {Studien zur Komposition der mekkanischen Suren} {Studien zur
+  komposition der mekkanischen suren}.
 \newblock
 \APACaddressPublisher{Berlin, Boston}{De Gruyter}.
 \newblock
-\begin{APACrefURL} [{2023-07-09}]\url{https://doi.org/10.1515/9783110920383} \end{APACrefURL}
+\begin{APACrefURL} [{2023-07-09}]\url{https://doi.org/10.1515/9783110920383}
+  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{doi:10.1515/9783110920383} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -1074,11 +1255,13 @@ Nielsen, M\BPBI A.%
 \newblock
 \APACrefYear{2015}.
 \newblock
-\APACrefbtitle {Neural Network and Deep Learning} {Neural network and deep learning}.
+\APACrefbtitle {Neural Network and Deep Learning} {Neural network and deep
+  learning}.
 \newblock
 \APACaddressPublisher{}{Determination Press}.
 \newblock
-\begin{APACrefURL} \url{http://neuralnetworksanddeeplearning.com/} \end{APACrefURL}
+\begin{APACrefURL} \url{http://neuralnetworksanddeeplearning.com/}
+  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1098,7 +1281,9 @@ rprogramming}%
 \newblock
 \APACrefYearMonthDay{2023}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {R: A Language and Environment for Statistical Computing} {R: A language and environment for statistical computing}{\BBCQ}\ [\bibcomputersoftwaremanual].
+{\BBOQ}\APACrefatitle {R: A Language and Environment for Statistical Computing}
+  {R: A language and environment for statistical computing}{\BBCQ}\
+  [\bibcomputersoftwaremanual].
 \newblock
 \APACaddressPublisher{Vienna, Austria}{}.
 \newblock
@@ -1128,7 +1313,9 @@ Radford, A.%
 \newblock
 \APACrefYearMonthDay{2018}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Improving language understanding by generative pre-training} {Improving language understanding by generative pre-training}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Improving language understanding by generative
+  pre-training} {Improving language understanding by generative
+  pre-training}.{\BBCQ}
 \newblock
 
 \PrintBackRefs{\CurrentBib}
@@ -1150,7 +1337,9 @@ Sabtan, Y.%
 \newblock
 \APACrefYearMonthDay{2017}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Morphological Analysis of the Glorious Qur'an: A Comparative Survey of Three Corpora} {Morphological analysis of the glorious qur'an: A comparative survey of three corpora}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Morphological Analysis of the Glorious Qur'an: A
+  Comparative Survey of Three Corpora} {Morphological analysis of the glorious
+  qur'an: A comparative survey of three corpora}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Arab World English Journal (AWEJ)}{8}{4}{}.
 \PrintBackRefs{\CurrentBib}
@@ -1175,11 +1364,14 @@ Sadeghi, B.%
 \newblock
 \APACrefYearMonthDay{2010}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {The Codex of a Companion of the Prophet and the Qurān of the Prophet} {The codex of a companion of the prophet and the qurān of the prophet}.{\BBCQ}
+{\BBOQ}\APACrefatitle {The Codex of a Companion of the Prophet and the Qurān
+  of the Prophet} {The codex of a companion of the prophet and the qurān of
+  the prophet}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Arabica}{57}{4}{343 - 436}.
 \newblock
-\begin{APACrefDOI} \doi{\url{https://doi.org/10.1163/157005810X504518}} \end{APACrefDOI}
+\begin{APACrefDOI} \doi{\url{https://doi.org/10.1163/157005810X504518}}
+  \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1203,11 +1395,14 @@ Shahzadi, N.%
 \newblock
 \APACrefYearMonthDay{2012}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Semantic Network based Classifier of Holy Quran} {Semantic network based classifier of holy quran}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Semantic Network based Classifier of Holy Quran}
+  {Semantic network based classifier of holy quran}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{International Journal of Computer Applications}{39}{}{43-47}.
+\APACjournalVolNumPages{International Journal of Computer
+  Applications}{39}{}{43-47}.
 \newblock
-\begin{APACrefURL} \url{https://api.semanticscholar.org/CorpusID:6539715} \end{APACrefURL}
+\begin{APACrefURL} \url{https://api.semanticscholar.org/CorpusID:6539715}
+  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1230,13 +1425,17 @@ Sharaf, A.%
 \newblock
 \APACrefYearMonthDay{2009}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Knowledge representation of the Quran through frame semantics: a corpus-based approach} {Knowledge representation of the quran through frame semantics: a corpus-based approach}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Knowledge representation of the Quran through frame
+  semantics: a corpus-based approach} {Knowledge representation of the quran
+  through frame semantics: a corpus-based approach}.{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {Proceedings of the Fifth Corpus Linguistics Conference.} {Proceedings of the fifth corpus linguistics conference.}
+\BIn{} \APACrefbtitle {Proceedings of the Fifth Corpus Linguistics Conference.}
+  {Proceedings of the fifth corpus linguistics conference.}
 \newblock
 \APACaddressPublisher{}{The Fifth Corpus Linguistics Conference}.
 \newblock
-\begin{APACrefURL} \url{https://api.semanticscholar.org/CorpusID:18278736} \end{APACrefURL}
+\begin{APACrefURL} \url{https://api.semanticscholar.org/CorpusID:18278736}
+  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1259,13 +1458,21 @@ Sharaf, A.%
 \newblock
 \APACrefYearMonthDay{2012{\protect \BCnt {1}}}{{\APACmonth{05}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Q}ur{A}na: Corpus of the {Q}uran annotated with Pronominal Anaphora} {{Q}ur{A}na: Corpus of the {Q}uran annotated with pronominal anaphora}.{\BBCQ}
+{\BBOQ}\APACrefatitle {{Q}ur{A}na: Corpus of the {Q}uran annotated with
+  Pronominal Anaphora} {{Q}ur{A}na: Corpus of the {Q}uran annotated with
+  pronominal anaphora}.{\BBCQ}
 \newblock
-\BIn{} N.~Calzolari\ \BOthers {.}\ (\BEDS), \APACrefbtitle {Proceedings of the Eighth International Conference on Language Resources and Evaluation ({LREC}'12)} {Proceedings of the eighth international conference on language resources and evaluation ({LREC}'12)}\ (\BPGS\ 130--137).
+\BIn{} N.~Calzolari\ \BOthers {.}\ (\BEDS), \APACrefbtitle {Proceedings of the
+  Eighth International Conference on Language Resources and Evaluation
+  ({LREC}'12)} {Proceedings of the eighth international conference on language
+  resources and evaluation ({LREC}'12)}\ (\BPGS\ 130--137).
 \newblock
-\APACaddressPublisher{Istanbul, Turkey}{European Language Resources Association (ELRA)}.
+\APACaddressPublisher{Istanbul, Turkey}{European Language Resources Association
+  (ELRA)}.
 \newblock
-\begin{APACrefURL} \url{http://www.lrec-conf.org/proceedings/lrec2012/pdf/123_Paper.pdf} \end{APACrefURL}
+\begin{APACrefURL}
+  \url{http://www.lrec-conf.org/proceedings/lrec2012/pdf/123_Paper.pdf}
+  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1288,13 +1495,21 @@ Sharaf, A.%
 \newblock
 \APACrefYearMonthDay{2012{\protect \BCnt {2}}}{{\APACmonth{05}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Q}ur{S}im: A corpus for evaluation of relatedness in short texts} {{Q}ur{S}im: A corpus for evaluation of relatedness in short texts}.{\BBCQ}
+{\BBOQ}\APACrefatitle {{Q}ur{S}im: A corpus for evaluation of relatedness in
+  short texts} {{Q}ur{S}im: A corpus for evaluation of relatedness in short
+  texts}.{\BBCQ}
 \newblock
-\BIn{} N.~Calzolari\ \BOthers {.}\ (\BEDS), \APACrefbtitle {Proceedings of the Eighth International Conference on Language Resources and Evaluation ({LREC}'12)} {Proceedings of the eighth international conference on language resources and evaluation ({LREC}'12)}\ (\BPGS\ 2295--2302).
+\BIn{} N.~Calzolari\ \BOthers {.}\ (\BEDS), \APACrefbtitle {Proceedings of the
+  Eighth International Conference on Language Resources and Evaluation
+  ({LREC}'12)} {Proceedings of the eighth international conference on language
+  resources and evaluation ({LREC}'12)}\ (\BPGS\ 2295--2302).
 \newblock
-\APACaddressPublisher{Istanbul, Turkey}{European Language Resources Association (ELRA)}.
+\APACaddressPublisher{Istanbul, Turkey}{European Language Resources Association
+  (ELRA)}.
 \newblock
-\begin{APACrefURL} \url{http://www.lrec-conf.org/proceedings/lrec2012/pdf/190_Paper.pdf} \end{APACrefURL}
+\begin{APACrefURL}
+  \url{http://www.lrec-conf.org/proceedings/lrec2012/pdf/190_Paper.pdf}
+  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1318,9 +1533,14 @@ siddiqui2013}%
 \newblock
 \APACrefYearMonthDay{2013}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Discovering the Thematic Structure of the Quran using Probabilistic Topic Model} {Discovering the thematic structure of the quran using probabilistic topic model}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Discovering the Thematic Structure of the Quran using
+  Probabilistic Topic Model} {Discovering the thematic structure of the quran
+  using probabilistic topic model}.{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {2013 Taibah University International Conference on Advances in Information Technology for the Holy Quran and Its Sciences} {2013 taibah university international conference on advances in information technology for the holy quran and its sciences}\ (\BPG~234-239).
+\BIn{} \APACrefbtitle {2013 Taibah University International Conference on
+  Advances in Information Technology for the Holy Quran and Its Sciences} {2013
+  taibah university international conference on advances in information
+  technology for the holy quran and its sciences}\ (\BPG~234-239).
 \newblock
 \begin{APACrefDOI} \doi{10.1109/NOORIC.2013.55} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -1342,11 +1562,14 @@ Sidky, H.%
 \newblock
 \APACrefYearMonthDay{2020}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {On the Regionality of Qur'anic Codices} {On the regionality of qur'anic codices}.{\BBCQ}
+{\BBOQ}\APACrefatitle {On the Regionality of Qur'anic Codices} {On the
+  regionality of qur'anic codices}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Journal of International Quranic Studies Association}{}{}{}.
+\APACjournalVolNumPages{Journal of International Quranic Studies
+  Association}{}{}{}.
 \newblock
-\begin{APACrefDOI} \doi{http://dx.doi.org/10.5913/jiqsa.5.2020.a005} \end{APACrefDOI}
+\begin{APACrefDOI} \doi{http://dx.doi.org/10.5913/jiqsa.5.2020.a005}
+  \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1366,9 +1589,12 @@ Sinai, N.%
 \newblock
 \APACrefYearMonthDay{2014}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {When did the consonantal skeleton of the Quran reach closure? Part II} {When did the consonantal skeleton of the quran reach closure? part ii}.{\BBCQ}
+{\BBOQ}\APACrefatitle {When did the consonantal skeleton of the Quran reach
+  closure? Part II} {When did the consonantal skeleton of the quran reach
+  closure? part ii}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Bulletin of the School of Oriental and African Studies}{77}{3}{509–521}.
+\APACjournalVolNumPages{Bulletin of the School of Oriental and African
+  Studies}{77}{3}{509–521}.
 \newblock
 \begin{APACrefDOI} \doi{10.1017/S0041977X14000111} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -1390,7 +1616,8 @@ Sinai, N.%
 \newblock
 \APACrefYear{2017}.
 \newblock
-\APACrefbtitle {The Qur'an: A historical-critical introduction} {The qur'an: A historical-critical introduction}.
+\APACrefbtitle {The Qur'an: A historical-critical introduction} {The qur'an: A
+  historical-critical introduction}.
 \newblock
 \APACaddressPublisher{}{Edinburgh University Press Ltd}.
 \PrintBackRefs{\CurrentBib}
@@ -1414,7 +1641,9 @@ Thabet, N.%
 \newblock
 {\BBOQ}\APACrefatitle {Stemming the Qur'an} {Stemming the qur'an}.{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {Proceedings of the Workshop on Computational Approaches to Arabic Script-Based Languages} {Proceedings of the workshop on computational approaches to arabic script-based languages}\ (\BPG~85-88).
+\BIn{} \APACrefbtitle {Proceedings of the Workshop on Computational Approaches
+  to Arabic Script-Based Languages} {Proceedings of the workshop on
+  computational approaches to arabic script-based languages}\ (\BPG~85-88).
 \newblock
 \APACaddressPublisher{USA}{Association for Computational Linguistics}.
 \PrintBackRefs{\CurrentBib}
@@ -1436,9 +1665,12 @@ Thabet, N.%
 \newblock
 \APACrefYearMonthDay{2005}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Understanding the thematic structure of the Qur'an: an exploratory multivariate approach} {Understanding the thematic structure of the qur'an: an exploratory multivariate approach}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Understanding the thematic structure of the Qur'an: an
+  exploratory multivariate approach} {Understanding the thematic structure of
+  the qur'an: an exploratory multivariate approach}.{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {Proceedings of the ACL Student Research Workshop} {Proceedings of the acl student research workshop}\ (\BPG~7-12).
+\BIn{} \APACrefbtitle {Proceedings of the ACL Student Research Workshop}
+  {Proceedings of the acl student research workshop}\ (\BPG~7-12).
 \newblock
 \APACaddressPublisher{USA}{Association for Computational Linguistics}.
 \PrintBackRefs{\CurrentBib}
@@ -1491,9 +1723,11 @@ Vaswani, A.%
 \newblock
 \APACrefYearMonthDay{2017}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Attention is all you need} {Attention is all you need}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Attention is all you need} {Attention is all you
+  need}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Advances in neural information processing systems}{30}{}{}.
+\APACjournalVolNumPages{Advances in neural information processing
+  systems}{30}{}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1513,7 +1747,9 @@ Wansbrough, J.%
 \newblock
 \APACrefYear{2004}.
 \newblock
-\APACrefbtitle {Quranic Studies: Sources and Methods of Scriptural Interpretation} {Quranic studies: Sources and methods of scriptural interpretation}.
+\APACrefbtitle {Quranic Studies: Sources and Methods of Scriptural
+  Interpretation} {Quranic studies: Sources and methods of scriptural
+  interpretation}.
 \newblock
 \APACaddressPublisher{}{Prometheus Books}.
 \PrintBackRefs{\CurrentBib}
@@ -1535,11 +1771,15 @@ wikibirmingham}%
 \newblock
 \APACrefYearMonthDay{2015}{}{}.
 \newblock
-\APACrefbtitle {Comparison of a 20th-century edition of the Quran (left) and the Birmingham Quran manuscript (right).} {Comparison of a 20th-century edition of the quran (left) and the birmingham quran manuscript (right).}
+\APACrefbtitle {Comparison of a 20th-century edition of the Quran (left) and
+  the Birmingham Quran manuscript (right).} {Comparison of a 20th-century
+  edition of the quran (left) and the birmingham quran manuscript (right).}
 \newblock
 \APACaddressPublisher{}{Wikipedia}.
 \newblock
-\APACrefnote{Available at: \url{https://en.wikipedia.org/wiki/Birmingham_Quran_manuscript} (Accessed: {July 9th, 2023})}
+\APACrefnote{Available at:
+  \url{https://en.wikipedia.org/wiki/Birmingham_Quran_manuscript} (Accessed:
+  {July 9th, 2023})}
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}
