@@ -1,32 +1,6 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
-Abalkheel%
-, Sourani%
-\BCBL {}\ \BBA {} ElZohbi%
-}{%
-Abalkheel%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2022}}%
-}]{%
-abalkheel2022linguistic}
-\APACinsertmetastar {%
-abalkheel2022linguistic}%
-\begin{APACrefauthors}%
-Abalkheel, A.%
-, Sourani, M.%
-\BCBL {}\ \BBA {} ElZohbi, S.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2022}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Linguistic and Rhythmic Precision in Quranic Fawasil} {Linguistic and rhythmic precision in quranic fawasil}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Journal of Namibian Studies: History Politics Culture}{32}{}{813--840}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Abdelazim%
 , Tharwat%
 \BCBL {}\ \BBA {} Mohamed%
@@ -185,6 +159,32 @@ Ahsiah, I.%
 \BIn{} \APACrefbtitle {2013 International Conference on Advanced Computer Science and Information Systems (ICACSIS)} {2013 international conference on advanced computer science and information systems (icacsis)}\ (\BPG~189-193).
 \newblock
 \begin{APACrefDOI} \doi{10.1109/ICACSIS.2013.6761574} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Alan%
+, Ayd{\i}n%
+\BCBL {}\ \BBA {} Karaarslan%
+}{%
+Alan%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2024}}%
+}]{%
+alan2024rag}
+\APACinsertmetastar {%
+alan2024rag}%
+\begin{APACrefauthors}%
+Alan, A\BPBI Y.%
+, Ayd{\i}n, {\"O}.%
+\BCBL {}\ \BBA {} Karaarslan, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2024}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A RAG-based Question Answering System Proposal for Understanding Islam: MufassirQAS LLM} {A rag-based question answering system proposal for understanding islam: Mufassirqas llm}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Available at SSRN 4707470}{}{}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -779,6 +779,31 @@ Dukes, K.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Egger%
+\ \BBA {} Yu%
+}{%
+Egger%
+\ \BBA {} Yu%
+}{%
+{\protect \APACyear {2022}}%
+}]{%
+egger2022topic}
+\APACinsertmetastar {%
+egger2022topic}%
+\begin{APACrefauthors}%
+Egger, R.%
+\BCBT {}\ \BBA {} Yu, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A topic modeling comparison between lda, nmf, top2vec, and bertopic to demystify twitter posts} {A topic modeling comparison between lda, nmf, top2vec, and bertopic to demystify twitter posts}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Frontiers in sociology}{7}{}{886498}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 ELAffendi%
 , Abuhaimed%
 \BCBL {}\ \BBA {} AlRajhi%
@@ -830,6 +855,28 @@ Farrin, R.%
 \APACaddressPublisher{}{White Cloud Press}.
 \newblock
 \begin{APACrefURL} \url{https://books.google.com.ph/books?id=io03ngEACAAJ} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Grootendorst%
+}{%
+Grootendorst%
+}{%
+{\protect \APACyear {2022}}%
+}]{%
+grootendorst2022bertopic}
+\APACinsertmetastar {%
+grootendorst2022bertopic}%
+\begin{APACrefauthors}%
+Grootendorst, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {BERTopic: Neural topic modeling with a class-based TF-IDF procedure} {Bertopic: Neural topic modeling with a class-based tf-idf procedure}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:2203.05794}{}{}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -959,7 +1006,35 @@ Lewis%
 Lewis%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2020}}%
-}]{%
+{\protect \APACexlab {{\protect \BCnt {1}}}}}]{%
+lewis2020retrieval}
+\APACinsertmetastar {%
+lewis2020retrieval}%
+\begin{APACrefauthors}%
+Lewis, P.%
+, Perez, E.%
+, Piktus, A.%
+, Petroni, F.%
+, Karpukhin, V.%
+, Goyal, N.%
+\BDBL {}others%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020{\protect \BCnt {1}}}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Retrieval-augmented generation for knowledge-intensive nlp tasks} {Retrieval-augmented generation for knowledge-intensive nlp tasks}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Advances in Neural Information Processing Systems}{33}{}{9459--9474}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lewis%
+\ \protect \BOthers {.}}{%
+Lewis%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+{\protect \APACexlab {{\protect \BCnt {2}}}}}]{%
 NEURIPS2020_6b493230}
 \APACinsertmetastar {%
 NEURIPS2020_6b493230}%
@@ -974,7 +1049,7 @@ Lewis, P.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2020}{}{}.
+\APACrefYearMonthDay{2020{\protect \BCnt {2}}}{}{}.
 \newblock
 {\BBOQ}\APACrefatitle {Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks} {Retrieval-augmented generation for knowledge-intensive nlp tasks}.{\BBCQ}
 \newblock
@@ -1008,28 +1083,6 @@ Mahboub, A.%
 \APACrefYearMonthDay{2024}{}{}.
 \newblock
 \APACrefbtitle {Evaluation of Semantic Search and its Role in Retrieved-Augmented-Generation (RAG) for Arabic Language.} {Evaluation of semantic search and its role in retrieved-augmented-generation (rag) for arabic language.}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Mahmood%
-}{%
-Mahmood%
-}{%
-{\protect \APACyear {2023}}%
-}]{%
-mahmood2023rhythmic}
-\APACinsertmetastar {%
-mahmood2023rhythmic}%
-\begin{APACrefauthors}%
-Mahmood, A\BPBI P\BPBI D\BPBI R\BPBI M.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2023}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Rhythmic Analysis of Selected Quranic Short Surahs a Phono-Pragmatic Study} {Rhythmic analysis of selected quranic short surahs a phono-pragmatic study}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Journal of Educational and Psychological Sciences}{152}{1}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1585,7 +1638,7 @@ Sinai%
 Sinai%
 }{%
 {\protect \APACyear {2017}}%
-}]{%
+{\protect \APACexlab {{\protect \BCnt {1}}}}}]{%
 sinai2017}
 \APACinsertmetastar {%
 sinai2017}%
@@ -1594,11 +1647,33 @@ Sinai, N.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYear{2017}.
+\APACrefYear{2017{\protect \BCnt {1}}}.
 \newblock
 \APACrefbtitle {The Qur'an: A historical-critical introduction} {The qur'an: A historical-critical introduction}.
 \newblock
 \APACaddressPublisher{}{Edinburgh University Press Ltd}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sinai%
+}{%
+Sinai%
+}{%
+{\protect \APACyear {2017}}%
+{\protect \APACexlab {{\protect \BCnt {2}}}}}]{%
+sinai2017review}
+\APACinsertmetastar {%
+sinai2017review}%
+\begin{APACrefauthors}%
+Sinai, N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017{\protect \BCnt {2}}}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Review essay: Going Round in Circles': Michel Cuypers, The Composition of the Qur'an: Rhetorical Analysis, and Raymond Farrin, Structure and Qur'anic Interpretation: A Study of Symmetry and Coherence in Islam's Holy Text} {Review essay: Going round in circles': Michel cuypers, the composition of the qur'an: Rhetorical analysis, and raymond farrin, structure and qur'anic interpretation: A study of symmetry and coherence in islam's holy text}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Qur'anic Studies}{19}{2}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
