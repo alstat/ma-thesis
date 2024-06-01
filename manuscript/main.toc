@@ -8,85 +8,85 @@
 \contentsline {section}{\numberline {1.6}Thesis Organization}{19}{section.1.6}%
 \contentsline {section}{\numberline {1.7}Mathematical Sections}{19}{section.1.7}%
 \contentsline {chapter}{\numberline {2}Review of Related Literature}{21}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Theoretical and Conceptual Frameworks}{24}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Theoretical Framework}{24}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Conceptual Framework}{24}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Historical Background of the Qur'\=an}{25}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Extant Manuscripts}{29}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Authorship}{29}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Background on Probability and Statistics}{30}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Descriptive Statistics}{30}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Probability Theory}{31}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Statistical Charts}{38}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Box, Density, and Histogram Plots}{38}{subsection.5.3.1}%
-\contentsline {section}{\numberline {5.4}Population and Sample}{41}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Probability Distributions}{46}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Frequentist Estimation}{47}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Maximum Likelihood Estimation}{48}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Numerical Approximation}{49}{subsection.5.6.2}%
-\contentsline {subsection}{\numberline {5.6.3}Stochastic Gradient Descent}{50}{subsection.5.6.3}%
-\contentsline {section}{\numberline {5.7}Bayesian Estimation}{50}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Laplace's Approximation}{51}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}Markov Chain Monte Carlo (MCMC)}{54}{subsection.5.7.2}%
-\contentsline {subsection}{\numberline {5.7.3}Metropolis-Hasting}{54}{subsection.5.7.3}%
-\contentsline {subsection}{\numberline {5.7.4}Gibbs Sampling}{55}{subsection.5.7.4}%
-\contentsline {subsection}{\numberline {5.7.5}Bayesian Linear Regression}{56}{subsection.5.7.5}%
-\contentsline {section}{\numberline {5.8}Types of Statistical Methods}{58}{section.5.8}%
-\contentsline {subsection}{\numberline {5.8.1}Parametric}{59}{subsection.5.8.1}%
-\contentsline {subsection}{\numberline {5.8.2}Nonparametric}{59}{subsection.5.8.2}%
-\contentsline {section}{\numberline {5.9}Types of Models}{59}{section.5.9}%
-\contentsline {subsection}{\numberline {5.9.1}Supervised}{60}{subsection.5.9.1}%
-\contentsline {subsection}{\numberline {5.9.2}Unsupervised}{60}{subsection.5.9.2}%
-\contentsline {chapter}{\numberline {6}Background on Neural Networks and Transformers}{61}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Perceptron}{61}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Logistic Sigmoid Neuron}{62}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Topology}{63}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Notations}{64}{subsection.6.3.1}%
-\contentsline {section}{\numberline {6.4}Network Training}{67}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Loss Function}{67}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Back-propagation Algorithm}{72}{subsection.6.4.2}%
-\contentsline {section}{\numberline {6.5}Transformers}{75}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Attention Mechanism}{75}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Multi-Head Attention}{77}{subsection.6.5.2}%
-\contentsline {subsection}{\numberline {6.5.3}Positional Encoding}{78}{subsection.6.5.3}%
-\contentsline {subsection}{\numberline {6.5.4}Transformer Architecture}{78}{subsection.6.5.4}%
-\contentsline {chapter}{\numberline {7}Background on Natural Language Processing}{80}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Text Analytics}{80}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Tokenization}{80}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Embeddings}{81}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Term Frequency - Inverse Document Frequency}{82}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Word Embeddings}{82}{subsection.7.3.2}%
-\contentsline {chapter}{\numberline {8}Methodology}{84}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Morphological Analysis}{84}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Rhythmic Analysis}{84}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Directed Probabilistic Graphical Models (PGM)}{86}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}Markov Chain}{90}{subsection.8.2.2}%
-\contentsline {section}{\numberline {8.3}Thematic Analysis}{91}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Latent Dirichlet Allocation}{91}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Large Language Models}{92}{subsection.8.3.2}%
-\contentsline {subsection}{\numberline {8.3.3}Bidirectional Encoder Representation from Transformers}{93}{subsection.8.3.3}%
-\contentsline {subsection}{\numberline {8.3.4}Generative Pre-Trained Transformer}{94}{subsection.8.3.4}%
-\contentsline {section}{\numberline {8.4}Concentrism Statistical Formulation}{94}{section.8.4}%
-\contentsline {subsection}{\numberline {8.4.1}Cosine Similarity}{96}{subsection.8.4.1}%
-\contentsline {subsection}{\numberline {8.4.2}Bayesian Optimization}{97}{subsection.8.4.2}%
-\contentsline {subsubsection}{Surrogate Function}{97}{subsubsection*.26}%
-\contentsline {section}{\numberline {8.5}Integrating Other Islamic Literatures}{100}{section.8.5}%
-\contentsline {subsection}{\numberline {8.5.1}Open Islamic Text Initiative}{101}{subsection.8.5.1}%
-\contentsline {subsection}{\numberline {8.5.2}Retrieval-Augmented Generation}{102}{subsection.8.5.2}%
-\contentsline {section}{\numberline {8.6}Programming Languages Setup}{102}{section.8.6}%
-\contentsline {chapter}{\numberline {9}Results and Discussions}{104}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Descriptive Statistics}{104}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}Verses}{105}{subsection.9.1.1}%
-\contentsline {section}{\numberline {9.2}Morphological Analysis}{105}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Structural Analysis}{105}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Concentric Structure}{105}{subsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.3.2}Discussions on Islamic Philosophy of Qur'\=an's Structural Analysis}{105}{subsection.9.3.2}%
-\contentsline {section}{\numberline {9.4}Topic Modeling}{106}{section.9.4}%
-\contentsline {subsection}{\numberline {9.4.1}Latent Dirichlet Allocation}{106}{subsection.9.4.1}%
-\contentsline {subsection}{\numberline {9.4.2}Bidirectional Encoder Representation from Transformer}{106}{subsection.9.4.2}%
-\contentsline {subsection}{\numberline {9.4.3}Generative Pre-Trained Transformer}{106}{subsection.9.4.3}%
-\contentsline {section}{\numberline {9.5}Relating to other Islamic Texts and Analyses}{106}{section.9.5}%
-\contentsline {subsection}{\numberline {9.5.1}Retrieval-Augmented Generation Approach}{106}{subsection.9.5.1}%
-\contentsline {section}{\numberline {9.6}Limitations of the Models}{106}{section.9.6}%
-\contentsline {chapter}{\numberline {10}Conclusion and Recommendation}{107}{chapter.10}%
-\contentsline {section}{References}{108}{section*.31}%
+\contentsline {chapter}{\numberline {3}Theoretical and Conceptual Frameworks}{25}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Theoretical Framework}{25}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Conceptual Framework}{25}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Historical Background of the Qur'\=an}{26}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Extant Manuscripts}{30}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Authorship}{30}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Background on Probability and Statistics}{31}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Descriptive Statistics}{31}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Probability Theory}{32}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Statistical Charts}{39}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Box, Density, and Histogram Plots}{39}{subsection.5.3.1}%
+\contentsline {section}{\numberline {5.4}Population and Sample}{42}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Probability Distributions}{47}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Frequentist Estimation}{48}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Maximum Likelihood Estimation}{49}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Numerical Approximation}{50}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}Stochastic Gradient Descent}{51}{subsection.5.6.3}%
+\contentsline {section}{\numberline {5.7}Bayesian Estimation}{51}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Laplace's Approximation}{52}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Markov Chain Monte Carlo (MCMC)}{55}{subsection.5.7.2}%
+\contentsline {subsection}{\numberline {5.7.3}Metropolis-Hasting}{55}{subsection.5.7.3}%
+\contentsline {subsection}{\numberline {5.7.4}Gibbs Sampling}{56}{subsection.5.7.4}%
+\contentsline {subsection}{\numberline {5.7.5}Bayesian Linear Regression}{57}{subsection.5.7.5}%
+\contentsline {section}{\numberline {5.8}Types of Statistical Methods}{59}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Parametric}{60}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}Nonparametric}{60}{subsection.5.8.2}%
+\contentsline {section}{\numberline {5.9}Types of Models}{60}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Supervised}{61}{subsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.9.2}Unsupervised}{61}{subsection.5.9.2}%
+\contentsline {chapter}{\numberline {6}Background on Neural Networks and Transformers}{62}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Perceptron}{62}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Logistic Sigmoid Neuron}{63}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Topology}{64}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Notations}{65}{subsection.6.3.1}%
+\contentsline {section}{\numberline {6.4}Network Training}{68}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Loss Function}{68}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Back-propagation Algorithm}{73}{subsection.6.4.2}%
+\contentsline {section}{\numberline {6.5}Transformers}{76}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Attention Mechanism}{76}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Multi-Head Attention}{78}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}Positional Encoding}{79}{subsection.6.5.3}%
+\contentsline {subsection}{\numberline {6.5.4}Transformer Architecture}{79}{subsection.6.5.4}%
+\contentsline {chapter}{\numberline {7}Background on Natural Language Processing}{81}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Text Analytics}{81}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Tokenization}{81}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Embeddings}{82}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Term Frequency - Inverse Document Frequency}{83}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Word Embeddings}{83}{subsection.7.3.2}%
+\contentsline {chapter}{\numberline {8}Methodology}{85}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Morphological Analysis}{85}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Rhythmic Analysis}{85}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Directed Probabilistic Graphical Models (PGM)}{87}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Markov Chain}{91}{subsection.8.2.2}%
+\contentsline {section}{\numberline {8.3}Thematic Analysis}{92}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Latent Dirichlet Allocation}{92}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Large Language Models}{93}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Bidirectional Encoder Representation from Transformers}{94}{subsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.3.4}Generative Pre-Trained Transformer}{95}{subsection.8.3.4}%
+\contentsline {section}{\numberline {8.4}Concentrism Statistical Formulation}{95}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Cosine Similarity}{97}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Bayesian Optimization}{98}{subsection.8.4.2}%
+\contentsline {subsubsection}{Surrogate Function}{98}{subsubsection*.26}%
+\contentsline {section}{\numberline {8.5}Integrating Other Islamic Literatures}{101}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Open Islamic Text Initiative}{102}{subsection.8.5.1}%
+\contentsline {subsection}{\numberline {8.5.2}Retrieval-Augmented Generation}{103}{subsection.8.5.2}%
+\contentsline {section}{\numberline {8.6}Programming Languages Setup}{103}{section.8.6}%
+\contentsline {chapter}{\numberline {9}Results and Discussions}{105}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Descriptive Statistics}{105}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Verses}{106}{subsection.9.1.1}%
+\contentsline {section}{\numberline {9.2}Morphological Analysis}{106}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Structural Analysis}{106}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Concentric Structure}{106}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Discussions on Islamic Philosophy of Qur'\=an's Structural Analysis}{106}{subsection.9.3.2}%
+\contentsline {section}{\numberline {9.4}Topic Modeling}{107}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Latent Dirichlet Allocation}{107}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {9.4.2}Bidirectional Encoder Representation from Transformer}{107}{subsection.9.4.2}%
+\contentsline {subsection}{\numberline {9.4.3}Generative Pre-Trained Transformer}{107}{subsection.9.4.3}%
+\contentsline {section}{\numberline {9.5}Relating to other Islamic Texts and Analyses}{107}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}Retrieval-Augmented Generation Approach}{107}{subsection.9.5.1}%
+\contentsline {section}{\numberline {9.6}Limitations of the Models}{107}{section.9.6}%
+\contentsline {chapter}{\numberline {10}Conclusion and Recommendation}{108}{chapter.10}%
+\contentsline {section}{References}{109}{section*.31}%
