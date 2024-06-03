@@ -331,7 +331,7 @@ Suppose the loss function is given by
 \begin{equation}\label{eq:errgd1}
 \ein(w)\triangleq w^4 - 3w^3 + 2.
 \end{equation}
-The first derivative of the above equation with respect to $w$ is given by ${\ein'(w)=4w^3-9w^2}$. Let the initial guess be $\hat{w}^{(0)}=.1$ and let $\gamma=.01$ with $\nu=.00001$. Then $\nabla\ein(\hat{w}^{(0)})=\ein'(\hat{w}^{(0)})=-0.086$, so that $\hat{w}^{(1)}\triangleq\hat{w}^{(0)}-.01(-0.086)=0.10086$, and $|\hat{w}^{(1)} - \hat{w}^{(0)}| = 0.00086> \nu$. It turns out that 173 iterations are needed to satisfy \mbox{the inequality}, $|\hat{w}^{(r+1)} - \hat{w}^{(r)}| \ngtr \nu$. The plot is given in Figure \ref{fig:f1}.
+The first derivative of the above equation with respect to $w$ is given by ${\ein'(w)=4w^3-9w^2}$. Let the initial guess be $\hat{w}^{(0)}=.1$ and let $\gamma=.01$ with $\nu=.00001$. Then $\nabla\ein(\hat{w}^{(0)})=\ein'(\hat{w}^{(0)})=-0.086$, so that $\hat{w}^{(1)}\triangleq\hat{w}^{(0)}-.01(-0.086)=0.10086$, and $|\hat{w}^{(1)} - \hat{w}^{(0)}| = 0.00086> \nu$. It turns out that 173 iterations are needed to satisfy \mbox{the inequality}, $|\hat{w}^{(r+1)} - \hat{w}^{(r)}| \ngtr \nu$.
 \end{exmp}
 In practice, however, there are hundreds to millions of data points that need to be summarized, so that at each iteration, the parameters are updated \textit{after} \mbox{the presentation} of \textit{all} the training examples that constitute an \textit{epoch} --- one complete presentation of the entire training dataset during the learning process \cite{Haykin1998}. In this setting, GD is sometimes called \textit{batch gradient descent} (BGD).
 \subsection{Stochastic Gradient Descent}\label{sec:sgd}
@@ -456,7 +456,7 @@ Suppose it has the following parameters:
 \end{equation}
 where ${\rho := .5}$; in order to draw samples from this model, let the proposal distribution defined to be the current step of the random walk plus an increment from a uniform distribution with parameters min = -5 and max = 5.
 
-The random samples drawn by MH are not independent, this is due to \mbox{the design} of the algorithm where the distribution of the candidate sample depends solely on the current sample\footnote{this is the property of the Markov Chain, hence the name MCMC.}. To address this problem, diagnostics are applied using methods such as \textit{thinning}, where every $i$th sample is taken and the rest are discarded; or using \textit{burn-in} where first $n^{\star}$ samples are discarded. So that the plot of the random samples and its kernel density are depicted in Figure \ref{fig:mcmcmh} using 10,000 iterations. \mbox{Figures \ref{fig:mcmcmh:w1corr}} and \ref{fig:mcmcmh:w2corr} depict the autocorrelations.
+The random samples drawn by MH are not independent, this is due to \mbox{the design} of the algorithm where the distribution of the candidate sample depends solely on the current sample\footnote{this is the property of the Markov Chain, hence the name MCMC.}. To address this problem, diagnostics are applied using methods such as \textit{thinning}, where every $i$th sample is taken and the rest are discarded; or using \textit{burn-in} where first $n^{\star}$ samples are discarded.
 
 \end{exmp}
 \subsection{Gibbs Sampling}\label{sec:gibbssampling}
@@ -480,7 +480,7 @@ MH is by far one of the easiest MCMC algorithm for drawing samples from \textit{
 \end{algorithm}
 \vspace{-.3cm}
 \begin{exmp}\label{exmp:gibbs}
-Using the same posterior distribution as in Example \ref{exmp:mcmcmh}, the conditional distributions of the parameters conditioned on other parameters are also Gaussian with mean $\mu:=\mu_1 + \left(\frac{\sigma_1}{\sigma_2}\right)\rho(x - \mu_2)$ and standard deviation $\sigma:=\sqrt{(1 - \rho^2)\sigma_1^2}$. Thus the Gibbs sampler for 10,000 iterations generates random samples shown in Figure \ref{fig:mcmcgibbs}. Analogous to MH, samples obtained using Gibbs are not independent but with lower autocorrelation compared to the former. As before, the same diagnostics can be done. The autocorrelation is shown in \mbox{Figures \ref{fig:mcmcgibbs:w0corr}} and \ref{fig:mcmcgibbs:w1corr}, which suggest good mixing of the random samples.
+Using the same posterior distribution as in Example \ref{exmp:mcmcmh}, the conditional distributions of the parameters conditioned on other parameters are also Gaussian with mean $\mu:=\mu_1 + \left(\frac{\sigma_1}{\sigma_2}\right)\rho(x - \mu_2)$ and standard deviation $\sigma:=\sqrt{(1 - \rho^2)\sigma_1^2}$. Analogous to MH, samples obtained using Gibbs are not independent but with lower autocorrelation compared to the former. As before, the same diagnostics can be done. 
 \end{exmp}
 \subsection{Bayesian Linear Regression}\label{sec:blr}
 As an illustration of Bayesian inference to basic modeling, this section attempts to discuss the Bayesian approach to linear regression. Let ${\mathscr{D}=\{(\mathbf{x}_1,y_1),\cdots, (\mathbf{x}_n,y_n)\}}$ where $\mathbf{x}_i\in\mathbb{R}^{d}, y_i\in \mathbb{R}$ be the pairwised dataset. Suppose the response values, $y_1,\cdots,y_n$, are independent given the parameter $\mathbf{w}$, and is distributed as $y_i\sim\mathcal{N}(\mathbf{w}^{\text{T}}\mathbf{x}_i,\alpha^{-1})$, where $\alpha^{-1}$ is referred to as the \textit{precision} parameter --- useful for later derivation. In Bayesian perspective, the weights are assumed to be random and are governed by some \textit{a priori} distribution. The choice of this distribution is subjective, but choosing arbitrary \textit{a priori} can sometimes or often result to an intractable integration, especially for interesting models. For simplicity, a conjugate prior is used for the latent weights. Specifically, assume that ${\mathbf{w}\sim\mathcal{N}(\mathbf{0},\beta^{-1}\mathbf{I})}$ such that $\beta>0$ is the hyperparameter supposed in this experiment as known value. The posterior distribution based on the Bayes' rule is given by
@@ -525,7 +525,7 @@ and
     \boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}&=\alpha\boldsymbol{\mathfrak{A}}^{\text{T}}\mathbf{y}\\
     \boldsymbol{\mu}&=\alpha\boldsymbol{\Sigma}\boldsymbol{\mathfrak{A}}^{\text{T}}\mathbf{y}.\label{eq:mublrgauss}
 \end{align}
-Thus the \textit{a posteriori} is a Gaussian distribution with location parameter in \mbox{Equation (\ref{eq:mublrgauss})} and scale parameter given by the inverse of Equation (\ref{eq:sigmablrgauss}). \mbox{The derivation} above is not fully mathematical since the process of completing \mbox{the square} is similar to the proof of Theorem \ref{thm:adlpost}.
+Thus the \textit{a posteriori} is a Gaussian distribution with location parameter in \mbox{Equation (\ref{eq:mublrgauss})} and scale parameter given by the inverse of Equation (\ref{eq:sigmablrgauss}).
 \section{Types of Statistical Methods}
 \textit{Parametric} and \textit{non-parametric} statistics are two broad categories of statistical methods, each with its own assumptions and applications. The primary difference between them lies in the underlying assumptions made about the population distribution.
 \subsection{Parametric}

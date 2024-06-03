@@ -1032,6 +1032,9 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmb10.tfm
 OUTPUT chapters/ch2.aux
 INPUT ./chapters/ch2.tex
 INPUT ./chapters/ch2.tex
+INPUT ./img/conceptual_framework.pdf
+INPUT ./img/conceptual_framework.pdf
+INPUT ./img/conceptual_framework.pdf
 OUTPUT chapters/ch3-0.aux
 INPUT ./chapters/ch3-0.tex
 INPUT ./chapters/ch3-0.tex
