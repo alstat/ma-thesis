@@ -1,0 +1,969 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{asaad2021qurantree}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=bf5c3ff45288a4ed647a4cc6510d16c3}{%
+           family={Asaad},
+           familyi={A\bibinitperiod},
+           given={Al-Ahmadgaid\bibnamedelima B.},
+           giveni={A\bibinithyphendelim A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Kyiv, Ukraine (Virtual)}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{bf5c3ff45288a4ed647a4cc6510d16c3}
+      \strng{fullhash}{bf5c3ff45288a4ed647a4cc6510d16c3}
+      \strng{bibnamehash}{bf5c3ff45288a4ed647a4cc6510d16c3}
+      \strng{authorbibnamehash}{bf5c3ff45288a4ed647a4cc6510d16c3}
+      \strng{authornamehash}{bf5c3ff45288a4ed647a4cc6510d16c3}
+      \strng{authorfullhash}{bf5c3ff45288a4ed647a4cc6510d16c3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{QuranTree.jl is an open-source package for working with the Quranic Arabic Corpus (Dukes and Habash, 2010). It aims to provide Julia APIs as an alternative to the Java APIs of JQuranTree. QuranTree.jl currently offers functionalities for intuitive indexing of chapters, verses, words and parts of words of the Qur{'}an; for creating custom transliteration; for character dediacritization and normalization; and, for handling the morphological features. Lastly, it can work well with Julia{'}s TextAnalysis.jl and Python{'}s CAMeL Tools.}
+      \field{booktitle}{Proceedings of the Sixth Arabic Natural Language Processing Workshop}
+      \field{title}{{Q}uran{T}ree.jl: A {J}ulia Package for {Q}uranic {A}rabic Corpus}
+      \field{year}{2021}
+      \field{pages}{208\bibrangedash 212}
+      \range{pages}{5}
+      \verb{urlraw}
+      \verb https://aclanthology.org/2021.wanlp-1.22
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/2021.wanlp-1.22
+      \endverb
+    \endentry
+    \entry{Julia2017}{article}{}
+      \name{author}{4}{}{%
+        {{hash=17e68031e06f57a7e83caeb4e0aed827}{%
+           family={Bezanson},
+           familyi={B\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod}}}%
+        {{hash=01a6ca61fcd12a3a071ec49304df57f8}{%
+           family={Edelman},
+           familyi={E\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bca7c93f55e669f71c4ff95e68ac9538}{%
+           family={Karpinski},
+           familyi={K\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=de802ff42d9c902868c57a332dbac5e0}{%
+           family={Shah},
+           familyi={S\bibinitperiod},
+           given={Viral\bibnamedelima B},
+           giveni={V\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SIAM}%
+      }
+      \strng{namehash}{07e3452af3652a626dc1d02355fda942}
+      \strng{fullhash}{651af5e2dc744eabe31cd448eb05d640}
+      \strng{bibnamehash}{07e3452af3652a626dc1d02355fda942}
+      \strng{authorbibnamehash}{07e3452af3652a626dc1d02355fda942}
+      \strng{authornamehash}{07e3452af3652a626dc1d02355fda942}
+      \strng{authorfullhash}{651af5e2dc744eabe31cd448eb05d640}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SIAM {R}eview}
+      \field{number}{1}
+      \field{title}{Julia: A fresh approach to numerical computing}
+      \field{volume}{59}
+      \field{year}{2017}
+      \field{pages}{65\bibrangedash 98}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.1137/141000671
+      \endverb
+      \verb{urlraw}
+      \verb https://epubs.siam.org/doi/10.1137/141000671
+      \endverb
+      \verb{url}
+      \verb https://epubs.siam.org/doi/10.1137/141000671
+      \endverb
+    \endentry
+    \entry{pewresearch}{report}{}
+      \name{author}{3}{}{%
+        {{hash=7d89435ccd268c0e923697e2c9d43112}{%
+           family={Cooperman},
+           familyi={C\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1cedc928f887dffd8b8b111f569002fe}{%
+           family={O'Connell},
+           familyi={O\bibinitperiod},
+           given={Erin},
+           giveni={E\bibinitperiod}}}%
+        {{hash=424d7937b96e9f350b10e7db93357e64}{%
+           family={Stencel},
+           familyi={S\bibinitperiod},
+           given={Sandra},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Pew Research Center}%
+      }
+      \strng{namehash}{23625462eed15ff61063033a9f9b568b}
+      \strng{fullhash}{23625462eed15ff61063033a9f9b568b}
+      \strng{bibnamehash}{23625462eed15ff61063033a9f9b568b}
+      \strng{authorbibnamehash}{23625462eed15ff61063033a9f9b568b}
+      \strng{authornamehash}{23625462eed15ff61063033a9f9b568b}
+      \strng{authorfullhash}{23625462eed15ff61063033a9f9b568b}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{the future of the global muslim population}
+      \field{type}{techreport}
+      \field{year}{2011}
+    \endentry
+    \entry{dukes2015statistical}{article}{}
+      \name{author}{1}{}{%
+        {{hash=14b732be014067c9ef60ddc2f6e7e4d9}{%
+           family={Dukes},
+           familyi={D\bibinitperiod},
+           given={Kais},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{14b732be014067c9ef60ddc2f6e7e4d9}
+      \strng{fullhash}{14b732be014067c9ef60ddc2f6e7e4d9}
+      \strng{bibnamehash}{14b732be014067c9ef60ddc2f6e7e4d9}
+      \strng{authorbibnamehash}{14b732be014067c9ef60ddc2f6e7e4d9}
+      \strng{authornamehash}{14b732be014067c9ef60ddc2f6e7e4d9}
+      \strng{authorfullhash}{14b732be014067c9ef60ddc2f6e7e4d9}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1510.07193}
+      \field{title}{Statistical parsing by machine learning from a classical Arabic treebank}
+      \field{year}{2015}
+    \endentry
+    \entry{dukes2013supervised}{article}{}
+      \name{author}{3}{}{%
+        {{hash=14b732be014067c9ef60ddc2f6e7e4d9}{%
+           family={Dukes},
+           familyi={D\bibinitperiod},
+           given={Kais},
+           giveni={K\bibinitperiod}}}%
+        {{hash=25514692fca0cbd031ecfb4e3fda9331}{%
+           family={Atwell},
+           familyi={A\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=171513a3f8ad448c09b164774fc78198}{%
+           family={Habash},
+           familyi={H\bibinitperiod},
+           given={Nizar},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b94a8c5734c9709b739f7c6871c771c0}
+      \strng{fullhash}{b94a8c5734c9709b739f7c6871c771c0}
+      \strng{bibnamehash}{b94a8c5734c9709b739f7c6871c771c0}
+      \strng{authorbibnamehash}{b94a8c5734c9709b739f7c6871c771c0}
+      \strng{authornamehash}{b94a8c5734c9709b739f7c6871c771c0}
+      \strng{authorfullhash}{b94a8c5734c9709b739f7c6871c771c0}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Language resources and evaluation}
+      \field{title}{Supervised collaboration for syntactic annotation of Quranic Arabic}
+      \field{volume}{47}
+      \field{year}{2013}
+      \field{pages}{33\bibrangedash 62}
+      \range{pages}{30}
+    \endentry
+    \entry{dukes2010online}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=14b732be014067c9ef60ddc2f6e7e4d9}{%
+           family={Dukes},
+           familyi={D\bibinitperiod},
+           given={Kais},
+           giveni={K\bibinitperiod}}}%
+        {{hash=25514692fca0cbd031ecfb4e3fda9331}{%
+           family={Atwell},
+           familyi={A\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=53255d497ff23b9efd2f34349b4b1aef}{%
+           family={Sharaf},
+           familyi={S\bibinitperiod},
+           given={Abdul-Baquee},
+           giveni={A\bibinithyphendelim B\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{c434669822b757bda8174e86249112d0}
+      \strng{fullhash}{c434669822b757bda8174e86249112d0}
+      \strng{bibnamehash}{c434669822b757bda8174e86249112d0}
+      \strng{authorbibnamehash}{c434669822b757bda8174e86249112d0}
+      \strng{authornamehash}{c434669822b757bda8174e86249112d0}
+      \strng{authorfullhash}{c434669822b757bda8174e86249112d0}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Foundations of Arabic Linguistics Conference}
+      \field{title}{Online visualization of traditional Quranic grammar using dependency graphs}
+      \field{year}{2010}
+    \endentry
+    \entry{dukes2010dependency}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=14b732be014067c9ef60ddc2f6e7e4d9}{%
+           family={Dukes},
+           familyi={D\bibinitperiod},
+           given={Kais},
+           giveni={K\bibinitperiod}}}%
+        {{hash=f150935fb5580969e01dfc414841de9c}{%
+           family={Buckwalter},
+           familyi={B\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{6ef51bc32cc111e209cb56964c3eb4ee}
+      \strng{fullhash}{6ef51bc32cc111e209cb56964c3eb4ee}
+      \strng{bibnamehash}{6ef51bc32cc111e209cb56964c3eb4ee}
+      \strng{authorbibnamehash}{6ef51bc32cc111e209cb56964c3eb4ee}
+      \strng{authornamehash}{6ef51bc32cc111e209cb56964c3eb4ee}
+      \strng{authorfullhash}{6ef51bc32cc111e209cb56964c3eb4ee}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2010 the 7th International Conference on Informatics and Systems (INFOS)}
+      \field{title}{A dependency treebank of the Quran using traditional Arabic grammar}
+      \field{year}{2010}
+      \field{pages}{1\bibrangedash 7}
+      \range{pages}{7}
+    \endentry
+    \entry{dukes-habash-2010-morphological}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=14b732be014067c9ef60ddc2f6e7e4d9}{%
+           family={Dukes},
+           familyi={D\bibinitperiod},
+           given={Kais},
+           giveni={K\bibinitperiod}}}%
+        {{hash=171513a3f8ad448c09b164774fc78198}{%
+           family={Habash},
+           familyi={H\bibinitperiod},
+           given={Nizar},
+           giveni={N\bibinitperiod}}}%
+      }
+      \name{editor}{8}{}{%
+        {{hash=c341e33a4b6ea903f6c723a46650c1be}{%
+           family={Calzolari},
+           familyi={C\bibinitperiod},
+           given={Nicoletta},
+           giveni={N\bibinitperiod}}}%
+        {{hash=39867e26feb655084bcaa95ee00ad1b3}{%
+           family={Choukri},
+           familyi={C\bibinitperiod},
+           given={Khalid},
+           giveni={K\bibinitperiod}}}%
+        {{hash=f89d93ac385cd2c8048bd80b6bec272c}{%
+           family={Maegaard},
+           familyi={M\bibinitperiod},
+           given={Bente},
+           giveni={B\bibinitperiod}}}%
+        {{hash=bdf0b8f2adba0ed452d8c7a080e79edb}{%
+           family={Mariani},
+           familyi={M\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=663e887ebca3a6dfcd35d2bbf8163b42}{%
+           family={Odijk},
+           familyi={O\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9d79dd4fb50589491e453c48e1d3c56a}{%
+           family={Piperidis},
+           familyi={P\bibinitperiod},
+           given={Stelios},
+           giveni={S\bibinitperiod}}}%
+        {{hash=07a088dd0e0f7bf00735aa329f1930ca}{%
+           family={Rosner},
+           familyi={R\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8c350023b6a37b3ba3f36e76733c22a0}{%
+           family={Tapias},
+           familyi={T\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Valletta, Malta}%
+      }
+      \list{publisher}{1}{%
+        {European Language Resources Association (ELRA)}%
+      }
+      \strng{namehash}{f0a2d0661a372c0a333f2afa4bc67cbd}
+      \strng{fullhash}{f0a2d0661a372c0a333f2afa4bc67cbd}
+      \strng{bibnamehash}{f0a2d0661a372c0a333f2afa4bc67cbd}
+      \strng{authorbibnamehash}{f0a2d0661a372c0a333f2afa4bc67cbd}
+      \strng{authornamehash}{f0a2d0661a372c0a333f2afa4bc67cbd}
+      \strng{authorfullhash}{f0a2d0661a372c0a333f2afa4bc67cbd}
+      \strng{editorbibnamehash}{c0f71bf98493a021e0ad741a5193b2ff}
+      \strng{editornamehash}{c0f71bf98493a021e0ad741a5193b2ff}
+      \strng{editorfullhash}{b2c4c0d17c6521fbcb3e83414a92490d}
+      \field{extraname}{1}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Quranic Arabic Corpus (\url{http://corpus.quran.com}) is an annotated linguistic resource with multiple layers of annotation including morphological segmentation, part-of-speech tagging, and syntactic analysis using dependency grammar. The motivation behind this work is to produce a resource that enables further analysis of the Quran, the 1,400 year old central religious text of Islam. This paper describes a new approach to morphological annotation of Quranic Arabic, a genre difficult to compare with other forms of Arabic. Processing Quranic Arabic is a unique challenge from a computational point of view, since the vocabulary and spelling differ from Modern Standard Arabic. The Quranic Arabic Corpus differs from other Arabic computational resources in adopting a tagset that closely follows traditional Arabic grammar. We made this decision in order to leverage a large body of existing historical grammatical analysis, and to encourage online collaborative annotation. In this paper, we discuss how the unique challenge of morphological annotation of Quranic Arabic is solved using a multi-stage approach. The different stages include automatic morphological tagging using diacritic edit-distance, two-pass manual verification, and online collaborative annotation. This process is evaluated to validate the appropriateness of the chosen methodology.}
+      \field{booktitle}{Proceedings of the Seventh International Conference on Language Resources and Evaluation ({LREC}'10)}
+      \field{month}{5}
+      \field{title}{Morphological Annotation of {Q}uranic {A}rabic}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb http://www.lrec-conf.org/proceedings/lrec2010/pdf/276_Paper.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.lrec-conf.org/proceedings/lrec2010/pdf/276_Paper.pdf
+      \endverb
+    \endentry
+    \entry{dukes-habash-2011-one}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=14b732be014067c9ef60ddc2f6e7e4d9}{%
+           family={Dukes},
+           familyi={D\bibinitperiod},
+           given={Kais},
+           giveni={K\bibinitperiod}}}%
+        {{hash=171513a3f8ad448c09b164774fc78198}{%
+           family={Habash},
+           familyi={H\bibinitperiod},
+           given={Nizar},
+           giveni={N\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=21e275bea0e3c6ff83a4385f7b2f3140}{%
+           family={Bunt},
+           familyi={B\bibinitperiod},
+           given={Harry},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c7682865373d09c3dcbd9422fbb74cc0}{%
+           family={Nivre},
+           familyi={N\bibinitperiod},
+           given={Joakim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=962c7588be703d0d497a9acbdef85d98}{%
+           family={Çetinoglu},
+           familyi={Ç\bibinitperiod},
+           given={Özlem},
+           giveni={Ö\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Dublin, Ireland}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{f0a2d0661a372c0a333f2afa4bc67cbd}
+      \strng{fullhash}{f0a2d0661a372c0a333f2afa4bc67cbd}
+      \strng{bibnamehash}{f0a2d0661a372c0a333f2afa4bc67cbd}
+      \strng{authorbibnamehash}{f0a2d0661a372c0a333f2afa4bc67cbd}
+      \strng{authornamehash}{f0a2d0661a372c0a333f2afa4bc67cbd}
+      \strng{authorfullhash}{f0a2d0661a372c0a333f2afa4bc67cbd}
+      \strng{editorbibnamehash}{f516e5e722e507127eb2c7ce887ade9b}
+      \strng{editornamehash}{f516e5e722e507127eb2c7ce887ade9b}
+      \strng{editorfullhash}{f516e5e722e507127eb2c7ce887ade9b}
+      \field{extraname}{2}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 12th International Conference on Parsing Technologies}
+      \field{month}{10}
+      \field{title}{One-Step Statistical Parsing of Hybrid Dependency-Constituency Syntactic Representations}
+      \field{year}{2011}
+      \field{pages}{92\bibrangedash 103}
+      \range{pages}{12}
+      \verb{urlraw}
+      \verb https://aclanthology.org/W11-2912
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/W11-2912
+      \endverb
+    \endentry
+    \entry{jarrar-hammouda-2024-qabas-open}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=bb533c344080b0a07eb763b0f6617617}{%
+           family={Jarrar},
+           familyi={J\bibinitperiod},
+           given={Mustafa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ee738b6a675ed3dfd7c4af0dcef10b6e}{%
+           family={Hammouda},
+           familyi={H\bibinitperiod},
+           given={Tymaa\bibnamedelima Hasanain},
+           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \name{editor}{6}{}{%
+        {{hash=c341e33a4b6ea903f6c723a46650c1be}{%
+           family={Calzolari},
+           familyi={C\bibinitperiod},
+           given={Nicoletta},
+           giveni={N\bibinitperiod}}}%
+        {{hash=549f49a0f40722c52169e0083730d12f}{%
+           family={Kan},
+           familyi={K\bibinitperiod},
+           given={Min-Yen},
+           giveni={M\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=a2552991b1433efe99cce9b2a665aae7}{%
+           family={Hoste},
+           familyi={H\bibinitperiod},
+           given={Veronique},
+           giveni={V\bibinitperiod}}}%
+        {{hash=5ca65e378c2b71d06107979d273315ed}{%
+           family={Lenci},
+           familyi={L\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8f51dd1b39e7ef8aa830c97a98536583}{%
+           family={Sakti},
+           familyi={S\bibinitperiod},
+           given={Sakriani},
+           giveni={S\bibinitperiod}}}%
+        {{hash=47c3156f10dfabf6842e8caf450fda15}{%
+           family={Xue},
+           familyi={X\bibinitperiod},
+           given={Nianwen},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Torino, Italia}%
+      }
+      \list{publisher}{2}{%
+        {ELRA}%
+        {ICCL}%
+      }
+      \strng{namehash}{8b875dff8f7a878db64ebd83b846ad1c}
+      \strng{fullhash}{8b875dff8f7a878db64ebd83b846ad1c}
+      \strng{bibnamehash}{8b875dff8f7a878db64ebd83b846ad1c}
+      \strng{authorbibnamehash}{8b875dff8f7a878db64ebd83b846ad1c}
+      \strng{authornamehash}{8b875dff8f7a878db64ebd83b846ad1c}
+      \strng{authorfullhash}{8b875dff8f7a878db64ebd83b846ad1c}
+      \strng{editorbibnamehash}{c0f71bf98493a021e0ad741a5193b2ff}
+      \strng{editornamehash}{c0f71bf98493a021e0ad741a5193b2ff}
+      \strng{editorfullhash}{67cc341797d15e0b10b5e05c259573e8}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present Qabas, a novel open-source Arabic lexicon designed for NLP applications. The novelty of Qabas lies in its synthesis of 110 lexicons. Specifically, Qabas lexical entries (lemmas) are assembled by linking lemmas from 110 lexicons. Furthermore, Qabas lemmas are also linked to 12 morphologically annotated corpora (about 2M tokens), making it the first Arabic lexicon to be linked to lexicons and corpora. Qabas was developed semi-automatically, utilizing a mapping framework and a web-based tool. Compared with other lexicons, Qabas stands as the most extensive Arabic lexicon, encompassing about 58K lemmas (45K nominal lemmas, 12.5K verbal lemmas, and 473 functional-word lemmas). Qabas is open-source and accessible online at https://sina.birzeit.edu/qabas}
+      \field{booktitle}{Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)}
+      \field{month}{5}
+      \field{title}{Qabas: An Open-Source {A}rabic Lexicographic Database}
+      \field{year}{2024}
+      \field{pages}{13363\bibrangedash 13370}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb https://aclanthology.org/2024.lrec-main.1170
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/2024.lrec-main.1170
+      \endverb
+    \endentry
+    \entry{rashad1981}{book}{}
+      \name{author}{1}{}{%
+        {{hash=103f321cf421e4bbc677faf804623a4d}{%
+           family={Khalifa},
+           familyi={K\bibinitperiod},
+           given={Rashad},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Renaissance Production}%
+      }
+      \strng{namehash}{103f321cf421e4bbc677faf804623a4d}
+      \strng{fullhash}{103f321cf421e4bbc677faf804623a4d}
+      \strng{bibnamehash}{103f321cf421e4bbc677faf804623a4d}
+      \strng{authorbibnamehash}{103f321cf421e4bbc677faf804623a4d}
+      \strng{authornamehash}{103f321cf421e4bbc677faf804623a4d}
+      \strng{authorfullhash}{103f321cf421e4bbc677faf804623a4d}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The computer speaks: God's message to the world}
+      \field{year}{1981}
+    \endentry
+    \entry{rprogramming}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=dcdebb6b35bff7c0568bf8c50ef8626d}{%
+           family={{R Core Team}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Vienna, Austria}%
+      }
+      \list{organization}{1}{%
+        {R Foundation for Statistical Computing}%
+      }
+      \strng{namehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{fullhash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{bibnamehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{authorbibnamehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{authornamehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{authorfullhash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{R: A Language and Environment for Statistical Computing}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.R-project.org/
+      \endverb
+      \verb{url}
+      \verb https://www.R-project.org/
+      \endverb
+    \endentry
+    \entry{sabtan2017morphological}{article}{}
+      \name{author}{1}{}{%
+        {{hash=bd6c995212e7264d6d4c3b19bf92d6eb}{%
+           family={Sabtan},
+           familyi={S\bibinitperiod},
+           given={Yasser},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{bd6c995212e7264d6d4c3b19bf92d6eb}
+      \strng{fullhash}{bd6c995212e7264d6d4c3b19bf92d6eb}
+      \strng{bibnamehash}{bd6c995212e7264d6d4c3b19bf92d6eb}
+      \strng{authorbibnamehash}{bd6c995212e7264d6d4c3b19bf92d6eb}
+      \strng{authornamehash}{bd6c995212e7264d6d4c3b19bf92d6eb}
+      \strng{authorfullhash}{bd6c995212e7264d6d4c3b19bf92d6eb}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Arab World English Journal (AWEJ)}
+      \field{number}{4}
+      \field{title}{Morphological Analysis of the Glorious Qur'an: A Comparative Survey of Three Corpora}
+      \field{volume}{8}
+      \field{year}{2017}
+    \endentry
+    \entry{sharaf2009}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=53255d497ff23b9efd2f34349b4b1aef}{%
+           family={Sharaf},
+           familyi={S\bibinitperiod},
+           given={{Abdul-Baquee}},
+           giveni={A\bibinitperiod}}}%
+        {{hash=25514692fca0cbd031ecfb4e3fda9331}{%
+           family={Atwell},
+           familyi={A\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {University of Liverpool, United Kingdom}%
+      }
+      \list{publisher}{1}{%
+        {The Fifth Corpus Linguistics Conference}%
+      }
+      \strng{namehash}{388f7371adb6624f888aed31a4a40819}
+      \strng{fullhash}{388f7371adb6624f888aed31a4a40819}
+      \strng{bibnamehash}{388f7371adb6624f888aed31a4a40819}
+      \strng{authorbibnamehash}{388f7371adb6624f888aed31a4a40819}
+      \strng{authornamehash}{388f7371adb6624f888aed31a4a40819}
+      \strng{authorfullhash}{388f7371adb6624f888aed31a4a40819}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Fifth Corpus Linguistics Conference}
+      \field{title}{Knowledge representation of the Quran through frame semantics: a corpus-based approach}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:18278736
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:18278736
+      \endverb
+    \endentry
+    \entry{sharaf2012}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=53255d497ff23b9efd2f34349b4b1aef}{%
+           family={Sharaf},
+           familyi={S\bibinitperiod},
+           given={{Abdul-Baquee}},
+           giveni={A\bibinitperiod}}}%
+        {{hash=25514692fca0cbd031ecfb4e3fda9331}{%
+           family={Atwell},
+           familyi={A\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+      }
+      \name{editor}{9}{}{%
+        {{hash=c341e33a4b6ea903f6c723a46650c1be}{%
+           family={Calzolari},
+           familyi={C\bibinitperiod},
+           given={Nicoletta},
+           giveni={N\bibinitperiod}}}%
+        {{hash=39867e26feb655084bcaa95ee00ad1b3}{%
+           family={Choukri},
+           familyi={C\bibinitperiod},
+           given={Khalid},
+           giveni={K\bibinitperiod}}}%
+        {{hash=aa314aaff9cde7c75dd1dbefb7df9aee}{%
+           family={Declerck},
+           familyi={D\bibinitperiod},
+           given={Thierry},
+           giveni={T\bibinitperiod}}}%
+        {{hash=979dc780b3343ae259affe8dcbf49f0f}{%
+           family={Doğan},
+           familyi={D\bibinitperiod},
+           given={Mehmet\bibnamedelima Uğur},
+           giveni={M\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+        {{hash=f89d93ac385cd2c8048bd80b6bec272c}{%
+           family={Maegaard},
+           familyi={M\bibinitperiod},
+           given={Bente},
+           giveni={B\bibinitperiod}}}%
+        {{hash=bdf0b8f2adba0ed452d8c7a080e79edb}{%
+           family={Mariani},
+           familyi={M\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=bfec001866fc980a5a370b3f8f617c1d}{%
+           family={Moreno},
+           familyi={M\bibinitperiod},
+           given={Asuncion},
+           giveni={A\bibinitperiod}}}%
+        {{hash=663e887ebca3a6dfcd35d2bbf8163b42}{%
+           family={Odijk},
+           familyi={O\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9d79dd4fb50589491e453c48e1d3c56a}{%
+           family={Piperidis},
+           familyi={P\bibinitperiod},
+           given={Stelios},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Istanbul, Turkey}%
+      }
+      \list{publisher}{1}{%
+        {European Language Resources Association (ELRA)}%
+      }
+      \strng{namehash}{388f7371adb6624f888aed31a4a40819}
+      \strng{fullhash}{388f7371adb6624f888aed31a4a40819}
+      \strng{bibnamehash}{388f7371adb6624f888aed31a4a40819}
+      \strng{authorbibnamehash}{388f7371adb6624f888aed31a4a40819}
+      \strng{authornamehash}{388f7371adb6624f888aed31a4a40819}
+      \strng{authorfullhash}{388f7371adb6624f888aed31a4a40819}
+      \strng{editorbibnamehash}{c0f71bf98493a021e0ad741a5193b2ff}
+      \strng{editornamehash}{c0f71bf98493a021e0ad741a5193b2ff}
+      \strng{editorfullhash}{a6d28cecd2434c77761dc5afab9a8bf1}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper presents QurAna: a large corpus created from the original Quranic text, where personal pronouns are tagged with their antecedence. These antecedents are maintained as an ontological list of concepts, which have proved helpful for information retrieval tasks. QurAna is characterized by: (a) comparatively large number of pronouns tagged with antecedent information (over 24,500 pronouns), and (b) maintenance of an ontological concept list out of these antecedents. We have shown useful applications of this corpus. This corpus is first of its kind considering classical Arabic text, which could be used for interesting applications for Modern Standard Arabic as well. This corpus would benefit researchers in obtaining empirical and rules in building new anaphora resolution approaches. Also, such corpus would be used to train, optimize and evaluate existing approaches.}
+      \field{booktitle}{Proceedings of the Eighth International Conference on Language Resources and Evaluation ({LREC}'12)}
+      \field{month}{5}
+      \field{title}{{Q}ur{A}na: Corpus of the {Q}uran annotated with Pronominal Anaphora}
+      \field{year}{2012}
+      \field{pages}{130\bibrangedash 137}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb http://www.lrec-conf.org/proceedings/lrec2012/pdf/123_Paper.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.lrec-conf.org/proceedings/lrec2012/pdf/123_Paper.pdf
+      \endverb
+    \endentry
+    \entry{sharaf2012b}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=53255d497ff23b9efd2f34349b4b1aef}{%
+           family={Sharaf},
+           familyi={S\bibinitperiod},
+           given={{Abdul-Baquee}},
+           giveni={A\bibinitperiod}}}%
+        {{hash=25514692fca0cbd031ecfb4e3fda9331}{%
+           family={Atwell},
+           familyi={A\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+      }
+      \name{editor}{9}{}{%
+        {{hash=c341e33a4b6ea903f6c723a46650c1be}{%
+           family={Calzolari},
+           familyi={C\bibinitperiod},
+           given={Nicoletta},
+           giveni={N\bibinitperiod}}}%
+        {{hash=39867e26feb655084bcaa95ee00ad1b3}{%
+           family={Choukri},
+           familyi={C\bibinitperiod},
+           given={Khalid},
+           giveni={K\bibinitperiod}}}%
+        {{hash=aa314aaff9cde7c75dd1dbefb7df9aee}{%
+           family={Declerck},
+           familyi={D\bibinitperiod},
+           given={Thierry},
+           giveni={T\bibinitperiod}}}%
+        {{hash=979dc780b3343ae259affe8dcbf49f0f}{%
+           family={Doğan},
+           familyi={D\bibinitperiod},
+           given={Mehmet\bibnamedelima Uğur},
+           giveni={M\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+        {{hash=f89d93ac385cd2c8048bd80b6bec272c}{%
+           family={Maegaard},
+           familyi={M\bibinitperiod},
+           given={Bente},
+           giveni={B\bibinitperiod}}}%
+        {{hash=bdf0b8f2adba0ed452d8c7a080e79edb}{%
+           family={Mariani},
+           familyi={M\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=bfec001866fc980a5a370b3f8f617c1d}{%
+           family={Moreno},
+           familyi={M\bibinitperiod},
+           given={Asuncion},
+           giveni={A\bibinitperiod}}}%
+        {{hash=663e887ebca3a6dfcd35d2bbf8163b42}{%
+           family={Odijk},
+           familyi={O\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9d79dd4fb50589491e453c48e1d3c56a}{%
+           family={Piperidis},
+           familyi={P\bibinitperiod},
+           given={Stelios},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Istanbul, Turkey}%
+      }
+      \list{publisher}{1}{%
+        {European Language Resources Association (ELRA)}%
+      }
+      \strng{namehash}{388f7371adb6624f888aed31a4a40819}
+      \strng{fullhash}{388f7371adb6624f888aed31a4a40819}
+      \strng{bibnamehash}{388f7371adb6624f888aed31a4a40819}
+      \strng{authorbibnamehash}{388f7371adb6624f888aed31a4a40819}
+      \strng{authornamehash}{388f7371adb6624f888aed31a4a40819}
+      \strng{authorfullhash}{388f7371adb6624f888aed31a4a40819}
+      \strng{editorbibnamehash}{c0f71bf98493a021e0ad741a5193b2ff}
+      \strng{editornamehash}{c0f71bf98493a021e0ad741a5193b2ff}
+      \strng{editorfullhash}{a6d28cecd2434c77761dc5afab9a8bf1}
+      \field{extraname}{3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper presents a large corpus created from the original Quranic text, where semantically similar or related verses are linked together. This corpus will be a valuable evaluation resource for computational linguists investigating similarity and relatedness in short texts. Furthermore, this dataset can be used for evaluation of paraphrase analysis and machine translation tasks. Our dataset is characterised by: (1) superior quality of relatedness assignment; as we have incorporated relations marked by well-known domain experts, this dataset could thus be considered a gold standard corpus for various evaluation tasks, (2) the size of our dataset; over 7,600 pairs of related verses are collected from scholarly sources with several levels of degree of relatedness. This dataset could be extended to over 13,500 pairs of related verses observing the commutative property of strongly related pairs. This dataset was incorporated into online query pages where users can visualize for a given verse a network of all directly and indirectly related verses. Empirical experiments showed that only 33{\%} of related pairs shared root words, emphasising the need to go beyond common lexical matching methods, and incorporate -in addition- semantic, domain knowledge, and other corpus-based approaches.}
+      \field{booktitle}{Proceedings of the Eighth International Conference on Language Resources and Evaluation ({LREC}'12)}
+      \field{month}{5}
+      \field{title}{{Q}ur{S}im: A corpus for evaluation of relatedness in short texts}
+      \field{year}{2012}
+      \field{pages}{2295\bibrangedash 2302}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb http://www.lrec-conf.org/proceedings/lrec2012/pdf/190_Paper.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.lrec-conf.org/proceedings/lrec2012/pdf/190_Paper.pdf
+      \endverb
+    \endentry
+    \entry{siddiqui2013}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=9dbe0334741d4d69686dccd6d87baf8a}{%
+           family={{Siddiqui}},
+           familyi={S\bibinitperiod},
+           given={Muazzam\bibnamedelima Ahmed},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=2a3516a6d0c6b44e386fb778d17fe51a}{%
+           family={Faraz},
+           familyi={F\bibinitperiod},
+           given={Syed\bibnamedelima Muhammad},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=d20694c1e62faf0de027673bb645cfeb}{%
+           family={Sattar},
+           familyi={S\bibinitperiod},
+           given={Sohail\bibnamedelima Abdul},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{231a67ace52e65cf906a1ebb500ea05e}
+      \strng{fullhash}{231a67ace52e65cf906a1ebb500ea05e}
+      \strng{bibnamehash}{231a67ace52e65cf906a1ebb500ea05e}
+      \strng{authorbibnamehash}{231a67ace52e65cf906a1ebb500ea05e}
+      \strng{authornamehash}{231a67ace52e65cf906a1ebb500ea05e}
+      \strng{authorfullhash}{231a67ace52e65cf906a1ebb500ea05e}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2013 Taibah University International Conference on Advances in Information Technology for the Holy Quran and Its Sciences}
+      \field{title}{Discovering the Thematic Structure of the Quran using Probabilistic Topic Model}
+      \field{year}{2013}
+      \field{pages}{234\bibrangedash 239}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/NOORIC.2013.55
+      \endverb
+      \keyw{Probabilistic logic;Computational modeling;Hidden Markov models;Data models;Vocabulary;Resource management;Text mining;probabilistic topic model;thematic structure of the Quran;text mining in the Quran;Arabic natural language processing;Latent Dirichlet Allocation}
+    \endentry
+    \entry{sinai2017}{book}{}
+      \name{author}{1}{}{%
+        {{hash=24fe2213f712c603584716e3b5087b4c}{%
+           family={Sinai},
+           familyi={S\bibinitperiod},
+           given={Nicolai},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Edinburgh University Press Ltd}%
+      }
+      \strng{namehash}{24fe2213f712c603584716e3b5087b4c}
+      \strng{fullhash}{24fe2213f712c603584716e3b5087b4c}
+      \strng{bibnamehash}{24fe2213f712c603584716e3b5087b4c}
+      \strng{authorbibnamehash}{24fe2213f712c603584716e3b5087b4c}
+      \strng{authornamehash}{24fe2213f712c603584716e3b5087b4c}
+      \strng{authorfullhash}{24fe2213f712c603584716e3b5087b4c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Qur'an: A historical-critical introduction}
+      \field{year}{2017}
+    \endentry
+    \entry{thabet2004}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=51da7527a2c6a2222f05c2f1568b10a0}{%
+           family={Thabet},
+           familyi={T\bibinitperiod},
+           given={Naglaa},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva, Switzerland}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{51da7527a2c6a2222f05c2f1568b10a0}
+      \strng{fullhash}{51da7527a2c6a2222f05c2f1568b10a0}
+      \strng{bibnamehash}{51da7527a2c6a2222f05c2f1568b10a0}
+      \strng{authorbibnamehash}{51da7527a2c6a2222f05c2f1568b10a0}
+      \strng{authornamehash}{51da7527a2c6a2222f05c2f1568b10a0}
+      \strng{authorfullhash}{51da7527a2c6a2222f05c2f1568b10a0}
+      \field{extraname}{1}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Workshop on Computational Approaches to Arabic Script-Based Languages}
+      \field{series}{Semitic '04}
+      \field{title}{Stemming the Qur'an}
+      \field{year}{2004}
+      \field{pages}{85\bibrangedash 88}
+      \range{pages}{4}
+    \endentry
+    \entry{thabet2005}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=51da7527a2c6a2222f05c2f1568b10a0}{%
+           family={Thabet},
+           familyi={T\bibinitperiod},
+           given={Naglaa},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Ann Arbor, Michigan}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{51da7527a2c6a2222f05c2f1568b10a0}
+      \strng{fullhash}{51da7527a2c6a2222f05c2f1568b10a0}
+      \strng{bibnamehash}{51da7527a2c6a2222f05c2f1568b10a0}
+      \strng{authorbibnamehash}{51da7527a2c6a2222f05c2f1568b10a0}
+      \strng{authornamehash}{51da7527a2c6a2222f05c2f1568b10a0}
+      \strng{authorfullhash}{51da7527a2c6a2222f05c2f1568b10a0}
+      \field{extraname}{2}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, we develop a methodology for discovering the thematic structure of the Qur'an based on a fundamental idea in data mining and related disciplines: that, with respect to some collection of texts, the lexical frequency profiles of the individual texts are a good indicator of their conceptual content, and thus provide a reliable criterion for their classification relative to one another. This idea is applied to the discovery of thematic interrelationships among the suras (chapters) of the Qur'an by abstracting lexical frequency data from them and then applying hierarchical cluster analysis to that data. The results reported here indicate that the proposed methodology yields usable results in understanding the Qur'an on the basis of its lexical semantics.}
+      \field{booktitle}{Proceedings of the ACL Student Research Workshop}
+      \field{series}{ACLstudent '05}
+      \field{title}{Understanding the thematic structure of the Qur'an: an exploratory multivariate approach}
+      \field{year}{2005}
+      \field{pages}{7\bibrangedash 12}
+      \range{pages}{6}
+    \endentry
+    \entry{van1995python}{book}{}
+      \name{author}{2}{}{%
+        {{hash=e504145eff12cd8803c227c919ccfacd}{%
+           family={Van\bibnamedelima Rossum},
+           familyi={V\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Guido},
+           giveni={G\bibinitperiod}}}%
+        {{hash=bf4b931c97bf1765ef2a50cdb0a42969}{%
+           family={Drake\bibnamedelima Jr},
+           familyi={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Fred\bibnamedelima L},
+           giveni={F\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Centrum voor Wiskunde en Informatica Amsterdam}%
+      }
+      \strng{namehash}{7ef38a15b789891031dc3c2618872607}
+      \strng{fullhash}{7ef38a15b789891031dc3c2618872607}
+      \strng{bibnamehash}{7ef38a15b789891031dc3c2618872607}
+      \strng{authorbibnamehash}{7ef38a15b789891031dc3c2618872607}
+      \strng{authornamehash}{7ef38a15b789891031dc3c2618872607}
+      \strng{authorfullhash}{7ef38a15b789891031dc3c2618872607}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Python reference manual}
+      \field{year}{1995}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

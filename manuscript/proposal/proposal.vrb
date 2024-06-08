@@ -1,0 +1,6 @@
+\justifying
+    \frametitle{Review of Related Literatures}
+    \begin{itemize}
+        \item This was mainly due to the very sparse document term matrix for the Term Frequency - Inverse Document Frequency\footnote{\textit{See} Section \ref{sec:tf-idf}} (TF-IDF) embedding if considering all of the 114 \arb[trans]{sUwar} \arb{sUwar}.
+        \item Aside from this, the rest have used the corpus by \cite{dukes-habash-2010-morphological} as part of benchmark for morphological analysis or for new lexicographic database, for example \cite{sabtan2017morphological, jarrar-hammouda-2024-qabas-open}.
+    \end{itemize}
