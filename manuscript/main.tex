@@ -9,12 +9,14 @@
 \usepackage[left=1.25in,top=1in,right=1in,bottom=1in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{booktabs}
+\usepackage{float}
 \usepackage{tabularx}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \usepackage{multirow}
 \usepackage[framemethod=TikZ]{mdframed}
 \usepackage{amsmath, amssymb, amsthm}
+\usepackage{mdframed}
 \usepackage{arabluatex}
 \usepackage{tikz}
 \usetikzlibrary{shapes,backgrounds,automata,chains,arrows,positioning,calc,patterns}
@@ -30,6 +32,85 @@
 \usepackage[explicit,compact]{titlesec}
 \usepackage[hidelinks]{hyperref}
 \usepackage{apacite} % load this after hyperref
+\usepackage{listings}
+\usepackage{xcolor} % For syntax highlighting colors
+\usepackage{fancyvrb}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage{arabic}
+
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[
+    fileext=loi,
+    listname={List of Listings},
+    name=Listing,
+    placement=tbhp,
+]{listing2}
+
+\mdfdefinestyle{mystyle}{
+    linewidth=1pt,
+    linecolor=black,
+    topline=true,
+    bottomline=true,
+    leftline=true,
+    rightline=true,
+    innertopmargin=10pt,
+    innerbottommargin=15pt,
+    innerrightmargin=10pt,
+    innerleftmargin=10pt,
+    roundcorner=5pt
+}
+
+\newenvironment{bottomtitledframe}[1]{%
+    \par\vspace{0.5cm}
+    \begin{mdframed}[style=mystyle]
+    \gdef\frameparamtitle{#1}% Store the parameter globally
+}{%
+    \end{mdframed}
+    \par\vspace{-1.05cm}
+    \centering\colorbox{white}{\textbf{\frameparamtitle}}% Use the stored parameter
+    \par\vspace{0.5cm}
+}
+
+% arabluatex
+\SetArbDflt*
+\newarbmark{als}{^^^^fd47}{} % alayhis salam
+
+
+% Basic configuration
+\lstset{
+    frame=single,
+    breaklines=true,
+    postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookrightarrow\space}},
+    basicstyle=\ttfamily\small\singlespacing,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{green!60!black}\itshape,
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    numbersep=10pt,
+    tabsize=4,
+    showspaces=false,
+    showstringspaces=false
+}
+
+\lstdefinelanguage{Julia}{
+  keywords={
+    abstract, baremodule, begin, bitstype, break, catch, ccall,
+    const, continue, do, else, elseif, end, export, finally, for,
+    function, global, if, immutable, import, importall, in,
+    let, local, macro, module, quote, return, struct, try, type,
+    typealias, using, while
+  },
+  sensitive=true,
+  comment=[l]{\#},
+  morecomment=[n]{\#=}{=\#},
+  string=[b]",
+  morestring=[b]',
+  morestring=[b]"""
+}
+
 \setmainfont{TeX Gyre Pagella} 
 \newfontfamily\arabicfont{Amiri}[Script=Arabic,RawFeature={+ss05}]
 % remove this if you want to print it as paperback
@@ -38,6 +119,14 @@
 
 % arabluatex options
 \SetTranslitConvention{arabica}
+% \txarb{\fontspec{Scheherazade New} ﵇} - peace be upon him
+% \txarb{\fontspec{Scheherazade New} ﵈} - peace be upon them (masculine)
+% \txarb{\fontspec{Scheherazade New} ﵉} - peace be upon them (both)
+% \txarb{\fontspec{Scheherazade New} ﵍} - peace be upon her
+% \txarb{\fontspec{Scheherazade New} ﷺ} - sallalahu alayhi wa sallam
+% \txarb{\fontspec{Scheherazade New} ﷾} - subhana wa ta'ala
+% \txarb{\fontspec{Scheherazade New} ﷿} - azza wa jall
+
 
 % mdframed options
 % \definecolor{amethyst}{rgb}{0.6, 0.4, 0.8}
@@ -149,6 +238,8 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 \include{chapters/ch6.tex}
 \include{chapters/ch7.tex}
 \include{chapters/ch8.tex}
+\include{chapters/appendix.tex}
+\include{chapters/appendix_installation.tex}
 \bibliographystyle{apacite}
 \bibliography{reference}
 \end{document}
