@@ -160,11 +160,11 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 
 \newcommand{\CI}{\mathrel{\perp\mspace{-10mu}\perp}}
 \newcommand{\nCI}{\centernot{\CI}}
-\newcommand{\ein}{E_{\mathrm{in}}}
-\newcommand{\eout}{E_{\mathrm{out}}}
-\newcommand{\Var}{\mathbb{V}\text{ar}}
-\newcommand{\ev}{\mathbb{E}}
-\newcommand{\var}{\mathbb{V}\text{ar}}
+\newcommand{\ein}{\varepsilon_{\mathrm{in}}}
+\newcommand{\eout}{\varepsilon_{\mathrm{out}}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\ev}{\operatorname{E}}
+\newcommand{\var}{\operatorname{Var}}
 \newcommand{\p}{\mathbb{P}}
 \newcommand{\af}{\varrho}
 \newcommand{\I}{\mathbb{I}}
@@ -223,15 +223,13 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 \begin{document}
 \include{titlepage.tex}
 \doublespacing
-% \include{chapters/dedication.tex}
-% \include{chapters/acknowledgement.tex}
+\include{chapters/dedication.tex}
+\include{chapters/acknowledgement.tex}
 \tableofcontents\newpage
 \listoffigures
 \include{chapters/abstract.tex}
 \include{chapters/ch1.tex}
-\include{chapters/ch2-0.tex}
 \include{chapters/ch2.tex}
-\include{chapters/ch3-0.tex}
 \include{chapters/ch3.tex}
 \include{chapters/ch4.tex}
 \include{chapters/ch5.tex}
@@ -239,6 +237,11 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 \include{chapters/ch7.tex}
 \include{chapters/ch8.tex}
 \include{chapters/appendix.tex}
+\include{chapters/appendix_theoretical_results.tex}
+\include{chapters/appendix_methodology_theory.tex}
+\include{chapters/appendix_probstat.tex}
+\include{chapters/appendix_nlp.tex}
+\include{chapters/appendix_nn.tex}
 \include{chapters/appendix_installation.tex}
 \bibliographystyle{apacite}
 \bibliography{reference}
