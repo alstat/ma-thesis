@@ -1,0 +1,83 @@
+\chapter{Mathematics of the Methodology}\label{app:math_methodology}
+This appendix provides the mathematics behind the methodology in Chapter \ref{ch:methodology}. 
+
+\section{Basic Statistics}
+The following definitions are the mathematics behind the basic statistics used in this study.
+
+\begin{defn}[Mean]\label{defn:mean_method}
+    Let $x\in\mathbb{R}, n\in\mathbb{N}$ s.t. for any $D:=\{x_1,\cdots,x_n\}$, the \textit{mean}, notated as $\bar{x}$ is given by:
+    \begin{equation}
+        \bar{x}:=\frac{1}{n}\sum_{\forall i}x_i,\quad i\in\mathbb{N}
+    \end{equation}
+\end{defn}
+\begin{defn}[Median]
+    From Definition \ref{defn:mean_method}, the \textit{median}, notated as $\tilde{x}$, is given by:
+    \begin{equation}
+        \tilde{x}:=\begin{cases}
+            x_{((n-1)/2)+1)},& n\operatorname{mod}2 \neq 0,\\[0.3cm]
+            \displaystyle\frac{x_{(n/2)}+x_{(n/2+1)}}{2},&\text{otherwise}
+        \end{cases},
+    \end{equation}  
+    where $x_{(i)}$ is the $i$th \textit{order statistics} of $x$.
+\end{defn}
+\begin{defn}[Variance]\label{defn:method_variance}
+    From Definition \ref{defn:mean_method}, the \textit{variance}, notated as $\sigma^2$ is given by:
+    \begin{equation}
+        \sigma^2:=\frac{1}{n}\sum_{\forall i}(x_i-\bar{x}_i)^2
+    \end{equation}
+\end{defn}
+\begin{defn}[Standard Deviation]
+    From Definition \ref{defn:method_variance}, the \textit{standard deviation}, notated as $\sigma$ is given by $\sigma:=\sqrt{\sigma^2}$.
+\end{defn}
+\begin{defn}[$q$th Sample Quantile]
+    From Definition \ref{defn:mean_method}, the $q$th \textit{sample quantile}, notated as $Q(p)$ where $p$ is the proportion, is given by
+    \begin{equation}
+        Q(p;\alpha,\beta):=(1-\gamma)x_{(i;\alpha,\beta)} + \gamma x_{(i+1;\alpha,\beta)},
+    \end{equation}
+    where $x_{(i)}$ is the $i$th \textit{order statistics} of $x$, $i:=\lfloor np+m\rfloor$, $m:=\alpha+p(1-\alpha-\beta)$, and $\gamma:=np+m-j$.
+\end{defn}
+\begin{remark}
+    The $q$th sample quantile is the formula used in Julia programming language, and by default $\alpha=1$ and $\beta=1$.
+\end{remark}
+
+\section{Thematic Analysis}
+
+
+\subsection{Large Language Models}\label{sec:llm_method}
+Generative Artificial Intelligence or GenAI for short has been making waves on its effectiveness to generate texts, images, audio, video, etc. It has elevated humanity to a new level of capability. However, behind this amazing capabilities is that GenAI is by design a mathematical formula that are called \textit{model}. There are several types of \textit{models}, and one of those is the Large Language Model (LLM). The following section will discuss what LLM is and its mathematical formulation.
+\subsection{Bidirectional Encoder Representation from Transformers}\label{sec:bert}
+BERT or Bidirectional Encoder Representation from Transformers model is a large language model proposed by \citeA{devlin2018bert}. From the name itself, it is based on the Transformer model architecture (\textit{see} discussion in Section \ref{sec:transformers}) in that it only uses the Encoder layer, and stack it together. BERT was pre-trained on large corpus of text using two unsupervised (\textit{see} Section \ref{sec:unsupervised_models}) tasks, and these are:
+\begin{enumerate}
+    \item \textit{Masked Language Modeling (MLM)} - tokens (\textit{see} Section \ref{sec:text_tokenization}) are randomly masked in the input and trains the model to predict these masked tokens based on the surrounding context.
+    \item \textit{Next Sentence Prediction (NSP)} - tains the model to understand the relationship between two sentences by predicting if one sentence follows the other.
+\end{enumerate}
+After pre-training the model, BERT can then be fine-tuned on specific tasks like question answering, sentiment analysis, and more with relatively smaller datasets. With that, BERT works as follows: 
+\begin{enumerate}
+    \item \textit{Input Representation} - BERT takes tokenized text as input, which includes a pair of sentences. The input is converted into tokens, added with special tokens like [CLS] (classification token at the beginning) and [SEP] (separator token between sentences).
+    \item \textit{Embedding Layer} - The tokens are converted into embeddings which are the sum of token embeddings, segment embeddings, and position embeddings.
+    \item \textit{Encoder Layers} - The embeddings are then passed through multiple layers of bidirectional Transformer encoders (\textit{see} Section \ref{sec:transformers}), which apply self-attention mechanisms to generate contextualized representations for each token.
+    \item \textit{Output} - The final hidden states from the encoder layers are used for different tasks:
+    \begin{itemize}
+        \item The [CLS] token’s representation can be used for classification tasks.
+        \item The representations of other tokens can be used for tasks like named entity recognition (NER) or question answering.
+    \end{itemize}
+\end{enumerate}
+There are several applications of BERT model, but for this paper it will be used for Topic Modeling and Text Summarization of the Qur'\=an. In particular, CL-AraBERT model by will be used for extracting embeddings of the Qur'\=anic words for further analysis.
+\subsection{Generative Pre-Trained Transformer}
+GPT or Generative Pre-Trained Transformer is another large language model proposed by \cite{radford2018improving}. From the name itself and like BERT, GPT is based on the Transformer model \cite{vaswani2017attention}, \textit{see} Section \ref{sec:transformers}. Unlike BERT though, GPT uses the decoder layer of the Transformer model and stacks it multiple times. This is the model that is powering the ChatGPT\footnote{\url{https://chat.openai.com/}} of OpenAI and also Claude AI\footnote{\url{https://claude.ai/}} of Anthropic\footnote{\url{https://anthropic.com/}}.
+
+GPT models like those powering ChatGPT were pre-trained on large corpora by going through the sequence of the texts in \textit{unidirection}, which is contrary to the \textit{bidirectional} approach of BERT model. As such, the GPT models excel in generating text and performing tasks that require producing coherent sequences of words, in applications like text completion and creative writing. Whereas BERT is technically effective for tasks requiring deep contextual understanding such as text classification and named-entity recognition.
+
+For this paper, the 
+\subsection{Cosine Similarity}\label{sec:cosine_similarity}
+From Defn. \ref{defn:concentric} and \ref{defn:chiasmus}, there are key words that are still vagued in terms of its mathematical meaning, and these were "mirrors," "not related," and "complemented" or "reversal." Well, semantically these words refer to measurement, particularly, a distance measurement. So that, "mirrors" would mean related meaning the distance in terms of measurement should be relatively close as opposed to "not related" or "complemented" or "reversal". So, how to measure this then?
+
+The answer to the above question is by measuring the distance of their word embeddings. These embeddings as discussed in Section \ref{sec:bert} will be extracted from BERT models. Using these embeddings a similarity or distance measurement can be used, and the common formula for this is the \textit{cosine similarity} defined below.
+
+\begin{defn}[\it Cosine Similarity]\label{defn:cosine_similarity}
+    Let $\mathbf{u}:=[u_1,\cdots,u_n]^{\text{T}}$ and $\mathbf{v}:=[v_1,\cdots,v_n]^{\text{T}},\linebreak n\in\mathbb{N}_{\geq 1}$ be word embedding vectors such that $\theta_{\mathbf{u},\mathbf{v}}$ is the angle between $\mathbf{u}$ and $\mathbf{v}$, then the cosine similarity of the given angle $\theta$ is
+    \begin{equation}
+        \cos(\theta_{\mathbf{u};\mathbf{v}}):=\frac{\mathbf{u}\cdot\mathbf{v}}{||\mathbf{u}||\,||\mathbf{v}||}.
+    \end{equation}
+\end{defn}
+Therefore, for this study, if $\theta_1$ is the angle between "related" \arb[trans]{s.t.} \arb{'AyAt} embeddings, and $\theta_2$ is the angle between "not related" \arb[trans]{'AyAt} \arb{'AyAt} embeddings, then it should be expected that $\cos(\theta_1)\leq\cos(\theta_2)$. Further, if $\theta_3$ is the angle of "complemented" or "reversal" \arb[trans]{'AyAt} \arb{'AyAt} embeddings, then maybe $\cos(\theta_1)\leq\cos(\theta_3)$ since it is not clear yet how disparate is the "related" distance to "complement" or "reversal" distance, and this is especially true for the relation of $\theta_2$ to $\theta_3$ as it cannot be determined up front, and may only be observed from the data, which will be discussed in the next chapter.
