@@ -14,7 +14,7 @@ Referring to Figure \ref{fig:result_crps_tbl}, the first line of the code, which
     \label{fig:result_crps_tbl}
 \end{figure}
 
-The output of the code in Figure 1 as indicated by the lines starting with \texttt{\#} shows the morphological data of the \textit{basmallah} \arb[fullvoc]{bismi 'l-l_ahi 'l-ra.hm_ani 'l-ra.hImi}. In this data, there are five columns after the Row column. The \texttt{word} column indicates the word of the queried data, in this case the first \arb[trans]{'ayaT} \arb{'ayaT} of the first \arb[trans]{sUraT} \arb{sUraT}. According to this column, there are four words in the \textit{basmallah}. The second column, \texttt{part}, indicates the parts of the word. In this case, the first word, has two parts. These two parts is indicated by its \texttt{form} in the third column, which are \texttt{bi} a Roman encoding based on Buckwalter mapping which is decoded in Arabic as \arb{bi}, and the second part of the first word has the form in Roman encoding through Buckwalter as \texttt{somi} or decoded in Arabic as \arb[fullvoc]{smi}. The fourth column indicates the part-of-speech of the parts of the words. For the first word, \arb[fullvoc]{bismi}, its two parts are composed of Preposition \arb{bi} and a Noun \arb[fullvoc]{smi}, both of which are further described in the \texttt{features} column, which is the morphological features column. In this last column, it further tells the reader that the Preposition \arb{bi} is a prefix. In addition, the second part \arb[fullvoc]{smi} is the stem of the word \arb[fullvoc]{bismi}, with lemma indicated by \texttt{\{som} which is decoded as \arb{"ism}, and a root of \arb{smw}. There are still other features detailed in the morphological column for the second word \arb[fullvoc]{smi}, and this can be describe further using QuranTree.jl's \texttt{@desc} macro. The result of which is given in Figure \ref{fig:result_at_desc_basmallah}, which also show the other features such as the gender of the noun, in this case it is Masculine and is in Genitive case.
+The output of the code in Figure 1 as indicated by the lines starting with \texttt{\#} shows the morphological data of the \textit{basmallah} \arb[fullvoc]{bismi 'l-l_ahi 'l-ra.hm_ani 'l-ra.hImi}. In this data, there are five columns after the Row column. The \texttt{word} column indicates the word of the queried data, in this case the first \arb[trans]{'ayaT} \arb{'ayaT} of the first \arb[trans]{sUraT} \arb{sUraT}. According to this column, there are four words in the \textit{basmallah}. The second column, \texttt{part}, indicates the parts of the word. In this case, the first word, has two parts. These two parts is indicated by its \texttt{form} in the third column, which are \texttt{bi} a Roman encoding based on Buckwalter mapping which is decoded in Arabic as \arb{bi}, and the second part of the first word has the form in Roman encoding through Buckwalter as \texttt{somi} or decoded in Arabic as \arb[fullvoc]{smi}. The fourth column indicates the part-of-speech of the parts of the words. For the first word, \arb[fullvoc]{bismi}, its two parts are composed of Preposition \arb{bi} and a Noun \arb[fullvoc]{smi}, both of which are further described in the \texttt{features} column, which is the morphological features column. In this last column, it further tells the reader that the Preposition \arb{bi} is a prefix. In addition, the second part \arb[fullvoc]{smi} is the stem of the word \arb[fullvoc]{bismi}, with lemma indicated by \texttt{\{som} which is decoded as \arb{"ism}, and a root of \arb{smw}. There are still other features detailed in the morphological column for the second word \arb[fullvoc]{smi}, and this can be described further using QuranTree.jl's \texttt{@desc} macro. The result of which is given in Figure \ref{fig:result_at_desc_basmallah}, which also show the other features such as the gender of the noun, in this case it is Masculine and is in Genitive case.
 
 \begin{figure}[!t]
     \centering
@@ -23,7 +23,7 @@ The output of the code in Figure 1 as indicated by the lines starting with \text
     \label{fig:result_at_desc_basmallah}
 \end{figure}
 
-The Quranic Arabic Corpus data which contain the morphological features discussed above, has the Qur'\=an texts represented as Buckwalter encoding, which is a character by character mapping of the Arabic orthographies of the Qur'\=an into a Roman letter. This encoding if decoded to Arabic matches exactly the Qur'\=an musaf. In fact, the Tanzil data which is also available in QuranTree.jl, exactly matches this data. The difference between the two is that the Tanzil data only contains the Arabic texts of the Qur'\=an broken down up until the \arb[trans]{'ayaT} \arb{'ayaT} only. Figure \ref{fig:result_tnzl_tbl} shows the Tanzil data queried through the QuranTree.jl for \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT}. The only difference between the two data in terms of presentation of the \arb[trans]{sUraT} \arb{sUraT} is that, the Quranic Arabic Corpus (in Figure \ref{fig:result_crps_tbl}) skips the \textit{basmallah} for all \arb[trans]{sUwar} \arb{sUwar} except for the first, \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT}, while the Tanzil data has it in every \arb[trans]{sUwar} \arb{sUwar}.
+The Quranic Arabic Corpus data which contain the morphological features discussed above, has the Qur'\=an texts represented as Buckwalter encoding, which is a character by character mapping of the Arabic orthographies of the Qur'\=an into a Roman letter. This encoding if decoded to Arabic matches exactly the Qur'\=an \arb[trans]{mu.s.haf} \arb{mu.s.haf}. In fact, the Tanzil data which is also available in QuranTree.jl, exactly matches this data. The difference between the two is that the Tanzil data only contains the Arabic texts of the Qur'\=an broken down up until the \arb[trans]{'ayaT} \arb{'ayaT} only. Figure \ref{fig:result_tnzl_tbl} shows the Tanzil data queried through the QuranTree.jl for \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT}. The only difference between the two data in terms of presentation of the \arb[trans]{sUraT} \arb{sUraT} is that, the Quranic Arabic Corpus (in Figure \ref{fig:result_crps_tbl}) skips the \textit{basmallah} for all \arb[trans]{sUwar} \arb{sUwar} except for the first, \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT}, while the Tanzil data has it in every \arb[trans]{sUwar} \arb{sUwar}.
 
 \begin{figure}[!t]
     \centering
@@ -54,7 +54,7 @@ The first obvious pattern, which is known to Muslims, is the monotonically decre
 
 Moving on, the distribution of the words per \arb[trans]{ayAt} \arb{ayAt} and the characters per \arb[trans]{ayAt} \arb{ayAt} are shown in the third and fourth rows or plots of Figure \ref{fig:result_ayah_word_count}. It is indeed expected that these distributions are more or less identical, since it is expected that more words means more characters. The reason why the distribution of characters per \arb[trans]{ayAt} \arb{ayAt} is shown is to make it comparable to the work of \citeA{sinai2020oqs}, which will be compared later in Section. 
 
-To interpret these distributions of word count per \arb[trans]{ayAt} \arb{ayAt} and the character count per \arb[trans]{ayAt} \arb{ayAt}, the x-axis is still the 114 \arb[trans]{suwar} \arb{suwar} of the Qur'\=an, while the y-axis is either the count of words (third row plot) per \arb[trans]{ayAt} \arb{ayAt} or the count of characters (fourth row plot) per \arb[trans]{ayAt} \arb{ayAt} in Figure \ref{fig:result_ayah_word_count}. Thus, each boxplot shown in these plots describes the distributions of the count of either the words or characters per \arb[trans]{ayAt} \arb{ayAt}. From these distributions, an interesting groups of distributions at around 57th \arb[trans]{sUraT} \arb{sUraT} to 66th \arb[trans]{sUraT} \arb{sUraT} are observed. These distributions while might be reasoned as easily seen because of its Medinan \arb[trans]{'asbAb 'alnuzUl} \arb{'asbAb 'alnuzUl} color, the mean of these are obviously higher than its surrounding \arb[trans]{sUraT} \arb{sUraT} as seen in the figure. In fact, these \arb[trans]{suwar} \arb{suwar} have lower number of \arb[trans]{ayAt} \arb{ayAt} compared to its surrounding \arb[trans]{suwar} \arb{suwar} (\textit{see} first plot and second plot of Figure \ref{fig:result_ayah_word_count}). Although, the number of words are more or less the same.
+To interpret these distributions of word count per \arb[trans]{ayAt} \arb{ayAt} and the character count per \arb[trans]{ayAt} \arb{ayAt}, the $x$-axis is still the 114 \arb[trans]{suwar} \arb{suwar} of the Qur'\=an, while the $y$-axis is either the count of words (third row plot) per \arb[trans]{ayAt} \arb{ayAt} or the count of characters (fourth row plot) per \arb[trans]{ayAt} \arb{ayAt} in Figure \ref{fig:result_ayah_word_count}. Thus, each boxplot shown in these plots describes the distributions of the count of either the words or characters per \arb[trans]{ayAt} \arb{ayAt}. From these distributions, an interesting groups of distributions at around 57th \arb[trans]{sUraT} \arb{sUraT} to 66th \arb[trans]{sUraT} \arb{sUraT} are observed. These distributions while might be reasoned as easily seen because of its Medinan \arb[trans]{'asbAb 'alnuzUl} \arb{'asbAb 'alnuzUl} color, the mean of these are obviously higher than its surrounding \arb[trans]{sUraT} \arb{sUraT} as seen in the figure. In fact, these \arb[trans]{suwar} \arb{suwar} have lower number of \arb[trans]{ayAt} \arb{ayAt} compared to its surrounding \arb[trans]{suwar} \arb{suwar} (\textit{see} first plot and second plot of Figure \ref{fig:result_ayah_word_count}). Although, the number of words are more or less the same.
 
 Further, it can be observed that the distributions of the Medinan \arb[trans]{suwar} \arb{suwar} tend to have higher mean as opposed to those in Meccan \arb[trans]{suwar} \arb{suwar}, which is indeed the case as seen in later discussions. In fact, as a prelude to this, if the order of the arb[trans]{suwar} \arb{suwar} is based on the \arb[trans]{'asbAb 'alnuzUl} \arb{'asbAb 'alnuzUl}, the observation that Medinan surah has higher number of word or character per \arb[trans]{ayAt} \arb{ayAt} can be seen in Figure \ref{fig:result_ayah_word_count_rev_order}. In this figure, the Medinan \arb[trans]{suwar} \arb{suwar} seen in the latter part of the \arb[trans]{'asbAb 'alnuzUl} \arb{'asbAb 'alnuzUl} clearly have higher mean counts and tend to have variable number of word or character counts per \arb[trans]{ayAt} \arb{ayAt}. This is again true especially when looking at the overall distributions of these categories across \arb[trans]{suwar} \arb{suwar} as in Figure \ref{fig:result_meccan_medinan_dist}.
 
@@ -224,36 +224,6 @@ Among the three approaches mentioned, the third one is the best for the study as
     \label{fig:result_thematic_analysis}
 \end{listing2}
 
-% \begin{table}[!h]
-%     \begin{tabularx}{\textwidth}[!h]{cXcc}
-%         \toprule\\[-0.3cm]
-%         Morph. & Surah \& Ayah & Count & Meccan \% \\[0.2cm]
-%         \midrule\\[-0.4cm]
-%         \arb[fullvoc]{'l-l_ahi} & Divine Unity \& Singularity (Tawhid) [6:164, 28:88, 2:163]; Faith \& Belief (Iman) [49:15, 65:11]; Divine Guidance \& Revelation [2:2, 5:48]; Prophet \& Messengers [2:136, 48:29]; The Day of Judgement \& Afterlife [2:281, 68:34]; Moral \& Ethical Teachings [16:90, 5:1]; Stories of Previous Nations [47:10]; Relationship Between Allah \& Creation [50:16, 51:56]; Rules \& Legislation [62:9, 4:2]; Struggle \& Perseverance [22:78, 2:155] & $710$ & 47\% \\[0.2cm]
-%         \arb[fullvoc]{llahi} & Divine Sovereignty \& Ownership [2:284, 3:109, 3:129]; Divine Attributes [4:170, 31:26, 4:139, 9:91]; Creator \& Sustainer [6:1, 35:1]; Purpose of Worship [53:62, 22:31]; Divine Judgement \& Authority [22:56, 24:64, 3:129]; Gratitude \& Praise [1:2, 6:1, 34:1, 35:1]; Divine Will \& Power [14:4, 3:129]; Submission to Allah [2:112, 4:125] & $122$ & 55\%\\[0.2cm]
-%         \arb[fullvoc]{'l-l_ahu} & Divine Unity \& Singularity (Tawhid) [112:1, 2:255, 2:116, 10:68]; Divine Sovereignty \& Power [7:54, 10:3]; Divine Knowledge [3:29, 9:94]; Divine Justice [40:20, 3:57]; Divine Guidance [2:213, 24:46, 57:25]; Divine Will \& Decree [14:27, 5:48]; Divine Names \& Attributes [59:24, 24:35]; Relationship with Believers [98:8]; Divine Creation \& Sustenance [23:14, 7:54]  & $624$ & 39\% \\[0.2cm]
-%         \arb[fullvoc]{'l-l_aha} & Divine Unity \& Singularity (Tawhid) [7:59, 19:36, 98:5]; Divine Attributes [49:16, 9:5, 2:284]; Obedience to Allah \& His Messenger [4:59, 64:12, 48:17]; Piety \& God Conciousness [3:102, 2:194, 8:25]; Reward \& Punishment [47:12, 40:17, 22:14]; Prayer, Charity, \& Righteous Deeds [98:5]; Stories of Prophets \& Past Nations [11:50, 11:61]; Faith \& Belief [49:10]; Justice \& Fairness [16:90] & $351$ & 30\% \\[0.2cm]
-%         \arb[fullvoc]{'il---a---_aha} & 2:133, 3:6, 6:106, $\cdots$, 45:23, 47:19, 73:9 & $17$ & 76\% \\[0.2cm]
-%         \arb[fullvoc]{'il---a---_ahu} & 2:163, 16:22, 18:110, $\cdots$ , 21:108, 29:46, 41:6 & $8$ & 88\% \\[0.2cm]
-%         \arb[fullvoc]{'il---a---_ahiN} & 3:62, 28:38, 38:65 & $3$ & 67\%\\[0.2cm]
-%         \arb[fullvoc]{|"'AlihaTaN} & 6:74, 18:15, 21:21, $\cdots$, 36:23, 37:86, 43:45 & $9$ & 100\% \\[0.2cm]
-%         \arb[fullvoc]{|"'Alihata} & 7:127, 21:36, 21:68, 71:23 & $4$ & 100\% \\[0.2cm]
-%         \arb[fullvoc]{'il---a---_ahaN} & 7:138, 18:14, 26:29 & $3$ & 100\%\\[0.2cm]
-%         \arb[fullvoc]{|"'Alihati} & 11:53, 11:54, 19:46, 25:42, 37:36, 37:91, 38:6, 46:22 & $8$ & 100\% \\[0.2cm]
-%         \arb[fullvoc]{|"'Alihatu} & 11:101 & $1$ & 100\% \\[0.2cm]
-%         \arb[fullvoc]{'il---a---_ahuN} & 14:52, 21:29, 43:84, 52:43 & $4$ & 100\% \\[0.2cm]
-%         \arb[fullvoc]{|"'AlihaTuN} & 17:42, 21:22, 21:43 & $3$ & 100\% \\[0.2cm]
-%         \arb[fullvoc]{'il---a---_ahi} & 20:97, 40:37, 114:3 & $3$ & 100\% \\[0.2cm]
-%         \arb[fullvoc]{--|"'Alihati}& 21:59, 21:62 & $2$ & 100\%\\[0.2cm]
-%         \arb[fullvoc]{|"'il---a---_ahuN} & 27:60, 27:61, 27:62, 27:63, 27:64 & $5$ & 100\% \\[0.2cm]
-%         \arb[fullvoc]{|"'AlihaTa} & 38:5 & $1$ & 100\% \\[0.2cm]
-%         \arb[fullvoc]{'alihatu} & 43:58 & $1$ & 100\% \\[0.2cm]
-%         \bottomrule
-%     \end{tabularx}
-%     \caption{Morphologies of \arb[novoc]{Alh} in the Qur'\=an}
-%     \label{tbl:result_Alh_morphologies_theme}
-% \end{table}
-
 \section{Rhythmic Analysis}\label{sec:result_rhythmic_analysis}
 As already emphasized in repeatedly in this paper is that the Qur'\=an rhymes. This rhythm is not only important for the recitation of the Qur'\=an, but it also plays a significant role in the meaning and interpretation of the text. The rhythm of the Qur'\=an is created by the use of various literary devices, such as alliteration and assonance, which help with the rhythm whose dynamics also gives recitations with sounds whose transition yields different emotions. A good example of this is the \arb[trans]{sUraTu 'l-qAri`ati} \arb{sUraTu 'l-qAri`ati} shown in Table \ref{tbl:surah_alqariah}.
 
@@ -333,11 +303,9 @@ This rhythmic progression isn't merely decorative but integral to the \arb[trans
 
 The \arb[trans]{sUraT} \arb{sUraT} demonstrates how the Quranic text masterfully employs sound as a vehicle for meaning, where the rhythm itself becomes a form of exegesis - explaining and reinforcing the content through the physical experience of recitation and listening.
 
-Before diving into the computational methods for analyzing these rhythms, another example showcasing a different rhythm is the \arb[trans]{sUraTu 'l-tIni} \arb{sUraTu 'l-tIni}. In this \arb[trans]{sUraT} \arb{sUraT}, there are 8 verses or \arb[trans]{'AyAt} \arb{'AyAt}. The first three can be grouped together as they form unique rhythm. The rhythm here is measured and ceremonial, with each \arb[trans]{'ayaT} \arb{'ayaT} beginning with the oath particle \arb[trans]{wa} \arb{wa} or \textit{by}. This creates a solemn, formal cadence that draws attention to these sacred symbols. 
+Before diving into the computational methods for analyzing these rhythms, another example showcasing a different rhythm is the \arb[trans]{sUraTu 'l-tIni} \arb{sUraTu 'l-tIni}. In this \arb[trans]{sUraT} \arb{sUraT}, there are 8 verses or \arb[trans]{'AyAt} \arb{'AyAt}. The first three can be grouped together as they form unique rhythm. The rhythm here is measured and ceremonial, that is it is consistent with predictable syllable patterns and
+even pacing that creates a steady, balanced flow. Each \arb[trans]{'ayaT} \arb{'ayaT} beginning with the oath particle \arb[trans]{wa} \arb{wa} or \textit{by}, this repeatition creates a solemn, ceremonial cadence that draws attention to these sacred oath. 
 
-As the \arb[trans]{sUraT} \arb{sUraT} moves to verses 4 to 6, the \arb[trans]{'AyAt} \arb{'AyAt}. The rhythm changes noticeably. The verses become longer and more complex, especially verse 6, which extends significantly compared to the earlier verses. The topic shifts dramatically from sacred symbols to human creation, fall, and salvation. The rhythm reflects this shift, becoming more narrative and expansive.
-
-Finally, the last section shifts again in rhythm, becoming interrogative and direct. The verses are sharp and pointed, ending with rhetorical questions that demand reflection. The topic transforms into a challenge to the disbelievers, questioning their denial given the evidence previously presented.
 
 \begin{table}[!h]
     \caption{The verses or \arb[trans]{'AyAt} \arb{'AyAt} of \arb[trans]{sUraTu 'l-tIni} \arb{sUraTu 'l-tIni}}
@@ -371,13 +339,13 @@ Finally, the last section shifts again in rhythm, becoming interrogative and dir
         \multirow{2}{*}{\arb[fullvoc]{_tumma radadna--_ahu 'asfala sa--_afi\arbcolor[red]{lIn"}\arbcolor[gray]{.a}}}\\[0.1cm]
         &then reduced him to the lowest of the low&\\[1cm]
 
-        6&\arb[trans]{'illA 'l-a_dIna 'AmanUA wa`amilU 'l-.sa--_ali.ha--_ati falahum 'ajruN .gayru mam\arbcolor[red]{nUn"}\arbcolor[gray]{iN}}&
-        \multirow{2}{*}{\arb[fullvoc]{'illA 'l-a_dIna 'A-manUA wa`amilU 'l-.sa--_ali.ha--_ati falahum 'ajruN .gayru mam\arbcolor[red]{nUn"}\arbcolor[gray]{iN}}}\\[0.1cm]
-        &but those who believe and do good deeds&\\[1cm]
+        6&\arb[trans]{'illA 'l-la_dIna 'AmanUA wa`amilU 'l-.sa--_ali.ha--_ati falahum 'ajruN .gayru mam\arbcolor[red]{nUn"}\arbcolor[gray]{iN}}&
+        \multirow{2}{*}{\arb[fullvoc]{'illA 'l-la_dIna 'A-manUA wa`amilU 'l-.sa--_ali.ha--_ati falahum 'ajruN .gayru mam\arbcolor[red]{nUn"}\arbcolor[gray]{iN}}}\\[0.1cm]
+        &but those who believe and do good deeds --- they will have an unfailing reward. &\\[1.5cm]
 
         7&\arb[trans]{famA yuka_d_dibuka ba`du bi-'l-\arbcolor[red]{dIn"}\arbcolor[gray]{.i}}&
         \multirow{2}{*}{\arb[fullvoc]{famA yuka_d_dibuka ba`du bi-'l-\arbcolor[red]{dIn"}\arbcolor[gray]{.i}}}\\[0.1cm]
-        &will have an unfailing reward. After this, waht makes you [man] deny he Judgement?&\\[1.5cm]
+        &After this, what makes you [man] deny the Judgement?&\\[1cm]
 
         8&\arb[trans]{'alaysa 'l-lahu bi-'a.hkami 'l-.ha--_aki\arbcolor[red]{mIn"}\arbcolor[gray]{.a}}&
         \multirow{2}{*}{\arb[fullvoc]{'alaysa 'l-lahu bi-'a.hkami 'l-.ha--_aki\arbcolor[red]{mIn"}\arbcolor[gray]{.a}}}\\[0.1cm]
@@ -388,74 +356,166 @@ Finally, the last section shifts again in rhythm, becoming interrogative and dir
     \label{tbl:surah_attin}
 \end{table}
 
+As the \arb[trans]{sUraT} \arb{sUraT} moves to verses 4 to 6, the \arb[trans]{'AyAt} \arb{'AyAt}. The rhythm dramatically changes, with longer and more complex construction. The cadence becomes faster at the first part of the \arb[trans]{'AyAt} \arb{'AyAt} due to the presence of \arb[trans]{sukUn} \arb{sukUn}, \arb{Bo}, which makes every letter having it will have absence of a vowel sound, or will be "amputated" since \arb[trans]{sukUn} \arb{sukUn} is also called \arb[trans]{jazmaT} \arb{jazmaT} or \textit{amputation}. This amputation prevents recitation from prolonging the preceding vowel sound and instead ends it abruptly with sound of the immediate consonant to it like \arb[trans]{qAf} \arb{qAf}, \arb{q} (transliterated as \arb[trans]{q}), and \arb[trans]{dAl} \arb{dAl}, \arb{d} (transliterated as \arb[trans]{d}), for "d"-like sound. It is "d"-like as it is the English sound "d" but a little softer, so not exactly the sound of English "d."\footnote{This is because \arb[trans]{dAl} \arb{dAl} letter is part of Arabic's \textit{dental} letters, which are articulated with the tongue making contact with or near the upper teeth.} The prevention of prolonging the recitation on these "amputated" consonants makes the cadence faster compared to previous \arb[trans]{'AyAt} \arb{'AyAt}, this is because the recitation will have to immediately proceed to the next syllable and not prolong with the current "amputated" consonants. In fact, with \arb[trans]{tajwId} \arb{tajwId}, which is the set of rules governing the proper pronunciation and recitation of the Qur'\=an, the letters \arb[trans]{qAf} \arb{qAf} \arb{q} and \arb[trans]{dAl} \arb{dAl} are referred to as \arb[trans]{qalqalaT} \arb{qalqalaT} or \textit{bouncing} or \textit{echoing} sound. Therefore, with proper pronunciation or recitation, the preceding vowels will not simply end abruptly and then immediately proceed to the next syllable, it is rather faster in cadence since the preceding vowel will immediately "bounce" to the next syllable. In summary, the rhythm becomes faster in cadence starting from \arb[trans]{'ayaT} \arb{'ayaT} 4 to 6 at the first part of these verses. 
 
-In this section, the paper investigates this feature analytically. To start with, it is better to set some definitions. 
+The fast cadence in the first part of \arb[trans]{'AyAt} \arb{'AyAt} 4 to 6 is further balanced at the second part of these \arb[trans]{'AyAt} \arb{'AyAt} which contain the Nasal sound letters, the \arb[trans]{nUn} \arb{nUn}, \arb{n} (transliterated as \arb[trans]{n}), and \arb[trans]{mIm} \arb{mIm}, \arb{m} (transliterated as \arb{m}), which in \arb[trans]{tajwId} \arb{tajwId} the vowels preceding it will get assimilated giving a slow prolong recitation from the abrupt rhythm. This is seen in the words \arb[trans]{'l-'i\arbnull{n}\arbcolor[red]{n}sa--_ana} \arb[fullvoc]{'l-'i\arbcolor[red]{n}sa--_ana} and in \arb[trans]{taqwI\arbcolor[red]{m"}\arbcolor[gray]{iN}} \arb[fullvoc]{taqwI\arbcolor[red]{m"}\arbcolor[gray]{iN}} in \arb[trans]{'ayaT} \arb{'ayaT} 4, also in words \arb[trans]{_tu\arbcolor[red]{mm"}.a} \arb[fullvoc]{_tu\arbcolor[red]{mm"}.a} and \arb[trans]{sa--_afilI\arbcolor[red]{n"}\arbcolor[gray]{.a}} \arb[fullvoc]{sa--_afilI\arbcolor[red]{n"}\arbcolor[gray]{.a}} in \arb[trans]{'ayaT} \arb{'ayaT} 5, and finally in words \arb[trans]{falahu\arbcolor[red]{m} 'ajr"\arbcolor[red]{uN}} \arb[fullvoc]{falahu\arbcolor[red]{m} 'ajr"\arbcolor[red]{uN}} and \arb[trans]{mamnU\arbcolor[red]{n"}\arbcolor[gray]{iN}} \arb[fullvoc]{mamnU\arbcolor[red]{n"}\arbcolor[gray]{iN}} in \arb[trans]{'ayaT} \arb{'ayaT} 6. Lastly, the verses 4 to 6 become longer and more complex, especially verse 6, which extends significantly compared to the earlier verses. The topic shifts dramatically from sacred symbols to human creation, fall, and salvation. The rhythm reflects this shift, becoming more narrative and expansive.
 
-\begin{defnx}[Rhythmic]
-    A text is said to be \textit{rhythmic} if and only if it has a particular rhythm or meter that is used throughout the text. This rhythm can be measured using various metrics, such as syllable count, stress patterns, and rhyme schemes.   
-\end{defnx}
-\begin{defnx}[Stress Patterns]
-    A rhytmic text is said to have a \textit{stress pattern} if and only if it has a particular characteristics of stressed and unstressed syllables. This pattern can be measured using various metrics, such as the number of syllables in each line, the number of stressed syllables in each line, and the overall rhythm of the text.    
-\end{defnx}
+Finally, the last section shifts again in rhythm, becoming interrogative and direct. The verses are sharp and pointed, ending with rhetorical questions that demand reflection. The topic transforms into a challenge to the disbelievers, questioning their denial given the evidence previously presented.
 
-\begin{defnx}[Rhyme Schemes]
-    A rhytmic text is said to have a \textit{rhyme scheme} if and only if it has a particular pattern of rhymes at the end of each line. This pattern can be measured using various metrics, such as the number of lines in each stanza, the number of rhymes in each stanza, and the overall rhythm of the text. 
-\end{defnx}
+These unique rhythms and style of the Qur'\=an is what this section of the paper aims to capture. The goal is to describe these patterns mathematically and through visual inspections, and see if there are patterns that can be observed. However, based on the explanation of the rhythms of the two short \arb[trans]{suwar} \arb{suwar} above, the rich quality of these rhythms and its dynamics may involve many parameters for any mathematical models for capturing the different frequencies of the rhythm. From, the phasing of the short and long vowels, and prolongation of the \arb[trans]{maddaT} \arb{maddaT}, to the fast cadence that the \arb[trans]{sukUn} \arb{sukUn} introduce. Further, the dynamics of the different types of Arabic letters, each producing unique sound, plus the additional rules from \arb[trans]{tajwId} \arb{tajwId} that can change the rhythm cadence. All of these add to the complexity of the mathematical formulation. With that said and as indicated in Chapter \ref{ch:introduction} of this paper, the goal is to give an initial direction and establish mathematical foundations that will be needed for future methodologies.
 
-\begin{defnx}[Assonance]
-    A rhytmic text is said to have a \textit{assonance} if and only if it has a particular pattern of vowel sounds in each line. This pattern can be measured using various metrics, such as the number of vowel sounds in each line, the number of consonant sounds in each line, and the overall rhythm of the text. 
-\end{defnx}
+The first method is the use of data visualization, to see the rhythmic patterns at a high level, which will help uncover or give insights into the structural form of the Qur'\=an. The first visualization is a line graph of characterizing the dynamics of the rhythmic patterns of the last recited syllable of the \arb[trans]{'ayaT} \arb{'ayaT} as in Figure \ref{fig:result_last_syllable_rhythmic}.
 
-
-\begin{figure}[!h]
+\begin{figure}[!t]
     \centering
     \includegraphics[width=\textwidth]{img/rhythmic_last_syllable.pdf}
     \caption{Rhythmic patterns of the last recited syllable of each \arb[trans]{'ayaT} \arb{'ayaT} in \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT} and \arb[trans]{sUraTu 'l-ra.hm_ani} \arb{sUraTu 'l-ra.hm_ani}}
     \label{fig:result_last_syllable_rhythmic}
 \end{figure}
-\begin{figure}[!h]
+
+In this figure, there are two rhythmic patterns visualized from two chapters, and these are \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT} and \arb[trans]{sUraTu 'l-ra.hm_ani} \arb{sUraTu 'l-ra.hm_ani}. For each \arb[trans]{sUraT} \arb{sUraT}, there are three graphs, which are \textit{Last Pronounced Syllable}, which shows the plot for the transitions of the last recited syllables; \textit{3 characters}, which shows the transition of the last recited sllable but with extra trailing character or consonant; and, \textit{3-4 Characters}, which shows the dynamics for the 3-4 characters of last recited syllable. To guide with the axes, the $x$-axis of each plot indicates the verse or \arb[trans]{'ayaT} \arb{'ayaT} number, while the $y$-axis indicates the vowels or characters.
+
+For the first \arb[trans]{sUraT} \arb{sUraT}, \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT}, in Figure \ref{fig:result_last_syllable_rhythmic}, it can be seen that the rhythmic signature of this \arb[trans]{sUraT} \arb{sUraT} is that it always end with one particular sound, and that is the \texttt{iy} sound, across its seven \arb[trans]{'AyAt} \arb{'AyAt}. More specifically, if we add the last consonant as additional trailing character, then a dynamic pattern can be observed where the \arb[trans]{'AyAt} \arb{'AyAt} transitions from \texttt{iyn} to \texttt{iym} sounds and vice-versa. Further, if additional character is added before the vowel, then this leading character will make the dynamics of the transitions into five rhythmic sounds, the \texttt{Hiym} sound which is from \arb[trans]{'AyAt} \arb{'AyAt} ending with \arb[trans]{hIm} or \arb{hIm}. Note that, QuranTree.jl \cite{asaad2021qurantree} uses an extended Buckwalter mapping for transliteration, which is different from the transliteration used in this paper. So in QuranTree.jl library the transliteration for \arb{hIm} is \texttt{Hiym}, while in this paper it is \arb[trans]{hIm}. Moving on, the rhythmic pattern with the added leading character has now added more fluctuations to the rhythmic transitions, but the fact that it bounces back to say \texttt{Hiym} (\arb{hIm}) in \arb[trans]{'ayaT} \arb{'ayaT}, and also the bounce back in the seventh \arb[trans]{'ayaT} \arb{'ayaT} to \verb|~iyn| which in its Arabic mapping is the \arb[trans]{BBIn} \arb{BBIn}. 
+
+As for the second \arb[trans]{sUraT} \arb{sUraT} in Figure \ref{fig:result_last_syllable_rhythmic}, \arb[trans]{sUraTu 'l-ra.hm_ani} \arb{sUraTu 'l-ra.hm_ani}, the dynamic of transitions for last syllable fluctuates from \texttt{a`} which is the Arabic for \arb[trans]{Ba_a} from the first \arb[trans]{'ayaT} \arb{'ayaT} of the said \arb[trans]{sUraT} \arb{sUraT}, which is \arb[trans]{'l-ra.hm"\arbcolor[red]{.a--_a}\arbcolor[gray]{n.u}} \arb[fullvoc]{'l-ra.hm"\arbcolor[red]{.a--_a}\arbcolor[gray]{n.u}}; then it transitions into \verb|aA| which is in the second \arb[trans]{'ayaT} \arb{'ayaT}, \arb[trans]{`allama 'l-qur|"'"\arbcolor[red]{.a-"A}\arbcolor[gray]{na}} \arb[fullvoc]{`allama 'l-qur|"'"\arbcolor[red]{.a-"A}\arbcolor[gray]{na}}; and then it goes back to the first pattern, \verb|a`|; and then back to the second pattern \verb|aA|. At least for the last recited syllable for \arb[trans]{sUraTu 'l-ra.hm_ani} \arb{sUraTu 'l-ra.hm_ani}, the major rhythmic pattern is the second one, \verb|aA| which in Arabic mapping are the \arb[trans]{fat.haT} \arb{fat.haT} and the long vowel \arb[trans]{'alif} \arb{'alif}. This is indicated by the steady horizontal flow of the line plot in this rhythmic pattern. Now adding trailing consonant or character to the rhythmic pattern, the earlier majority rhythmic sound is specifically from the \verb|aAn| sound, which is means that most of the \arb[trans]{'AyAt} \arb{'AyAt} in \arb[trans]{sUraTu 'l-ra.hm_ani} \arb{sUraTu 'l-ra.hm_ani} ends with a \verb|aAn| sound or in its Arabic mapping \arb[trans]{BaAn} \arb{BaAn}. In fact, the repeating refrain from this \arb[trans]{'ayaT} \arb{'ayaT}, which is significantly emphasized repeatedly in the \arb[trans]{sUraT} \arb{sUraT}, ends with the same rhythmic pattern as highlighted in Q55:13 below.
+
+\begin{bottomtitledframe}{Q55:13}
+    \begin{center}
+        \begin{arab}[fullvoc]
+            min ((sUraTu 'l-ra.hm_ani)): fabi'a-yyi |"'-AlA'i rabbikumA tuka_d_dibAni
+        \end{arab}
+        \begin{arab}[trans]
+            min ((sUraTu 'l-ra.hm_ani)): fabi'a-yyi |"'-AlA'i rabbikumA tuka_d_dibAni
+        \end{arab}
+    \end{center}
+    From Surah \textit{The Lord of Mercy}: Which, then, of your Lord’s blessings do you both deny?
+\end{bottomtitledframe}
+
+The third plot for \arb[trans]{sUraTu 'l-ra.hm_ani} \arb{sUraTu 'l-ra.hm_ani} which adds a leading character to the last recited vowel has yielded so many rhythmic patterns, which in total is almost 30. However, as seen in Figure \ref{fig:result_last_syllable_rhythmic}, while the line charts seem to go up consistently, it always bounces back to a particular rhythmic pattern, each almost has an identical distances. This rhythmic pattern is the Q55:13, which is emphasized after almost every new \arb[trans]{'ayaT} \arb{'ayaT} introduced starting from verse 21 onwards. The total bounce back if counted from the plot is 31 times, which is equivalent to the number of the refrain (Q55:13) in the said \arb[trans]{sUraT} \arb{sUraT}. 
+
+Therefore, visualizing the line charts of the last recited syllable is one way to come up with a \textit{signature} for a particular \arb[trans]{sUraT} \arb{sUraT}. These signatures can be used as identity of the \arb[trans]{sUraT} \arb{sUraT} that can be used for future mathematical computations. Although, the different sizes of them may need some mathematical transformation to put them in one dimensional space. If this can be used as a signature for the \arb[trans]{sUraT} \arb{sUraT}, a good question to ask then is that are there other \arb[trans]{suwar} \arb{suwar} in the Qur'\=an then that has the exhibit same signature or at least close to it? Figure \ref{fig:result_last_syllable_rhythmic_cross_similarities} is the answer to the said question.
+
+\begin{figure}[!t]
     \centering
     \includegraphics[width=\textwidth]{img/rhythmic_last_syllable_similarities.pdf}
-    \caption{Rhythmic patterns of the last recited syllable of each \arb[trans]{'ayaT} \arb{'ayaT} in \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT} and \arb[trans]{sUraTu 'l-ra.hm_ani} \arb{sUraTu 'l-ra.hm_ani}}
-    \label{fig:result_last_syllable_rhythmic}
+    \caption{Cross similarities of surah with same sequence of last recited syllable.}
+    \label{fig:result_last_syllable_rhythmic_cross_similarities}
 \end{figure}
 
-\begin{figure}[!h]
+Figure \ref{fig:result_last_syllable_rhythmic_cross_similarities} is a heatmap of the relationship of the \arb[trans]{suwar} \arb{suwar}, where both the $x$ and $y$ axes are the \arb[trans]{sUraT} \arb{sUraT} numbers and their interaction is the percentage of their similarity colored between yellow to brown to red. The similarity measured here is the similarity of their signatures discussed earlier. The signature is the transitions of the rhythmic pattern for the last recited syllable (that is, not including the trailing and leading characters) as in the first row plot in Figure \ref{fig:result_last_syllable_rhythmic}. This means that a signature is said to be 100\% similar if the number of \arb[trans]{'AyAt} \arb{'AyAt} are the same, and the rhytmic pattern of the last recited syllable is also the same. Therefore, the red colored interaction which forms the diagonal path in the heatmap is the similarity of a given \arb[trans]{sUraT} \arb{sUraT} against itself, which is understood to be 100\%, hence their colors are red. Further, the yellow colored interactions meant that the \arb[trans]{suwar} \arb{suwar} being compared here have either differing number of \arb[trans]{'AyAt} \arb{'AyAt} or if both have the same number, then it could be that no exactly the same rhythmic pattern in sequence are the same. What's left to interpret then are the gradient of browns in the heatmap. Those interaction with such color meant that the \arb[trans]{suwar} \arb{suwar} being compared have similarity score of around 50\%. For example, \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT} 57.14\% signature similarity with \arb[trans]{sUraTu 'l-mA`Un} \arb{sUraTu 'l-ma`Un}, which is given in Table \ref{tbl:surah_almaun}. 
+
+\begin{table}[!t]
+    \caption{The verses or \arb[trans]{'AyAt} \arb{'AyAt} of \arb[trans]{sUraTu 'l-mA`Un} \arb{sUraTu 'l-mA`Un}}
+    \begin{tabularx}{\textwidth}{cXr}
+        \toprule
+        \textbf{No.}&\textbf{Transliteration \& }&\textbf{Verses} or \arb[trans]{'AyAt} \arb{'AyAt}\\
+        &\textbf{Translation}&\\
+        \midrule
+        
+        &\arb[trans]{bismi 'l-lahi 'l-ra.hm_ani 'l-rahIm\arbcolor[gray]{i}}&
+        \multirow{2}{*}{\arb[fullvoc]{bismi 'l-l_ahi 'l-ra.hm_ani 'l-rahIm\arbcolor[gray]{.i}}}\\[0.1cm]
+        &In the name of God, the Lord of Mercy, the Giver of Mercy!&\\[1cm]
+
+        1&\arb[trans]{'ara|"'a-yta 'lla_diY yuka_d_dibu bi-'l-d\arbcolor[red]{I"}\arbcolor[gray]{ni}};&
+        \multirow{2}{*}{\arb[fullvoc]{'ara|"'a-yta 'lla_diY yuka_d_dibu bi-'l-d\arbcolor[red]{I"}\arbcolor[gray]{ni}}}\\[0.1cm]
+        &[Prophet], have you considered the person who denies the Judgement?&\\[1cm]
+
+        2&\arb[trans]{fa_da_alika 'lla_diY" yadu``u 'l-yat"\arbcolor[red]{I}\arbcolor[gray]{ma}}&
+        \multirow{2}{*}{\arb[fullvoc]{fa_da_alika 'lla_diY" yadu``u 'l-yat"\arbcolor[red]{I}\arbcolor[gray]{ma}}}\\[0.1cm]
+        &It is he who pushes aside the orphan&\\[0.5cm]
+        
+        3&\arb[trans]{walaA ya.hu.d.du `alY_a .ta`Ami 'l-misk"\arbcolor[red]{I}\arbcolor[gray]{ni}}&
+        \multirow{2}{*}{\arb[fullvoc]{walaA ya.hu.d.du `alY_a .ta`Ami 'l-misk"\arbcolor[red]{I}\arbcolor[gray]{ni}}}\\[0.1cm]
+        &and does not urge others to feed the needy.&\\[0.5cm]
+
+        4&\arb[trans]{fawayluN lilmu.sall"\arbcolor[red]{I}\arbcolor[gray]{na}}&
+        \multirow{2}{*}{\arb[fullvoc]{fawayluN lilmu.sall"\arbcolor[red]{I}\arbcolor[gray]{na}}}\\[0.1cm]
+        &So woe to those who pray&\\[0.5cm]
+
+        5&\arb[trans]{'lla_dIna hum `an" .salAtihim sAhUn"\arbcolor[gray]{.a}}&
+        \multirow{2}{*}{\arb[fullvoc]{'lla_dIna hum `an" .salAtihim sAhUn"\arbcolor[gray]{.a}}}\\[0.1cm]
+        &but are heedless of their prayer&\\[0.5cm]
+
+        6&\arb[trans]{'lla_dIna hum yurA'Un\arbcolor[gray]{a}}&
+        \multirow{2}{*}{\arb[fullvoc]{'lla_dIna hum yurA'Un"\arbcolor[gray]{.a}}}\\[0.1cm]
+        &those who are all show&\\[0.5cm]
+
+        7&\arb[trans]{wayamna`Una 'l-mA`Un"\arbcolor[gray]{a}}&
+        \multirow{2}{*}{\arb[fullvoc]{wayamna`Una 'l-mA`Un"\arbcolor[gray]{.a}}}\\[0.1cm]
+        &and forbid common kindnesses.&\\
+        \bottomrule
+    \end{tabularx}
+    \label{tbl:surah_almaun}
+\end{table}
+
+To compare \arb[trans]{sUraTu 'l-mA`Un} \arb{sUraTu 'l-ma`Un} in Table \ref{tbl:surah_almaun} to \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT} in Table \ref{tbl:surah_alfatihah}. The \verb|iy| sound as in \arb[trans]{BI} \arb{BI}, which is the similarity of the two \arb[trans]{suwar} \arb{suwar}, is highlighted as red in Table \ref{tbl:surah_almaun} for \arb[trans]{sUraTu 'l-mA`Un} \arb{sUraTu 'l-ma`Un}. Therefore, there are four \arb[trans]{'ayaT} \arb{'ayaT} in \arb[trans]{sUraTu 'l-mA`Un} \arb{sUraTu 'l-ma`Un} that has exactly the same sound \verb|iy| for the first four \arb[trans]{'AyAt} \arb{'AyAt} of both \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT}  and \arb[trans]{sUraTu 'l-mA`Un} \arb{sUraTu 'l-ma`Un}. Interestingly, the topic discussed in both \arb[trans]{suwar} \arb{suwar} are also connected. From Table \ref{tbl:surah_alfatihah}, \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT} is a prayer chapter, where \arb[trans]{'AyAt} \arb{'AyAt} acknowledges the Merciful God and His infinite power, and then ends it with supplication asking God for guidance to the straight path, not the path of those who have gone astray, in this case the disbelievers. For \arb[trans]{sUraTu 'l-mA`Un} \arb{sUraTu 'l-ma`Un}, on the other hand, Allah \txarb{\fontspec{Scheherazade New} ﷾} gives description about these disbelievers, which according to God are those who pushes aside the orphans, not feeding the needy, and are heedless of their prayer, who only show off.
+
+Now, what if the interest is not on the last syllable, but rather on the full rhythmic pattern of the \arb[trans]{'ayaT} \arb{'ayaT} with emphasis on the timing of each syllables? How to visualize it? One appropriate graph for this is the \textit{rhythmic graph} proposed by Joseph Schillinger in his Theory of Rhythm \cite{schillinger1946schillinger}. For example, the rhythmic graph for \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT}, \arb[trans]{sUraTu 'l-fIl} \arb{sUraTu 'l-fIl}, \arb[trans]{sUraTu 'l-kaw_tar} \arb{sUraTu 'l-kaw_tar}, and \arb[trans]{sUraTu 'l-'ixlA.s} \arb{sUraTu 'l-'ixlA.s} are given in Figure \ref{fig:result_syllabic_rhythmic_graph}. Rhythmic graph emphasizes on the timing of each syllable in an \arb[trans]{'ayaT} \arb{'ayaT}. So for \arb[trans]{sUraTu 'l-fAti.haT}, the first \arb[trans]{'ayaT} \arb{'ayaT} labelled as Q1:1 in Figure \ref{fig:result_syllabic_rhythmic_graph}, has rhythmic pattern where all syllables have equal timing except for the last recited syllable where the timing is prolonged for the long vowel. To understand this, each rhythmic graph, for example in Q1:1 again, has \textit{timing} as the $x$-axis, referred here as $t$. The timing is how long one pronounces the syllable. For example, for $t=1$, may mean that the prolongation of the recitation for the particular syllable is one second. So that, $t=2$ for syllables with long vowel, meaning the recitation for syllables with long vowel must be two seconds. Further, $t=4$ can be assigned for syllables with long vowel and \arb[trans]{maddaT} \arb{maddaT}. The $y$-axis is referred to by Schillinger as the \textit{moment of attack}, basically, it simply indicates to proceed with recitation of the next syllable already. 
+
+\begin{figure}[!t]
     \centering
     \includegraphics[width=\textwidth]{img/rhythmic_resultant.pdf}
-    \caption{Rhythmic patterns of the last recited syllable of each \arb[trans]{'ayaT} \arb{'ayaT} in \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT} and \arb[trans]{sUraTu 'l-ra.hm_ani} \arb{sUraTu 'l-ra.hm_ani}}
-    \label{fig:result_last_syllable_rhythmic}
+    \caption{Syllabic rhythmic patterns using Joseph Schillinger's rhythmic graph}
+    \label{fig:result_syllabic_rhythmic_graph}
 \end{figure}
 
+From Figure \ref{fig:result_syllabic_rhythmic_graph}, it shows the prolongation not only on the last recited syllables as in \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT} and \arb[trans]{sUraTu 'l-fIl} \arb{sUraTu 'l-fIl}, but it also shows the prolongation within the \arb[trans]{'ayaT} \arb{'ayaT}. For example, this prolongation is seen in the long vowels in Q1:5 in the said figure. The last \arb[trans]{'ayaT} \arb{'ayaT} in fact of \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT} contains the word \arb[trans]{wa-lA 'l-\arbcolor[red]{.da'A}lIn"\arbcolor[gray]{.a}} \arb[fullvoc]{wa-lA 'l-"\arbcolor[red]{.d.da'A}lIn"\arbcolor[gray]{.a}}, which contains the \arb[trans]{maddaT} \arb{maddaT}, and hence the long prolongation in Q1:7 of the said figure. Such prolongation is also observed in the first \arb[trans]{'ayaT} \arb{'ayaT} of \arb[trans]{sUraTu 'l-kaw_tar} \arb{sUraTu 'l-kaw_tar}indicated by Q108:1 of the said figure. Further, it can be seen easily at a glance who has prolonged last recited syllables among the four \arb[trans]{suwar} \arb{suwar}, and that is, both \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT} and \arb[trans]{sUraTu 'l-fIl} \arb{sUraTu 'l-fIl} have prolongation in its last recited syllable (except for the last \arb[trans]{'ayaT} \arb{'ayaT} of \arb[trans]{sUraTu 'l-fIl} \arb{sUraTu 'l-fIl}), whereas \arb[trans]{sUraTu 'l-kaw_tar} \arb{sUraTu 'l-kaw_tar}, and \arb[trans]{sUraTu 'l-'ixlA.s} \arb{sUraTu 'l-'ixlA.s} both don't have prolongation on the last recited syllable. It should be noted that, the setup for the generating the rhythmic graph is based on the simple prolongation defined, where $t=1$ is for syllables with no long vowels, $t=2$ for syllables with long vowels, and $t=4$ for syllables with \arb[trans]{maddaT} \arb{maddaT}. The prolongation for Nasal sound letters and other rules of recitations in\arb[trans]{tajwId} \arb{tajwId} are all not captured in the current rhythmic graph. As such, this is also an open research as to how the signature of the rhythmic graph would look like once those are incorporated.
+
+As in the graphical methods for the last recited syllables in Figure \ref{fig:result_last_syllable_rhythmic}, the rhythmic graph in Figure \ref{fig:result_syllabic_rhythmic_graph} will help in creating signatures not only at the \arb[trans]{sUraT} \arb{sUraT} level, but also down to the \arb[trans]{'ayaT} \arb{'ayaT} level. If Figure \ref{fig:result_last_syllable_rhythmic_cross_similarities} helped to see holistically the similarities of the last recited syllables across \arb[trans]{suwar} \arb{suwar}, then one way to see the big picture for the rhythmic graph across the \arb[trans]{suwar} \arb{suwar} is through the use of heatmap as well but this time per number of syllables.
+
+To see this, Figure \ref{fig:result_rhythmic_pattern_2_9} shows the rhythmic pattern of all two syllables \arb[trans]{'AyAt} \arb{'AyAt} to nine syllables \arb[trans]{'AyAt} \arb{'AyAt}. In this figure, the two syllables are the following \arb[trans]{.th} \arb{.th}, \arb[trans]{ys} \txarb{يسٓ}\;, and seven \arb[trans]{.hm} \txarb{حمٓ}. For three syllables, there are 14 total \arb[trans]{'AyAt} \arb{'AyAt}, and these are sixth \arb[trans]{'alif lAm mIm} \txarb{الٓـمٓ} (found in Q2:1, Q3:1, Q29:1, Q30:1, Q31:1, Q32:1), two \arb[trans]{.ta sIn mIm}\;\txarb{طسٓـمٓ} (found in Q26:1 and Q28:1), then one each for \arb[trans]{`ayn sIn qAf} \txarb{عٓسٓقٓ} (Q42:2), \arb[trans]{wa-'l-.tUri} \arb[fullvoc]{wa-'l-.tUri} (Q52:1), \arb[trans]{mA 'l-.ha'AqqaTu} \arb[fullvoc]{mA 'l-.ha----'AqqaTu} (Q69:2), \arb[trans]{wa-'l-fajri} \arb[fullvoc]{wa-'l-fajri} (Q89:1), \arb[trans]{wa-'l-.du.haY_a} \arb[fullvoc]{wa-'l-.du.haY_a} (Q93:1), and \arb[trans]{wa-'l-`a.sri} \arb[fullvoc]{wa-'l-`a.sri} (Q103:1).
 \begin{figure}[!h]
     \centering
     \includegraphics[width=\textwidth]{img/rhythmic_heatmap_2_9.pdf}
-    \caption{Rhythmic patterns of the last recited syllable of each \arb[trans]{'ayaT} \arb{'ayaT} in \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT} and \arb[trans]{sUraTu 'l-ra.hm_ani} \arb{sUraTu 'l-ra.hm_ani}}
-    \label{fig:result_last_syllable_rhythmic}
+    \caption{Rhythmic patterns of \arb[trans]{'AyAt} \arb{'AyAt} with 2 to 9 syllable length}
+    \label{fig:result_rhythmic_pattern_2_9}
 \end{figure}
 \begin{figure}[!h]
     \centering
     \includegraphics[width=\textwidth]{img/rhythmic_heatmap_10_25.pdf}
-    \caption{Rhythmic patterns of the last recited syllable of each \arb[trans]{'ayaT} \arb{'ayaT} in \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT} and \arb[trans]{sUraTu 'l-ra.hm_ani} \arb{sUraTu 'l-ra.hm_ani}}
-    \label{fig:result_last_syllable_rhythmic}
+    \caption{Rhythmic patterns of \arb[trans]{'AyAt} \arb{'AyAt} with 10 to 25 syllable length}
+    \label{fig:result_rhythmic_pattern_10_25}
 \end{figure}
 \begin{figure}[!h]
     \centering
     \includegraphics[width=\textwidth]{img/rhythmic_heatmap_26_41.pdf}
-    \caption{Rhythmic patterns of the last recited syllable of each \arb[trans]{'ayaT} \arb{'ayaT} in \arb[trans]{sUraTu 'l-fAti.haT} \arb{sUraTu 'l-fAti.haT} and \arb[trans]{sUraTu 'l-ra.hm_ani} \arb{sUraTu 'l-ra.hm_ani}}
-    \label{fig:result_last_syllable_rhythmic}
+    \caption{Rhythmic patterns of \arb[trans]{'AyAt} \arb{'AyAt} with 26 to 41 syllable length}
+    \label{fig:result_rhythmic_pattern_26_41}
 \end{figure}
 \section{Theory of Concentric Structure}
 One of the specific items for the second objective of this paper is on the theory of concentrism, and how can this be formulated statistically, and what are the insights that can be extracted. The idea of the theory of concentrism is that a given texts with define partition follows a ring or concentric structure, which is a literary form where the text is organized in such a way that it mirrors itself around a central point. This means that the beginning and ending sections correspond to each other, moving inward until the center of the text, which often contains the main message or theme. This particular pattern was observed by linguistic experts that it got documented in a book by \citeA{farrin2014structure}. This theory can be defined mathematically as follows:
 
 \subsection{Discussions on Islamic Philosophy of Qur'\=an's Structural Analysis}
 \newpage
-\section{Topic Modeling}\label{sec:ch4_topic_modeling_result}
-\subsection{Latent Dirichlet Allocation}
-\subsection{Bidirectional Encoder Representation from Transformer}
-\subsection{Generative Pre-Trained Transformer}
-\section{Relating to other Islamic Texts and Analyses}\label{sec:ch4_relating_islamic_texts}
-\subsection{Retrieval-Augmented Generation Approach}
-\section{Limitations of the Models}
 
 \section{Advantages of Computation}
+
+\begin{table}[!t]
+    \begin{tabularx}{\textwidth}[!h]{cXcc}
+        \toprule\\[-0.3cm]
+        Morph. & Surah \& Ayah & Count & Meccan \% \\[0.2cm]
+        \midrule\\[-0.4cm]
+        \arb[fullvoc]{'l-l_ahi} & Divine Unity \& Singularity (Tawhid) [6:164, 28:88, 2:163]; Faith \& Belief (Iman) [49:15, 65:11]; Divine Guidance \& Revelation [2:2, 5:48]; Prophet \& Messengers [2:136, 48:29]; The Day of Judgement \& Afterlife [2:281, 68:34]; Moral \& Ethical Teachings [16:90, 5:1]; Stories of Previous Nations [47:10]; Relationship Between Allah \& Creation [50:16, 51:56]; Rules \& Legislation [62:9, 4:2]; Struggle \& Perseverance [22:78, 2:155] & $710$ & 47\% \\[0.2cm]
+        \arb[fullvoc]{llahi} & Divine Sovereignty \& Ownership [2:284, 3:109, 3:129]; Divine Attributes [4:170, 31:26, 4:139, 9:91]; Creator \& Sustainer [6:1, 35:1]; Purpose of Worship [53:62, 22:31]; Divine Judgement \& Authority [22:56, 24:64, 3:129]; Gratitude \& Praise [1:2, 6:1, 34:1, 35:1]; Divine Will \& Power [14:4, 3:129]; Submission to Allah [2:112, 4:125] & $122$ & 55\%\\[0.2cm]
+        \arb[fullvoc]{'l-l_ahu} & Divine Unity \& Singularity (Tawhid) [112:1, 2:255, 2:116, 10:68]; Divine Sovereignty \& Power [7:54, 10:3]; Divine Knowledge [3:29, 9:94]; Divine Justice [40:20, 3:57]; Divine Guidance [2:213, 24:46, 57:25]; Divine Will \& Decree [14:27, 5:48]; Divine Names \& Attributes [59:24, 24:35]; Relationship with Believers [98:8]; Divine Creation \& Sustenance [23:14, 7:54]  & $624$ & 39\% \\[0.2cm]
+        \arb[fullvoc]{'l-l_aha} & Divine Unity \& Singularity (Tawhid) [7:59, 19:36, 98:5]; Divine Attributes [49:16, 9:5, 2:284]; Obedience to Allah \& His Messenger [4:59, 64:12, 48:17]; Piety \& God Conciousness [3:102, 2:194, 8:25]; Reward \& Punishment [47:12, 40:17, 22:14]; Prayer, Charity, \& Righteous Deeds [98:5]; Stories of Prophets \& Past Nations [11:50, 11:61]; Faith \& Belief [49:10]; Justice \& Fairness [16:90] & $351$ & 30\% \\[0.2cm]
+        \arb[fullvoc]{'il---a---_aha} & 2:133, 3:6, 6:106, $\cdots$, 45:23, 47:19, 73:9 & $17$ & 76\% \\[0.2cm]
+        \arb[fullvoc]{'il---a---_ahu} & 2:163, 16:22, 18:110, $\cdots$ , 21:108, 29:46, 41:6 & $8$ & 88\% \\[0.2cm]
+        \arb[fullvoc]{'il---a---_ahiN} & 3:62, 28:38, 38:65 & $3$ & 67\%\\[0.2cm]
+        \arb[fullvoc]{|"'AlihaTaN} & 6:74, 18:15, 21:21, $\cdots$, 36:23, 37:86, 43:45 & $9$ & 100\% \\[0.2cm]
+        \arb[fullvoc]{|"'Alihata} & 7:127, 21:36, 21:68, 71:23 & $4$ & 100\% \\[0.2cm]
+        \arb[fullvoc]{'il---a---_ahaN} & 7:138, 18:14, 26:29 & $3$ & 100\%\\[0.2cm]
+        \arb[fullvoc]{|"'Alihati} & 11:53, 11:54, 19:46, 25:42, 37:36, 37:91, 38:6, 46:22 & $8$ & 100\% \\[0.2cm]
+        \arb[fullvoc]{|"'Alihatu} & 11:101 & $1$ & 100\% \\[0.2cm]
+        \arb[fullvoc]{'il---a---_ahuN} & 14:52, 21:29, 43:84, 52:43 & $4$ & 100\% \\[0.2cm]
+        \arb[fullvoc]{|"'AlihaTuN} & 17:42, 21:22, 21:43 & $3$ & 100\% \\[0.2cm]
+        \arb[fullvoc]{'il---a---_ahi} & 20:97, 40:37, 114:3 & $3$ & 100\% \\[0.2cm]
+        \arb[fullvoc]{--|"'Alihati}& 21:59, 21:62 & $2$ & 100\%\\[0.2cm]
+        \arb[fullvoc]{|"'il---a---_ahuN} & 27:60, 27:61, 27:62, 27:63, 27:64 & $5$ & 100\% \\[0.2cm]
+        \arb[fullvoc]{|"'AlihaTa} & 38:5 & $1$ & 100\% \\[0.2cm]
+        \arb[fullvoc]{'alihatu} & 43:58 & $1$ & 100\% \\[0.2cm]
+        \bottomrule
+    \end{tabularx}
+    \caption{Morphologies of \arb[novoc]{Alh} in the Qur'\=an}
+    \label{tbl:result_Alh_morphologies_theme}
+\end{table}
