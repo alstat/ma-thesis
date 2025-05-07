@@ -90,7 +90,7 @@ The work of \citeA{sinai2020oqs} investigated the same statistical distributions
 
 Furthermore, while it is healthy for the advancement of any studies including Qur'\=anic studies to have opposing views. For the case of \citeA{sinai2020oqs}, the premise of not considering \arb[trans]{'asbAb 'alnuzUl} \arb{'asbAb 'alnuzUl} shows a different structure as discussed in the preceding section.
 \section{Morphological Analysis}\label{sec:ch4_morphological_analysis}
-The second statistical analysis is to analyze the morphological features of the Qur'\=an. There are several ways to do this, and the easiest one is to find a particular word and study its morphologies. This will be the goal of this section, and the important word to study is the name of God in the Qur'\=an and that is \arb[trans]{'l-l_ah} \arb{'l-l_ah}. The root of this word is the \arb[trans]{Alh} \arb[novoc]{Alh}, and thus the morphologies of this root word will be studied and compared againts the \arb[trans]{'asbAb 'alnuzUl} \arb{'asbAb 'alnuzUl} or the 'occasions/circumstances of revelation.' Table \ref{tbl:result_Alh_morphologies} contains the complete list of morphologies of \arb[trans]{Alh} \arb[novoc]{Alh}. The first column in the said table lists the said morphologies, the second column lists its location in \arb[trans]{sUraT} \arb{sUraT} and \arb[trans]{'ayaT} \arb{'ayaT}, the third column lists the total number of \arb[trans]{'ayaT} \arb{'ayaT} that has the said morphology in the Qur'\=an, and the fourth column lists the percentage of \arb[trans]{'ayaT} \arb{'ayaT} whose \arb[trans]{'asbAb 'alnuzUl} \arb{'asbAb 'alnuzUl} is Mecca. The codes on how to generate this table in Julia using QuranTree.jl, Yunir.jl, and DataFrames.jl libraries are shown in Figure \ref{fig:result_Alh_morphologies}.
+The second statistical analysis is to analyze the morphological features of the Qur'\=an. There are several ways to do this, and the easiest one is to find a particular word and study its morphologies. This will be the goal of this section, and the important word to study is the name of God in the Qur'\=an and that is \arb[trans]{'l-l_ah} \arb{'l-l_ah}. The root of this word is the \arb[trans]{Alh} \arb[novoc]{Alh}, and thus the morphologies of this root word will be studied and compared againts the \arb[trans]{'asbAb 'alnuzUl} \arb{'asbAb 'alnuzUl} or the 'occasions/circumstances of revelation.' Table \ref{tbl:result_Alh_morphologies} contains the complete list of morphologies of \arb[trans]{Alh} \arb[novoc]{Alh}. The first column in the said table lists the said morphologies, the second column lists its location in \arb[trans]{sUraT} \arb{sUraT} and \arb[trans]{'ayaT} \arb{'ayaT}, the third column lists the total number of \arb[trans]{'ayaT} \arb{'ayaT} that has the said morphology in the Qur'\=an, and the fourth column lists the percentage of \arb[trans]{'ayaT} \arb{'ayaT} whose \arb[trans]{'asbAb 'alnuzUl} \arb{'asbAb 'alnuzUl} is Mecca. The codes on how to generate this table in Julia using QuranTree.jl, Yunir.jl, and DataFrames.jl libraries are shown in Listing \ref{fig:result_Alh_morphologies}.
 
 \begin{table}[!t]
     \begin{tabularx}{\textwidth}[!h]{cXcc}
@@ -122,14 +122,14 @@ The second statistical analysis is to analyze the morphological features of the 
     \label{tbl:result_Alh_morphologies}
 \end{table}
 
-The codes in Figure \ref{fig:result_Alh_morphologies} defines a Julia function called \verb|get_morphologies| from lines 5 to 25. The body of this function contains logics for extracting the morphologies of a given root word. At a high level, the logics has the following flow: it reads the morphological features of the root word \arb[novoc]{Alh}, then it lists down the chapter and verses containing this root word, and then compute the total number of \arb[trans]{AyAt} \arb{AyAt} that contain the given morphology of the given root word. Finally, it returns the output in tabular form that is presented in Table \ref{tbl:result_Alh_morphologies}. The defined \verb|get_morphologies| function can then be used to generate similar tables from other root words without rewriting those codes in lines 5 to 25 of Figure \ref{fig:result_Alh_morphologies}. Indeed, this is the beauty of programming, it can automate the manual process. For example, to generate similar table for the morphology of \arb{r.hm}, the code is as simple as shown in Figure \ref{fig:result_rHm_morphologies}, which shows only the first five morphologies of \arb{r.hm}.
+The codes in Listing \ref{fig:result_Alh_morphologies} defines a Julia function called \verb|get_morphologies| from lines 5 to 25. The body of this function contains logics for extracting the morphologies of a given root word. At a high level, the logics has the following flow: it reads the morphological features of the root word \arb[novoc]{Alh}, then it lists down the chapter and verses containing this root word, and then compute the total number of \arb[trans]{AyAt} \arb{AyAt} that contain the given morphology of the given root word. Finally, it returns the output in tabular form that is presented in Table \ref{tbl:result_Alh_morphologies}. The defined \verb|get_morphologies| function can then be used to generate similar tables from other root words without rewriting those codes in lines 5 to 25 of Listing \ref{fig:result_Alh_morphologies}. Indeed, this is the beauty of programming, it can automate the manual process. For example, to generate similar table for the morphology of \arb{r.hm}, the code is as simple as shown in Figure \ref{fig:result_rHm_morphologies}, which shows only the first five morphologies of \arb{r.hm}.
 
-\begin{figure}[!t]
+\begin{listing2}[!t]
     \centering
     \includegraphics[width=\textwidth]{img/morphologies_Alh.png}
     \caption{Julia code for generating Table \ref{tbl:result_Alh_morphologies}}
     \label{fig:result_Alh_morphologies}
-\end{figure}
+\end{listing2}
 
 \begin{figure}[!t]
     \centering
@@ -198,31 +198,11 @@ Finally, the example for the use of \arb[novoc]{alh} morphology to refer to the 
     From Surah \textit{The Cow}: If you have doubts about the revelation We have sent down to Our servant, then produce a single surah like it --- enlist whatever supporters you have other than \textcolor{red}{God} --- if you truly [think you can].
 \end{bottomtitledframe}
 
-The results shown in Table \ref{tbl:result_Alh_morphologies} found several verses for the common morphologies of \arb[novoc]{alh}, while those rare ones have been found by the codes in Figure \ref{fig:result_Alh_morphologies}. In fact, the whole results in Table \ref{tbl:result_Alh_morphologies} were generated in under 5 seconds and few lines of codes from Figure \ref{fig:result_Alh_morphologies} and \ref{fig:result_meccan_ratio}. Had it been done manually, it would have taken days, weeks or even months. Plus the final results will likely have human errors, or at least it will need another person to verify the results, which too will take time. This is the main advantage of programming as it can automate such process with great accuracy, so long as the codes are accurate. Generating new morphologies for any given root can be done in just one line of code as in the first line of code in Figure \ref{fig:result_rHm_morphologies}.
+The results shown in Table \ref{tbl:result_Alh_morphologies} found several verses for the common morphologies of \arb[novoc]{alh}, while those rare ones have been found by the codes in Listing \ref{fig:result_Alh_morphologies}. In fact, the whole results in Table \ref{tbl:result_Alh_morphologies} were generated in under 5 seconds and few lines of codes from Listing \ref{fig:result_Alh_morphologies} and \ref{fig:result_meccan_ratio}. Had it been done manually, it would have taken days, weeks or even months. Plus the final results will likely have human errors, or at least it will need another person to verify the results, which too will take time. This is the main advantage of programming as it can automate such process with great accuracy, so long as the codes are accurate. Generating new morphologies for any given root can be done in just one line of code as in the first line of code in Figure \ref{fig:result_rHm_morphologies}.
 
 % \begin{bottomtitledframe}{Q43:58}
 %    Hello!
 % \end{bottomtitledframe}
-
-
-
-\section{Thematic Analysis}\label{sec:result_thematic_analysis}
-From previous section, it was concluded that those morphologies that are unique to Meccan \arb[trans]{sUwar} \arb{sUwar} are considered to refer to false gods or deities worshipped by the disbelievers. Whereas those with common morphologies are considered to refer to the true God. Sample \arb[trans]{sUwar} \arb{sUwar} were given above for three \arb[trans]{ayaT} \arb{ayaT}, but it would be better to also understand the themes of \arb[trans]{AyAt} \arb{AyAt} for other morphologies, especially those that are common. However, doing this manually would be very tedious and time consuming, since the first morphology, \arb[trans]{'l-lahi} \arb[fullvoc]{'l-lahi}, contain 710 \arb[trans]{AyAt} \arb{AyAt}. Trying to summarize this manually would take so much time, and will also be prone to human error. How to automate then?
-
-In Statistics and Machine Learning, there are techniques to do this mathematically. Among the basic method is what is called Latent Dirichlet Allocation (LDA), an algorithm that can produce keywords as topics from a given text. The algorithm is based on the idea that each document is a mixture of topics, and each topic is a mixture of words. The algorithm works by assigning each word in the document to a topic, and then updating the topic assignments based on the words assigned to each topic. This process is repeated until the topic assignments converge. The result is a set of topics, each represented by a set of words, that can be used to summarize the document. LDA has been effective for topic modeling and has been widely used in various applications, including text classification, information retrieval, and document clustering.
-
-Another approach to topic modeling is using the BERT (Bidirectional Encoder Representations from Transformers) model, in layman's term, it is an artificial intelligence model that can understand the meaning of words in a sentence by looking at the context of the words around it. The idea is that BERT can generate a numerical representation of a word or a sentence, which can then be used to find similar words or sentences. Since it can be used to find similar words, it therefore can be used to find themes --- which groups similar words. This concept is called BERTopic. 
-
-The third approach to topic modeling or thematic clustering is to use Generative Pre-trained Transformer (GPT) model. The idea is that GPT can generate a summary of a given text, and this summary can be used to find the themes of the text. This approach is similar to LDA, but it uses a different algorithm to generate the summary. The advantage of using GPT is that it can generate a more accurate summary than LDA, and it can also be used to generate summaries for longer texts. For many readers, ChatGPT is the most popular AI model. Indeed, this is the GPT model referred here. 
-
-Among the three approaches mentioned, the third one is the best for the study as it can do everything the first two approaches do, but with human-readable summary and many GPT models have been trained on Qur'\=an data. There are many open-sourced GPT models that can be used, but those commercialized one are more accurate, such as the ChatGPT or the ClaudeAI. For this study, Claude 3.7 Sonnet GPT model is used.
-
-\begin{listing2}[!t]
-    \centering
-    \includegraphics[width=\textwidth]{img/ayah_morph_extract.png}
-    \caption{Julia code for generating last column of Table \ref{tbl:result_meccan_ratio}}
-    \label{fig:result_thematic_analysis}
-\end{listing2}
 
 \section{Rhythmic Analysis}\label{sec:result_rhythmic_analysis}
 As already emphasized in repeatedly in this paper is that the Qur'\=an rhymes. This rhythm is not only important for the recitation of the Qur'\=an, but it also plays a significant role in the meaning and interpretation of the text. The rhythm of the Qur'\=an is created by the use of various literary devices, such as alliteration and assonance, which help with the rhythm whose dynamics also gives recitations with sounds whose transition yields different emotions. A good example of this is the \arb[trans]{sUraTu 'l-qAri`ati} \arb{sUraTu 'l-qAri`ati} shown in Table \ref{tbl:surah_alqariah}.
@@ -388,7 +368,7 @@ As for the second \arb[trans]{sUraT} \arb{sUraT} in Figure \ref{fig:result_last_
             min ((sUraTu 'l-ra.hm_ani)): fabi'a-yyi |"'-AlA'i rabbikumA tuka_d_dibAni
         \end{arab}
     \end{center}
-    From Surah \textit{The Lord of Mercy}: Which, then, of your Lord’s blessings do you both deny?
+    From Surah \textit{The Lord of Mercy}: Which, then, of your Lord's blessings do you both deny?
 \end{bottomtitledframe}
 
 The third plot for \arb[trans]{sUraTu 'l-ra.hm_ani} \arb{sUraTu 'l-ra.hm_ani} which adds a leading character to the last recited vowel has yielded so many rhythmic patterns, which in total is almost 30. However, as seen in Figure \ref{fig:result_last_syllable_rhythmic}, while the line charts seem to go up consistently, it always bounces back to a particular rhythmic pattern, each almost has an identical distances. This rhythmic pattern is the Q55:13, which is emphasized after almost every new \arb[trans]{'ayaT} \arb{'ayaT} introduced starting from verse 21 onwards. The total bounce back if counted from the plot is 31 times, which is equivalent to the number of the refrain (Q55:13) in the said \arb[trans]{sUraT} \arb{sUraT}. 
@@ -612,7 +592,7 @@ Sinai's second point of principal flaws on the work of Cuypers and Farrin stems 
 
 Indeed, by doing the analysis mathematically will mean that determining a member of a group $A$ would mean that there should be first a formula for measuring the relatedness or similarity of the texts in it. Further, there should be a way to determine what would be the optimal structural border that Sinai criticized in his review \cite{sinai2017review}. This mathematical approach will be the main content of the next section.
 
-\section{Genetic Algorithm for Finding Optimal Class Borders}
+\section{Genetic Algorithm for Finding Optimal Class Borders}\label{sec:ga}
 For this study, the main goal is to come up with a mathematical algorithm for concentric pattern. The \textit{chiastic} pattern which can be easily derived is provided as a recommendation for future studies. The following discussions will avoid the mathematical results, and instead presents this in manner that can be easily understood by readers with no mathematical background. The theoretical results for this section, which is the original contribution of this paper, is presented in Appendix \ref{appendix:theoretical_results}.
 
 The study of finding a concentric pattern can be reduced to finding an optimal structural or class border of a given groups, for example $A/B/C/B^*/A^*$. For a class border to be optimal, there should be a criteria that needs to be satisfied. For concentric pattern, this criteria is as follows: the optimal borders for $A/B/C/B^*/A^*$ should be those that maximizes the similarity of $A$ and $A^*$, and $B$ and $B^*$ (since both $A$ and $A^*$ need to mirror each other, also true for $B$ and $B^*$), but also minimizes the similarity of $C$ in relation to other classes or groups ($A$, $A^*$, $B$, and $B^*$), since $C$ is the central point by definition. Therefore, the corresponding borders that can maximizes the said similarity whilst also minimizes the said similarity to the center point will become the optimal borders. 
@@ -687,41 +667,95 @@ Now, there is a problem in doing this. How can one used a numeric representation
 
 There are several embeddings or numerical representations that can be used, and all of them are based on the BERT (Bidirectional Encoder Representations from Transformers) models \cite{devlin2018bert}. Among the BERT models for Arabic embeddings are AraBERT \cite{mahboub2024evaluation}, and CL-AraBERT \cite{MALHAS2022103068}. For this study, CL-AraBERT is used since it is based on Classical Arabic texts including the Qur'\=an.
 \subsection{Fitness Score}
-The next question now is to understand how to .
-\section{Discussions on Islamic Philosophy}\label{sec:result_islamic_philosophy}
-\subsection{The Hidden Structure of the Qur'\=an}
-\subsection{Implications of Errors of Mathematical Models}
+The next part of the Genetic Algorithm is to compute the fitness score, which is the global cost function given in Equation \ref{eq:result_global_cost}. The function $\operatorname{dist}(\cdot)$ can be any distance function, but for this paper the Cosine Distance is used.
+\subsection{Parent Selection}
+Once the fitness score has been computed, the next task is to select the parents from the initial population. This is done by sampling a group of candidate parents, and then selecting the one with the best fitness score in the said sample, in the case of the global cost function Equation \ref{eq:result_global_cost}, the best fitness score is the one with the lowest score.
+\subsection{Crossover and Mutation}
+Once the parent has been selected, the crossover and mutation as discussed in Section \ref{sec:ga}. This also include the refinement after mutation mentioned in the said section.
+\subsection{Iteration}
+The Genetic Algorithm works iteratively, starting with the initial population of structural borders, and then the next iteration will generate the children after crossover, mutation, and refinement processes. The generated children becomes the latest generation and will serve as the new initial population. This is then repeated for $K$ generations, where at the last of it will be the $K$th generation, which contain the best solution or the optimal structural borders.
 
-\newpage
+\subsection{Application to Selected \arb[trans]{suwar} \arb{suwar}}
+The above algorithm will be applied to finding the structural borders for \arb[trans]{sUraTu 'l-baqaraT} \arb{sUraTu 'l-baqaraT}. According to Farrin, this \arb[trans]{sUraT} \arb{sUraT} can be divided into seven classes or groups that form a concentric pattern. This divisions of the 286 \arb[trans]{'AyAt} \arb{'AyAt} of the said \arb[trans]{sUraT} \arb{sUraT} are as follows: $A\;(1-39)$, $B\;(40-112)$, $C\;(113-141)$, $D\;(142-152)$, $C^*\;(153-177)$, $B^*\;(178-242)$, $A^*\;(243-286)$. 
 
-\section{Advantages of Computation}
+For the Genetic Algorithm, we will have the same number of divisions, seven, so that the results can be compared to what Farrin's divisions. There will be two types of initial population for the structural borders to generate for Dirichlet distribution. The first one is using Dirichlet($[1.0,\cdots,1.0]$), that is the values of all $\alpha$ parameters of Dirichlet distribution is set to 1.0, and there are sixth $\alpha$s or sixth 1.0s for the structural borders of the seven classes or groups. This will generate a joint distribution on the simplex that exhibits uniformity similar to Dirichlet($[1.0,1.0,1.0]$) for three dimension given in Figure \ref{fig:result_dirichlet_simplex}. The other set of population is the Dirichlet($[0.6,\cdots,0.6]$) which is almost similar to Dirichlet($[0.5,0.5,0.5]$) as in Figure \ref{fig:result_dirichlet_simplex}. 
+
+\begin{figure}[!t]
+    \centering
+    \includegraphics[width=\textwidth]{img/ga_dirichlet_costs.pdf}
+    \caption{Global Costs Across Generations of Genetic Algorithm using Dirichlet Distribution}
+    \label{fig:result_ga_dirichlet_cost}
+\end{figure}
+
+Both experiment were performed for 50 generations or iterations for 1,000 initial population of random structural borders sampled for each Dirichlet($[1.0,\cdots,1.0]$) and Dirichlet($[0.6,\cdots,0.6]$). In every generation, the components of the Genetic Algorithm are performed, from generating the initial population, to computing the fitness score, and then choosing the parent for generating the next generation, and then doing the crossover from the selected parent, and then mutating the result from the crossover, then doing the refinement of the chromosome, and finally treating the generated children as the new population. In addition, in every generation the average global cost as defined in Equation \ref{eq:result_global_cost} is computed. The goal is to minimize the global cost in order to find the mirror groups and the center of the concentric pattern. The results showed that the global costs for both experiments have been minimized beyond -2.0 after the 50th iteration or generation. The graph of the minimization of the global cost is provided in Figure \ref{fig:result_ga_dirichlet_cost}.
+
+\begin{figure}[!t]
+    \centering
+    \includegraphics[width=\textwidth]{img/ga_dirichlet_borders.pdf}
+    \caption{Structural Borders from Initial Population to Final Generation using Dirichlet($[1.0,\cdots,1.0]$) Distribution}
+    \label{fig:result_ga_first_final_borders}
+\end{figure}
+
+The structural borders found for the seven divisions for Dirichlet($[1.0,\cdots,1.0]$) are as follows: $A\;(1-11)$, $B\;(12-32)$, $C\;(33-52)$, $D\;(53-53)$, $C^*\;(54-82)$, $B^*\;(83-118)$, $A^*\;(119-286)$. Note that this may slightly be different for every generated initial population, since the initial population is randomly sampled from Dirichlet($[1.0,\cdots,1.0]$) distribution. For this paper though, the algorithm were set to a particular random seed for reproducibility purposes. Now, going back into the results. It is far from the one found by Farrin, and it is also not logically ideal. The reason is that, the center point is only one verse or \arb[trans]{'ayaT} \arb{'ayaT} that represents it, $D\;(53-53)$. In addition, there is a huge chunk of \arb[trans]{'AyAt} \arb{'AyAt} for $A^*$ having structural borders at 119 to 286. This is despite having a uniformly distributed points on the Dirichlet simplex. However, upon investigation of this points in the simplex, projecting it into one dimensional vector shows a skewed distribution for the structural borders of initial generation in Figure \ref{fig:result_ga_first_final_borders}. This is indeed expected due to the nature of the simplex, that even if the points are uniformly projected on Dirichlet's simplex, the projection of it to one dimension will make the points mostly fall into the lower values of the new axis. Upon inspection, the distribution of the projected points are Mixture of Beta Distribution, see the proof in Proposition \ref{prop:mixture_beta} in Appendix \ref{appendix:theoretical_results}. This is the reason why the resulting solution was only able to explore the lower values of the structural borders and not those beyond 200 for example, which has obviously very few points as shown in its histogram in the left plot in Figure \ref{fig:result_ga_first_final_borders}.
+
+The structural borders of final generation in Figure \ref{fig:result_ga_first_final_borders} does show a multi-modal distribution, which shows that the algorithm did worked, since it was able to transform from a skewed distribution into a multi-modal one, where the different modes correspond to the structural borders it converged to. Moreover, for Dirichlet($[0.6,\cdots,0.6]$), the results are as follows: $A\;(1-8)$, $B\;(9-19)$, $C\;(20-52)$, $D\;(53-53)$, $C^*\;(54-86)$, $B^*\;(87-227)$, $A^*\;(117-286)$. This is again problematic, and is also suffers from the skewed distribution of the projected initial structural borders from Dirichlet simplex discussed earlier. So now, how should we address this? The answer is to ignore the controls we get from Dirichlet Distribution through $\alpha$ parameters, and simply use the straightforward Uniform Distribution.
+
+For Uniform Distribution, the goal is to simply generate an initial population using Uniform($10,n-10$), where $n$ is the total number of \arb[trans]{'AyAt} \arb{'AyAt} in the \arb[trans]{sUraT} \arb{sUraT}, in this case $n=286$ for \arb[trans]{sUraTu 'l-baqaraT} \arb{sUraTu 'l-baqaraT}. The 10 and $n-10$ are meant to create a padding for the generated structural borders. The value can be anything that is above at least 2 but also not so big that it shrinks the samples to small range of possible structural borders. Unlike the skewed distribution from Dirichlet earlier for the initial population, the distribution this time around using Uniform will be \textit{uniform} across all values between 10 to 276 ($n-10$). The resulting minimization and structural borders of final generation are given in Figure \ref{fig:result_ga_uniform}. 
+
+\begin{figure}[!t]
+    \centering
+    \includegraphics[width=\textwidth]{img/ga_uniform_costs.pdf}
+    \caption{Global Costs Across Generations and Final Generation using Uniform($10,n-10$) Distribution}
+    \label{fig:result_ga_uniform}
+\end{figure}
+
+In Figure \ref{fig:result_ga_uniform}, it shows that the Genetic Algorithm did work on minimizing the global cost function as shown in the left plot of the said figure, which also went beyond -2.0. The histogram of the structural borders of the final generation as shown in the right plot of the said figure also shows multi-modality. Indeed, these modals are the structural borders it converged to. Unlike the one for Dirichlet in Figure \ref{fig:result_ga_first_final_borders}, the bins of the histogram goes beyond 200th border, indicating that the algorithm did found solutions beyond the said border. The best structural borders found by the algorithm are as follows: $A\;(1-44)$, $B\;(45-86)$, $C\;(87-162)$, $D\;(163-163)$, $C^*\;(164-195)$, $B^*\;(196-236)$, $A^*\;(237-286)$. This is indeed better than the one from Dirichlet Distribution since $A^*$ has a reasonable number of members in it, between \arb[trans]{'ayaT} \arb{'ayaT} 236 to 286. However, despite the centroid $D^*$ is still shrunk down to a single verse at 163rd. This shows that the algorithm has been agressive so much on minimizing the global cost function, that it shrunk the members of the centroid into one. This therefore leaves room for improvement for the algorithm, which will be discussed later. For now, the results are compared in Table \ref{tbl:struct_borders_baqarah}. Note that in the said table, the Unif and Dir are shorthand for Uniform and Dirichlet, and $[(1.0)]^6$ and $[(0.6)]^6$ are shorthand for a vector with sixth 1.0 and sixth 0.6 elements, respectively. The question now is, if Uniform($10,n-10$) provides better solution, how is it compared to Farrin's results? What are the topics in the resulting classes or groups? And do these form a concentric pattern? This is the goal of the next section.
 
 \begin{table}[!t]
-    \begin{tabularx}{\textwidth}[!h]{cXcc}
-        \toprule\\[-0.3cm]
-        Morph. & Surah \& Ayah & Count & Meccan \% \\[0.2cm]
-        \midrule\\[-0.4cm]
-        \arb[fullvoc]{'l-l_ahi} & Divine Unity \& Singularity (Tawhid) [6:164, 28:88, 2:163]; Faith \& Belief (Iman) [49:15, 65:11]; Divine Guidance \& Revelation [2:2, 5:48]; Prophet \& Messengers [2:136, 48:29]; The Day of Judgement \& Afterlife [2:281, 68:34]; Moral \& Ethical Teachings [16:90, 5:1]; Stories of Previous Nations [47:10]; Relationship Between Allah \& Creation [50:16, 51:56]; Rules \& Legislation [62:9, 4:2]; Struggle \& Perseverance [22:78, 2:155] & $710$ & 47\% \\[0.2cm]
-        \arb[fullvoc]{llahi} & Divine Sovereignty \& Ownership [2:284, 3:109, 3:129]; Divine Attributes [4:170, 31:26, 4:139, 9:91]; Creator \& Sustainer [6:1, 35:1]; Purpose of Worship [53:62, 22:31]; Divine Judgement \& Authority [22:56, 24:64, 3:129]; Gratitude \& Praise [1:2, 6:1, 34:1, 35:1]; Divine Will \& Power [14:4, 3:129]; Submission to Allah [2:112, 4:125] & $122$ & 55\%\\[0.2cm]
-        \arb[fullvoc]{'l-l_ahu} & Divine Unity \& Singularity (Tawhid) [112:1, 2:255, 2:116, 10:68]; Divine Sovereignty \& Power [7:54, 10:3]; Divine Knowledge [3:29, 9:94]; Divine Justice [40:20, 3:57]; Divine Guidance [2:213, 24:46, 57:25]; Divine Will \& Decree [14:27, 5:48]; Divine Names \& Attributes [59:24, 24:35]; Relationship with Believers [98:8]; Divine Creation \& Sustenance [23:14, 7:54]  & $624$ & 39\% \\[0.2cm]
-        \arb[fullvoc]{'l-l_aha} & Divine Unity \& Singularity (Tawhid) [7:59, 19:36, 98:5]; Divine Attributes [49:16, 9:5, 2:284]; Obedience to Allah \& His Messenger [4:59, 64:12, 48:17]; Piety \& God Conciousness [3:102, 2:194, 8:25]; Reward \& Punishment [47:12, 40:17, 22:14]; Prayer, Charity, \& Righteous Deeds [98:5]; Stories of Prophets \& Past Nations [11:50, 11:61]; Faith \& Belief [49:10]; Justice \& Fairness [16:90] & $351$ & 30\% \\[0.2cm]
-        \arb[fullvoc]{'il---a---_aha} & 2:133, 3:6, 6:106, $\cdots$, 45:23, 47:19, 73:9 & $17$ & 76\% \\[0.2cm]
-        \arb[fullvoc]{'il---a---_ahu} & 2:163, 16:22, 18:110, $\cdots$ , 21:108, 29:46, 41:6 & $8$ & 88\% \\[0.2cm]
-        \arb[fullvoc]{'il---a---_ahiN} & 3:62, 28:38, 38:65 & $3$ & 67\%\\[0.2cm]
-        \arb[fullvoc]{|"'AlihaTaN} & 6:74, 18:15, 21:21, $\cdots$, 36:23, 37:86, 43:45 & $9$ & 100\% \\[0.2cm]
-        \arb[fullvoc]{|"'Alihata} & 7:127, 21:36, 21:68, 71:23 & $4$ & 100\% \\[0.2cm]
-        \arb[fullvoc]{'il---a---_ahaN} & 7:138, 18:14, 26:29 & $3$ & 100\%\\[0.2cm]
-        \arb[fullvoc]{|"'Alihati} & 11:53, 11:54, 19:46, 25:42, 37:36, 37:91, 38:6, 46:22 & $8$ & 100\% \\[0.2cm]
-        \arb[fullvoc]{|"'Alihatu} & 11:101 & $1$ & 100\% \\[0.2cm]
-        \arb[fullvoc]{'il---a---_ahuN} & 14:52, 21:29, 43:84, 52:43 & $4$ & 100\% \\[0.2cm]
-        \arb[fullvoc]{|"'AlihaTuN} & 17:42, 21:22, 21:43 & $3$ & 100\% \\[0.2cm]
-        \arb[fullvoc]{'il---a---_ahi} & 20:97, 40:37, 114:3 & $3$ & 100\% \\[0.2cm]
-        \arb[fullvoc]{--|"'Alihati}& 21:59, 21:62 & $2$ & 100\%\\[0.2cm]
-        \arb[fullvoc]{|"'il---a---_ahuN} & 27:60, 27:61, 27:62, 27:63, 27:64 & $5$ & 100\% \\[0.2cm]
-        \arb[fullvoc]{|"'AlihaTa} & 38:5 & $1$ & 100\% \\[0.2cm]
-        \arb[fullvoc]{'alihatu} & 43:58 & $1$ & 100\% \\[0.2cm]
+    \caption{Structural Borders of \arb[trans]{sUraTu 'l-baqaraT} \arb{sUraTu 'l-baqaraT} using Genetic Algorithm}
+    \label{tbl:struct_borders_baqarah}
+    \begin{tabularx}{\textwidth}[!h]{XcccccX}
+        \toprule
+        &\textbf{Groups}&\textbf{Farrin}&\textbf{Unif($10,n-10$)}&\textbf{Dir($[(1.0)]^6$)}&\textbf{Dir($[(0.6)]^6$)}&\\
+        \midrule
+        &$A$&$1-39$&$1-44$&$1-11$&$1-8$&\\
+        &$B$&$40-112$&$45-86$&$12-32$&$9-19$&\\
+        &$C$&$113-141$&$87-162$&$33-52$&$20-52$&\\
+        &$D$&$142-152$&$163$&$53$&$53$&\\
+        &$C^*$&$153-177$&$164-195$&$54-82$&$54-86$&\\
+        &$B^*$&$178-242$&$196-236$&$83-118$&$87-227$&\\
+        &$A^*$&$243-286$&$237-286$&$119-286$&$117-286$&\\
         \bottomrule
     \end{tabularx}
-    \caption{Morphologies of \arb[novoc]{Alh} in the Qur'\=an}
-    \label{tbl:result_Alh_morphologies_theme}
 \end{table}
+
+\section{Thematic Analysis}\label{sec:result_thematic_analysis}
+The explanation for topics within the classes identified by Farrin are provided in detail in his book \cite<\textit{see}>{farrin2014structure}. For the one found by Genetic Algorithm though, it requires another Machine Learning technique for extracting the themes. There are several methodology, the classic one based on Bayesian Statistics is the Latent Dirichlet Allocation (LDA), and the recent one is the BERTopic \cite{grootendorst2022bertopic}. Another alternative is based on Generative Pre-Trained Transformer (GPT) \cite{radford2018improving} models such as ChatGPT.
+
+For this paper, BERTopic can be used. However, GPT models can also be used like ChatGPT. This is because ChatGPT models were pre-trained across many texts including the Qur'\=an and most research and books classic or modern regarding the Qur'\=an. The point is that ChatGPT models have good context about the Qur'\=an already. Further, the Qur'\=an is also a well known Holy Book that many are aware of. Had it been other text data other than the Qur'\=an, ChatGPT would surely have no context about it and will require the use of other methods like BERTopic. For the Qur'\=an though, ChatGPT can be used for extracting topics, and this paper will use it but with validation by the author as well. At the time of writing, the OpenAI ChatGPT model used is the GPT-4o model. The next paragraph is the discussions from ChatGPT using the following prompt: \textit{I have the following groupings for surah baqarah for concentric pattern using Raymond Farrin's method. Help in creating the descriptions (themes or topics) for the following groupings of surah baqarah's verses}. The structural borders where added in the prompt as well.
+
+\begin{quotation}
+    The opening section $(A: 1-44)$ introduces the Qur'\=an as divine guidance for the righteous, emphasizing belief, the covenant, and calls on the Children of Israel to remember God's favors and uphold their responsibilities. This is mirrored by the closing section $(A^*: 237-286)$, which also focuses on fulfilling duties—particularly financial obligations—emphasizing faith, obedience, and concluding with a profound invocation that reflects submission to God. Sections $B\;(45-86)$ and $B^*\;(196-236)$ form a pair, with $B$ detailing the repeated transgressions and hypocrisies of the Children of Israel, while $B^*$ presents the laws and moral guidelines for the new Muslim community, especially regarding rituals and social conduct, illustrating how the new ummah should not repeat past failures. Sections $C\;(87-162)$ and $C^*\;(164-195)$ explore God's justice, signs, and the comprehensive nature of His message: $C$ discusses prophetic missions, Abraham's role, and the universality of the divine message; $C^*$ reflects on the signs of God in creation and prescribes righteous practices such as charity, fasting, and pilgrimage. At the very center stands verse 163 ($D$), a powerful proclamation of tawḥīd—the oneness of God—serving as the theological and structural heart of the surah. This intricate arrangement not only enhances the literary coherence of the surah but also reinforces its spiritual and legal guidance through thematic symmetry.
+\end{quotation}
+
+\section{Advantages of Computation}
+Another goal of this paper is to emphasize the advantage of using computations. All of the results above were programmed or coded using Julia programming language, using libraries such as QuranTree.jl by \citeA{asaad2021qurantree} and Yunir.jl by \citeA{al_ahmadgaid_b_asaad_yunir}, and of course using other libraries necessary for creating the visualizations. All of the codes used for generating the results are provided in the following link as mentioned in Chapter \ref{ch:methodology}:
+\begin{center}
+\url{https://github.com/alstat/ma-thesis-codes}
+\end{center}
+The advantage of this approach is that it can automate the manual process of reading through the Qur'\=an and investigating it one-by-one. In fact, generating Table \ref{tbl:result_Alh_morphologies} as discussed above were generated in under 5 seconds and few lines of codes in Listing \ref{fig:result_Alh_morphologies}. Coding also opens opportunities for expressing complex instructions to computers to execute, such as the complexity of the Genetic Algorithm. Further, any Islamic students who will also learn this will open other career opportunities as well, since skills on programming and coding are needed in many industries.
+\section{Discussions on Islamic Philosophy}\label{sec:result_islamic_philosophy}
+At this point, it is necessary to answer some philosophical questions. Why would one need to use statistical and complex text analytics for studying the Qur'\=an? How does this help a Muslim in his faith? How would the great Islamic philosophers view such approach?
+
+As pointed out by Sayyed Hussein Nasr in \cite{nasr2013history}, Islamic philosophy is essentially "prophetic philosophy" based on the hermeneutics of a Sacred Text which is the result of a revelation that is inalienably linked to the microcosmic intellect and which alone is able to actualize the dormant possibilities of the intellect within us. He furhter asserted that, Islamic philosophy, as understood from within that tradition, is also an unveiling of the inner meaning of the Sacred Text, a means of access to that \arb[trans]{.haqIqaT} \arb{.haqIqaT}\footnote{From \cite{nasr2013history} \arb[trans]{'l-.haqIqaT} \arb{'l-.haqIqaT} means both truth and reality. It is realted to God Himself, one of whose names is \arb[trans]{'l-.haqq} \arb{'l-.haqq} or the Truth, and is that whose discovery is the goal of all Islamic philosophy.} which lies hidden within the inner dimension of the Qur'\=an.
+
+Indeed, the unique structure of the Qur'\=an as not being chronological, or following other typical arrangement of a book, is what separates it from other Holy Books. If God were to write a book, how would it be arranged or structured? A question that I kept pondering. If it had been chronological, it would not make it special. In fact any typical arrangement for a book, will not make any book claimed to be from God to be not special. However, the unique arrangement and structure of the Qur'\=an have intrigue many scholars both Islamic and orientalist. It is this effort of studying the structure of the Qur'\=an where some of the \arb[trans]{.haqIqaT} \arb{.haqIqaT} lies. However, will we ever find this hidden structure or formula? A question to be discussed in the next section.
+
+\subsection{The Hidden Structure of the Qur'\=an}
+The Qur'\=an as is further proven in the previous section of this paper, has the obvious unique literary style. This is strong rhythmic style of the \arb[trans]{'AyAt} \arb{'AyAt} serves many purposes. The first one is preservation of the Qur'\=an. One has to understand that the Qur'\=an as believed by the Muslims were revealed orally, transferred orally, and preserved orally. It was revealed at the time Arabic ortographies where at its basic form, where the letters has no diacritics, no vowels, but rather consonantal form. 
+
+The evolution of the orthographies were all meant to cater the intricate recitation of the orally preserved Qur'\=an. The long vowels and \arb[trans]{maddaT} \arb{maddaT} where all added to capture the recitation of the said Holy Book. However, the structure of it as to why it is arranged accordingly has no obious pattern. Will we ever find it, however?
+
+If the Qur'\=an is the Word of God, then being able to find its exact hidden structure or exact formula would reveal God's thinking. Such truth or \arb[trans]{.haqIqaT} \arb{.haqIqaT} to be precised would cost so much. It would almost mean seeing through the hereafter already, which would mean judgment would necessarily follow, as the time for choice and free will would be over because of the obvious truth already.
+
+\subsection{Implications of Errors of Mathematical Models}

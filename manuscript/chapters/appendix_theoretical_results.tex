@@ -1,117 +1,144 @@
 \chapter{Theoretical Results}
 \label{appendix:theoretical_results}
-\section{Rhythmic Analyses}
 \section{Textual Concentrism}
-
+The following are the mathematical formulations of the proposed solution for finding the optimal structural borders of classes of concentric structure.
 \begin{defn}[\it Concentric]\label{defn:concentric}
-    Let $\mathscr{D}$ be a collection of texts, then $\mathscr{D}$ is said to have a \textit{concentric} or \textit{ring} structure if and only if $\exists\;\mathscr{A}_i\subseteq\mathscr{D},\mathscr{C}\subseteq\mathscr{D},$ and $\mathscr{A}_i^{*}\subseteq\mathscr{D},i\in\mathbb{N}_1$; and that these sets are arranged as follows in $\mathscr{D}$:  $\mathscr{A}_1,\cdots,\mathscr{A}_n,\mathscr{C},\mathscr{A}_1^{*},\cdots,\mathscr{A}_n^{*}$, such that $\mathscr{A}_i^{*}$ \underline{mirrors} $\mathscr{A}_i$ in semantic, and that $\mathscr{C}$ is the center texts of the document $\mathscr{D}$ that is \underline{not related} to both $\mathscr{A}_i$ and $\mathscr{A}_i^{*}$.
+    Let $\mathscr{D}$ be a collection of texts, then $\mathscr{D}$ is said to have a \textit{concentric} or \textit{ring} structure if and only if $\exists\;\mathscr{A}_i\subseteq\mathscr{D},\mathscr{C}\subseteq\mathscr{D},$ and $\mathscr{A}_i^{*}\subseteq\mathscr{D},i\in\mathbb{N}_1$; and that these sets are arranged as follows in $\mathscr{D}$:  $\mathscr{A}_1,\cdots,\mathscr{A}_n,\mathscr{C},\mathscr{A}_1^{*},\cdots,\mathscr{A}_n^{*}$, s.t. $\mathscr{A}_i^{*}$ \underline{mirrors} $\mathscr{A}_i$ in semantic, and that $\mathscr{C}$ is the center section of the document $\mathscr{D}$ that is \underline{not related} to both $\mathscr{A}_i$ and $\mathscr{A}_i^{*}$.
 \end{defn}
 
-The underlined words above will be used in the next section, because mathematically it begs further definition on what we mean by "mirrors" and "not related" mathematically. This will be defined in the next section. Now, another pattern that was observed by \citeA{farrin2014structure} as chiasmus, which is basically \textit{ring} structure but the second half of the ring after the center is the "complement" or "reversal" of the first half of the document before the center. The following is its mathematical definition.
-
-\begin{defn}[\it Chiasmus]\label{defn:chiasmus}
-    Let $\mathscr{D}$ be a collection of texts, then $\mathscr{D}$ is said to have a \textit{concentric} or \textit{ring} structure if and only if $\exists\;\mathscr{A}_i\subseteq\mathscr{D},\mathscr{C}\subseteq\mathscr{D},$ and $\mathscr{A}_i^{*}\subseteq\mathscr{D},i\in\mathbb{N}_{geq 1}$; and that these sets are arranged as follows in $\mathscr{D}$:  $\mathscr{A}_1,\cdots,\mathscr{A}_n,\mathscr{C},\mathscr{A}_1^{c},\cdots,\mathscr{A}_n^{c}$, such that $\mathscr{A}_i^{c}$ is the \underline{complement} or \underline{reversal} of $\mathscr{A}_i$ in semantic, and that $\mathscr{C}$ is the center texts of the document $\mathscr{D}$ that is \underline{not related} to both $\mathscr{A}_i$ and $\mathscr{A}_i^{c}$.
+The underlined words above will be used in the next section, because mathematically it begs further definition on what we mean by "mirrors" and "not related." This will be defined in the next section. Now, another pattern that was observed by \citeA{farrin2014structure} is \textit{chiasm}, which is basically \textit{concentrism} structure but with no center class. Succeeding definitions and results outline the proposed mathematical formulation of finding the optimal structural borders of a given number of classes of concentric structure.
+\begin{defn}[\it CL-AraBERT Embedding Function]
+    Let $\mathscr{D}$ be the collection of texts, e.g. \arb[trans]{'AyAt} \arb{'AyAt} in a \arb[trans]{suwar} \arb{suwar}, and let $s_i\in\mathscr{D}$, then  $\omega:s\rightarrow\mathbb{R}^{r},r\in\mathbb{N}_{\geq 1}$ is the \textit{CL-AraBERT} embedding function s.t. $\omega(s_i)=\mathbf{z}_i\in\mathbb{R}^{r}$, where $\mathbf{z}_i$ is the $i$th CL-AraBERT sentence embedding of the document $\mathscr{D}$, and $r$ is the dimension of the embedding space. 
 \end{defn}
-There are other structures that can be observed in the Qur'\=an, like \textit{parallelism} where themes are repeated in other \arb[trans]{sUraT} \arb{sUraT}; and \textit{segment structure}, where a particular segment starts and ends with similar phrases or themes, creating a bracket around the content; but, these other structures are not studied in this paper. Apart from this, there is also the "mathematical patterns" of the Qur'\=an which has been extensively studied by \citeA{rashad1981}, but this is also not studied in this paper.
-\subsection{Optimizing Genetic Algorithm}\label{sec:bayes-opt}
-From Defn. \ref{defn:concentric} and \ref{defn:chiasmus}, it both states that, a document $\mathscr{D}$ may only be considered \textit{concentric} or \textit{chiasmus} if and only if "there exist", denoted by the symbol $\exists$. Indeed, subset of texts $\mathscr{A}_i$s, $\mathscr{C}$, and $\mathscr{A}_i^{*}$ or $\mathscr{A}_i^{\text{c}}$ are all determined manually by the investigator. In this study, we propose to automate the determination of these subsets of texts of document $\mathscr{D}$, and this is through the use of an optimization algorithm called Bayesian Optimization. The idea behind Bayesian optimization is that it approximates the objective function with a \textit{surrogate} function, and using this surrogate to find the global maximum or minimum of the objective function. Furthermore, it does this by fitting the surrogate function to the objective function in as few input points or iteration as possible. As such, an \textit{acquisition} function is needed for choosing smartly the next input points to be used for fitting the surrogate. Using these components, a Bayes' Theorem is used in fitting the surrogate.
-
-To do this, a \textit{global objective function} must be defined, for this study, the cosine similarity discussed in the previous section will be used as the said cost function that will either be maximized or minimized. The core model for this optimization is the Gaussian Process defined below.
-\subsubsection{Surrogate Function}
-The surrogate function aims to approximate the objective function. In Bayesian, optimization, the surrogate function is defined by the Gaussian process (GP).
-\begin{defn}[\it Gaussian Process]\label{defn:gp}
-    Let $Y_1,Y_2,\cdots,Y_T$ be sequence of random variables such that $Y_t\in\mathbf{Y}$, then the sequence is a \textit{Gaussian process} (GP) if and only if $\mathbf{Y}\overset{\mathrm{iid}}{\sim}\mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma})$.
+\begin{defn}[\it Structural Borders]\label{defn:structural_borders}
+    Let $\mathscr{D}$ be a collection of texts, then for $s_i\in\mathscr{D}, i\in\mathbb{N}$, \exists\; \textit{structural borders} $x_0<\cdots<x_{n}$ s.t. $\mathscr{A}_j:=\{s_{x_{j-1}},\cdots,s_{x_{j}}\}\subseteq\mathscr{D},j\in\mathbb{N}$.
 \end{defn}
-\begin{defn}[\it Parameter Space]\label{defn:parameter_space}
-    Let $\mathbf{s}_i\in\mathscr{D}$ be a word embedding of an \arb[trans]{'ayaT} \arb{'ayaT} in document $\mathscr{D}$, which can be a \arb[trans]{sUraT} \arb{sUraT}, group of \arb[trans]{suwar} \arb{suwar}, or group of \arb[trans]{'AyAt} \arb{'AyAt} within a \arb[trans]{sUraT} \arb{sUraT}. Further, suppose $\mathscr{A}_i,\mathscr{C},\mathscr{A}_i^{*}\subseteq\mathscr{D}$ such that $\mathscr{A}_i:=\{\mathbf{s}_{i,1},\cdots,\mathbf{s}_{i,n}\},\linebreak\mathscr{C}:=\{\mathbf{s}_{n+1},\cdots,\mathbf{s}_{n+c}\}$, and $\mathscr{A}_i^{*}:=\{\mathbf{s}_{i,(n+c+1)},\cdots,\mathbf{s}_{i,(n+c+n)}\}$, then the \textit{parameters} to be optimized are assigned to $\mathbf{v}:=[n,c]^{\text{T}}$, and since $n,c,m\in\mathbb{N}_{\geq 2}$, then the \textit{parameter space} is $\mathscr{P}:=\mathbb{N}_{\geq 2}\times\mathbb{N}_{\geq 2}\times\mathbb{N}_{\geq 2}=(\mathbb{N}_{\geq 2})^3$, so that $\mathbf{v}\in\mathscr{P}$. 
-\end{defn}
-\begin{defn}[\it Semi-Circle Cost Function]\label{defn:semi_circle_cost}
-    From Defn. \ref{defn:parameter_space}, let $r_1$ to denote that $\mathscr{A}_i$ is "related" to $\mathscr{A}_i^{*}$, and $r_2$ to denote that $\mathscr{A}_i$ is "reversal" of $\mathscr{A}_i^{*}$, such that $\eta:=\{r_1,r_2\}$, then  the \textit{semi-circle} cost function between $\mathscr{A}_i$ and $\mathscr{A}_i^{*}$ is defined as:
+\begin{defn}[\it Dirichlet Structural Proportions]\label{defn:dirichlet_structural_proportions}
+    Let $\mathbf{x}_i:=[x_{i,1},\cdots,x_{i,n-1}]^{\top}$ where $i\in\mathbb{N}_{\leq v}$ and $n$ is the total number of concentric classes, then the \textit{Dirichlet Structural Proportions} are generated from the Dirichlet distribution, that is $\mathbf{x}_i\overset{\text{iid}}{\sim}\mathcal{D}(\alpha_1,\cdots,\alpha_{n-1})$, where $\alpha_i\in\mathbb{R}_{>0}$, and $\sum_{i=1}^{n-1}\alpha_i=1$. Thus,
     \begin{equation}
-        \operatorname{\gamma}_{a}(\mathbf{v};\mathscr{A}_i,\mathscr{A}_i^{*},\eta):=\begin{cases}
-            \frac{1}{n}\sum_{k=1}^{n}\cos\left(\theta_{\mathbf{s}_{i,k};\mathbf{s}_{i,n+l}}\right),&\text{if}\;\eta=r_1\\
-            1-\frac{1}{n}\sum_{k=1}^{n}\cos\left(\theta_{\mathbf{s}_{i,k};\mathbf{s}_{i,n+l}}\right),&\text{if}\;\eta=r_2\\
-        \end{cases}
+        \mathcal{D}(\mathbf{x}_i|\alpha_1,\cdots,\alpha_{n-1}):=\frac{1}{B(\alpha_1,\cdots,\alpha_{n-1})}\prod_{j=1}^{n-1}x_{i,j}^{\alpha_j-1},
     \end{equation}
+    where $B(\alpha_1,\cdots,\alpha_{n-1})=\frac{\prod_{j=1}^{n-1}\Gamma(\alpha_j)}{\Gamma(\sum_{j=1}^{n-1}\alpha_j)}$, and $\Gamma(x)=\int_0^{\infty}t^{x-1}e^{-t}\D t$.
 \end{defn}
-\begin{defn}[\it Center Cost Function]\label{defn:center_cost}
-    From Defn. \ref{defn:parameter_space}, the \textit{center} cost function is defined as:
-    \begin{equation}
-        \operatorname{\gamma}_{b}(\mathbf{v};\mathscr{A}_i,\mathscr{C},\mathscr{A}_i^{*}):=2-\frac{1}{nc}\sum_{k=1}^{n}\sum_{l=1}^{c}\cos\left(\theta_{\mathbf{s}_{i,k};\mathbf{s}_{n+l}}\right)-\frac{1}{nc}\sum_{k=1}^{n}\sum_{l=1}^{c}\cos\left(\theta_{\mathbf{s}_{n+l};\mathbf{s}_{i,n+c+k}^{*}}\right).
-    \end{equation}
-\end{defn}
-\begin{defn}[\it Global Cost Function]\label{defn:global_cost}
-    From Defn. \ref{defn:parameter_space}-\ref{defn:center_cost}, the \textit{global} cost function is defined as:
-    \begin{equation}
-        \operatorname{\gamma}_{g}(\mathbf{v};\mathscr{A}_i,\mathscr{C},\mathscr{A}_i^{*},\eta):=\operatorname{\gamma}_{a}(\mathbf{v};\mathscr{A}_i,\mathscr{A}_i^{*},\eta)+\operatorname{\gamma}_{b}(\mathbf{v};\mathscr{A}_i,\mathscr{C},\mathscr{A}_i^{*})
-    \end{equation}
-\end{defn}
-\begin{defn}[\it Optimal Parameters] From Defn. \ref{defn:global_cost}, the optimal parameters would be:
-\begin{equation}
-    \hat{\mathbf{v}}:=\underset{n,c}{\arg\min}\operatorname{\gamma}_{g}(\mathbf{v};\mathscr{A}_i,\mathscr{C},\mathscr{A}_i^{*},\eta),
-\end{equation}    
-\end{defn}
-\begin{prop}\label{prop:hypedist}
-    Let $\mathscr{P}$ be the parameter space and suppose $\gamma(\mathbf{v})\overset{\mathrm{iid}}{\sim}\mathcal{N}(m(\mathbf{v}),k(\mathbf{v},\mathbf{v})), \linebreak\forall \mathbf{v}\in\mathscr{P}$, then for any $\boldsymbol{\delta}:=[\gamma(\mathbf{v}_1),\cdots,\gamma(\mathbf{v}_n)]^{\top}$, $\boldsymbol{\delta}\overset{\mathrm{iid}}{\sim}\mathcal{N}_n(\mathbf{m},\mathbf{K})$, where 
-    \begin{equation}
-        \mathbf{m}:=[m(\mathbf{v}_1),\cdots,m(\mathbf{v}_n)]^{\top}
-    \end{equation}
-    and
-    \begin{equation}
-        \mathbf{K}:=\left[\begin{matrix}
-        k(\mathbf{v}_1,\mathbf{v}_1)&\cdots&k(\mathbf{v}_1,\mathbf{v}_n)\\
-        \vdots&\ddots&\vdots\\
-        k(\mathbf{v}_n,\mathbf{v}_1)&\cdots&k(\mathbf{v}_n,\mathbf{v}_n)\\
-        \end{matrix}\right]
-    \end{equation}
-\end{prop}
-\begin{proof}
-    The proof follows from the proof of Theorem 1.2.9 of \citeA{muirhead2005}.
-\end{proof}
 \begin{remark}
-    From Proposition \ref{prop:hypedist} and Definition \ref{defn:gp}, $\boldsymbol{\delta}$ is a GP.
+    The structural proportions need to be sorted, thus if $\rho:\mathscr{X}\rightarrow\tilde{\mathscr{X}}$ is the sorting function s.t. $\mathscr{X}:=\{\mathbf{x}_1,\cdots,\mathbf{x}_m\}$, then $\rho(\mathscr{X})=\tilde{\mathscr{X}}=\{[x_{i,j},\cdots,x_{i,n-1}]^{\top}:x_{i,j}<x_{i,j+1}\}$ is the set of sorted structural proportions.
 \end{remark}
-\begin{prop}\label{prop:jointpdf}
-    From Proposition \ref{prop:hypedist}, suppose $\boldsymbol{\delta}_{*}:=[\gamma(\mathbf{v}_{n+1}),\cdots,\gamma(\mathbf{v}_{n+p})]^{\top}$, such that $\boldsymbol{\delta}_{*}\overset{\mathrm{iid}}{\sim}\mathcal{N}_p(\mathbf{m}_*,\mathbf{K}_*)$ then 
+
+\begin{defn}[\it Dirichlet Propulation]
+    From Definition \ref{defn:dirichlet_structural_proportions}, let $v$ be the total number of sections of texts, e.g. number of \arb[trans]{'AyAt} \arb{'AyAt} in a \arb[trans]{suwar} \arb{suwar}, then the \textit{Dirichlet population} is $\mathbf{y}_i:=v\mathbf{x}_i=[vx_{i,1},\cdots,vx_{i,n-1}]^{\top},\mathbf{y}_i\in\mathscr{P}$, where $\mathscr{P}$ is the solution space.
+\end{defn}
+\begin{remark}
+    If the goal is to find $n$ classes for the concentric structure, then the intervals for structural borders are $[x_0=1,x_1),[x_1,x_2),\cdots,[x_{n-1},x_n=v]$ where $v$ is the total number of sections (e.g. \arb[trans]{'ayaT} \textnormal{\arb{'ayaT}} as the section) of the texts. Therefore, since $x_0$ and $x_n$ are both known, then the only unknowns are $x_1,\cdots,x_{n-1}$, and these are the structural proportions. Thus, the Dirichlet population is a vector of $n-1$ proportions, i.e. $\mathbf{y}_i:=[vx_{i,1},\cdots,vx_{i,n-1}]^{\top}$.
+\end{remark}
+\begin{defn}[\it Discrete Uniform Population]
+    Let $\mathbf{x}_i:=[x_{i,1},\cdots,x_{i,n-1}]^{\top}$ where $n$ is the total number of target classes for concentric structure, then the \textit{uniform population} is generated from the discrete uniform distribution, that is $\mathbf{x}_i\overset{\text{iid}}{\sim}\mathcal{U}(k,m-k)$, where $k\in\mathbb{N}_{\geq \delta},\delta>1$ serves as the padding, and $x_{i,j}\in\mathbb{R}_{>0}$, and $\sum_{j=1}^{n-1}x_{i,j}=1$. Thus,
     \begin{equation}
-        \left[
-        \begin{matrix}
-            \boldsymbol{\delta}\\
-            \boldsymbol{\delta}_{*}\\
-        \end{matrix}
-        \right]\overset{\mathrm{iid}}{\sim}
-        \mathcal{N}_{n+p}\left(\left[
-        \begin{matrix}
-            \mathbf{m}\\
-            \mathbf{m}_{*}\\
-        \end{matrix}
-        \right],\left[
-        \begin{matrix}
-            \mathbf{K}&\mathbf{K}_{*}\\
-            \mathbf{K}_{*}^{\top}&\mathbf{K}_{**}\\
-        \end{matrix}
-        \right]\right)
+        \mathcal{U}(\mathbf{x}_i|k,v-k):=\prod_{j=1}^{n-1}\frac{1}{v-2k}.
     \end{equation}
+\end{defn}
+\begin{remark}
+    For this study, $k$ is set to 10 for finding the optimal structural borders of \arb[trans]{sUraTu 'l-baqaraT} \textnormal{\arb{sUraTu 'l-baqaraT}}.
+\end{remark}
+\begin{prop}\label{prop:mixture_beta}
+    Let $\mathbf{x}_i:=[x_{i,1},\cdots,x_{i,n-1}]^{\top}\overset{\textnormal{iid}}{\sim}\mathcal{D}(\alpha_1,\cdots,\alpha_{n-1}),i\in\mathbb{N}_{\leq m}$, s.t. $y_k\in\{x_{1,1},\cdots,x_{1,n-1},x_{2,1},\cdots,x_{2,n-1},\cdots,x_{m,n-1}\}$, then the distribution of $y_k$ is given by:
+\begin{equation}
+y_k\overset{\textnormal{iid}}{\sim}\frac{1}{n-1}\sum_{i=1}^{n-1}\mathcal{B}(\alpha_i,\alpha_0-\alpha_i),\quad\text{where}\;\alpha_0=\sum_{i=1}^{n-1}\alpha_i,
+\end{equation}
+and $\mathcal{B}(\cdot)$ is a Beta distribution function.
 \end{prop}
 \begin{proof}
-    Let $\mathbf{u}:=[\boldsymbol{\delta},\boldsymbol{\delta}_{*}]^{\top}$, then $\mathbf{u}=[\gamma(\mathbf{v}_1),\cdots,\gamma(\mathbf{v}_{n+p})]^{\top}$. Further, since $\mathbf{\gamma}(\mathbf{v}_i)\overset{\mathrm{iid}}{\sim}\mathcal{N}(m(\mathbf{v}_i),k(\mathbf{v}_i,\mathbf{v}_i)),\forall i\in\mathbb{N}_{\leq n+p}$, then the joint distribution of the $\gamma(\mathbf{v}_i)$s, i.e. $\mathrm{Pr}(\mathbf{u})$, follows from the proof of Theorem 1.2.9 of \citeA{muirhead2005}.
-\end{proof}
-\begin{cor}\label{cor:condpdf}
-From Proposition \ref{prop:jointpdf}, let $\mathbf{m}$ and $\mathbf{m}_{*}$ be zero vectors, then the following conditional distribution is true:
-    \begin{equation}\label{eq:gp_updater}    \boldsymbol{\delta}_*\mid\boldsymbol{\delta}\overset{\mathrm{iid}}{\sim}\mathcal{N}_{p}(\mathbf{K}_{*}^{\top}\mathbf{K}^{-1}\boldsymbol{\delta},\mathbf{K}_{**}-\mathbf{K}_{*}^{\top}\mathbf{K}^{-1}\mathbf{K}_{*}).
-\end{equation}
-\end{cor}
-\begin{proof}
-    The proof follows by reversing the condition from $\mathbf{X}_1\mid\mathbf{X}_2$ to $\mathbf{X}_2\mid\mathbf{X}_1$ of the proof of Theorem 1.2.11 of \cite{muirhead2005}.
-\end{proof}
-\begin{defn}[\it Lower Confidence Bound]\label{defn:lcb}
-    Let $m(\mathbf{v})$ be the mean of the GP, then the Lower Confidence Bound (LCB) notated as $\xi$ is given by
-    \begin{equation}
-        \xi(\mathbf{v}\mid\zeta):=m(\mathbf{v})-\zeta k(\mathbf{v},\mathbf{v}),
+    For a fixed $i$, the marginal distribution of $x_{i,j}$ is:
+    \begin{equation}\label{eq:dirichlet_marginal}
+        x_{i,j}\overset{\textnormal{iid}}{\sim}\mathcal{B}(\alpha_j,\alpha_0-\alpha_j),\quad\text{where}\;\alpha_0=\sum_{j=1}^{n-1}\alpha_j,
     \end{equation}
-    where $\zeta$ is the balancing factor.
+    This is a known property of the Dirichlet distribution, where each coordinate marginal follows a Beta distribution. Now, let 
+    \begin{equation}
+        \mathcal{Y}:=\{x_{i,j}:i\in\mathbb{N}_{\leq m}, j\in\mathbb{N}_{\leq n-1}\},
+    \end{equation}
+    then $k\in\mathbb{N}_{\leq m(n-1)}$. Let $y_k$ be a uniformly random draw from the full set $\mathcal{Y}$, then 
+    \begin{equation}
+        p(y_k=x_{i,j})=\frac{1}{m(n-1)}.
+    \end{equation}
+    Hence, the distribution of $y_k$ is given by:
+    \begin{equation}
+        p(y_k\leq z)=\frac{1}{m(n-1)}\sum_{i=1}^m\sum_{j=1}^{n-1}p(x_{i,j}\leq z).
+    \end{equation}
+    Further, since $x_{i,j}$ is independent and identically Beta distributed as in Equation \ref{eq:dirichlet_marginal} for fixed $j$, then:
+    \begin{equation}
+        p(x_{1,j}\leq z)=p(x_{2,j}\leq z)=\cdots=p(x_{m,j}\leq z)=p(x_{i,j}\leq z),
+    \end{equation}
+    so that for fixed $j$, we have:
+    \begin{equation}
+        \sum_{i=1}^m p(x_{i,j}\leq z)=m\cdot p(x_{i,j}\leq z).
+    \end{equation}
+    Thus, we can write:
+    \begin{equation}
+        p(y_k\leq z)=\frac{1}{n-1}\sum_{j=1}^{n-1}p(x_{i,j}\leq z).
+    \end{equation}
+    Therefore,
+    \begin{equation}
+        y_k\overset{\textnormal{iid}}{\sim}\frac{1}{n-1}\sum_{j=1}^{n-1}\mathcal{B}(\alpha_j,\alpha_0-\alpha_j),\quad\text{where}\;\alpha_0=\sum_{j=1}^{n-1}\alpha_j.
+    \end{equation}
+\end{proof}
+\begin{defn}[\it Cosine Distance]
+    Let $\mathbf{z}_i$ and $\mathbf{z}_j$ be the CL-AraBERT embeddings of the $i$th and $j$th words, then the cosine distance denoted by $d_{\cos}(\cdot)$ between $\mathbf{z}_i$ and $\mathbf{z}_j$ is defined as:
+    \begin{equation}
+        d_{\cos}(\mathbf{z}_i,\mathbf{z}_j):=1-\frac{\mathbf{z}_i\cdot\mathbf{z}_j}{||\mathbf{z}_i||\cdot||\mathbf{z}_j||},
+    \end{equation}
+    where $\cdot$ is the dot product, and $||\cdot||$ is the Euclidean norm.
 \end{defn}
-The \textit{global cost} computed from the global cost function in Defn. \ref{defn:global_cost} is approximated by the Gaussian process (the surrogate function) defined in Defn. \ref{defn:gp} through Proposition \ref{prop:hypedist}. So that, for any new observed global cost computed from the new parameter input $\mathbf{v}$, chosen by the acquisition function defined in Defn. \ref{defn:lcb}, the joint distribution with the previous global cost is given in Proposition \ref{prop:jointpdf}. Therefore, computing for the conditional distribution of the new global costs conditioned on previous global cost is given in Corollary \ref{cor:condpdf}. The process of acquiring new parameter candidate and computing the global cost is done iteratively. The algorithm converges until there is no significant changes on the new parameter candidate relative to the preceding parameter candidate, or alternatively, until a specified maximum iteration.
-\begin{center}
-    \textcolor{red}{add theoretical Bayes theorem computations here}
-\end{center}
+\begin{defn}[\it Concentric Classes]\label{defn:concentric_classes}
+    Let $\mathscr{D}$ be a collection of sentence embeddings of given texts s.t. given a vector of structural borders $\mathbf{x}_i:=[x_{i,1},\cdots,x_{i,n-1}]^{\top},i\in\mathbb{N}$ and $j\in\mathbb{N}$, \exists\; \textit{concentric classes} as follows:
+    \begin{align}
+        \mathscr{A}_{i,j}&:=\left\{\mathbf{z}_{x_{i,j}},\cdots,\mathbf{z}_{x_{i,j+1}}\right\},\quad 0\leq j\leq \frac{n-1}{2},\\
+        \mathscr{C}_{i}&:=\left\{\mathbf{z}_{x_{i,\frac{n-1}{2}}+1},\cdots,\mathbf{z}_{x_{i,\frac{n-1}{2}+1}}\right\},\\
+        \mathscr{A}_{i,j}^{*}&:=\left\{\mathbf{z}_{x_{i,j}+1},\cdots,\mathbf{z}_{x_{i,j}}\right\},\quad \frac{n-1}{2}+1\leq j\leq n,
+    \end{align}
+    where $\mathscr{A}_{i,j}$ and $\mathscr{A}_{i,j}^{*}$ form a pair since $\frac{n-1}{2}-0=n-\frac{n+1}{2}-1$.
+\end{defn}
+\begin{defn}[\it Five Number Summary]\label{defn:five_number_summary}
+    From Definition \ref{defn:concentric_classes}, for a given concentric class $\mathscr{A}_{i,j}$ with $\mathbf{z}_{i,j}\in\mathscr{A}$, let $\mathbf{A}_{i,j}:=[\mathbf{z}_{i,j}^{\top},\cdots,\mathbf{z}_{i,k}^{\top}]^{\top}$ be the matrix form of the sentence embeddings $\mathbf{z}\in\mathbb{R}^r$ s.t. $\mathbf{v}_{i,l}\in\mathbb{R}^k$ and $l\in\mathbb{N}_{\leq r}$ be the column vector of $\mathbf{A}_{i,j}$, then the \textit{five number summary} of $\mathscr{A}_{i,j}$, denoted by $\gamma(\mathscr{A}_{i,j})$ is defined as:
+    \begin{align}
+        \gamma(\mathscr{A}_{i,j}):=&\left\{\min(\mathscr{A}_{i,j}),q_1(\mathscr{A}_{i,j}),\text{median}(\mathscr{A}_{i,j}),q_3(\mathscr{A}_{i,j}),\max(\mathscr{A}_{i,j})\right\}\\
+        =&\left[\min(\mathbf{A}_{i,j})^{\top},q_1(\mathbf{A}_{i,j})^{\top},\text{median}(\mathbf{A}_{i,j})^{\top},q_3(\mathbf{A}_{i,j})^{\top},\max(\mathbf{A}_{i,j})^{\top}\right]^{\top}
+    \end{align}
+    where 
+    \begin{align}
+        \min(\mathbf{A}_{i,j}):=&[\min(\mathbf{v}_{i,1}),\cdots,\min(\mathbf{v}_{i,r})]^{\top},\\
+        q_1(\mathbf{A}_{i,j}):=&[q_1(\mathbf{v}_{i,1}),\cdots,q_1(\mathbf{v}_{i,r})]^{\top},\\
+        \operatorname{median}(\mathbf{A}_{i,j}):=&[\operatorname{median}(\mathbf{v}_{i,1}),\cdots,\operatorname{median}(\mathbf{v}_{i,r})]^{\top},\\
+        q_3(\mathbf{A}_{i,j}):=&[q_3(\mathbf{v}_{i,1}),\cdots,q_3(\mathbf{v}_{i,r})]^{\top},\\
+        \max(\mathbf{A}_{i,j}):=&[\max(\mathbf{v}_{i,1}),\cdots,\max(\mathbf{v}_{i,r})]^{\top},
+    \end{align}
+    and $\min(\mathbf{v}),q_1(\mathbf{v}),\operatorname{median}(\mathbf{v}),q_3(\mathbf{v}),\max(\mathbf{v})$ are the minimum, first quartile, median, third quartile, and maximum of $\mathbf{v}$, respectively.
+\end{defn}
+\begin{remark}
+    Since every concentric class $\mathscr{A}_{i,j}$ can have differing number of elements, Definition \ref{defn:five_number_summary} guarantees that the newly summarized embedding $\gamma(\mathscr{A}_{i,j})\in\mathbb{R}^5\times\mathbb{R}^r$ will have the orignal dimension of embedding space but the varying number of sentence embeddings are now summarized into five numbers, which are robust statistics that are less sensitive to outliers, and it provides a good summary of the distribution of the data. This will make it easier to compare the concentric classes $\mathscr{A}_{i,j},\mathscr{A}_{i,j}^{*},$ and $\mathscr{C}_i$ because of the same number of dimensions.
+\end{remark}
+\begin{defn}[\it Cosine Distance on Summaries]\label{defn:cosine_distance_on_summaries}
+    From Definition \ref{defn:five_number_summary}, let $\mathbf{W}:=[\mathbf{w}_1,\cdots,\mathbf{w}_r]$ where $\mathbf{w}_l:=[\min(\mathbf{v}_{i,1}),q_1(\mathbf{v}_{i,1}),\operatorname{median}(\mathbf{v}_{i,1}),q_3(\mathbf{v}_{i,1}),\max(\mathbf{v}_{i,1})]^{\top}$, then the \textit{cosine distance on summaries} is defined as:
+    \begin{equation}
+        d_{\cos}(\gamma(\mathscr{A}),\gamma(\mathscr{A}^*)):=d_{\cos}(\mathbf{W},\mathbf{W}^*):=[d_{\cos}(\mathbf{w}_1,\mathbf{w}_1^*),\cdots,d_{\cos}(\mathbf{w}_r,\mathbf{w}_r^*)]^{\top}.
+    \end{equation}
+\end{defn}
+\begin{defn}[\it Global Cost Function]\label{defn:global_cost_function}
+    From Definition \ref{defn:concentric_classes} and \ref{defn:cosine_distance_on_summaries}, the \textit{global cost function} is defined as:
+    \begin{align}
+        g(\mathscr{D};\mathbf{x}_{i}):=&\sum_{j=0}^{\frac{n-1}{2}}\mu\left\{d_{\cos}\left[\gamma\left(\mathscr{A}_{i,j}\right),\gamma\left(\mathscr{A}_{i,\frac{n-1}{2}+1+j}^{*}\right)\right]\right\}\nonumber\\
+        &-\sum_{j=0}^{\frac{n-1}{2}}\mu\left\{d_{\cos}\left[\gamma\left(\mathscr{C}_i\right),\gamma\left(\mathscr{A}_{i,j}\right)\right]\right\}\nonumber\\
+        &-\sum_{j=0}^{\frac{n-1}{2}}\mu\left\{d_{\cos}\left[\gamma\left(\mathscr{C}_i\right),\gamma\left(\mathscr{A}_{i,\frac{n-1}{2}+1+j}^{*}\right)\right]\right\},
+    \end{align}
+    where $\mu(\cdot)$ is the mean function.
+\end{defn}
+
+\begin{remark}
+    Minimizing the global cost function $g(\cdot)$ is equivalent to minimizing the cosine distance between $\mathscr{A}_{i,j}$ and $\mathscr{A}_{i,\frac{n-1}{2}+1+j}^{*}$ (since both should mirror each other from Definition \ref{defn:concentric}), and maximizing the negative cosine distance between both $\mathscr{C}_i$ versus $\mathscr{A}_{i,j}$, and $\mathscr{C}_i$ versus $\mathscr{A}_{i,\frac{n-1}{2}+1+j}^{*}$ (since $\mathscr{C}_i$ as a center class should not relate to other classes according to Definition \ref{defn:concentric}).
+\end{remark}
+
+\begin{defn}[\it Optimal Structural Borders]\label{defn:optimal_structural_borders}
+    Let $\mathscr{D}$ be a collection of texts, then the \textit{optimal structural borders} are defined as:
+    \begin{equation}
+        \hat{\mathbf{x}}_{i}:=\arg\min_{\mathbf{x}_i\in\mathscr{P}}g(\mathscr{D};\mathbf{x}_i),
+    \end{equation}
+    where $\mathscr{P}$ is the solution space.
+\end{defn}
