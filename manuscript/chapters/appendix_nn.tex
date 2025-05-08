@@ -1,4 +1,4 @@
-\chapter{Background on Neural Networks and Transformers}\label{app:neural_networks}
+\chapter[Background on ANN and Transformers]{Background on Neural Networks and Transformers}\label{app:neural_networks}
 The goal of this appendix is to build upon the theory of Artificial Neural Networks (ANN), which form the fundamental components of complex models used in this paper: the BERT (Bidirectional Encoder Representations from Transformers) \cite{devlin2018bert} and GPT (Generative Pre-trained Transformer) \cite{radford2018improving} models. This paper will provide details on the mathematical background of ANNs, with the hope of giving the reader a good understanding of how to generalize it to complex models like BERT and GPT.
 
 \section{Perceptron}
@@ -684,7 +684,7 @@ So that using Equation \ref{eq:deltawij} in \ref{eq:delta2},
 To emphasize, $\af'\!\left(z_{ki}^{(L-1)}\right)$ is indexed at $i$ but at the $(L-1)$th layer, so the dimension on that layer is not necessarily the same as the $L$th layer, and thus it is not included in the summation. Equation \ref{eq:backprop} is known as the \textit{back-propagation equation}.
 
 \section{Transformers}\label{sec:transformers}
-Transformer models are models based on the work of \cite{vaswani2017attention}. These models are a type of neural network architecture designed to handle sequential data, primarily used in natural language processing (NLP) tasks. Unlike traditional variants of ANN like Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) networks, Transformers do not rely on sequential data processing. Instead, they utilize an \textit{attention} mechanism that allows them to process entire sequences simultaneously, significantly improving efficiency and effectiveness. The following formulation is based from \cite{bi}
+Transformer models are models based on the work of \cite{vaswani2017attention}. These models are a type of neural network architecture designed to handle sequential data, primarily used in natural language processing (NLP) tasks. Unlike traditional variants of ANN like Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) networks, Transformers do not rely on sequential data processing. Instead, they utilize an \textit{attention} mechanism that allows them to process entire sequences simultaneously, significantly improving efficiency and effectiveness. The following formulation is based from \cite{bishop2023learning}.
 
 \subsection{Attention Mechanism}\label{sec:attention-mechanism}
 The core innovation of transformers is the self-attention mechanism, which computes attention scores to weigh the importance of different words in a sentence relative to each other. 
@@ -697,7 +697,7 @@ The core innovation of transformers is the self-attention mechanism, which compu
     where $0\leq a_{nm}\leq 1$ is a attention coefficient, and that $\sum_{\forall n}a_{nm}=1$.
 \end{defn}
 
-The attention weights are based on the idea of \textit{query}, \textit{key}, and \textit{value}, where given an input vector $\mathbf{x}_n$, its similarity to other words $\mathbf{x}_m,n\neq m$. Here $\mathbf{x}_n$ is the query and $\mathbf{x}_m$ is the key. The similarity can be computed using \textit{cosine similarity} (\textit{see} discussions on this in Section \ref{sec:cosine_similarity} and Defn. \ref{defn:cosine_similarity})
+The attention weights are based on the idea of \textit{query}, \textit{key}, and \textit{value}, where given an input vector $\mathbf{x}_n$, its similarity to other words $\mathbf{x}_m,n\neq m$. Here $\mathbf{x}_n$ is the query and $\mathbf{x}_m$ is the key. The similarity can be computed using \textit{cosine similarity} (\textit{see} discussions on this in Appendix \ref{appendix:theoretical_results} under Definition \ref{defn:defn:cosine_distance}.
 \begin{defn}[Attention Coefficient]
     Let $\mathbf{X}:=[\mathbf{x}_1,\cdots,\mathbf{x}_N]^{\top}$ be the data matrix, then the \textit{attention coefficient} is
     \begin{equation}
@@ -717,7 +717,7 @@ The attention weights are based on the idea of \textit{query}, \textit{key}, and
 \begin{defn}[Encoded Data Matrix]\label{defn:encoded-data-matrix}
     Let $\mathbf{V}\in\mathbb{R}^{D\times D}$, then the \textit{encoded data matrix} is given by $\mathbf{Z}:=\mathbf{X}\mathbf{V}$
 \end{defn}
-So that from Defn. \ref{defn:encoded-data-matrix}, Eq. \ref{eq:identity-self-attention} becomes:
+So that from Definition \ref{defn:encoded-data-matrix}, Eq. \ref{eq:identity-self-attention} becomes:
 \begin{align}
     \mathbf{Y}=&\operatorname{Softmax}(\mathbf{X}\mathbf{V}\mathbf{V}^{\top}\mathbf{X}^{\top})\mathbf{X}\mathbf{V}\\
     =&\operatorname{Softmax}(\mathbf{Z}\mathbf{Z}^{\top})\mathbf{Z}
@@ -735,7 +735,7 @@ Further, it would be better to add learnable weights for the \textit{query}, \te
 Further, becaus the Softmax can suffer from having exponentially small gradients for inputs of high magnitude, the same case for tanh or logistic-sigmoid activation functions, scaling can be used to address this issue.
 
 \begin{defn}[Scaled Self-Attention]
-    From Defn. \ref{defn:self-attention}, the \textit{scaled self-attention} is
+    From Definition \ref{defn:self-attention}, the \textit{scaled self-attention} is
     \begin{equation}
         \mathbf{Y}=\operatorname{Attention}(\mathbf{Q},\mathbf{K},\mathbf{V}):=\operatorname{Softmax}\left[\frac{\mathbf{Q}\mathbf{K}^{\top}}{\sqrt{D}}\right]\mathbf{V},
     \end{equation}
@@ -803,17 +803,3 @@ There are several applications of BERT model, but for this paper it will be used
 GPT or Generative Pre-Trained Transformer is another large language model proposed by \cite{radford2018improving}. From the name itself and like BERT, GPT is based on the Transformer model \cite{vaswani2017attention}, \textit{see} Section \ref{sec:transformers}. Unlike BERT though, GPT uses the decoder layer of the Transformer model and stacks it multiple times. This is the model that is powering the ChatGPT\footnote{\url{https://chat.openai.com/}} of OpenAI and also Claude AI\footnote{\url{https://claude.ai/}} of Anthropic\footnote{\url{https://anthropic.com/}}.
 
 GPT models like those powering ChatGPT were pre-trained on large corpora by going through the sequence of the texts in \textit{unidirection}, which is contrary to the \textit{bidirectional} approach of BERT model. As such, the GPT models excel in generating text and performing tasks that require producing coherent sequences of words, in applications like text completion and creative writing. Whereas BERT is technically effective for tasks requiring deep contextual understanding such as text classification and named-entity recognition.
-
-For this paper, the 
-\subsection{Cosine Similarity}\label{sec:cosine_similarity}
-From Defn. \ref{defn:concentric} and \ref{defn:chiasmus}, there are key words that are still vagued in terms of its mathematical meaning, and these were "mirrors," "not related," and "complemented" or "reversal." Well, semantically these words refer to measurement, particularly, a distance measurement. So that, "mirrors" would mean related meaning the distance in terms of measurement should be relatively close as opposed to "not related" or "complemented" or "reversal". So, how to measure this then?
-
-The answer to the above question is by measuring the distance of their word embeddings. These embeddings as discussed in Section \ref{sec:bert} will be extracted from BERT models. Using these embeddings a similarity or distance measurement can be used, and the common formula for this is the \textit{cosine similarity} defined below.
-
-\begin{defn}[\it Cosine Similarity]\label{defn:cosine_similarity}
-    Let $\mathbf{u}:=[u_1,\cdots,u_n]^{\text{T}}$ and $\mathbf{v}:=[v_1,\cdots,v_n]^{\text{T}},\linebreak n\in\mathbb{N}_{\geq 1}$ be word embedding vectors such that $\theta_{\mathbf{u},\mathbf{v}}$ is the angle between $\mathbf{u}$ and $\mathbf{v}$, then the cosine similarity of the given angle $\theta$ is
-    \begin{equation}
-        \cos(\theta_{\mathbf{u};\mathbf{v}}):=\frac{\mathbf{u}\cdot\mathbf{v}}{||\mathbf{u}||\,||\mathbf{v}||}.
-    \end{equation}
-\end{defn}
-Therefore, for this study, if $\theta_1$ is the angle between "related" \arb[trans]{s.t.} \arb{'AyAt} embeddings, and $\theta_2$ is the angle between "not related" \arb[trans]{'AyAt} \arb{'AyAt} embeddings, then it should be expected that $\cos(\theta_1)\leq\cos(\theta_2)$. Further, if $\theta_3$ is the angle of "complemented" or "reversal" \arb[trans]{'AyAt} \arb{'AyAt} embeddings, then maybe $\cos(\theta_1)\leq\cos(\theta_3)$ since it is not clear yet how disparate is the "related" distance to "complement" or "reversal" distance, and this is especially true for the relation of $\theta_2$ to $\theta_3$ as it cannot be determined up front, and may only be observed from the data, which will be discussed in the next chapter.

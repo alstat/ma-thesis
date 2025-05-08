@@ -80,7 +80,7 @@ and $\mathcal{B}(\cdot)$ is a Beta distribution function.
         y_k\overset{\textnormal{iid}}{\sim}\frac{1}{n-1}\sum_{j=1}^{n-1}\mathcal{B}(\alpha_j,\alpha_0-\alpha_j),\quad\text{where}\;\alpha_0=\sum_{j=1}^{n-1}\alpha_j.
     \end{equation}
 \end{proof}
-\begin{defn}[\it Cosine Distance]
+\begin{defn}[\it Cosine Distance]\label{defn:cosine_distance}
     Let $\mathbf{z}_i$ and $\mathbf{z}_j$ be the CL-AraBERT embeddings of the $i$th and $j$th words, then the cosine distance denoted by $d_{\cos}(\cdot)$ between $\mathbf{z}_i$ and $\mathbf{z}_j$ is defined as:
     \begin{equation}
         d_{\cos}(\mathbf{z}_i,\mathbf{z}_j):=1-\frac{\mathbf{z}_i\cdot\mathbf{z}_j}{||\mathbf{z}_i||\cdot||\mathbf{z}_j||},

@@ -1,3 +1,20 @@
-\chapter{Installation of Libraries}
+\chapter{Installation of Software Libraries}
 \label{appendix:installation_libraries}
-\section{Installation of Julia}
+This appendix will provide the details on how to install the software libraries used in this paper. The main programming language used in this paper is Julia \cite{Julia2017}, and can be installed by following the steps below:
+
+\begin{enumerate}
+    \item Go to the official Julia website: \url{https://julialang.org/downloads/}
+    \item Download the latest version of Julia for your operating system (Windows, macOS, or Linux).
+    \item Follow the installation instructions for your operating system.
+    \item After installation, open the Julia REPL (Read-Eval-Print Loop) by running the `julia` command in your terminal or command prompt.
+    \item To check if Julia is installed correctly, type `versioninfo()` in the Julia REPL and press Enter. You should see information about your Julia installation.
+\end{enumerate}
+
+Once succesffuly installed, next is to install the required libraries. The main libraries used in this paper are: QuranTree.jl \cite{asaad2021qurantree} and Yunir.jl \cite{al_ahmadgaid_b_asaad_yunir}, among others. The following steps will guide you on how to install these libraries:
+\begin{enumerate}
+    \item Open the Julia REPL.
+    \item Type \verb|]| to enter the package manager mode.
+    \item To install the QuranTree.jl library, type \verb|add QuranTree| and press Enter.
+    \item To install the Yunir.jl library, type \verb|add Yunir| and press Enter.
+    \item To install the other libraries, type \verb|add <library_name>| for each library you want to install. For example, to install the DataFrames.jl library, type \verb|add DataFrames|.
+\end{enumerate}
