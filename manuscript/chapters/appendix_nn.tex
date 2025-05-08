@@ -1,7 +1,8 @@
-\chapter{Background on Neural Networks and Transformers}\label{ch:neural-networks}
-Detailed presentation on the theoretical results of ANN will be the focus of this chapter. Starting with the discussion on different types of \textit{neurons} and a brief history about it. In Section \ref{sec:topologyann}, these neurons are then arranged to form networks which will be the topology of feedforward \textit{multilayer perceptron} (MLP). Following that, are definitions of the standard notations for ANN used for the rest of this thesis. Then what follows is the optimization on the parameters. And finally, the extension to Bayesian framework for ANN.
+\chapter{Background on Neural Networks and Transformers}\label{app:neural_networks}
+The goal of this appendix is to build upon the theory of Artificial Neural Networks (ANN), which form the fundamental components of complex models used in this paper: the BERT (Bidirectional Encoder Representations from Transformers) \cite{devlin2018bert} and GPT (Generative Pre-trained Transformer) \cite{radford2018improving} models. This paper will provide details on the mathematical background of ANNs, with the hope of giving the reader a good understanding of how to generalize it to complex models like BERT and GPT.
+
 \section{Perceptron}
-From \citeA{Haykin1998}, some 15 years after the publication of \citeA{mccullochpitts} classic paper, a new approach to the pattern recognition was introduced by (Rosenblatt 1958) in his work on the \textit{perceptron}, a novel method of supervised learning. The crowning achievement's of Rosenblatt's work was the so-called \textit{perceptron convergence theorem}, the first proof for which was outlined by (Rosenblatt 1960b).
+From \citeA{Haykin1998}, some 15 years after the publication of \citeA{mccullochpitts} classic paper, a new approach to pattern recognition was introduced by Rosenblatt (1958) in his work on the \textit{perceptron}, a novel method of supervised learning. The crowning achievement of Rosenblatt's work was the so-called \textit{perceptron convergence theorem}, the first proof for which was outlined by Rosenblatt (1960b).
 
 \begin{figure}[!h]
 \centering\includegraphics[scale = .4]{img/Neuron.pdf}
@@ -11,7 +12,7 @@ From \citeA{Haykin1998}, some 15 years after the publication of \citeA{mcculloch
 
 \footnotetext{Original SVG image by Quasar Jarosz but colors and some labels were modified for this paper.}
 
-Figure \ref{fig:neuron} is the typical nerve cell in Biology. In relation to perceptron, the dendrite in this case takes several binary inputs, and returns a single binary output on its axon. Mathematically, let $w_1,w_2,\cdots,w_p$ be the parameters or weights, and $x_1,x_2,\cdots, x_p$ be the inputs. Then the perceptron is defined as follows:
+Figure \ref{fig:neuron} shows the typical nerve cell in Biology. In relation to the perceptron, the dendrite in this case takes several binary inputs and returns a single binary output on its axon. Mathematically, let $w_1,w_2,\cdots,w_p$ be the parameters or weights, and $x_1,x_2,\cdots, x_p$ be the inputs. Then the perceptron is defined as follows:
 
 \begin{equation}
 \label{eq:perceptron}
@@ -19,14 +20,15 @@ Figure \ref{fig:neuron} is the typical nerve cell in Biology. In relation to per
 y&=
 \begin{cases}
 0,& \sum_{i}w_i x_i\leq c\\
-1,& \sum_{i}w_i x_i> c\\
+1,& \sum_{i}w_i x_i> c,
 \end{cases}
 \end{aligned}
 \end{equation}
 
-where $c$ is a threshold set by the experimenter. The following diagram in Figure \ref{fig:perceptron} is the schematic representation of Equation (\ref{eq:perceptron}).
+where $c$ is a threshold set by the experimenter. The following diagram in Figure \ref{fig:perceptron} is the schematic representation of Equation \ref{eq:perceptron}.
 
-\begin{figure}[!h]
+\begin{figure}[!t]
+\vspace{0.7cm}
 \centering\begin{tikzpicture}[
 init/.style={
   draw,
@@ -95,23 +97,24 @@ start chain=4,node distance=13mm,thick
 
 \draw[decorate,decoration={brace,mirror}] (x1.north west) -- node[left=10pt] {Inputs} (xp.south west);
 \end{tikzpicture}
+\vspace{0.7cm}
 \caption[Schematic Representation of the Perceptron Neuron]{Schematic Representation of the Perceptron Neuron.}
 \label{fig:perceptron}
 \end{figure}
-
-One limitation of the perceptron is its binary output, which sometimes is poor in discrimination problem, such as in text classification. To address this issue, a new artificial neuron is proposed that returns continuous values between 0 and 1, and so it can be interpreted as probabilities.
+One limitation of the perceptron is its binary output, which sometimes is poor in discrimination problems, such as in text classification. To address this issue, a new artificial neuron is proposed that returns continuous values between 0 and 1, which can be interpreted as probabilities.
 
 \section{Logistic Sigmoid Neuron}\label{sec:sln}
-The logistic sigmoid neuron or simply sigmoid neuron takes its name from the fact that it uses logistic function as its link/basis function, thus it is also known as logistic neuron. Formally, let $w_0$ be the intercept or the bias term and as before let $w_1,w_2,\cdots,w_p$ be the parameters, then the logistic sigmoid function is given by
+The logistic sigmoid neuron, or simply sigmoid neuron, takes its name from the fact that it uses the logistic function as its link/basis function; thus, it is also known as a logistic neuron. Formally, let $w_0$ be the intercept or the bias term and, as before, let $w_1,w_2,\cdots,w_p$ be the parameters. Then the logistic sigmoid function is given by
 \begin{equation}\label{eq:logsig}
-z=\sum_{i}w_ix_i+w_0,\quad y=\af(z)=\frac{1}{1+\exp(-z)}
+z=\sum_{i}w_ix_i+w_0,\quad y=\af(z)=\frac{1}{1+\exp(-z)}.
 \end{equation}
 
-In the proceeding section, the connections between neurons will be discussed, and how the architecture of these networks is designed.
+In the following section, the connections between neurons will be discussed, as well as how the architecture of these networks is designed.
 
 \section{Topology}\label{sec:topologyann}
-The basic architecture of the network comprises of the \textit{input} and the \textit{output} layers, between them are the \textit{hidden} layers. These hidden layers are layers that are not observed by the experimenter, hence the name. Figure \ref{fig:neuralnetarch} shows the diagram of a \textit{feedforward} neural network. It is feedforward due to the fact that the inputs are propagated onto the succeeding layers up to the output without redirecting back to the previous layer after processing. Otherwise the model the recurrence would make it a \textit{recurrent} neural network. 
-\begin{figure}[!h]
+The basic architecture of the network comprises the \textit{input} and the \textit{output} layers, between which are the \textit{hidden} layers. These hidden layers are layers that are not observed by the experimenter, hence the name. Figure \ref{fig:neuralnetarch} shows the diagram of a \textit{feedforward} neural network. It is feedforward due to the fact that the inputs are propagated onto the succeeding layers up to the output without redirecting back to the previous layer after processing. Otherwise, the model with recurrence would make it a \textit{recurrent} neural network.
+\begin{figure}[!t]
+\vspace{0.7cm}
 \tikzset{%
   every neuron/.style={
     circle,
@@ -155,14 +158,15 @@ The basic architecture of the network comprises of the \textit{input} and the \t
   \node [align=center, above] at (\x*2,2) {\l \\ layer};
 
 \end{tikzpicture}
+\vspace{0.7cm}
 \caption[Feedforward Neural Network]{Feedforward Neural Network.}
 \label{fig:neuralnetarch}
 \end{figure}
-
-Since the input and output layers are at best observed, the hidden layers will only serve as behind-the-scene computations. The parameter associated with each neuron has no interpretation at all, and that's one major limitation of ANN. Neural networks can have several hidden layers depending on the study, for high level of abstraction one might consider multiple layers also known as \textit{multilayer perceptrons} (MLP), which is a misnomer since layers are made up of logistic sigmoid neurons not of perceptrons. Networks with 2 or more hidden layers are often referred to as \textit{deep neural networks} \cite{nndeepl}, an example of this is depicted in Figure \ref{fig:deepnn}. The unknown vector $\mathbf{w}=[(w_i)]_{i=0}^p$ in Equation (\ref{eq:logsig}), is the parameter vector that needs to be estimated. This is done by maximum likelihood which is equivalent to minimization of the error function through mathematical programming using methods such as \textit{Gradient Descent} algorithm. The succeeding section will formalize the standard notations, and then the definition of the loss function which will be the basis for choosing the best estimates of the weights, and finally the estimation.
+Since the input and output layers are observable, the hidden layers only serve as behind-the-scene computations. The parameters associated with each neuron have no interpretation at all, and that's one major limitation of ANNs. Neural networks can have several hidden layers depending on the study; for high levels of abstraction, one might consider multiple layers, also known as \textit{multilayer perceptrons} (MLP), which is a misnomer since these layers are made up of logistic sigmoid neurons, not of perceptrons. Networks with 2 or more hidden layers are often referred to as \textit{deep neural networks} \cite{nndeepl}, an example of which is depicted in Figure \ref{fig:deepnn}. The unknown vector $\mathbf{w}=[(w_i)]_{i=0}^p$ in Equation \ref{eq:logsig} is the parameter vector that needs to be estimated. This is done by maximum likelihood, which is equivalent to minimizing the error function through mathematical programming using methods such as the \textit{Gradient Descent} algorithm. The succeeding section will formalize the standard notations, then define the loss function which will be the basis for choosing the best estimates of the weights, and finally describe the estimation process.
 
 \noindent
-\begin{figure}[!h]
+\begin{figure}[!b]
+\vspace{0.7cm}
 \tikzset{%
   every neuron/.style={
     circle,
@@ -214,14 +218,15 @@ Since the input and output layers are at best observed, the hidden layers will o
 
 \draw (4,-4.7) node[above] {$\underbrace{\hspace{6cm}}_{\text{\small Hidden Layers}}$};
 \end{tikzpicture}
+\vspace{0.7cm}
 \caption[Multilayer Feedforward Neural Network]{Multilayer Feedforward Neural Network.}
 \label{fig:deepnn}
 \end{figure}
 
 \subsection{Notations}
-The following definition will serve as the standard notation for this appendix. To start with, let $f:\mathcal{X}\to\mathcal{Y}$ be the unknown \textit{target function} of the data points in the population, that is $y:=f(\mathbf{x})$. The sample data set from this population is denoted by $(\mathbf{x}_1,y_1),\cdots,(\mathbf{x}_N,y_N)$. The learning algorithm picks $g:\mathcal{X}\to \mathcal{Y}$ as the \textit{final hypothesis} from the hypothesis set $\mathscr{H}:=\{h_v:h_v(\mathbf{x})=\hat{y},v\in\mathbb{N}\}$ s.t. $g\approx f$, that is, $g$ is the hypothesis that best approximate the target function $f$, thus $\hat{y}=g(\mathbf{x})$. The error in the training data set named \textit{in-sample error} is denoted by $\ein$, while the error in the validation dataset named \textit{out-of-sample error} is denoted by $\eout$.
+The following definitions will serve as the standard notation for this appendix. To start with, let $f:\mathcal{X}\to\mathcal{Y}$ be the unknown \textit{target function} of the data points in the population, that is, $y:=f(\mathbf{x})$. The sample data set from this population is denoted by $(\mathbf{x}_1,y_1),\cdots,(\mathbf{x}_N,y_N)$. The learning algorithm picks $g:\mathcal{X}\to \mathcal{Y}$ as the \textit{final hypothesis} from the hypothesis set $\mathscr{H}:=\{h_v:h_v(\mathbf{x})=\hat{y},v\in\mathbb{N}\}$ s.t. $g\approx f$, that is, $g$ is the hypothesis that best approximates the target function $f$, thus $\hat{y}=g(\mathbf{x})$. The error in the training data set, named \textit{in-sample error}, is denoted by $\ein$, while the error in the validation dataset, named \textit{out-of-sample error}, is denoted by $\eout$.
 
-For ANN models, let $i, j$ and $l$ be the indices of the observations in the inputs, outputs and the layers containing the observations, respectively. The domain of these indices are as follows: $i\in\mathbb{N}_0^{(d^{(l-1)})}$, $j\in\mathbb{N}_1^{(d^{(l)})}$ and $l\in\mathbb{N}_1^L$, where $d^{(l)}$ is the dimension of the outputs in the $l$th layer. The upper bound of the inputs is $d^{(l-1)}$, since this is the dimension of the outputs in the previous layer, $l-1$, and is now an input layer due to the foward-propagation process, in this case the next layer has $d^{(l)}$ dimension. Further, the lower bound of the input is 0 to account for the intercept term $w_0$. Hence, the standard notation for the parameters is $w_{ji}^{(l)}$.
+For ANN models, let $i$, $j$, and $l$ be the indices of the observations in the inputs, outputs, and the layers containing the observations, respectively. The domains of these indices are as follows: $i\in\mathbb{N}_0^{(d^{(l-1)})}$, $j\in\mathbb{N}_1^{(d^{(l)})}$, and $l\in\mathbb{N}_1^L$, where $d^{(l)}$ is the dimension of the outputs in the $l$th layer. The upper bound of the inputs is $d^{(l-1)}$, since this is the dimension of the outputs in the previous layer, $l-1$, and is now an input layer due to the forward-propagation process; in this case, the next layer has $d^{(l)}$ dimension. Further, the lower bound of the input is 0 to account for the intercept term $w_0$. Hence, the standard notation for the parameters is $w_{ji}^{(l)}$.
 
 Let $\mathbf{x}_k$ be the training input, $k\in\mathbb{N}$. Since the input layer is the $0$th layer with $d$ dimension, then each input is a $d^{(0)}\times 1$ vector. That is,
 $$
@@ -239,19 +244,19 @@ In this setting, $h(\mathbf{x}_k,\mathbf{w})$ denotes the hypothesis or the mode
 $$
 x_{kj}^{(l)}=\af\left(z_{kj}^{(l)}\right)=\af\left(\left(\mathbf{w}_{j}^{(l)}\right)^{\top}\mathbf{x}_k^{(l-1)} + w_{j0}^{(l)}\right)=\af\left(\sum_{i=1}^{d^{(l-1)}}w_{ji}^{(l)}x_{ki}^{(l-1)}+w_{j0}^{(l)}\right),
 $$
-where $\mathbf{w}_{j}^{(l)}=\left[\begin{array}{cccc}w_{j1}^{(1)}&w_{j2}^{(2)}&\cdots&w_{jd^{(l-1)}}^{(l)}\end{array}\right]^{\top}$. This is computation is propagated up to the output layer. For example, the following is the formula for obtaining $x_{kj}^{(l+1)}$,
+where $\mathbf{w}_{j}^{(l)}=\left[\begin{array}{cccc}w_{j1}^{(1)}&w_{j2}^{(2)}&\cdots&w_{jd^{(l-1)}}^{(l)}\end{array}\right]^{\top}$. This computation is propagated up to the output layer. For example, the following is the formula for obtaining $x_{kj}^{(l+1)}$:
 $$
 \begin{aligned}
-x_{kj}^{(l+1)}&=\af\left(z_{kj}^{(l+1)}\right)=\af\left(\left(\mathbf{w}_{j}^{(l+1)}\right)^{\top}\mathbf{x}_k^{(l)} + w_{j0}^{(l)}\right)=\af\left(\sum_{i=1}^{d^{(l)}}w_{ji}^{(l+1)}x_{ki}^{(l)}+w_{j0}^{(l+1)}\right)\\
+x_{kj}^{(l+1)}&=\af\left(z_{kj}^{(l+1)}\right)=\af\left(\left(\mathbf{w}_{j}^{(l+1)}\right)^{\top}\mathbf{x}_k^{(l)} + w_{j0}^{(l+1)}\right)=\af\left(\sum_{i=1}^{d^{(l)}}w_{ji}^{(l+1)}x_{ki}^{(l)}+w_{j0}^{(l+1)}\right)\\
 &=\af\left\{\sum_{i=1}^{d^{(l)}}w_{ji}^{(l+1)}\left[\af\left(\sum_{i=1}^{d^{(l-1)}}w_{ji}^{(l)}x_{ki}^{(l-1)}+w_{j0}^{(l)}\right)\right]+w_{j0}^{(l+1)}\right\}.
 \end{aligned}
 $$
-So the dimension $d$ will vary from layer to layer. Consider Figure \ref{fig:neuralnetarch}, the neurons can now be labelled with the standard notations as in Figure \ref{fig:nnlab}.
-So that, $x_{kj}^{(1)}$ in the hidden layer has the following form:
+So the dimension $d$ will vary from layer to layer. Consider Figure \ref{fig:neuralnetarch}; the neurons can now be labeled with the standard notations as in Figure \ref{fig:nnlab}.
+Thus, $x_{kj}^{(1)}$ in the hidden layer has the following form:
 $$
 x_{kj}^{(1)}=\af(z_{kj}^{(1)})=\af\left(\left(\mathbf{w}_{j}^{(1)}\right)^{\top}\mathbf{x}_k^{(0)} + w_{j0}^{(1)}\right)=\af\left(\sum_{i=1}^{d^{(0)}}w_{ji}^{(1)}x_{ki}^{(0)}+w_{j0}^{(1)}\right),
 $$
-The $x_{kj}^{(2)}$ in the output layer is computed from the following equation,
+The $x_{kj}^{(2)}$ in the output layer is computed from the following equation:
 $$
 \begin{aligned}
 x_{kj}^{(2)}&=\af(z_{kj}^{(2)})=\af\left(\left(\mathbf{w}_{j}^{(2)}\right)^{\top}\mathbf{x}_k^{(1)} + w_{j0}^{(2)}\right)=\af\left(\sum_{i=1}^{d^{(1)}}w_{ji}^{(2)}x_{ki}^{(1)}+w_{j0}^{(2)}\right)\\
@@ -259,7 +264,8 @@ x_{kj}^{(2)}&=\af(z_{kj}^{(2)})=\af\left(\left(\mathbf{w}_{j}^{(2)}\right)^{\top
 \end{aligned}
 $$
 
-\begin{figure}[!h]
+\begin{figure}[!t]
+\vspace{0.7cm}
 \tikzset{%
   every neuron/.style={
     circle,
@@ -311,16 +317,20 @@ $$
   \node [align=center, above] at (\x*2,2) {\l \\ layer};
 
 \end{tikzpicture}
+\vspace{0.7cm}
 \caption[Neural Net with Standard Neuron Notation]{Neural Net with Standard Neuron Notation.}
 \label{fig:nnlab}
 \end{figure}
 
-The final output $\mathbf{x}_{k}^{(2)}$ is the value of the hypothesis, that is $h(\mathbf{x}_k,\mathbf{w})=\mathbf{x}_{k}^{(L)}$, where $L=2$.
+The final output $\mathbf{x}_{k}^{(2)}$ is the value of the hypothesis, that is, $h(\mathbf{x}_k,\mathbf{w})=\mathbf{x}_{k}^{(L)}$, where $L=2$.
+
 \section{Network Training}
 The nonlinearity of the loss function of a neural network makes it hard to compute the weights analytically, and instead the approach is often through numerical approximation.
+
 \subsection{Loss Function}\label{sec:costfun}
-In this section, the error functions of ANN models for regression and classification are derived from probabilistic perspective. For regression setup, the network has at least two nodes (one for the intercept and one for the independent variable) at the input layer and one node at the output layer. The standard activation function is the identity function, i.e. $h(\mathbf{x}_k,\mathbf{w})=z_k=\mathbf{w}^{\top}\mathbf{x}_k$, so there is no hidden layer, see Figure \ref{fig:slrnn}. 
-\begin{figure}[t]
+In this section, the error functions of ANN models for regression and classification are derived from a probabilistic perspective. For the regression setup, the network has at least two nodes (one for the intercept and one for the independent variable) at the input layer and one node at the output layer. The standard activation function is the identity function, i.e., $h(\mathbf{x}_k,\mathbf{w})=z_k=\mathbf{w}^{\top}\mathbf{x}_k$, so there is no hidden layer; see Figure \ref{fig:slrnn}.
+\begin{figure}[!t]
+\vspace{0.7cm}
 \centering\begin{tikzpicture}[
 init/.style={
   draw,
@@ -390,15 +400,16 @@ start chain=4,node distance=13mm, thick
 \draw[o-latex] (b) -- (sigma);
 
 \end{tikzpicture}
+\vspace{0.7cm}
 \caption[Neuron's Schematic Diagram for Linear Regression]{Neuron's Schematic Diagram for Linear Regression.}
 \label{fig:slrnn}
 \end{figure}
 Given the training input $\mathbf{X}:=[\mathbf{x}_1^{(0)},\mathbf{x}_2^{(0)},\cdots,\mathbf{x}_N^{(0)}]$, where $\mathbf{x}_k^{(0)}$ is a $d^{(0)}$-dimensional feature vector whose elements are $\left[x_{k0}^{(0)},x_{k1}^{(0)},\cdots, x_{kd^{(0)}}^{(0)}\right]^{\top}\;\forall k\in\mathbb{N}$, the corresponding target variable is $\mathbf{Y}:=[y_1,y_2,\cdots,y_N]^{\top}$, and the error term $\varepsilon_k$ is assumed to be normally distributed with mean $\ev\varepsilon_k=0$ and variance $\var\varepsilon_k=\sigma^2$. It follows that the uncertainty around the target variable is also Gaussian distributed and is given by
 \begin{align}
 p(y|\mathbf{x},\mathbf{w},\sigma^2)&=\mathcal{N}(y|h(\mathbf{x},\mathbf{w}),\sigma^2)\nonumber\\
-&:=\frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\left[-\frac{(y-h(\mathbf{x},\mathbf{w}))^2}{2\sigma^{2}}\right]
+&:=\frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\left[-\frac{(y-h(\mathbf{x},\mathbf{w}))^2}{2\sigma^{2}}\right].
 \end{align}
-If the data are independent and identically distributed, then the likelihood function of $\mathbf{y}$ is given by,
+If the data are independent and identically distributed, then the likelihood function of $\mathbf{y}$ is given by
 \begin{align}
 \mathcal{L}(\mathbf{w},\sigma|\mathbf{y},\mathbf{X})&=p(\mathbf{y}|\mathbf{X},\mathbf{w},\sigma)=\prod_{k=1}^{K}\mathcal{N}(y_k|h(\mathbf{x}_k,\mathbf{w}),\sigma^2)\nonumber\\
 &=\frac{1}{(2\pi)^{K/2}\sigma^K}\exp\left[-\frac{1}{2\sigma^2}\sum_{k=1}^{K}(y_k-h(\mathbf{x}_k,\mathbf{w}))^2\right].
@@ -408,30 +419,31 @@ Taking the log-likelihood,
 \label{eq:mle}
 \ell(\mathbf{w},\sigma|\mathbf{y},\mathbf{X})=-\frac{1}{2\sigma^2}\sum_{k=1}^K(y_k-h(\mathbf{x}_k,\mathbf{w}))^2-K\log\sigma-\frac{K}{2}\log 2\pi.
 \end{equation}
-The estimate for the weight $\mathbf{w}$, denoted by $\hat{\mathbf{w}}_{\mathrm{MLE}}$, is obtained by maximizing the log-likelihood function. To do so, partial differentiation is applied to Equation (\ref{eq:mle}) with respect to $\mathbf{w}$, suggesting that the last two terms in the right hand side can be disregarded since these are not dependent on $\mathbf{w}$. Also, the location of the maximum log-likelihood with respect to $\mathbf{w}$ is not affected by arbitrary positive scalar multiplication, so the factor $\frac{1}{\sigma^2}$ can be omitted. Equivalently, one can minimize the negative log-likelihood instead of maximizing $\ell$. The reason for doing this has something to do with numerical computation, since optimizers in most statistical packages often work by minimizing the function. Thus, differentiating negative of Equation (\ref{eq:mle}) is the same as differentiating the following equation,
+The estimate for the weight $\mathbf{w}$, denoted by $\hat{\mathbf{w}}_{\mathrm{MLE}}$, is obtained by maximizing the log-likelihood function. To do so, partial differentiation is applied to Equation \ref{eq:mle} with respect to $\mathbf{w}$, suggesting that the last two terms on the right-hand side can be disregarded since these are not dependent on $\mathbf{w}$. Also, the location of the maximum log-likelihood with respect to $\mathbf{w}$ is not affected by arbitrary positive scalar multiplication, so the factor $\frac{1}{\sigma^2}$ can be omitted. Equivalently, one can minimize the negative log-likelihood instead of maximizing $\ell$. The reason for doing this has to do with numerical computation, since optimizers in most statistical packages often work by minimizing the function. Thus, differentiating the negative of Equation \ref{eq:mle} is the same as differentiating the following equation:
 \begin{equation}
 \label{eq:regin}
 \ein(h)=\frac{1}{2}\sum_{k=1}^K(y_k-h(\mathbf{x}_k,\mathbf{w}))^2,
 \end{equation}
-which is similar to the form of \textit{residual sum-of-squares}. Hence the sum-of-squares error function is a consequence of maximum likelihood under the normality assumption of the uncertainty around the target variable.
+which is similar to the form of the \textit{residual sum-of-squares}. Hence, the sum-of-squares error function is a consequence of maximum likelihood under the normality assumption of the uncertainty around the target variable.
 
-Likewise, the precision parameter can be estimated using maximum likelihood, by simply differentiating Equation (\ref{eq:mle}) with respect to $\sigma$, i.e.
+Likewise, the precision parameter can be estimated using maximum likelihood by simply differentiating Equation \ref{eq:mle} with respect to $\sigma$, i.e.,
 $$
 \hat{\sigma}_{\mathrm{mle}}^2=\frac{1}{K}\sum_{k=1}^K(y_k-h(\mathbf{x}_k,\mathbf{w}))^2.
 $$
 
-Now consider the case for classification, in which there is a single target variable $y$ that returns binary output, cases like when $y=1$ corresponds to class $\mathcal{C}_1$ and $y=0$ for class $\mathcal{C}_2$. The appropriate activation function is the logistic sigmoid defined in Section \ref{sec:sln} that is 
+Now consider the case for classification, in which there is a single target variable $y$ that returns binary output, where $y=1$ corresponds to class $\mathcal{C}_1$ and $y=0$ to class $\mathcal{C}_2$. The appropriate activation function is the logistic sigmoid defined in Section \ref{sec:sln}, that is, 
 $$
 \af(z)=\frac{1}{1+\exp(-z_k)},
 $$
-implying $\af:\mathbb{R}\to[0,1]$, and hence it can be interpreted as probability, this type of model has the same network architecture and neuron's schematic diagram as that in linear regression model (see Figure \ref{fig:slrnn}), but this time the activation function has unit interval range with hypothesis given by
+implying $\af:\mathbb{R}\to[0,1]$, and hence it can be interpreted as a probability. This type of model has the same network architecture and neuron's schematic diagram as that in the linear regression model (see Figure \ref{fig:slrnn}), but this time the activation function has a unit interval range with hypothesis given by
 $$\hat{y}=h(\mathbf{x},\mathbf{w})=\begin{cases}
 1,&\af>c\\
 0,&\af\leq c
 \end{cases},$$
-where $c$ is specified by the user, and is often chosen to be 0.5. 
+where $c$ is specified by the user and is often chosen to be 0.5.
 
 \begin{figure}[t]
+  \vspace{0.7cm}
 \centering\begin{tikzpicture}[
 init/.style={
   draw,
@@ -514,20 +526,20 @@ start chain=4,node distance=13mm, thick
 \draw[-latex] (con) |- (fl);
 
 \end{tikzpicture}
+\vspace{0.7cm}
 \caption[Neuron's Schematic Diagram for Logistic Regression]{Neuron's Schematic Diagram for Logistic Regression.}
 \label{fig:logrnn}
 \end{figure}
-
-The probability of success, in this case $y=1$ for $\mathcal{C}_1$ is 
+The probability of success, in this case $y=1$ for $\mathcal{C}_1$, is 
 $$
 p(y=1|h(\mathbf{x},\mathbf{w}))=h(\mathbf{x},\mathbf{w})
 $$
-So that the conditional distribution of the target variable $y$ given $\mathbf{x}$ is a Bernoulli distribution with density given by
+Thus, the conditional distribution of the target variable $y$ given $\mathbf{x}$ is a Bernoulli distribution with density given by
 $$
 p(y|h(\mathbf{x},\mathbf{w}))=\mathcal{B}(y|h(\mathbf{x},\mathbf{w}))=h(\mathbf{x},\mathbf{w})^{y}(1-h(\mathbf{x},\mathbf{w}))^{1-y},\quad y\in\{0,1\}.
 $$
 
-So for sample data set $\{\mathbf{x}_k,y_k\}$ where $\mathbf{x}_k$ is a $d^{(0)}$-dimensional feature space and $y_k\in\{0,1\}\;\forall k\in\mathbb{N}$, if the $y$s are independent and identically distributed then the likelihood function is given by
+For a sample data set $\{\mathbf{x}_k,y_k\}$ where $\mathbf{x}_k$ is a $d^{(0)}$-dimensional feature vector and $y_k\in\{0,1\}\;\forall k\in\mathbb{N}$, if the $y$s are independent and identically distributed, then the likelihood function is given by
 $$
 \mathcal{L}(h(\mathbf{x}_k,\mathbf{w})|\mathbf{y})=\prod_{k=1}^{K}h(\mathbf{x}_k,\mathbf{w})^{y_k}(1-h(\mathbf{x}_k,\mathbf{w}))^{1-y_k},
 $$
@@ -536,8 +548,9 @@ and the negative log-likelihood is given by
 \ein(h)&=-\ell (h(\mathbf{x}_k,\mathbf{w})|\mathbf{y})\nonumber\\
 &=-\sum_{k=1}^{K}\left[y_k\log h(\mathbf{x}_k,\mathbf{w})+(1-y_k)\log(1-h(\mathbf{x}_k,\mathbf{w}))\right].\label{eq:logitein}
 \end{align}
-This equation is known as \textit{cross-entropy} loss function. 
+This equation is known as the \textit{cross-entropy} loss function.
 \begin{figure}[!t]
+  \vspace{0.7cm}
 \centering
 \tikzset{%
   every neuron/.style={
@@ -572,10 +585,11 @@ This equation is known as \textit{cross-entropy} loss function.
   \foreach \j in {1,...,2}
     \draw [->] (input-\i) -- (output-\j);
 \end{tikzpicture}
+\vspace{0.7cm}
 \caption[Neural Network for $d^{(1)}\geq 2$ Output Nodes]{Neural Network for $d^{(1)}\geq 2$ Output Nodes}
 \label{fig:kloginn}
 \end{figure}
-Extending the case to at least two separate binary classification requires $d^{(L)}\geq 2$ neurons on the output layer, each of which has a logistic sigmoid activation function. So the target variable is defined as $\mathbf{y}_k=[y_1,y_2,\cdots,y_{d^{(L)}}]^{\top}$, where $y_j\in\{0,1\}\;\forall j\in\mathbb{N}^{(L)}$. Assuming independence on the class labels, the joint conditional distribution of the targets given the input vector is
+Extending the case to at least two separate binary classifications requires $d^{(L)}\geq 2$ neurons on the output layer, each of which has a logistic sigmoid activation function. The target variable is defined as $\mathbf{y}_k=[y_1,y_2,\cdots,y_{d^{(L)}}]^{\top}$, where $y_j\in\{0,1\}\;\forall j\in\mathbb{N}^{(L)}$. Assuming independence of the class labels, the joint conditional distribution of the targets given the input vector is
 $$
 p(\mathbf{y}|\mathbf{x},\mathbf{w})=\prod_{j=1}^{d^{(L)}}h(\mathbf{x},\mathbf{w})^{y_j}\left[1-h(\mathbf{x},\mathbf{w})\right]^{1-y_j}.
 $$
@@ -583,31 +597,32 @@ Then the likelihood function is given by
 $$
 \mathcal{L}(h(\mathbf{x}_k,\mathbf{w})|\mathbf{y})=\prod_{k=1}^{K}\prod_{j=1}^{d^{(L)}}h(\mathbf{x}_{k},\mathbf{w})^{y_{kj}}\left[1-h(\mathbf{x}_{k},\mathbf{w})\right]^{1-y_{kj}}.
 $$
-The negative log-likelihood then becomes,
+The negative log-likelihood then becomes
 \begin{align}
 \ein(h)&=-\ell (h(\mathbf{x}_{k},\mathbf{w})|\mathbf{y})\nonumber\\
 &=-\sum_{k=1}^{K}\sum_{j=1}^{d^{(L)}}\left[y_{kj}\log h(\mathbf{x}_{k},\mathbf{w})+(1-y_{kj})\log(1-h(\mathbf{x}_{k},\mathbf{w}))\right].\label{eq:mlogitein}
 \end{align}
 
-In general, the loss function of a neural network can be written as the average errors of the errors in the output layer across all $k$ training inputs, i.e.
+In general, the loss function of a neural network can be written as the average of the errors in the output layer across all $k$ training inputs, i.e.,
 \begin{align}
 \ein(h)&=\frac{1}{K}\sum_{k=1}^K\frac{1}{2}\sum_{j=1}^{d^{(L)}}(y_{kj}-h(\mathbf{x}_{k},\mathbf{w}))^2\\
 &=\frac{1}{K}\sum_{k=1}^K\varepsilon(h(\mathbf{x}_{k},\mathbf{w}),y_{kj})
 \end{align}
 
-This equation is also known as the \textit{mean squared error}. In order to minimize this function, one has to consider numerical methods such as \textit{gradient descent} or the \textit{stochastic gradient descent}.
+This equation is also known as the \textit{mean squared error}. In order to minimize this function, one has to consider numerical methods such as \textit{gradient descent} or \textit{stochastic gradient descent}.
+
 \subsection{Back-propagation Algorithm}\label{sec:backprop}
 The average error of the $k$ training inputs defined in Section \ref{sec:costfun} is given by
 \begin{equation}\label{eq:errornn}
 \ein(\mathbf{w}):=\frac{1}{K}\sum_{k=1}^{K}\varepsilon(\mathbf{h}(\mathbf{x}_k,\mathbf{w}),\mathbf{y}_k).
 \end{equation}
-The terms in this equation are errors of the training inputs. That is, for each training input there is a corresponding error that needs to be minimized. This error is the difference between the target $\mathbf{y}_k$ and the output of the hypothesis $\mathbf{h}(\mathbf{x}_k,\mathbf{w})$. To account for the iteration counter $r$, let $\hat{\mathbf{w}}_r$ be the notation for the estimate of $\mathbf{w}$ at the $r$th iteration; also let $\varepsilon_r$ be the error of the $r$th iteration. The inner term of Equation (\ref{eq:errornn}) can be expanded as follows:
+The terms in this equation are errors of the training inputs. That is, for each training input, there is a corresponding error that needs to be minimized. This error is the difference between the target $\mathbf{y}_k$ and the output of the hypothesis $\mathbf{h}(\mathbf{x}_k,\mathbf{w})$. To account for the iteration counter $r$, let $\hat{\mathbf{w}}_r$ be the notation for the estimate of $\mathbf{w}$ at the $r$th iteration; also let $\varepsilon_r$ be the error of the $r$th iteration. The inner term of Equation \ref{eq:errornn} can be expanded as follows:
 \begin{align}
 \varepsilon(\mathbf{h}(\mathbf{x}_k,\hat{\mathbf{w}}_r),\mathbf{y}_k)&:=\frac{1}{2}\lVert\mathbf{y}_k-\mathbf{h}(\mathbf{x}_k,\hat{\mathbf{w}}_r)\rVert^2=\frac{1}{2}\sum_{j=1}^{d^{(L)}}(y_{kj}-h_j(\mathbf{x}_k,\mathbf{w}))^2\nonumber\\
 &=\frac{1}{2}\sum_{j=1}^{d^{(L)}}\left(y_{kj}-x_{kj}^{(L)}\right)^2=\frac{1}{2}\sum_{j=1}^{d^{(L)}}\left[y_{kj}-\af\left(z_{kj}^{(L)}\right)\right]^2\nonumber\\
 &=\frac{1}{2}\sum_{j=1}^{d^{(L)}}\left[y_{kj}-\af\left(\sum_{i=1}^{d^{(L-1)}}w_{ji}^{(L)}x_{ki}^{(L-1)}+w_{j0}^{(L)}\right)\right]^2.
 \end{align}
-For each training input $k$, gradient descent algorithm is applied to the function $\varepsilon(\mathbf{h}(\mathbf{x}_k,\mathbf{w}),\mathbf{y}_{k})$. The average of all this function correspond to the loss function, so the minimum average of the error terms will give the corresponding estimate of the parameters. For simplicity, assuming there is only one hidden layer, that is $L=2$. Consider the following:
+For each training input $k$, the gradient descent algorithm is applied to the function $\varepsilon(\mathbf{h}(\mathbf{x}_k,\mathbf{w}),\mathbf{y}_{k})$. The average of all these functions corresponds to the loss function, so the minimum average of the error terms will give the corresponding estimate of the parameters. For simplicity, assume there is only one hidden layer, that is, $L=2$. Consider the following:
 
 \begin{equation}
 \frac{\partial \ein(\mathbf{w})}{\partial w_{ji}^{(L)}}=\frac{\partial \ein(\mathbf{w})}{\partial \varepsilon(\mathbf{h}(\mathbf{x}_k,\mathbf{w}),\mathbf{y}_{k})}\frac{\partial \varepsilon(\mathbf{h}(\mathbf{x}_k,\mathbf{w}),\mathbf{y}_{k})}{\partial w_{ji}^{(L)}}
@@ -642,34 +657,34 @@ where $\delta_{j}^{(L)}$ is the \textit{local gradient} defined as
 \delta_{j}^{(L)}&=-\frac{\partial \ein(h)}{\partial z_{kj}^{(L)}}=-\frac{\partial \ein(h)}{\partial x_{kj}^{(L)}}\frac{\partial x_{kj}^{(L)}}{\partial z_{kj}^{(L)}}=\frac{1}{K}\sum_{k=1}^{K}\varepsilon(h_j(\mathbf{x}_k,\mathbf{w}),y_{kj})\af'\!\left(z_{kj}^{(L)}\right)\nonumber\\
 &=\frac{1}{K}\sum_{k=1}^{K}\left(y_{kj}-x_{kj}^{(L)}\right)\af'\!\left(z_{kj}^{(L)}\right).
 \end{align}
-Thus the local gradient is the product of the error signal at the $j$th neuron of the $L$th layer and the derivative of the associated activation function.
+Thus, the local gradient is the product of the error signal at the $j$th neuron of the $L$th layer and the derivative of the associated activation function.
 
-For weights at $(L-1)$th layer, the local gradient is then given by
+For weights at the $(L-1)$th layer, the local gradient is then given by
 \begin{equation}\label{eq:delta2}
-\delta_{j}^{(L-1)}=-\frac{\partial \ein(h)}{\partial x_{kj}^{(L-1)}}\frac{\partial x_{kj}^{(L-1)}}{\partial z_{kj}^{(L-1)}}=-\frac{\partial \ein(h)}{\partial x_{kj}^{(L-1)}}\af'\!\left(z_{kj}^{(L-1)}\right).
+\delta_{j}^{(L-1)}=-\frac{\partial \mathcal{E}_{in}(\mathbf{w})}{\partial x_{kj}^{(L-1)}}\frac{\partial x_{kj}^{(L-1)}}{\partial z_{kj}^{(L-1)}}=-\frac{\partial \mathcal{E}_{in}(\mathbf{w})}{\partial x_{kj}^{(L-1)}}\af'\!\left(z_{kj}^{(L-1)}\right).
 \end{equation}
-where,
+where
 \begin{equation}
-\frac{\partial \ein(\mathbf{w})}{\partial x_{kj}^{(L-1)}}=\frac{\partial \ein(\mathbf{w})}{\partial \varepsilon(\mathbf{h}(\mathbf{x}_k,\mathbf{w}),\mathbf{y}_{k})}\frac{\partial \varepsilon(\mathbf{h}(\mathbf{x}_k,\mathbf{w}),\mathbf{y}_{k})}{\partial x_{kj}^{(L)}}\frac{\partial x_{kj}^{(L)}}{\partial z_{kj}^{(L)}}\frac{\partial z_{kj}^{(L)}}{\partial x_{kj}^{(L-1)}}.
+\frac{\partial \mathcal{E}_{in}(\mathbf{w})}{\partial x_{kj}^{(L-1)}}=\frac{\partial \mathcal{E}_{in}(\mathbf{w})}{\partial \varepsilon(\mathbf{h}(\mathbf{x}_k,\mathbf{w}),\mathbf{y}_{k})}\frac{\partial \varepsilon(\mathbf{h}(\mathbf{x}_k,\mathbf{w}),\mathbf{y}_{k})}{\partial x_{kj}^{(L)}}\frac{\partial x_{kj}^{(L)}}{\partial z_{kj}^{(L)}}\frac{\partial z_{kj}^{(L)}}{\partial x_{kj}^{(L-1)}}.
 \end{equation}
 And since
 \begin{equation}
-\frac{\partial \ein(\mathbf{w})}{\partial \varepsilon(\mathbf{h}(\mathbf{x}_k,\mathbf{w}),\mathbf{y}_{k})}\frac{\partial \varepsilon(\mathbf{h}(\mathbf{x}_k,\mathbf{w}),\mathbf{y}_{k})}{\partial x_{kj}^{(L)}}=-\frac{1}{K}\sum_{k=1}^{K}\sum_{j=1}^{d^{(L)}}\left(y_{kj}-x_{kj}^{(L)}\right)
+\frac{\partial \mathcal{E}_{in}(\mathbf{w})}{\partial \varepsilon(\mathbf{h}(\mathbf{x}_k,\mathbf{w}),\mathbf{y}_{k})}\frac{\partial \varepsilon(\mathbf{h}(\mathbf{x}_k,\mathbf{w}),\mathbf{y}_{k})}{\partial x_{kj}^{(L)}}=-\frac{1}{K}\sum_{k=1}^{K}\sum_{j=1}^{d^{(L)}}\left(y_{kj}-x_{kj}^{(L)}\right)
 \end{equation}
 then
 \begin{align}
-\frac{\partial \ein(\mathbf{w})}{\partial x_{kj}^{(L-1)}}&=-\frac{1}{K}\sum_{k=1}^{K}\sum_{j=1}^{d^{(L)}}\left(y_{kj}-x_{kj}^{(L)}\right)\frac{\partial x_{kj}^{(L)}}{\partial z_{kj}^{(L)}}\frac{\partial z_{kj}^{(L)}}{\partial x_{kj}^{(L-1)}}\nonumber\\
+\frac{\partial \mathcal{E}_{in}(\mathbf{w})}{\partial x_{kj}^{(L-1)}}&=-\frac{1}{K}\sum_{k=1}^{K}\sum_{j=1}^{d^{(L)}}\left(y_{kj}-x_{kj}^{(L)}\right)\frac{\partial x_{kj}^{(L)}}{\partial z_{kj}^{(L)}}\frac{\partial z_{kj}^{(L)}}{\partial x_{kj}^{(L-1)}}\nonumber\\
 &=-\sum_{j=1}^{d^{(L)}}\frac{1}{K}\sum_{k=1}^{K}\left(y_{kj}-x_{kj}^{(L)}\right)\af'\!\left(z_{kj}^{(L)}\right)w_{ji}^{(L)}\nonumber\\
 &=-\sum_{j=1}^{d^{(L)}}\delta_j^{(L)}w_{ji}^{(L)}.\label{eq:deltawij}
 \end{align}
-So that using Equation (\ref{eq:deltawij}) in (\ref{eq:delta2}),
+So that using Equation \ref{eq:deltawij} in \ref{eq:delta2},
 \begin{equation}\label{eq:backprop}
-\delta_{j}^{(L-1)}=\af'\!\left(z_{kj}^{(L-1)}\right)\sum_{j=1}^{d^{(L)}}\delta_j^{(L)}w_{ji}^{(L)}.
+\delta_{i}^{(L-1)}=\af'\!\left(z_{ki}^{(L-1)}\right)\sum_{j=1}^{d^{(L)}}\delta_j^{(L)}w_{ji}^{(L)}.
 \end{equation}
-And just to emphasize $\af'\!\left(z_{kj}^{(L-1)}\right)$ is indexed at $j$ but at the $(L-1)$th layer, so the dimension on that layer is not necessarily the same with the $L$th layer, and thus it is not included in the summation. Equations (\ref{eq:backprop}) is known as the \textit{back-propagation equations}.
+To emphasize, $\af'\!\left(z_{ki}^{(L-1)}\right)$ is indexed at $i$ but at the $(L-1)$th layer, so the dimension on that layer is not necessarily the same as the $L$th layer, and thus it is not included in the summation. Equation \ref{eq:backprop} is known as the \textit{back-propagation equation}.
 
 \section{Transformers}\label{sec:transformers}
-Transformer models is a model based on the work of \cite{vaswani2017attention}. These models are a type of neural network architecture designed to handle sequential data, primarily used in natural language processing (NLP) tasks. Unlike traditional recurrent neural networks (RNNs) and long short-term memory networks (LSTMs), transformers do not rely on sequential data processing. Instead, they utilize an attention mechanism that allows them to process entire sequences simultaneously, significantly improving efficiency and effectiveness. The following formulation is based from \cite{bish}
+Transformer models are models based on the work of \cite{vaswani2017attention}. These models are a type of neural network architecture designed to handle sequential data, primarily used in natural language processing (NLP) tasks. Unlike traditional variants of ANN like Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) networks, Transformers do not rely on sequential data processing. Instead, they utilize an \textit{attention} mechanism that allows them to process entire sequences simultaneously, significantly improving efficiency and effectiveness. The following formulation is based from \cite{bish}
 
 \subsection{Attention Mechanism}\label{sec:attention-mechanism}
 The core innovation of transformers is the self-attention mechanism, which computes attention scores to weigh the importance of different words in a sentence relative to each other. 
@@ -763,3 +778,42 @@ The transformer architecture consists of an \textit{encoder} and a \textit{decod
 where $FFN(X)$ is a feed-forward network applied to each position separately and identically.
 
 Transformers have revolutionized NLP by enabling efficient parallel processing and capturing long-range dependencies in text data. Their architecture, centered around self-attention and multi-head attention mechanisms, has set new benchmarks in various NLP tasks, including machine translation, text summarization, and question answering.
+
+\subsection{Large Language Models}\label{sec:llm_method}
+Generative Artificial Intelligence or GenAI for short has been making waves on its effectiveness to generate texts, images, audio, video, etc. It has elevated humanity to a new level of capability. However, behind this amazing capabilities is that GenAI is by design a mathematical formula that are called \textit{model}. There are several types of \textit{models}, and one of those is the Large Language Model (LLM). The following section will discuss what LLM is and its mathematical formulation.
+\subsection{Bidirectional Encoder Representation from Transformers}\label{sec:bert}
+BERT or Bidirectional Encoder Representation from Transformers model is a large language model proposed by \citeA{devlin2018bert}. From the name itself, it is based on the Transformer model architecture (\textit{see} discussion in Section \ref{sec:transformers}) in that it only uses the Encoder layer, and stack it together. BERT was pre-trained on large corpus of text using two unsupervised (\textit{see} Section \ref{sec:unsupervised_models}) tasks, and these are:
+\begin{enumerate}
+    \item \textit{Masked Language Modeling (MLM)} - tokens (\textit{see} Section \ref{sec:text_tokenization}) are randomly masked in the input and trains the model to predict these masked tokens based on the surrounding context.
+    \item \textit{Next Sentence Prediction (NSP)} - tains the model to understand the relationship between two sentences by predicting if one sentence follows the other.
+\end{enumerate}
+After pre-training the model, BERT can then be fine-tuned on specific tasks like question answering, sentiment analysis, and more with relatively smaller datasets. With that, BERT works as follows: 
+\begin{enumerate}
+    \item \textit{Input Representation} - BERT takes tokenized text as input, which includes a pair of sentences. The input is converted into tokens, added with special tokens like [CLS] (classification token at the beginning) and [SEP] (separator token between sentences).
+    \item \textit{Embedding Layer} - The tokens are converted into embeddings which are the sum of token embeddings, segment embeddings, and position embeddings.
+    \item \textit{Encoder Layers} - The embeddings are then passed through multiple layers of bidirectional Transformer encoders (\textit{see} Section \ref{sec:transformers}), which apply self-attention mechanisms to generate contextualized representations for each token.
+    \item \textit{Output} - The final hidden states from the encoder layers are used for different tasks:
+    \begin{itemize}
+        \item The [CLS] token’s representation can be used for classification tasks.
+        \item The representations of other tokens can be used for tasks like named entity recognition (NER) or question answering.
+    \end{itemize}
+\end{enumerate}
+There are several applications of BERT model, but for this paper it will be used for Topic Modeling and Text Summarization of the Qur'\=an. In particular, CL-AraBERT model by will be used for extracting embeddings of the Qur'\=anic words for further analysis.
+\subsection{Generative Pre-Trained Transformer}
+GPT or Generative Pre-Trained Transformer is another large language model proposed by \cite{radford2018improving}. From the name itself and like BERT, GPT is based on the Transformer model \cite{vaswani2017attention}, \textit{see} Section \ref{sec:transformers}. Unlike BERT though, GPT uses the decoder layer of the Transformer model and stacks it multiple times. This is the model that is powering the ChatGPT\footnote{\url{https://chat.openai.com/}} of OpenAI and also Claude AI\footnote{\url{https://claude.ai/}} of Anthropic\footnote{\url{https://anthropic.com/}}.
+
+GPT models like those powering ChatGPT were pre-trained on large corpora by going through the sequence of the texts in \textit{unidirection}, which is contrary to the \textit{bidirectional} approach of BERT model. As such, the GPT models excel in generating text and performing tasks that require producing coherent sequences of words, in applications like text completion and creative writing. Whereas BERT is technically effective for tasks requiring deep contextual understanding such as text classification and named-entity recognition.
+
+For this paper, the 
+\subsection{Cosine Similarity}\label{sec:cosine_similarity}
+From Defn. \ref{defn:concentric} and \ref{defn:chiasmus}, there are key words that are still vagued in terms of its mathematical meaning, and these were "mirrors," "not related," and "complemented" or "reversal." Well, semantically these words refer to measurement, particularly, a distance measurement. So that, "mirrors" would mean related meaning the distance in terms of measurement should be relatively close as opposed to "not related" or "complemented" or "reversal". So, how to measure this then?
+
+The answer to the above question is by measuring the distance of their word embeddings. These embeddings as discussed in Section \ref{sec:bert} will be extracted from BERT models. Using these embeddings a similarity or distance measurement can be used, and the common formula for this is the \textit{cosine similarity} defined below.
+
+\begin{defn}[\it Cosine Similarity]\label{defn:cosine_similarity}
+    Let $\mathbf{u}:=[u_1,\cdots,u_n]^{\text{T}}$ and $\mathbf{v}:=[v_1,\cdots,v_n]^{\text{T}},\linebreak n\in\mathbb{N}_{\geq 1}$ be word embedding vectors such that $\theta_{\mathbf{u},\mathbf{v}}$ is the angle between $\mathbf{u}$ and $\mathbf{v}$, then the cosine similarity of the given angle $\theta$ is
+    \begin{equation}
+        \cos(\theta_{\mathbf{u};\mathbf{v}}):=\frac{\mathbf{u}\cdot\mathbf{v}}{||\mathbf{u}||\,||\mathbf{v}||}.
+    \end{equation}
+\end{defn}
+Therefore, for this study, if $\theta_1$ is the angle between "related" \arb[trans]{s.t.} \arb{'AyAt} embeddings, and $\theta_2$ is the angle between "not related" \arb[trans]{'AyAt} \arb{'AyAt} embeddings, then it should be expected that $\cos(\theta_1)\leq\cos(\theta_2)$. Further, if $\theta_3$ is the angle of "complemented" or "reversal" \arb[trans]{'AyAt} \arb{'AyAt} embeddings, then maybe $\cos(\theta_1)\leq\cos(\theta_3)$ since it is not clear yet how disparate is the "related" distance to "complement" or "reversal" distance, and this is especially true for the relation of $\theta_2$ to $\theta_3$ as it cannot be determined up front, and may only be observed from the data, which will be discussed in the next chapter.

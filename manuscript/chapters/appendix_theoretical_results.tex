@@ -1,6 +1,6 @@
 \chapter{Theoretical Results}
 \label{appendix:theoretical_results}
-\section{Textual Concentrism}
+\setcounter{section}{1}
 The following are the mathematical formulations of the proposed solution for finding the optimal structural borders of classes of concentric structure.
 \begin{defn}[\it Concentric]\label{defn:concentric}
     Let $\mathscr{D}$ be a collection of texts, then $\mathscr{D}$ is said to have a \textit{concentric} or \textit{ring} structure if and only if $\exists\;\mathscr{A}_i\subseteq\mathscr{D},\mathscr{C}\subseteq\mathscr{D},$ and $\mathscr{A}_i^{*}\subseteq\mathscr{D},i\in\mathbb{N}_1$; and that these sets are arranged as follows in $\mathscr{D}$:  $\mathscr{A}_1,\cdots,\mathscr{A}_n,\mathscr{C},\mathscr{A}_1^{*},\cdots,\mathscr{A}_n^{*}$, s.t. $\mathscr{A}_i^{*}$ \underline{mirrors} $\mathscr{A}_i$ in semantic, and that $\mathscr{C}$ is the center section of the document $\mathscr{D}$ that is \underline{not related} to both $\mathscr{A}_i$ and $\mathscr{A}_i^{*}$.
@@ -24,16 +24,16 @@ The underlined words above will be used in the next section, because mathematica
     The structural proportions need to be sorted, thus if $\rho:\mathscr{X}\rightarrow\tilde{\mathscr{X}}$ is the sorting function s.t. $\mathscr{X}:=\{\mathbf{x}_1,\cdots,\mathbf{x}_m\}$, then $\rho(\mathscr{X})=\tilde{\mathscr{X}}=\{[x_{i,j},\cdots,x_{i,n-1}]^{\top}:x_{i,j}<x_{i,j+1}\}$ is the set of sorted structural proportions.
 \end{remark}
 
-\begin{defn}[\it Dirichlet Propulation]
+\begin{defn}[\it Dirichlet Propulation]\label{defn:dirichlet_population}
     From Definition \ref{defn:dirichlet_structural_proportions}, let $v$ be the total number of sections of texts, e.g. number of \arb[trans]{'AyAt} \arb{'AyAt} in a \arb[trans]{suwar} \arb{suwar}, then the \textit{Dirichlet population} is $\mathbf{y}_i:=v\mathbf{x}_i=[vx_{i,1},\cdots,vx_{i,n-1}]^{\top},\mathbf{y}_i\in\mathscr{P}$, where $\mathscr{P}$ is the solution space.
 \end{defn}
 \begin{remark}
     If the goal is to find $n$ classes for the concentric structure, then the intervals for structural borders are $[x_0=1,x_1),[x_1,x_2),\cdots,[x_{n-1},x_n=v]$ where $v$ is the total number of sections (e.g. \arb[trans]{'ayaT} \textnormal{\arb{'ayaT}} as the section) of the texts. Therefore, since $x_0$ and $x_n$ are both known, then the only unknowns are $x_1,\cdots,x_{n-1}$, and these are the structural proportions. Thus, the Dirichlet population is a vector of $n-1$ proportions, i.e. $\mathbf{y}_i:=[vx_{i,1},\cdots,vx_{i,n-1}]^{\top}$.
 \end{remark}
-\begin{defn}[\it Discrete Uniform Population]
+\begin{defn}[\it Discrete Uniform Population]\label{defn:discrete_uniform_population}
     Let $\mathbf{x}_i:=[x_{i,1},\cdots,x_{i,n-1}]^{\top}$ where $n$ is the total number of target classes for concentric structure, then the \textit{uniform population} is generated from the discrete uniform distribution, that is $\mathbf{x}_i\overset{\text{iid}}{\sim}\mathcal{U}(k,m-k)$, where $k\in\mathbb{N}_{\geq \delta},\delta>1$ serves as the padding, and $x_{i,j}\in\mathbb{R}_{>0}$, and $\sum_{j=1}^{n-1}x_{i,j}=1$. Thus,
     \begin{equation}
-        \mathcal{U}(\mathbf{x}_i|k,v-k):=\prod_{j=1}^{n-1}\frac{1}{v-2k}.
+        \mathcal{U}_{\mathbb{N}}(\mathbf{x}_i|k,v-k):=\prod_{j=1}^{n-1}\frac{1}{v-2k}.
     \end{equation}
 \end{defn}
 \begin{remark}
@@ -138,7 +138,51 @@ and $\mathcal{B}(\cdot)$ is a Beta distribution function.
 \begin{defn}[\it Optimal Structural Borders]\label{defn:optimal_structural_borders}
     Let $\mathscr{D}$ be a collection of texts, then the \textit{optimal structural borders} are defined as:
     \begin{equation}
-        \hat{\mathbf{x}}_{i}:=\arg\min_{\mathbf{x}_i\in\mathscr{P}}g(\mathscr{D};\mathbf{x}_i),
+        \hat{\mathbf{x}}_{i}:=\underset{\mathbf{x}_i\in\mathscr{P}}{\arg\min}g(\mathscr{D};\mathbf{x}_i),
     \end{equation}
     where $\mathscr{P}$ is the solution space.
+\end{defn}
+
+\begin{defn}[\it Sampling Parents]\label{defn:sampling_parents}
+    Let $\mathscr{X}_h:=\{\mathbf{x}_{i}\mid 1\leq i\leq m\}$ be the $h$th population, then \textit{sampling $s$ candidate structural borders}, denoted as $\mathbf{y}_j, j \in\mathbb{N}_{\leq s}$ from $\mathscr{X}_h$ is defined as
+    \begin{equation}
+        \mathbf{y}_j\overset{\textnormal{iid}}{\sim}\mathcal{U}(\mathscr{X}_h),\quad j\in\mathbb{N}_{\leq s},
+    \end{equation}
+    so that for $\mathbf{y}_j\in\mathscr{Y}$ and from Definition \ref{defn:global_cost_function}, the sampled parent is
+    \begin{equation}
+        \mathbf{y}:=\underset{\mathbf{y}_j\in\mathscr{Y}}{\arg\min}\{g(\mathscr{D};\mathbf{y}_j)\mid j \in\mathbb{N}_{\leq s}\}
+    \end{equation}
+\end{defn}
+
+\begin{defn}[\it Chromosome Crossover]\label{defn:chromosome_crossover}
+    Let $\mathscr{Y}_h:=\{\mathbf{y}_{i}\mid 1\leq i \leq m\}$ be the selected parents (structural borders), then for a candidate pair of two structural borders $\mathbf{y}_i$ and $\mathbf{y}_j, i\neq j$ from $\mathscr{Y}_h$ selected as follows:
+    \begin{equation}
+        (\mathbf{y}_i, \mathbf{y}_j)=\begin{cases}
+            (\mathbf{y}_i,\mathbf{y}_{i+1}),&i< m\\
+            (\mathbf{y}_i,\mathbf{y}_{j}), j\overset{\text{iid}}{\sim}\mathcal{U}(1,m-1),&\text{otherwise},
+        \end{cases}
+    \end{equation}
+    the \textit{crossovered chromosome} $\mathbf{u}_i$ and $\mathbf{u}_j$ are derived as follow: let $w\in\mathcal{U}_{\mathbb{N}}(1,n-3)$ and let $r\in\mathbb{R}_{[0,1]}$, then
+    \begin{equation}
+        (\mathbf{u}_i,\mathbf{u}_j):=\begin{cases}
+            [y_{i,1},\cdots,y_{i,w-1},y_{j,w},\cdots,y_{j,n-1}]^{\top},&\mathcal{U}(0,1)< r\\
+            [y_{j,1},\cdots,y_{j,w-1},y_{i,w},\cdots,y_{i,n-1}]^{\top}&\\[0.3cm]
+            \mathbf{y}_i,\mathbf{y}_j,&\text{otherwise}.
+        \end{cases}
+    \end{equation}
+\end{defn}
+
+\begin{defn}[\it Chromosome Mutation]\label{defn:chromosome_mutation}
+    Let $\mathscr{U}_h:=\{\mathbf{u}_{i}\mid 1\leq i \leq m\}$ be the crossovered structural borders, let $r\in\mathbb{R}_{[0,1]}$, then the \textit{mutation} of a candidate cross-overed structural border $\mathbf{u}_i$ is defined as:
+    \begin{equation}
+        \tilde{\mathbf{u}}_i:=\begin{cases}
+            \mathbf{u}_i-\mathbf{w},&\mathcal{U}(0,1)< r\\
+            \mathbf{u}_i,&\text{otherwise},
+        \end{cases}
+    \end{equation}
+    where $\mathbf{w}:=[w_1,\cdots,w_{n-1}]^{\top}$ and $w_j\overset{\text{iid}}{\sim}\mathcal{U}_{\mathbb{N}}(-2,2)$.
+\end{defn}
+
+\begin{defn}[\it Genetic Algorithm]
+    Let $\mathscr{D}$ be the given texts, let $\mathscr{X}_0$ be the initial \textit{population} sampled from either Dirichlet (Definition \ref{defn:dirichlet_population}) or Discrete Uniform (Definition \ref{defn:discrete_uniform_population}) distribution, then from this population the \textit{fitness score} using the global cost function (Definition \ref{defn:global_cost_function}). Given these fitness scores, the candidate structural borders or the parents are selected (Definition \ref{defn:sampling_parents}) for the next generation. The selected parents are then crossovered (Definition \ref{defn:chromosome_crossover}) to form the next generation of structural borders. The crossovered structural borders are then mutated (Definition \ref{defn:chromosome_mutation}), and finally refined by sorting the mutated results, and handling duplicate elements in a structural border vector. The final results form the next generation of structural borders. The process is repeated until the stopping criteria is met, i.e. the number of generations is reached or the fitness score does not improve. For this study, the stopping criteria is set to 50 generations. At the end of the process, the optimal structural borders are selected as the best candidate structural borders with the lowest fitness score or global cost function.
 \end{defn}
