@@ -225,7 +225,7 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 \begin{document} 
 \include{titlepage.tex}
 \doublespacing
-% \include{chapters/dedication.tex}
+\include{chapters/dedication.tex}
 % \include{chapters/acknowledgement.tex}
 \tableofcontents\newpage
 \listoffigures 
@@ -238,13 +238,14 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 \include{chapters/ch6.tex}
 \include{chapters/ch7.tex}
 \include{chapters/ch8.tex}
+\bibliographystyle{apacite}
+\bibliography{reference}
 \include{chapters/appendix.tex}
 \include{chapters/appendix_theoretical_results.tex}
 \include{chapters/appendix_methodology_theory.tex}
 \include{chapters/appendix_probstat.tex}
 \include{chapters/appendix_nlp.tex}
 \include{chapters/appendix_nn.tex}
+\include{chapters/appendix_extant_manuscripts.tex}
 \include{chapters/appendix_installation.tex}
-\bibliographystyle{apacite}
-\bibliography{reference}
 \end{document}
