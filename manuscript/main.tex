@@ -23,6 +23,7 @@
 \usetikzlibrary{decorations.markings,arrows}
 \usepackage{pgfplots}
 \usepackage{pifont}
+\usepackage{parnotes}
 \usepackage{newpxmath} % math font is Palatino compatible
 % \usepackage[nomath]{fontspec}
 % \usepackage{amsmath}
@@ -202,6 +203,7 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 
 % for full expanding width table
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{s}{>{\hsize=.6\textwidth}c}
 
 \def\title{\Large\bf Text Analytics of the Qur'\=an}
 \def\author{Al-Ahmadgaid Bahauddin Asaad}
@@ -223,8 +225,8 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 \begin{document} 
 \include{titlepage.tex}
 \doublespacing
-\include{chapters/dedication.tex}
-\include{chapters/acknowledgement.tex}
+% \include{chapters/dedication.tex}
+% \include{chapters/acknowledgement.tex}
 \tableofcontents\newpage
 \listoffigures 
 \include{chapters/abstract.tex}
