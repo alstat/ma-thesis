@@ -43,20 +43,20 @@ The following are the general and specific objectives of this paper:
 \begin{enumerate}
     \item What are the structural characteristics of the Qur'an that can be extracted from its rich morphologies using statistical and large language models?
     \begin{enumerate}
-        \item What are the statistics of the Qur'\=an's morphological features in terms of its parts of speech and selected entities like God's name and the prophets names mentioned?
+        \item What are the descriptive statistics of the \arb[trans]{'asbAb 'alnuzUl} \arb{'asbAb 'alnuzUl} in terms of the Qur'\=an's \arb[trans]{suwar} \arb{suwar} and \arb[trans]{'AyAt} \arb{'AyAt} divisions? How is this compared to the \citeA{sinai2020oqs}'s inner-chronology?
         
-        \item How do the rhythmic signatures of the Qur'\=an of the verses looks like and what are statistical insights that can be extracted?
+        \item What are the different morphologies of the root word \arb[trans]{alh} \arb{alh}, and from a sample of those, how is it encoded in the extant manuscripts? What does this suggest on the preservations of the Qur'\=an?
+        
+        \item How do the rhythmic signatures of the Qur'\=an of the verses looks like and what are statistical insights that can be extracted? What are the different methodologies that can be used for signatures?
 
-        \item What are the rhythmic signatures of the \arb[trans]{'AyAt} \arb{'AyAt} of \arb[trans]{makkiyyaT} \arb{makkiyyaT} and \arb[trans]{madaniyyaT} \arb{madaniyyaT} \arb[trans]{sUwar} \arb{sUwar}?
+        % \item What are the rhythmic signatures of the \arb[trans]{'AyAt} \arb{'AyAt} of \arb[trans]{makkiyyaT} \arb{makkiyyaT} and \arb[trans]{madaniyyaT} \arb{madaniyyaT} \arb[trans]{sUwar} \arb{sUwar}?
     \end{enumerate}
     
     \item What other insights that can be extracted from the semantics of the Qur'an's texts using statistical and large language models?
     \begin{enumerate}
-        \item How does the theory of \textit{concentrism} be formulated statistically, and what are the insights from the statistical and large language models on this? 
+        \item How does the theory of \textit{concentrism} be formulated mathematically? What are the optimal structural borders of \arb[trans]{sUraTu 'l-baqaraTi} \arb{sUraTu 'l-baqaraTi}?
         
-        \item How do the \arb[trans]{sUwar} \arb{sUwar} are organized in terms of the topics? What are the themes that can be extracted for each of the surahs?
-        
-        \item How do these extracted themes compare to the summaries of Abdel\linebreak Haleem's English translation of the Qur'an?
+        \item What are the themes from the structural borders found by the algorithm?
     \end{enumerate}
     
     \item How does these combinations of statistical, machine learning, and artificial intelligence with the Muslim's traditional literatures help in understanding the Qur'\=an, especially with the advent of Generative AI?
@@ -71,37 +71,13 @@ The paper will cover all chapters of the Qur'\=an as much as possible, except ma
 \section{Thesis Organization}
 The paper is organized as follows: Chapter \ref{ch:rrl} will discuss the related literatures; Chapter \ref{ch:tf-cf} will discuss the Theoretical and Conceptual Frameworks; Chapter \ref{ch:quran_history} will discuss the historical background of the Qur'\=an; Chapter \ref{ch:statistics} will discuss the background on Probability and Statistics; Chapter \ref{ch:neural-networks} the backgound on Neural Networks and Transformers, this is the core model used by most AI nowadays which is also part of the models of this paper; Chapter \ref{ch:nlp} will discuss the backgound and concept of Natural Language Processing, that is, how to process the Qur'\=anic texts; Chapter \ref{ch:methodology} will discuss the Methodology of this paper; Chapter \ref{ch:results} will discuss the results of the paper; Chapter \ref{ch:conclusion} will discuss the conclusion and recommendation of the paper.
 \section{Mathematical Sections}
-Succeeding chapters will have a lot of mathematical formulas, and it is important to have some guide on the flow of presentation. Like any humanities studies, Mathematics is mostly concern with understanding facts about objects that is being studied. For Islamic studies, these objects can be physical like Qur'\=an and other Islamic texts, or metaphysical like understanding the purpose of life. For Mathematics, the objects can be explicit or abstract as well, but it does revolve heavily on numbers and logics, and like other domain it studies facts about these objects. With that said, any object being studied in Mathematics are presented as Definitions, a formal way of defining terms or objects, see for example the following presented in Chapter \ref{ch:statistics}:
+The mathematical formulas are all presented in the appendices, although there are small part of mathematics in the main chapters as well, but most of it are separated in the appendices. This section aims to at least provide some guide on the flow of presentation of the mathematical definitions, prepositions, etc. Like any humanities studies, Mathematics is mostly concern with understanding facts about objects that is being studied. For Islamic studies, these objects can be physical like Qur'\=an and other Islamic texts, or metaphysical like understanding the purpose of life. For Mathematics, the objects can be explicit or abstract as well, but it does revolve heavily on numbers and logics building up from a very basic \textit{axiom}, and like other domain it studies facts about these objects. With that said, any object being studied in Mathematics are presented as Definitions, a formal way of defining terms or objects, see for example the following presented in Appendix \ref{ch:statistics}:
 \begin{defn}[Mean]\label{defn:mean-1}
 Let $x_i, i\in\{1,\cdots,n\}$ where $n\in\mathbb{N}$, then the \textit{mean} of $x_i$s is defined as follows:
 \begin{equation}\label{eq:mean-formula-1}
     \bar{x} = \sum_{i=1}^n x_i, \qquad\text{where}\;x_i \in\mathbb{R}.
 \end{equation}
 \end{defn}
-This is a Definition of a mathematical object called \textit{mean} or \textit{average}. It is presented as a section in this paper like the one above, and this is the convention in any advanced mathematical books and courses. In this paper, and for the sake of brevity, when referring to Definition \ref{defn:mean-1}, it will be written as Definition \ref{defn:mean-1}. Also, instead of writing Equation \ref{eq:mean-formula-1} to refer to the above equation, it will be written as Eq. \ref{eq:mean-formula-1}. Further, using these objects, facts about these them are found through proof using mathematical computations and logics. An example of this is the result or fact about another mathematical object called \textit{Gaussian Process} discussed in Section \ref{sec:bayes-opt} of this paper, see below.
-\begin{prop}\label{prop:jointpdf-1}
-    From Proposition \ref{prop:hypedist}, suppose $\boldsymbol{\delta}_{*}:=[\gamma(\mathbf{v}_{n+1}),\cdots,\gamma(\mathbf{v}_{n+p})]^{\top}$, such that $\boldsymbol{\delta}_{*}\overset{\mathrm{iid}}{\sim}\mathcal{N}_p(\mathbf{m}_*,\mathbf{K}_*)$ then 
-    \begin{equation}
-        \left[
-        \begin{matrix}
-            \boldsymbol{\delta}\\
-            \boldsymbol{\delta}_{*}\\
-        \end{matrix}
-        \right]\overset{\mathrm{iid}}{\sim}
-        \mathcal{N}_{n+p}\left(\left[
-        \begin{matrix}
-            \mathbf{m}\\
-            \mathbf{m}_{*}\\
-        \end{matrix}
-        \right],\left[
-        \begin{matrix}
-            \mathbf{K}&\mathbf{K}_{*}\\
-            \mathbf{K}_{*}^{\top}&\mathbf{K}_{**}\\
-        \end{matrix}
-        \right]\right)
-    \end{equation}
-\end{prop}
-\begin{proof}
-    Let $\mathbf{u}:=[\boldsymbol{\delta},\boldsymbol{\delta}_{*}]^{\top}$, then $\mathbf{u}=[\gamma(\mathbf{v}_1),\cdots,\gamma(\mathbf{v}_{n+p})]^{\top}$. Further, since $\mathbf{\gamma}(\mathbf{v}_i)\overset{\mathrm{iid}}{\sim}\mathcal{N}(m(\mathbf{v}_i),k(\mathbf{v}_i,\mathbf{v}_i)),\forall i\in\mathbb{N}_{\leq n+p}$, then the joint distribution of the $\gamma(\mathbf{v}_i)$s, i.e. $\mathrm{Pr}(\mathbf{u})$, follows from the proof of Theorem 1.2.9 of \citeA{muirhead2005}.
-\end{proof}
+This is a Definition of a mathematical object called \textit{mean} or \textit{average}. It is presented as a section in this paper like the one above, and this is the convention in any advanced mathematical books and courses. In this paper, and for the sake of brevity, when referring to Definition \ref{defn:mean-1}, it will be written as Definition \ref{defn:mean-1}. Also, instead of writing Equation \ref{eq:mean-formula-1} to refer to the above equation, it will be written as Eq. \ref{eq:mean-formula-1}. Further, using these objects, facts about these them are found through proof using mathematical computations and logics. An example of this is the result for the distribution of combined Dirichlet data points discussed in Appendix \ref{appendix:theoretical_results} under Preposition \ref{prop:mixture_beta}.
+
 Verified facts that are of significant findings are sectioned as Theorem in mathematics, whereas those that are proposed are called Proposition. Other small results or facts supporting the Proposition are sectioned as Corollary. There are other sections in mathematics for formal presentation of facts and results, but those are the ones used in this paper. These sections are present in most chapters of this paper especially those dealing with math, and this brief guide hopes to help Islamic students or reseachers navigate the paper.
