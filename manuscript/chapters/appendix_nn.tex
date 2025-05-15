@@ -717,7 +717,7 @@ The attention weights are based on the idea of \textit{query}, \textit{key}, and
 \begin{defn}[Encoded Data Matrix]\label{defn:encoded-data-matrix}
     Let $\mathbf{V}\in\mathbb{R}^{D\times D}$, then the \textit{encoded data matrix} is given by $\mathbf{Z}:=\mathbf{X}\mathbf{V}$
 \end{defn}
-So that from Definition \ref{defn:encoded-data-matrix}, Eq. \ref{eq:identity-self-attention} becomes:
+So that from Definition \ref{defn:encoded-data-matrix}, Equation \ref{eq:identity-self-attention} becomes:
 \begin{align}
     \mathbf{Y}=&\operatorname{Softmax}(\mathbf{X}\mathbf{V}\mathbf{V}^{\top}\mathbf{X}^{\top})\mathbf{X}\mathbf{V}\\
     =&\operatorname{Softmax}(\mathbf{Z}\mathbf{Z}^{\top})\mathbf{Z}
