@@ -40,12 +40,14 @@ The data in this case are the orthographies, parts of words, words, \arb[trans]{
 
 Moving on, the Qur'\=an has a unique organizational structure that is totally different from other scriptures. This uniqueness has attracted both Muslims and non-Muslims to dive deeper to understand the design of its presentation. The typical approach even to this day is to do this manually, going through each \arb[trans]{'AyAt} \arb{'AyAt} and \arb[trans]{sUraT} \arb{sUraT} of the Qur'\=an one at a time to find patterns that will at least convey why it is arranged as it is. As expected, this manual process is very tedious and time-consuming, and may missed some data points in the process if not done carefully. However, with the advent of computations, slowly and especially recently, some automation can now be done to do repeatetive tasks of finding patterns. Among the researchers to understanding the structure of the Qur'\=an is by studying the statistics of the counts of words, \arb[trans]{'AyAt} \arb{'AyAt}, and \arb[trans]{suwar} \arb{suwar}.
 
-\begin{figure}[!t]
+\begin{landscape}
+\begin{figure}[!h]
     \centering
-    \includegraphics[width=\textwidth]{img/plot1.pdf}
+    \includegraphics[width=1.35\textwidth]{img/plot1-landscape.pdf}
     \caption{Distribution of Meccan and Medinan \arb[trans]{sUwar} \arb{suwar}}
     \label{fig:result_ayah_word_count}
 \end{figure}
+\end{landscape}
 
 Figure \ref{fig:result_ayah_word_count} shows the bar chart of the \arb[trans]{'AyAt} \arb{'AyAt} counts and word counts, as well as the distribution of the word counts and character counts per \arb[trans]{'AyAt} \arb{'AyAt}. In this figure, the geographical locations (Meccan or Medinan) of the \arb[trans]{sUraT} \arb{sUraT} based on the \arb[trans]{'asbAb 'alnuzUl} \arb{'asbAb 'alnuzUl} or the 'occasions/circumstances of revelation' are also indicated.
 
@@ -53,12 +55,14 @@ The first obvious pattern in Figure \ref{fig:result_ayah_word_count}, which is k
 
 Moving on, the distribution of words per \arb[trans]{'AyAt} \arb{'AyAt} and characters per \arb[trans]{'AyAt} \arb{'AyAt} are shown in the third and fourth rows or plots of Figure \ref{fig:result_ayah_word_count}. It is indeed expected that these distributions are more or less identical, since more words typically mean more characters. The distribution of characters per \arb[trans]{'AyAt} \arb{'AyAt} is shown to make it comparable to the work of \citeA{sinai2020oqs}, which will be discussed in Section \ref{sec:comparison_sinai}.
 
-\begin{figure}[!t]
-    \centering
-    \includegraphics[width=\textwidth]{img/plot2.pdf}
-    \caption{Statistics of the words and \arb[trans]{'AyAt} \arb{'AyAt} (verses) of the Qur'\=an according to revelation order}
-    \label{fig:result_ayah_word_count_rev_order}
-\end{figure}
+\begin{landscape}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=1.35\textwidth]{img/plot2-landscape.pdf}
+        \caption{Statistics of the words and \arb[trans]{'AyAt} \arb{'AyAt} (verses) of the Qur'\=an according to revelation order}
+        \label{fig:result_ayah_word_count_rev_order}
+    \end{figure}    
+\end{landscape}
 
 To help interpret the plots for the distributions of word count per \arb[trans]{'AyAt} \arb{'AyAt} and character count per \arb[trans]{'AyAt} \arb{'AyAt} in Figure \ref{fig:result_ayah_word_count}, the $x$-axis represents the 114 \arb[trans]{suwar} \arb{suwar} of the Qur'\=an, while the $y$-axis represents either the count of words (third row plot) per \arb[trans]{'AyAt} \arb{'AyAt} or the count of characters (fourth row plot) per \arb[trans]{'AyAt} \arb{'AyAt} in Figure \ref{fig:result_ayah_word_count}. Thus, each boxplot shown in these plots describes the distribution of the count of either words (third row plot) or characters (fourth row plot) per \arb[trans]{'AyAt} \arb{'AyAt}. From these distributions, interesting groups of distributions are observed around the 57th to 66th \arb[trans]{sUraT} \arb{sUraT}. While the color of these distributions helped in distinguishing it as \arb[trans]{madaniyyaT} \arb{madaniyyaT} (or Medinan) based in \arb[trans]{'asbAb 'alnuzUl} \arb{'asbAb 'alnuzUl}, the mean of these \arb[trans]{madaniyyaT} \arb{madaniyyaT} \arb[trans]{suwar} \arb{suwar} is observed to be higher than that of the surrounding \arb[trans]{sUraT} \arb{sUraT}, as seen in the figure. In fact, these \arb[trans]{suwar} \arb{suwar} have a lower number of \arb[trans]{'AyAt} \arb{'AyAt} compared to the surrounding \arb[trans]{makkiyyaT} \arb{makkiyyaT} \arb[trans]{suwar} \arb{suwar} (\textit{see} first row plot and second row plot of Figure \ref{fig:result_ayah_word_count}), which has opposing patterns, and that is, those \arb[trans]{madaniyyaT} \arb{madaniyyaT} \arb[trans]{suwar} \arb{suwar} has variable number of words or characters per \arb[trans]{'ayaT} \arb{'ayaT}, while those \arb[trans]{makkiyyaT} \arb{makkiyyaT} \arb[trans]{suwar} \arb{suwar} tend to have lower variable variability in the number of words or characters. Indeed, even the 98th \arb[trans]{sUraT} \arb{sUraT}, which is a \arb[trans]{madaniyyaT} \arb{madaniyyaT}, sticks out significantly due to its high variability compared to its surrounding \arb[trans]{makkiyyaT} \arb{makkiyyaT} \arb[trans]{suwar} \arb{suwar} which have more or less similar number of words and \arb[trans]{'AyAt} \arb{'AyAt}. There are some exception though, for example the 55th and 99th \arb[trans]{suwar} \arb{suwar}, which both have small variability, but the rest tend to have a higher variability in the number of words or characters per \arb[trans]{'ayaT} \arb{'ayaT}, even the 110th \arb[trans]{sUraT} \arb{sUraT}, which at glance seem to be part of the excemption, but relative to its neighbour it still has a higher variability despite having only three \arb[trans]{'AyAt} \arb{'AyAt}. 
 
