@@ -5,7 +5,7 @@ The use of scientific computing to study the Qur'an is still in its early stages
 \section{Background}
 The Qur'\=an or \arb[trans]{al-qur'An} \arb{al-qur'An} meaning \textit{the recitation}, the holy book of Islam, is revered by 1.9 billion (according to 2020 projection of \shortciteA[p.~13]{pewresearch}) Muslims across the globe as the literal words of God. Muslims believed that the Qur'\=an was gradually revealed (Qur'\=an 25:32) to Prophet Muhammad \arb{\arbmark{slm}} through angel \arb[trans]{jibrIl} \arb{jibrIl} or Gabriel (Qur'\=an 2:97). The Qur'\=an contains 77,429 Arabic words in total, which covers only 56 percent of the Greek New Testament which has 138,020 words in total \cite[p.~11]{sinai2017}. 
 
-The Qur'\=an is divided into \arb[trans]{sUwar} \arb{sUwar} (\textit{plural} of \arb[trans]{sUraT} \arb{sUraT}) which are the equivalent of chapters, each containing \arb[trans]{'AyAt} \arb{'AyAt} (\textit{plural} of \arb[trans]{'AyaT} \arb{'AyaT} meaning \textit{signs}), which are the equivalent of verses. The \arb[trans]{sUwar} \arb{sUwar} are not arranged in chronological order like the Bible's books and chapters, but rather arranged in monotonically decreasing length of number of verses after the first \arb[trans]{sUraT} \arb{sUraT} (\textit{see} Figure \ref{fig:ayah_word_count}). The \arb[trans]{sUwar} \arb{sUwar} of the Qur'\=an can be categorized into two types: the \arb[trans]{makkiyyaT} \arb{makkiyyaT} (Meccan) and \arb[trans]{madaniyyaT} \arb{madaniyyaT} (Medinan). The categories refer to the geographical location of where the \arb[trans]{sUraT} \arb{sUraT} was revealed to Prophet Muhammad \arb{\arbmark{slm}}. Figure \ref{fig:ayah_word_count} shows the groupings of the \arb[trans]{sUwar} \arb{sUwar}. Note that some of the \arb[trans]{sUwar} \arb{sUwar} have mixed geographical locations\footnote{\textit{see} list of the location in \url{https://tanzil.net/docs/revelation_order}}, that is, a few of the \arb[trans]{'AyAt} \arb{'AyAt} in it were revealed in other geographical location apart from the geographical location of the rest of the \arb[trans]{'AyAt} \arb{'AyAt}. Therefore, the categorization in Figure \ref{fig:ayah_word_count} highlights the geographical location of the majority of the \arb[trans]{'AyAt} \arb{'AyAt} in the \arb[trans]{sUraT} \arb{sUraT}.
+The Qur'\=an is divided into \arb[trans]{sUwar} \arb{sUwar} (\textit{plural} of \arb[trans]{sUraT} \arb{sUraT}) which are the equivalent of chapters, each containing \arb[trans]{'AyAt} \arb{'AyAt} (\textit{plural} of \arb[trans]{'AyaT} \arb{'AyaT} meaning \textit{signs}), which are the equivalent of verses. The \arb[trans]{sUwar} \arb{sUwar} are not arranged in chronological order like the Bible's books and chapters, but rather arranged in monotonically decreasing length of number of verses after the first \arb[trans]{sUraT} \arb{sUraT} (\textit{see} Figure \ref{fig:ayah_word_count}---this is the same as Figure \ref{fig:result_ayah_word_count} but in landscape form to easily see the names of the \arb[trans]{suwar} \arb{suwar} in the $x$-axis). The \arb[trans]{sUwar} \arb{sUwar} of the Qur'\=an can be categorized into two types: the \arb[trans]{makkiyyaT} \arb{makkiyyaT} (Meccan) and \arb[trans]{madaniyyaT} \arb{madaniyyaT} (Medinan). The categories refer to the geographical location of where the \arb[trans]{sUraT} \arb{sUraT} was revealed to Prophet Muhammad \arb{\arbmark{slm}}. Figure \ref{fig:ayah_word_count} shows the groupings of the \arb[trans]{sUwar} \arb{sUwar}. Note that some of the \arb[trans]{sUwar} \arb{sUwar}\newline have mixed geographical locations\footnote{\textit{see} list of the location in \url{https://tanzil.net/docs/revelation_order}}, that is, a few of the \arb[trans]{'AyAt} \arb{'AyAt} in it were revealed in other geographical location apart from the geographical location of the rest of the \arb[trans]{'AyAt} \arb{'AyAt}. Therefore, the categorization in Figure \ref{fig:ayah_word_count} highlights the geographical location of the majority of the \arb[trans]{'AyAt} \arb{'AyAt} in the \arb[trans]{sUraT} \arb{sUraT}.
 
 \begin{figure}[!b]
     \centering
@@ -41,13 +41,13 @@ Moving on, some papers did not use NLP to analyze the Qur'\=an's texts, instead 
 
 Furthermore, the rich morphological annotations done by \citeA{dukes-habash-2010-morphological} has opened up many opportunities as emphasized above. However, none has looked into studing these morphological data of the Qur'\=an. The work of \citeA{asaad2021qurantree} has further made it accessible to many researchers by providing the users with a library in Julia programming language, which is a high-level language that is easier to understand than Java programming language---the software developed by \citeA{dukes-habash-2010-morphological} for the said data. Among the papers on morphological analysis, \citeA{Hadi_2023} analyzed the morphology of selected \arb[trans]{'AyAt} \arb{'AyAt}, starting from \arb[trans]{sUraTu 'l-kaw_tari} \arb{sUraTu 'l-kaw_tari} to \arb[trans]{sUraTu 'l-nAsi} \arb{sUraTu 'l-nAsi}, but the said study focused only on describing the morphological features of the words in the said \arb[trans]{suwar} \arb{suwar} and nothing else. To the best knowledge of the author, none has yet looked into the said data and did analysis on it.
 
-In addition, the Corpus Coranicum\footnote{\url{https://corpuscoranicum.de/en}} project from Germany, overseen by Angelika Neuwirth, has brought new datasets for extant manuscripts supplementing the digitized Qur'\=an data. This exciting project has extensive extant manuscripts of the Qur'\=an, where a good amount of which have been radiocarbon dated. The methodology of this radiocarbon dating is discussed by \cite{Radiocarbon14CDatingofQurnManuscripts}. Some recent papers on Qur'\=anic studies such as the work of \cite{sidky2020} have used the said resources for studying the regionality of Qur'\=anic Codices, where upon inspection of some manuscripts from the Corpus Coranicum indicated that the findings are more or less consistent with claims of Muslim's sources on the codices sent out by Uthman ibn Affan \arb{`u_tmAnu bnu `affAn} in the year 645 CE to different regions. This paper will make use of the extant manuscripts from the said projects as well to supplement the computational findings. In comparison to Biblical study, there is no online resources yet available for Bible's extant manuscripts to the best knowledge of the author.
+In addition, the Corpus Coranicum\footnote{\url{https://corpuscoranicum.de/en}} project from Germany, overseen by Angelika Neuwirth, has brought new datasets for extant manuscripts supplementing the digitized Qur'\=an data. This exciting project has extensive extant manuscripts of the Qur'\=an, where a good amount of which have been radiocarbon dated. The methodology of this radiocarbon dating is discussed by \cite{Radiocarbon14CDatingofQurnManuscripts}. Some recent papers on Qur'\=anic studies such as the work of \cite{sidky2020} have used the said resources for studying the regionality of Qur'\=anic Codices, where upon inspection of some manuscripts from the Corpus Coranicum indicated that the findings are more or less consistent with claims of Muslim's sources on the codices sent out by Uthman ibn Affan \arb{`u_tmAnu bnu `affAn} in the year 645 CE to different regions. This paper will make use of the extant manuscripts from the said projects as well to supplement the computational findings. One thing to note though is that, the Corpus Coranicum also provided digital encodings from the said raw scans of extant manuscripts, but critics like \citeA{Rashwani_2020} has pointed that those derived data from the extant manuscripts have documentation errors and other inconsistencies. For this paper though, the main data used are the raw scans of the manuscripts and not the said derived data from the Corpus Coranicum project. In comparison to Biblical study, there is no online resources yet available for Bible's extant manuscripts to the best knowledge of the author.  
 
 Finally, there is no study yet that used statistical and computational methodology for the \textit{concentrism theory} proposed by \shortcite{farrin2014structure}. The said author suggested that the Qur'\=an follows a symmetric structural characteristics, with \textit{concentric} symmetry as the prevalent pattern in the Qur'\=an. Indeed, no paper yet has come up with a mathematical formulation for finding concentric patterns objectively.
 
 Lastly, the recent advances in Artificial Intelligence have led to language models for Arabic as well. These language models can be used for analyzing natural languages quite accurately. Among these is the CL-AraBERT language model, which is an AraBERT language model but fine-tuned for classic Arabic texts that includes the Qur'\=an. It is therefore the goal of this paper to use this for numerical representations of the Qur'\=an.
-\section{Objectives}\label{sec:objectives}
-With all the advances and opportunities mentioned in the rationale of the paper, the following are the general and specific objectives of this paper:
+\section{Research Questions}\label{sec:research_questions}
+With all the advances and opportunities mentioned in the rationale of the paper, the following are the research questions:
 \begin{enumerate}
     \item What are the structural characteristics of the Qur'an that can be extracted from the Qur'\=anic Arabic Corpus data \cite{dukes-habash-2010-morphological}?
     \begin{enumerate}
@@ -73,7 +73,58 @@ With all the advances and opportunities mentioned in the rationale of the paper,
         \item What are the Islamic philosophical explanations on how to best consume or approach the findings from these statistical/machine learning models, which are by design to commit errors?
     \end{enumerate}
 \end{enumerate}
+\section{Objectives of the Study}\label{sec:objectives}
 
+This study aims to conduct a comprehensive computational and statistical analysis of the Qur'\=an by integrating traditional Islamic scholarship with modern digital humanities methodologies. The primary objective is to examine the structural, linguistic, and thematic characteristics of the Qur'\=anic text through multiple analytical approaches, thereby contributing to both Qur'\=anic studies and computational linguistics Specifically, this research seeks to:
+\begin{enumerate}
+    \item \textbf{Extract and analyze structural characteristics} of the Qur'\=an using the Qur'\=anic Arabic Corpus data, including descriptive statistics of \arb[trans]{'asbAb 'alnuzUl} \arb{'asbAb 'alnuzUl} in relation to the Qur'\=an's \arb[trans]{suwar} \arb{suwar} and \arb[trans]{'AyAt} \arb{'AyAt} divisions, morphological variations of the root word \arb[trans]{alh} \arb{alh} and their manuscript encodings, and rhythmic signatures of \arb[trans]{'AyAt} \arb{'AyAt} with their statistical implications.
+
+    \item \textbf{Explore advanced computational approaches} using CL-AraBERT language models and other large language models to identify additional structural characteristics, particularly focusing on the mathematical formulation of \textit{concentrism} theory and the determination of optimal structural borders within \arb[trans]{sUraTu 'l-baqaraTi} \arb{sUraTu 'l-baqaraTi}, along with thematic analysis of identified structural boundaries.
+    
+    \item \textbf{Investigate manuscript evidence} from extant Qur'\=anic manuscripts dating from 660-710 CE to understand the preservation of oral transmissions and textual integrity of the Qur'\=an.
+    
+    \item \textbf{Synthesize computational findings with traditional Islamic scholarship} to develop a framework for understanding how statistical, machine learning, and artificial intelligence methodologies can complement Muslim traditional literature in Qur'\=anic interpretation, while addressing the Islamic philosophical considerations for approaching findings from error-prone computational models.
+\end{enumerate}
+
+Through this multidisciplinary approach, the study endeavors to bridge the gap between traditional Qur'\=anic scholarship and contemporary computational methods, offering new insights into the text's structural complexity while respecting the methodological considerations inherent in Islamic scholarship.
+\section{Research Hypotheses}\label{sec:hypotheses}
+
+Based on the research questions and objectives outlined above, the following null hypotheses are proposed to guide this investigation:
+
+\subsection{Structural Characteristics Hypotheses}
+\begin{itemize}
+    \item \textbf{H1:} The distribution of \arb[trans]{'asbAb 'alnuzUl} \arb{'asbAb 'alnuzUl} across \arb[trans]{suwar} \arb{suwar} and \arb[trans]{'AyAt} \arb{'AyAt}\newline will demonstrate distinct patterns.
+
+    \item \textbf{H2:} The morphological variations of the root word \arb[trans]{alh} \arb{alh} will show consistent encoding patterns across extant manuscripts, supporting the hypothesis of meticulous textual preservation in the Qur'\=anic transmission process.
+    
+    \item \textbf{H3:} The rhythmic signatures of \arb[trans]{'AyAt} \arb{'AyAt} will exhibit statistically significant patterns that distinguish between different textual sections and contexts.
+\end{itemize}
+
+\subsection{Computational Linguistics Hypotheses}
+\begin{itemize}
+    \item \textbf{H4:} CL-AraBERT embeddings will successfully capture semantic relationships that enable the mathematical formulation of \textit{concentrism} theory, providing quantifiable measures for identifying optimal structural borders within \arb[trans]{sUraTu 'l-baqaraTi} \arb{sUraTu 'l-baqaraTi}.
+
+    \item \textbf{H5:} The structural borders identified through computational analysis will correspond to coherent thematic boundaries, demonstrating that algorithmic approaches can detect meaningful semantic divisions within \arb[trans]{sUraTu 'l-baqaraTi} \arb{sUraTu 'l-baqaraTi}.
+\end{itemize}
+
+\subsection{Manuscript Preservation Hypotheses}
+\begin{itemize}
+    \item \textbf{H6:} Analysis of manuscripts from 660-710 CE will demonstrate high fidelity between early written records and oral transmission traditions, providing empirical evidence for the preservation accuracy of the Qur'\=anic text.
+
+    \item \textbf{H7:} Textual variations found in early manuscripts will be limited to orthographic conventions rather than substantive content differences, supporting claims of textual stability across transmission methods.
+\end{itemize}
+
+
+\subsection{Interdisciplinary Integration Hypotheses}
+\begin{itemize}
+    \item \textbf{H8:} The integration of computational findings with traditional Islamic scholarship will yield complementary insights that enhance understanding of Qur'\=anic structure without contradicting established interpretive frameworks.
+
+    \item \textbf{H9:} Islamic philosophical frameworks can provide coherent methodological approaches for interpreting computational results while accounting for the inherent error margins in statistical and machine learning models.
+    
+    \item \textbf{H10:} The combined application of statistical, machine learning, and artificial intelligence methods with traditional Muslim literature will reveal multi-layered structural patterns that neither approach could identify independently.
+\end{itemize}
+
+These hypotheses are formulated to be testable through the proposed methodologies while respecting the epistemological considerations inherent in both computational linguistics and Islamic scholarship.
 \section{Significance of the Study}\label{sec:significance}
 While the Qur'\=an has been extensively studied by Muslim and non-Muslim scholars alike, especially on the topic of \arb[trans]{makkiyyaT} \arb{makkiyyaT} and \arb[trans]{madaniyyaT} \arb{madaniyyaT} types of \arb[trans]{suwar} \arb{suwar}, there is still much to uncover from the perspective of computational statistics. More specifically, the significance of this study is that it brings forward new ways of extracting insights from the Qur'\=an by leveraging computations, Statistics, Machine Learning, and Artificial Intelligence, which are still young in their applications to the field of Qur'\=anic Studies. The author hopes that the Islamic research community will benefit from and become interested in this type of approaches, which is now formalized into a new research area called Islamicate Digital Humanities, which aims to take advantage of the scientific computations for studying Islamic texts. The other side of the coin is that this paper will also benefit researchers from the field of science and mathematics, since it provides new methodologies for textual analyses. Finally, the paper hopes to encourage Muslim researchers from the field of science and mathematics to apply their skills in studying the Qur'\=an and, in general, in Islamic studies.
 
