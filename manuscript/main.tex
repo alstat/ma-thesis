@@ -13,6 +13,7 @@
 \usepackage{tabularx}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{fancyhdr}
 \usepackage{multirow}
 \usepackage[framemethod=TikZ]{mdframed}
 \usepackage{amsmath, amssymb, amsthm}
@@ -225,12 +226,17 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 \begin{document} 
 \include{titlepage.tex}
 \doublespacing
-% \include{chapters/dedication.tex}
-% \include{chapters/acknowledgement.tex}
+\include{chapters/approval_sheet}
+\include{chapters/distribution_copyright.tex}
+\include{chapters/dedication.tex}
+\include{chapters/acknowledgement.tex}
+\include{chapters/abstract.tex}
 \tableofcontents\newpage
 \listoffigures 
+\addcontentsline{toc}{chapter}{List of Figures}
 \listoftables
-\include{chapters/abstract.tex}
+\addcontentsline{toc}{chapter}{List of Tables}
+% \include{chapters/list_of_manuscripts.tex}
 \include{chapters/ch1.tex}
 \include{chapters/ch2.tex}
 \include{chapters/ch3.tex}
@@ -240,6 +246,11 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 \include{chapters/ch7.tex}
 \include{chapters/ch8.tex}
 \bibliographystyle{apacite}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{References}
+\chapter*{References}
+\renewcommand{\refname}{List of Articles, Books, Online Resources}
 \bibliography{reference}
 \include{chapters/appendix.tex}
 \include{chapters/appendix_theoretical_results.tex}
@@ -249,4 +260,5 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 \include{chapters/appendix_nn.tex}
 \include{chapters/appendix_extant_manuscripts.tex}
 \include{chapters/appendix_installation.tex}
+\include{chapters/cv.tex}
 \end{document}

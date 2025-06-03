@@ -697,7 +697,7 @@ The core innovation of transformers is the self-attention mechanism, which compu
     where $0\leq a_{nm}\leq 1$ is a attention coefficient, and that $\sum_{\forall n}a_{nm}=1$.
 \end{defn}
 
-The attention weights are based on the idea of \textit{query}, \textit{key}, and \textit{value}, where given an input vector $\mathbf{x}_n$, its similarity to other words $\mathbf{x}_m,n\neq m$. Here $\mathbf{x}_n$ is the query and $\mathbf{x}_m$ is the key. The similarity can be computed using \textit{cosine similarity} (\textit{see} discussions on this in Appendix \ref{appendix:theoretical_results} under Definition \ref{defn:defn:cosine_distance}.
+The attention weights are based on the idea of \textit{query}, \textit{key}, and \textit{value}, where given an input vector $\mathbf{x}_n$, its similarity to other words $\mathbf{x}_m,n\neq m$. Here $\mathbf{x}_n$ is the query and $\mathbf{x}_m$ is the key.
 \begin{defn}[Attention Coefficient]
     Let $\mathbf{X}:=[\mathbf{x}_1,\cdots,\mathbf{x}_N]^{\top}$ be the data matrix, then the \textit{attention coefficient} is
     \begin{equation}
@@ -800,6 +800,6 @@ After pre-training the model, BERT can then be fine-tuned on specific tasks like
 \end{enumerate}
 There are several applications of BERT model, but for this paper it will be used for Topic Modeling and Text Summarization of the Qur'\=an. In particular, CL-AraBERT model by will be used for extracting embeddings of the Qur'\=anic words for further analysis.
 \subsection{Generative Pre-Trained Transformer}
-GPT or Generative Pre-Trained Transformer is another large language model proposed by \cite{radford2018improving}. From the name itself and like BERT, GPT is based on the Transformer model \cite{vaswani2017attention}, \textit{see} Section \ref{sec:transformers}. Unlike BERT though, GPT uses the decoder layer of the Transformer model and stacks it multiple times. This is the model that is powering the ChatGPT\footnote{\url{https://chat.openai.com/}} of OpenAI and also Claude AI\footnote{\url{https://claude.ai/}} of Anthropic\footnote{\url{https://anthropic.com/}}.
+GPT or Generative Pre-Trained Transformer is another large language model proposed by \citeA{radford2018improving}. From the name itself and like BERT, GPT is based on the Transformer model \cite{vaswani2017attention}, \textit{see} Section \ref{sec:transformers}. Unlike BERT though, GPT uses the decoder layer of the Transformer model and stacks it multiple times. This is the model that is powering the ChatGPT\footnote{\url{https://chat.openai.com/}} of OpenAI and also Claude AI\footnote{\url{https://claude.ai/}} of Anthropic\footnote{\url{https://anthropic.com/}}.
 
 GPT models like those powering ChatGPT were pre-trained on large corpora by going through the sequence of the texts in \textit{unidirection}, which is contrary to the \textit{bidirectional} approach of BERT model. As such, the GPT models excel in generating text and performing tasks that require producing coherent sequences of words, in applications like text completion and creative writing. Whereas BERT is technically effective for tasks requiring deep contextual understanding such as text classification and named-entity recognition.

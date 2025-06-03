@@ -27,7 +27,7 @@ Notice that each word has a unique identity in its vector encoding. Now, what if
 
 Ideally, these very high-dimensional vectors should be condensed into a much lower dimension to avoid the \textit{curse of dimensionality}, a case where vectors which should be close to each other become more distinct due to the high dimensionality. Apart from this, the embedding in the vector space should also capture semantic proximity, meaning words that are semantically similar should be close to each other in the embedding space. There are two main approaches: \textit{Term Frequency - Inverse Document Frequency} and \textit{Word Embeddings}.
 
-\subsection{Term Frequency - Inverse Document Frequency}\label{sec:tf-df}
+\subsection{Term Frequency - Inverse Document Frequency}\label{sec:tf-idf}
 The TF-IDF or Term Frequency - Inverse Document Frequency is an NLP method for embedding words. It is composed of two statistics: the TF and the IDF. The following are the formal definitions of both statistics.
 
 \begin{defnx}[Term Frequency]
