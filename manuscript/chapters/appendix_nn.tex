@@ -692,67 +692,77 @@ The core innovation of transformers is the self-attention mechanism, which compu
 \begin{defn}[Vector Self-Attention]\label{defn:vec-self-attention}
     Let $\mathbf{X}:=[\mathbf{x}_1,\cdots,\mathbf{x}_N]^{\top}$ be the data matrix, s.t. $\mathbf{x}_i\in\mathbb{R}^{D}$ is a word embedding, then the \textit{self-attention} is given by
     \begin{equation}\label{eq:self-attention}
-        \mathbf{y}_n := \sum_{n=1}^{N}a_{nm}\mathbf{x}_n,
+        \mathbf{y}_n := \sum_{m=1}^{N}a_{nm}\mathbf{x}_m,
     \end{equation}
-    where $0\leq a_{nm}\leq 1$ is a attention coefficient, and that $\sum_{\forall n}a_{nm}=1$.
+    where $0\leq a_{nm}\leq 1$ is a attention coefficient, and that $\sum_{m=1}^{N}a_{nm}=1$.
 \end{defn}
 
-The attention weights are based on the idea of \textit{query}, \textit{key}, and \textit{value}, where given an input vector $\mathbf{x}_n$, its similarity to other words $\mathbf{x}_m,n\neq m$. Here $\mathbf{x}_n$ is the query and $\mathbf{x}_m$ is the key.
+The attention weights are based on the idea of \textit{query}, \textit{key}, and \textit{value}, where given an input vector $\mathbf{x}_n$, we compute its similarity to other words $\mathbf{x}_m,m\neq n$. Here $\mathbf{x}_n$ is the query and $\mathbf{x}_m$ is the key.
+
 \begin{defn}[Attention Coefficient]
     Let $\mathbf{X}:=[\mathbf{x}_1,\cdots,\mathbf{x}_N]^{\top}$ be the data matrix, then the \textit{attention coefficient} is
     \begin{equation}
-        a_{nm}:=\frac{\exp(\mathbf{x}_n^{\top}\mathbf{x}_l)}{\displaystyle\sum_{m'=1}^{M}\exp(\mathbf{x}_n^{\top}\mathbf{x}_{m'})},
+        a_{nm}:=\frac{\exp(\mathbf{x}_n^{\top}\mathbf{x}_m)}{\displaystyle\sum_{m'=1}^{N}\exp(\mathbf{x}_n^{\top}\mathbf{x}_{m'})},
     \end{equation}
-    the softmax formula helps $a_{kl}$ satisfy its contraints.
+    where the softmax formula helps $a_{nm}$ satisfy its constraints.
 \end{defn}
+
 \begin{defn}[Identity Self-Attention]
-    Let $\mathbf{y_1},\cdots,\mathbf{y}_N$ be the \textit{vector self-attention}, then $\mathbf{Y}=[\mathbf{y}_1,\cdots,\mathbf{y}_N]^{\top}$ is the \textit{identity self-attention} with the following formula:
+    Let $\mathbf{y}_1,\cdots,\mathbf{y}_N$ be the \textit{vector self-attention}, then $\mathbf{Y}=[\mathbf{y}_1,\cdots,\mathbf{y}_N]^{\top}$ is the \textit{identity self-attention} with the following formula:
     \begin{equation}\label{eq:identity-self-attention}
         \mathbf{Y}:=\operatorname{Softmax}(\mathbf{X}\mathbf{X}^{\top})\mathbf{X}
     \end{equation}
 \end{defn}
+
 \begin{remark}
-    It is called \text{identity self-attention} since there is no learnable parameter that controls the data matrix input.
+    It is called \textit{identity self-attention} since there is no learnable parameter that controls the data matrix input.
 \end{remark}
+
 \begin{defn}[Encoded Data Matrix]\label{defn:encoded-data-matrix}
     Let $\mathbf{V}\in\mathbb{R}^{D\times D}$, then the \textit{encoded data matrix} is given by $\mathbf{Z}:=\mathbf{X}\mathbf{V}$
 \end{defn}
+
 So that from Definition \ref{defn:encoded-data-matrix}, Equation \ref{eq:identity-self-attention} becomes:
 \begin{align}
     \mathbf{Y}=&\operatorname{Softmax}(\mathbf{X}\mathbf{V}\mathbf{V}^{\top}\mathbf{X}^{\top})\mathbf{X}\mathbf{V}\\
     =&\operatorname{Softmax}(\mathbf{Z}\mathbf{Z}^{\top})\mathbf{Z}
 \end{align}
+
 Further, it would be better to add learnable weights for the \textit{query}, \textit{key}, and \textit{value} as well. This is formulated in the next definition.
+
 \begin{defn}[Self-Attention]\label{defn:self-attention}
-    Let $\mathbf{W}_{(q)},\mathbf{W}_{(k)}$, and $\mathbf{W}_{(v)}$ be the weights matrix for \textit{query}, \textit{key}, and \textit{value}, respectively, s.t. $\mathbf{W_{(i)}}\in\mathbb{R}^{D\times D_i},i\in\{q,k,v\}$, then the \textit{self-attention} is 
+    Let $\mathbf{W}_{(q)},\mathbf{W}_{(k)}$, and $\mathbf{W}_{(v)}$ be the weights matrix for \textit{query}, \textit{key}, and \textit{value}, respectively, s.t. $\mathbf{W}_{(i)}\in\mathbb{R}^{D\times D_i},i\in\{q,k,v\}$, then the \textit{self-attention} is 
     \begin{align}
-        \mathbf{Y}=&\operatorname{Softmax}(\mathbf{Z}\mathbf{W}_{(q)}\mathbf{W}_{(k)}^{\mathbf{T}}\mathbf{Z}^{\mathbf{T}})\mathbf{Z}\mathbf{W}_{(v)}\\
-        &\operatorname{Softmax}(\mathbf{Q}\mathbf{K}^{\top})\mathbf{V},
+        \mathbf{Y}=&\operatorname{Softmax}(\mathbf{X}\mathbf{W}_{(q)}\mathbf{W}_{(k)}^{\mathbf{T}}\mathbf{X}^{\mathbf{T}})\mathbf{X}\mathbf{W}_{(v)}\\
+        =&\operatorname{Softmax}(\mathbf{Q}\mathbf{K}^{\top})\mathbf{V},
     \end{align}
-    where $\mathbf{Q}:=\mathbf{Z}\mathbf{W}_{(q)},\mathbf{K}:=\mathbf{Z}\mathbf{W}_{(k)},\mathbf{V}:=\mathbf{Z}\mathbf{W}_{(v)}$. The above equation will only work if $\mathbf{W}_{(q)}$ and $\mathbf{W}_{(k)}$ have the same dimention.
+    where $\mathbf{Q}:=\mathbf{X}\mathbf{W}_{(q)},\mathbf{K}:=\mathbf{X}\mathbf{W}_{(k)},\mathbf{V}:=\mathbf{X}\mathbf{W}_{(v)}$. The above equation will only work if $\mathbf{W}_{(q)}$ and $\mathbf{W}_{(k)}$ have the same output dimension, i.e., $D_q = D_k$.
 \end{defn}
 
-Further, becaus the Softmax can suffer from having exponentially small gradients for inputs of high magnitude, the same case for tanh or logistic-sigmoid activation functions, scaling can be used to address this issue.
+Further, because the Softmax can suffer from having exponentially small gradients for inputs of high magnitude, the same case for tanh or logistic-sigmoid activation functions, scaling can be used to address this issue.
 
 \begin{defn}[Scaled Self-Attention]
     From Definition \ref{defn:self-attention}, the \textit{scaled self-attention} is
     \begin{equation}
-        \mathbf{Y}=\operatorname{Attention}(\mathbf{Q},\mathbf{K},\mathbf{V}):=\operatorname{Softmax}\left[\frac{\mathbf{Q}\mathbf{K}^{\top}}{\sqrt{D}}\right]\mathbf{V},
+        \mathbf{Y}=\operatorname{Attention}(\mathbf{Q},\mathbf{K},\mathbf{V}):=\operatorname{Softmax}\left(\frac{\mathbf{Q}\mathbf{K}^{\top}}{\sqrt{D_k}}\right)\mathbf{V},
     \end{equation}
-    where $D$ can be $D_q$ or $D_k$ since $D_q=D_k$.
+    where $D_k$ is the dimension of the key vectors.
 \end{defn}
 
 \subsection{Multi-Head Attention}
 To enhance the model's ability to focus on different parts of the input sequence, transformers employ multi-head attention. This involves splitting the query, key, and value matrices into multiple heads, applying the attention mechanism to each head independently, and then concatenating the results.
+
 \begin{defn}[Multi-Head Attention]
-    Let $\mathbf{Y}_1,\cdots,\mathbf{Y}_H$ be the scaled self-attention s.t. $\mathbf{Y}_h=\operatorname{Attention}(\mathbf{Q}_h,\mathbf{K}_h,\mathbf{V}_h)$, where $\mathbf{Q}_h=\mathbf{X}\mathbf{W}_h^{(q)},\mathbf{K}_h=\mathbf{X}\mathbf{W}_h^{(k)}$, and $\mathbf{V}_h=\mathbf{X}\mathbf{V}_h^{(k)}$, then the \textit{multi-head attention} is
+    Let $\mathbf{Y}_1,\cdots,\mathbf{Y}_H$ be the scaled self-attention s.t. $\mathbf{Y}_h=\operatorname{Attention}(\mathbf{Q}_h,\mathbf{K}_h,\mathbf{V}_h)$, where $\mathbf{Q}_h=\mathbf{X}\mathbf{W}_h^{(q)},\mathbf{K}_h=\mathbf{X}\mathbf{W}_h^{(k)}$, and $\mathbf{V}_h=\mathbf{X}\mathbf{W}_h^{(v)}$, then the \textit{multi-head attention} is
     \begin{equation}
         \operatorname{MultiHead}(\mathbf{Q},\mathbf{K},\mathbf{V}):=\operatorname{Concat}(\mathbf{Y}_1,\cdots,\mathbf{Y}_H)\mathbf{W}^{(o)},
     \end{equation}
-    where $\operatorname{Concat}$ simply combines the outputs $\mathbf{Y}_h$ into a matrix, so that, $\mathbf{W}^{(o)}\in\mathbb{R}^{H\times D_o}$.
+    where $\operatorname{Concat}$ simply combines the outputs $\mathbf{Y}_h$ into a matrix, so that $\mathbf{W}^{(o)}\in\mathbb{R}^{HD_v \times D_{\text{model}}}$, where $D_v$ is the dimension of each value head and $D_{\text{model}}$ is the model dimension.
 \end{defn}
+
 \subsection{Positional Encoding}
-Since transformers do not process input sequences in order, it require a way to incorporate the position of each word. This is achieved through positional encoding, which adds positional information to the input embeddings. Positional encodings are vectors added to the input embeddings and can be computed using sine and cosine functions of different frequencies.
+Since transformers do not process input sequences in order, they require a way to incorporate the position of each word. This is achieved through positional encoding, which adds positional information to the input embeddings. Positional encodings are vectors added to the input embeddings and can be computed using sine and cosine functions of different frequencies.
+
 \begin{defn}[Positional Encoding]
     Let $\mathbf{r}_n$ be the vector of positional encoding with components defined as:
     \begin{equation}
@@ -761,31 +771,36 @@ Since transformers do not process input sequences in order, it require a way to 
             \cos\left(\displaystyle\frac{n}{L^{(i-1)/D}}\right)&\text{if}\;i\;\text{is odd},
         \end{cases}
     \end{equation}
-    where $n$ is the position, $i$ is the dimension, and $L$ is the maximum of the spectrum. For the paper of \shortciteA{vaswani2017attention} uses $L=10000$.
+    where $n$ is the position, $i$ is the dimension, and $L$ is the maximum wavelength parameter. The paper of \citeA{vaswani2017attention} uses $L=10000$.
 \end{defn}
+
 \subsection{Transformer Architecture}
-The transformer architecture consists of an \textit{encoder} and a \textit{decoder}, each comprising several layers of multi-head attention and feed-forward neural networks. The encoder processes the input sequence and generates context-aware representations, while the decoder uses these representations along with previously generated outputs to produce the final sequence.\\
+The transformer architecture consists of an \textit{encoder} and a \textit{decoder}, each comprising several layers of multi-head attention and feed-forward neural networks. The encoder processes the input sequence and generates context-aware representations, while the decoder uses these representations along with previously generated outputs to produce the final sequence.
+
 \textbf{Encoder Layer}:
 \begin{equation}
-    \operatorname{EncoderLayer}(X)=\operatorname{LayerNorm}(X+\operatorname{MultiHead}(Q,K,V))+\operatorname{FFN}(X)\nonumber
+    \operatorname{EncoderLayer}(X)=\operatorname{LayerNorm}(X+\operatorname{MultiHead}(X,X,X))+\operatorname{LayerNorm}(X'+\operatorname{FFN}(X'))\nonumber
 \end{equation}
+where $X' = \operatorname{LayerNorm}(X+\operatorname{MultiHead}(X,X,X))$.
+
 \textbf{Decoder Layer}:
 \begin{align}
-    \operatorname{DecoderLayer}(Y,\operatorname{EncoderOutput}):=&\operatorname{LayerNorm}(Y+\operatorname{MaskedMultiHead}(Q,K,V))+\nonumber\\
-    &\operatorname{LayerNorm}(Y+\operatorname{MultiHead}(Q,K,V))+\\
-    &\operatorname{FFN}(Y)\nonumber,
+    \operatorname{DecoderLayer}(Y,\operatorname{EncoderOutput}):=&\operatorname{LayerNorm}(Y+\operatorname{MaskedMultiHead}(Y,Y,Y))\\
+    &+ \operatorname{LayerNorm}(Y'+\operatorname{MultiHead}(Y',\operatorname{EncoderOutput},\operatorname{EncoderOutput}))\nonumber\\
+    &+ \operatorname{LayerNorm}(Y''+\operatorname{FFN}(Y''))\nonumber,
 \end{align}
-where $FFN(X)$ is a feed-forward network applied to each position separately and identically.
+where $Y' = \operatorname{LayerNorm}(Y+\operatorname{MaskedMultiHead}(Y,Y,Y))$ and $Y'' = \operatorname{LayerNorm}(Y'+\operatorname{MultiHead}(Y',\operatorname{EncoderOutput},\operatorname{EncoderOutput}))$, and $\operatorname{FFN}(X)$ is a feed-forward network applied to each position separately and identically.
 
 Transformers have revolutionized NLP by enabling efficient parallel processing and capturing long-range dependencies in text data. Their architecture, centered around self-attention and multi-head attention mechanisms, has set new benchmarks in various NLP tasks, including machine translation, text summarization, and question answering.
 
 \subsection{Large Language Models}\label{sec:llm_method}
-Generative Artificial Intelligence or GenAI for short has been making waves on its effectiveness to generate texts, images, audio, video, etc. It has elevated humanity to a new level of capability. However, behind this amazing capabilities is that GenAI is by design a mathematical formula that are called \textit{model}. There are several types of \textit{models}, and one of those is the Large Language Model (LLM). The following section will discuss what LLM is and its mathematical formulation.
+Generative Artificial Intelligence or GenAI for short has been making waves due to its effectiveness in generating texts, images, audio, video, etc. It has elevated humanity to a new level of capability. However, behind these amazing capabilities is that GenAI is by design a mathematical formula that is called a \textit{model}. There are several types of \textit{models}, and one of those is the Large Language Model (LLM). The following section will discuss what LLM is and its mathematical formulation.
+
 \subsection{Bidirectional Encoder Representation from Transformers}\label{sec:bert}
-BERT or Bidirectional Encoder Representation from Transformers model is a large language model proposed by \citeA{devlin2018bert}. From the name itself, it is based on the Transformer model architecture (\textit{see} discussion in Section \ref{sec:transformers}) in that it only uses the Encoder layer, and stack it together. BERT was pre-trained on large corpus of text using two unsupervised (\textit{see} Section \ref{sec:unsupervised_models}) tasks, and these are:
+BERT or Bidirectional Encoder Representation from Transformers model is a large language model proposed by \citeA{devlin2018bert}. From the name itself, it is based on the Transformer model architecture (\textit{see} discussion in Section \ref{sec:transformers}) in that it only uses the Encoder layer, and stacks it together. BERT was pre-trained on large corpus of text using two unsupervised (\textit{see} Section \ref{sec:unsupervised_models}) tasks, and these are:
 \begin{enumerate}
-    \item \textit{Masked Language Modeling (MLM)} - tokens (\textit{see} Section \ref{sec:text_tokenization}) are randomly masked in the input and trains the model to predict these masked tokens based on the surrounding context.
-    \item \textit{Next Sentence Prediction (NSP)} - tains the model to understand the relationship between two sentences by predicting if one sentence follows the other.
+    \item \textit{Masked Language Modeling (MLM)} - tokens (\textit{see} Section \ref{sec:text_tokenization}) are randomly masked in the input and the model is trained to predict these masked tokens based on the surrounding context.
+    \item \textit{Next Sentence Prediction (NSP)} - trains the model to understand the relationship between two sentences by predicting if one sentence follows the other.
 \end{enumerate}
 After pre-training the model, BERT can then be fine-tuned on specific tasks like question answering, sentiment analysis, and more with relatively smaller datasets. With that, BERT works as follows: 
 \begin{enumerate}
@@ -794,12 +809,13 @@ After pre-training the model, BERT can then be fine-tuned on specific tasks like
     \item \textit{Encoder Layers} - The embeddings are then passed through multiple layers of bidirectional Transformer encoders (\textit{see} Section \ref{sec:transformers}), which apply self-attention mechanisms to generate contextualized representations for each token.
     \item \textit{Output} - The final hidden states from the encoder layers are used for different tasks:
     \begin{itemize}
-        \item The [CLS] token’s representation can be used for classification tasks.
+        \item The [CLS] token's representation can be used for classification tasks.
         \item The representations of other tokens can be used for tasks like named entity recognition (NER) or question answering.
     \end{itemize}
 \end{enumerate}
-There are several applications of BERT model, but for this paper it will be used for Topic Modeling and Text Summarization of the Qur'\=an. In particular, CL-AraBERT model by will be used for extracting embeddings of the Qur'\=anic words for further analysis.
+There are several applications of BERT model, but for this paper it will be used for Topic Modeling and Text Summarization of the Qur'\=an. In particular, the CL-AraBERT model will be used for extracting embeddings of the Qur'\=anic words for further analysis.
+
 \subsection{Generative Pre-Trained Transformer}
-GPT or Generative Pre-Trained Transformer is another large language model proposed by \citeA{radford2018improving}. From the name itself and like BERT, GPT is based on the Transformer model \cite{vaswani2017attention}, \textit{see} Section \ref{sec:transformers}. Unlike BERT though, GPT uses the decoder layer of the Transformer model and stacks it multiple times. This is the model that is powering the ChatGPT\footnote{\url{https://chat.openai.com/}} of OpenAI and also Claude AI\footnote{\url{https://claude.ai/}} of Anthropic\footnote{\url{https://anthropic.com/}}.
+GPT or Generative Pre-Trained Transformer is another large language model proposed by \citeA{radford2018improving}. From the name itself and like BERT, GPT is based on the Transformer model \cite{vaswani2017attention}, \textit{see} Section \ref{sec:transformers}. Unlike BERT though, GPT uses the decoder layer of the Transformer model and stacks it multiple times. This is the model that is powering ChatGPT\footnote{\url{https://chat.openai.com/}} of OpenAI and also Claude AI\footnote{\url{https://claude.ai/}} of Anthropic\footnote{\url{https://anthropic.com/}}.
 
 GPT models like those powering ChatGPT were pre-trained on large corpora by going through the sequence of the texts in \textit{unidirection}, which is contrary to the \textit{bidirectional} approach of BERT model. As such, the GPT models excel in generating text and performing tasks that require producing coherent sequences of words, in applications like text completion and creative writing. Whereas BERT is technically effective for tasks requiring deep contextual understanding such as text classification and named-entity recognition.
